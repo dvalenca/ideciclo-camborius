@@ -66,4 +66,4 @@ Este projeto está configurado para deploy automático na Vercel. Qualquer push 
 
 ## 📄 Licença
 
-MIT License - veja o arquivo LICENSE para detalhes.
+GNU General Public License v3.0 - veja o arquivo LICENSE para detalhes.
