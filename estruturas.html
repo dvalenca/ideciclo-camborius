@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Relatório de Auditoria Cicloviária - IDECICLO - Camboriú e Balneário Camboriú">
+    <meta name="keywords" content="ciclovia, auditoria, mobilidade urbana, Camboriú, Balneário Camboriú">
+    <title>Estruturas Avaliadas - IDECICLO</title>
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">IDECICLO</a></h1>
+                    <p>Auditoria Cicloviária</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
+                        <li><a href="comparacao.html" class="nav-link">Comparação</a></li>
+                        <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Estruturas Avaliadas</h1>
+                <p>Exploração detalhada das estruturas cicloviárias de Camboriú e Balneário Camboriú</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Estatísticas -->
+            <section class="stats" id="stats-container">
+                <div class="loading">Carregando estatísticas...</div>
+            </section>
+
+            <!-- Mapa Geral -->
+            <section class="map-section">
+                <h2>Mapa das Estruturas</h2>
+                <div id="overview-map" class="overview-map"></div>
+            </section>
+
+            <!-- Busca -->
+            <section class="search-section">
+                <div class="search-group">
+                    <label for="search-input">Buscar estrutura</label>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Digite o nome da via ou estrutura..."
+                    >
+                </div>
+            </section>
+
+            <!-- Filtros -->
+            <section class="filters">
+                <div class="filters-row">
+                    <div class="filter-group">
+                        <label for="city-filter">Cidade</label>
+                        <select id="city-filter" class="filter-select">
+                            <option value="">Todas as cidades</option>
+                            <option value="Camboriú">Camboriú</option>
+                            <option value="Balneário Camboriú">Balneário Camboriú</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="typology-filter">Tipologia</label>
+                        <select id="typology-filter" class="filter-select">
+                            <option value="">Todas as tipologias</option>
+                            <option value="Ciclovia">Ciclovia</option>
+                            <option value="Ciclofaixa">Ciclofaixa</option>
+                            <option value="Calçada compartilhada">Calçada compartilhada</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-select">Ordenar por</label>
+                        <select id="sort-select" class="filter-select">
+                            <option value="name">Nome</option>
+                            <option value="score-desc">Nota (maior → menor)</option>
+                            <option value="score-asc">Nota (menor → maior)</option>
+                            <option value="length-desc">Extensão (maior → menor)</option>
+                            <option value="length-asc">Extensão (menor → maior)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <button class="btn btn-report" onclick="showReportModal()">
+                            📊 Relatórios
+                        </button>
+                    </div>
+                </div>
+                <div class="results-info">
+                    <span id="results-count">Carregando...</span>
+                </div>
+            </section>
+
+            <!-- Lista de Vias -->
+            <section class="vias-section">
+                <div class="vias-grid" id="vias-container">
+                    <div class="loading">Carregando estruturas...</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>IDECICLO</h3>
+                    <p>Relatório de Auditoria Cicloviária</p>
+                    <p>Camboriú e Balneário Camboriú</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Relatórios -->
+    <div id="report-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeReportModal()">&times;</span>
+            <h2>📊 Gerar Relatórios</h2>
+            <p>Escolha o tipo de relatório que deseja gerar:</p>
+            <div class="report-options">
+                <button class="btn btn-primary" onclick="generateCityReport('Camboriú')">
+                    🏢 Relatório Camboriú
+                </button>
+                <button class="btn btn-primary" onclick="generateCityReport('Balneário Camboriú')">
+                    🏖️ Relatório Balneário Camboriú
+                </button>
+                <button class="btn btn-secondary" onclick="generateFullReport()">
+                    📊 Relatório Completo
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/overview-map.js"></script>
+    <script src="assets/js/markdown-export.js"></script>
+    <script src="assets/js/report-generator.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        let reportGenerator;
+        
+        // Inicializar gerador de relatórios
+        document.addEventListener('DOMContentLoaded', () => {
+            reportGenerator = new ReportGenerator();
+        });
+        
+        // Mostrar modal de relatórios
+        function showReportModal() {
+            document.getElementById('report-modal').style.display = 'block';
+        }
+        
+        // Fechar modal
+        function closeReportModal() {
+            document.getElementById('report-modal').style.display = 'none';
+        }
+        
+        // Gerar relatório por cidade
+        async function generateCityReport(city) {
+            closeReportModal();
+            await reportGenerator.generateCityReport(city);
+        }
+        
+        // Gerar relatório completo
+        async function generateFullReport() {
+            closeReportModal();
+            await reportGenerator.generateFullReport();
+        }
+        
+        // Fechar modal ao clicar fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('report-modal');
+            if (event.target === modal) {
+                closeReportModal();
+            }
+        }
+    </script>
+</body>
+</html>

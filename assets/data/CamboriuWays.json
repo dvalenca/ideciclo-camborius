@@ -1,0 +1,52 @@
+[
+  {
+    "type": "arterial",
+    "highway": "motorway",
+    "length": 4503.989
+  },
+  {
+    "type": "arterial",
+    "highway": "motorway_link",
+    "length": 171.01
+  },
+  {
+    "type": "arterial",
+    "highway": "primary",
+    "length": 7650.286
+  },
+  {
+    "type": "arterial",
+    "highway": "primary_link",
+    "length": 152.327
+  },
+  {
+    "type": "local",
+    "highway": "residential",
+    "length": 273732.739
+  },
+  {
+    "type": "coletora",
+    "highway": "secondary",
+    "length": 17094.767
+  },
+  {
+    "type": "coletora",
+    "highway": "secondary_link",
+    "length": 75.212
+  },
+  {
+    "type": "coletora",
+    "highway": "tertiary",
+    "length": 80431.324
+  },
+  {
+    "type": "coletora",
+    "highway": "tertiary_link",
+    "length": 57.637
+  },
+  {
+    "type": "local",
+    "highway": "unclassified",
+    "length": 96372.419
+  }
+]

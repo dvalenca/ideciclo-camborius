@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Metodologia de Avaliação Cicloviária - IDECICLO">
+    <title>Metodologia - IDECICLO</title>
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Mermaid para diagramas -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    
+    <style>
+        .methodology-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .methodology-content h1 {
+            color: #2E7D32;
+            border-bottom: 3px solid #E8F5E8;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .methodology-content h2 {
+            color: #2E7D32;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .methodology-content h3 {
+            color: #4CAF50;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .diagram-container {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .formula-box {
+            background: #E8F5E8;
+            border-left: 4px solid #2E7D32;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        
+        .criteria-grid {
+            margin: 2rem 0;
+        }
+        
+        .criteria-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2E7D32;
+        }
+        
+        .criteria-card h4 {
+            color: #2E7D32;
+            margin-bottom: 1rem;
+        }
+        
+        .weight-badge {
+            background: #2E7D32;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2E7D32;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        
+        .back-button:hover {
+            text-decoration: underline;
+        }
+        
+        /* Estilos para seções retráteis */
+        .collapsible-section {
+            margin-bottom: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .collapsible-header {
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .collapsible-header:hover {
+            background: linear-gradient(135deg, #1B5E20, #2E7D32);
+        }
+        
+        .section-number {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 0.75rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+            min-width: 2.5rem;
+            text-align: center;
+        }
+        
+        .section-title {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .toggle-icon {
+            transition: transform 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .collapsible-header.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+        
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: white;
+        }
+        
+        .collapsible-content.active {
+            max-height: none;
+            padding: 2rem;
+        }
+        
+        .collapsible-content h1 {
+            margin-top: 0;
+        }
+        
+        .collapsible-content h2 {
+            color: #2E7D32;
+            border-bottom: 2px solid #E8F5E8;
+            padding-bottom: 0.5rem;
+        }
+        
+        .collapsible-content h3 {
+            color: #4CAF50;
+        }
+        
+        .collapsible-content h4 {
+            color: #66BB6A;
+        }
+        
+        .collapsible-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .collapsible-content table th,
+        .collapsible-content table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        .collapsible-content table th {
+            background: #E8F5E8;
+            font-weight: 600;
+        }
+        
+        .collapsible-content ul {
+            padding-left: 1.5rem;
+        }
+        
+        .collapsible-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Estilos para botões */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #2E7D32;
+            color: #2E7D32;
+        }
+        
+        .btn-outline:hover {
+            background: #2E7D32;
+            color: white;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Estilos para árvore de critérios */
+        .tree-container {
+            margin: 2rem 0;
+            display: block !important;
+            flex-direction: column !important;
+            grid-template-columns: none !important;
+        }
+        
+        .tree-container > .tree-level-1 {
+            display: block !important;
+            width: 100% !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        .tree-level-1, .tree-level-2, .tree-level-3, .tree-level-4 {
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .tree-level-1 {
+            background: #E8F5E8;
+            border-left: 6px solid #2E7D32;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+            float: none !important;
+        }
+        
+        .tree-level-2 {
+            background: #F1F8E9;
+            border-left: 4px solid #4CAF50;
+            padding: 1.25rem;
+            margin: 0.75rem 0 0 1rem;
+        }
+        
+        .tree-level-3 {
+            background: #F9FBE7;
+            border-left: 3px solid #8BC34A;
+            padding: 1rem;
+            margin: 0.5rem 0 0 1rem;
+        }
+        
+        .tree-level-4 {
+            background: #FCFFF4;
+            border-left: 2px solid #C8E6C9;
+            padding: 0.75rem;
+            margin: 0.25rem 0 0 1rem;
+        }
+        
+        .criterion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .criterion-header:hover {
+            background: rgba(46, 125, 50, 0.1);
+            border-radius: 4px;
+            padding: 0.5rem;
+            margin: -0.5rem -0.5rem 0.5rem -0.5rem;
+        }
+        
+        .criterion-title {
+            font-weight: bold;
+            color: #2E7D32;
+            margin: 0;
+            flex: 1;
+        }
+        
+        .criterion-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+        
+        .calculation-method {
+            background: #FFF3E0;
+            border-left: 4px solid #FF9800;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        
+        .tree-toggle {
+            background: none;
+            border: none;
+            color: #2E7D32;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.25rem;
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .tree-toggle.collapsed {
+            transform: rotate(-90deg);
+        }
+        
+        .tree-content {
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .tree-content.collapsed {
+            max-height: 0;
+        }
+        
+        .note {
+            background: #FFF8E1;
+            border-left: 4px solid #FFC107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        
+        .note strong {
+            color: #F57C00;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">IDECICLO</a></h1>
+                    <p>Auditoria Cicloviária</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
+                        <li><a href="comparacao.html" class="nav-link">Comparação</a></li>
+                        <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+                        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <a href="index.html" class="back-button">
+                ← Voltar para página inicial
+            </a>
+
+            <div class="methodology-content">
+                <div class="section-controls" style="margin-bottom: 2rem; text-align: center;">
+                    <button onclick="expandAllSections()" class="btn btn-outline" style="margin-right: 1rem;">
+                        ▼ Expandir Todas as Seções
+                    </button>
+                    <button onclick="collapseAllSections()" class="btn btn-outline">
+                        ▲ Contrair Todas as Seções
+                    </button>
+                </div>
+                
+                <div id="methodology-text">
+                    <div class="loading">Carregando metodologia...</div>
+                </div>
+                
+                <!-- Seção Árvore de Critérios -->
+                <div class="collapsible-section">
+                    <button class="collapsible-header" onclick="toggleSection(this)">
+                        <span class="section-number">6.</span>
+                        <span class="section-title">Árvore Completa de Critérios de Avaliação</span>
+                        <span class="toggle-icon">▼</span>
+                    </button>
+                    <div class="collapsible-content">
+                        <div class="note">
+                            <strong>Nota:</strong> Esta árvore apresenta todos os critérios utilizados na metodologia IDECICLO, 
+                            com os pesos distribuídos igualmente entre os galhos de cada nível hierárquico.
+                        </div>
+
+                        <div class="formula-box">
+                            <strong>Fórmula Principal:</strong><br>
+                            Nota Final = (Projeto + Proteção + Conforto)/3
+                        </div>
+
+                        <div class="tree-container">
+                            <!-- Nível 1: Qualidade do Projeto -->
+                            <div class="tree-level-1">
+                                <div class="criterion-header" onclick="toggleTreeNode(this)">
+                                    <h2 class="criterion-title">1. Qualidade do Projeto</h2>
+                                    <div>
+                                        <span class="weight-badge">33,3%</span>
+                                        <button class="tree-toggle">▼</button>
+                                    </div>
+                                </div>
+                                <div class="criterion-description">
+                                    Avalia a concepção original da ciclovia, incluindo proteção, sinalização e conforto.
+                                </div>
+                                <div class="tree-content">
+                                
+                                <!-- Nível 2: Proteção da Estrutura -->
+                                <div class="tree-level-2">
+                                    <div class="criterion-header">
+                                        <h3 class="criterion-title">1.1. Proteção contra a invasão</h3>
+                                        <span class="weight-badge">33,3%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Eficácia da proteção contra invasão de veículos motorizados.
+                                    </div>
+                                    
+                                    <!-- Nível 3: Subcritérios de Proteção -->
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">1.1.1. Concepção do Projeto</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Avaliação das escolhas de localização, tipologia e direção da estrutura.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Padrões de avaliação aplicados para determinar a qualidade das escolhas.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">1.1.2. Situações de Riscos</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Riscos de colisão com veículos motorizados devido a fatores estruturais.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Função binária (nota 0 ou 10).
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">1.1.3. Segregação</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Capacidade da estrutura em manter veículos motorizados afastados.
+                                        </div>
+                                        
+                                        <!-- Nível 4: Subcritérios de Segregação -->
+                                        <div class="tree-level-4">
+                                            <div class="criterion-header">
+                                                <h5 class="criterion-title">1.1.3.1. Tipo de Segregador</h5>
+                                                <span class="weight-badge">50%</span>
+                                            </div>
+                                            <div class="criterion-description">
+                                                Tipo de elemento físico utilizado para segregação.
+                                            </div>
+                                            <div class="calculation-method">
+                                                <strong>Método:</strong> Padrões de avaliação.
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tree-level-4">
+                                            <div class="criterion-header">
+                                                <h5 class="criterion-title">1.1.3.2. Faixa de Amortecimento</h5>
+                                                <span class="weight-badge">50%</span>
+                                            </div>
+                                            <div class="criterion-description">
+                                                Largura da faixa que separa a estrutura do fluxo motorizado.
+                                            </div>
+                                            <div class="calculation-method">
+                                                <strong>Método:</strong> Valores interpolados (0,3m = nota 0; 1,0m = nota 10).
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Nível 2: Sinalização Vertical -->
+                                <div class="tree-level-2">
+                                    <div class="criterion-header">
+                                        <h3 class="criterion-title">1.2. Sinalização Vertical</h3>
+                                        <span class="weight-badge">33,3%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Sinalizações verticais ao longo da estrutura.
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">1.2.1. Sinalização Vertical Regulamentadora</h4>
+                                            <span class="weight-badge">20%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Quantidade de placas de sinalização regulamentadora tipo R-34.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Valores interpolados (1 placa/100m = nota 10).
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">1.2.2. Sinalização de Início e Fim</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Presença de sinalização de início e fim da estrutura.
+                                        </div>
+                                        
+                                        <div class="tree-level-4">
+                                            <div class="criterion-header">
+                                                <h5 class="criterion-title">1.2.2.1. Sinalização de Início</h5>
+                                                <span class="weight-badge">50%</span>
+                                            </div>
+                                            <div class="calculation-method">
+                                                <strong>Método:</strong> Função binária.
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tree-level-4">
+                                            <div class="criterion-header">
+                                                <h5 class="criterion-title">1.2.2.2. Sinalização de Fim</h5>
+                                                <span class="weight-badge">50%</span>
+                                            </div>
+                                            <div class="calculation-method">
+                                                <strong>Método:</strong> Função binária.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">1.2.3. Sinalização Vertical nas Travessias</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Proporção de sinalização regulamentadora tipo A-30 nas travessias.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Proporcional ao total de cruzamentos.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Nível 2: Sinalização Horizontal -->
+                                <div class="tree-level-2">
+                                    <div class="criterion-header">
+                                        <h3 class="criterion-title">1.3. Sinalização Horizontal</h3>
+                                        <span class="weight-badge">33,3%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Presença e qualidade da sinalização horizontal.
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">1.3.1. Padrão de Sinalização Horizontal</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Padrão escolhido na pintura da área de circulação.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Padrões de avaliação (área toda pintada = 10; apenas bordas = 0).
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">1.3.2. Presença de Setas e Pictogramas</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Quantidade de pictogramas e setas por metro da estrutura.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Valores interpolados (1 elemento/30m = nota 10).
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">1.3.3. Sinalização Horizontal nos Cruzamentos</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Proporção de sinalização horizontal nos cruzamentos.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Proporcional ao total de cruzamentos.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Nível 2: Conforto da Estrutura -->
+                                <div class="tree-level-2">
+                                    <div class="criterion-header">
+                                        <h3 class="criterion-title">1.4. Conforto da Estrutura</h3>
+                                        <span class="weight-badge">33,3%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Condições de conforto ao pedalar na estrutura.
+                                    </div>
+                                
+                                <div class="tree-level-3">
+                                    <div class="criterion-header">
+                                        <h4 class="criterion-title">1.4.1. Acesso da estrutura</h4>
+                                        <span class="weight-badge">16,7%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Facilidade de acessar e sair da estrutura.
+                                    </div>
+                                    <div class="calculation-method">
+                                        <strong>Método:</strong> Valores interpolados.
+                                    </div>
+                                </div>
+                                
+                                <div class="tree-level-3">
+                                    <div class="criterion-header">
+                                        <h4 class="criterion-title">1.4.2. Tipo de Pavimento</h4>
+                                        <span class="weight-badge">16,7%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Tipo de material usado no piso da estrutura.
+                                    </div>
+                                    <div class="calculation-method">
+                                        <strong>Método:</strong> Padrões de avaliação.
+                                    </div>
+                                </div>
+                                
+                                <div class="tree-level-3">
+                                    <div class="criterion-header">
+                                        <h4 class="criterion-title">1.4.3. Sinuosidade</h4>
+                                        <span class="weight-badge">16,7%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Presença de curvas desnecessárias no trajeto.
+                                    </div>
+                                    <div class="calculation-method">
+                                        <strong>Método:</strong> Padrões de avaliação.
+                                    </div>
+                                </div>
+                                
+                                <div class="tree-level-3">
+                                    <div class="criterion-header">
+                                        <h4 class="criterion-title">1.4.4. Largura Transitável</h4>
+                                        <span class="weight-badge">16,7%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Largura transitável da estrutura considerando direção do fluxo.
+                                    </div>
+                                    <div class="calculation-method">
+                                        <strong>Método:</strong> Valores interpolados (unidirecional: 1,2m = 0; 1,5m = 8; 2,5m = 10).
+                                    </div>
+                                </div>
+                                
+                                <div class="tree-level-3">
+                                    <div class="criterion-header">
+                                        <h4 class="criterion-title">1.4.5. Desníveis</h4>
+                                        <span class="weight-badge">16,7%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Existência de desníveis na estrutura.
+                                    </div>
+                                    <div class="calculation-method">
+                                        <strong>Método:</strong> Função binária.
+                                    </div>
+                                </div>
+                                
+                                <div class="tree-level-3">
+                                    <div class="criterion-header">
+                                        <h4 class="criterion-title">1.4.6. Bidirecionalidade</h4>
+                                        <span class="weight-badge">16,7%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Fluxo da estrutura (unidirecional ou bidirecional).
+                                    </div>
+                                    <div class="calculation-method">
+                                        <strong>Método:</strong> Função binária.
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                            <!-- Nível 1: Proteção -->
+                            <div class="tree-level-1">
+                                <div class="criterion-header" onclick="toggleTreeNode(this)">
+                                    <h2 class="criterion-title">2. Segurança viária</h2>
+                                    <div>
+                                        <span class="weight-badge">33,3%</span>
+                                        <button class="tree-toggle">▼</button>
+                                    </div>
+                                </div>
+                                <div class="criterion-description">
+                                    Avalia a segurança geral de transitar na via e na estrutura.
+                                </div>
+                                <div class="tree-content">
+                                
+                                <!-- Nível 2: Controle de Velocidade -->
+                                <div class="tree-level-2">
+                                    <div class="criterion-header">
+                                        <h3 class="criterion-title">2.1. Controle de Velocidade</h3>
+                                        <span class="weight-badge">33,3%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Presença de elementos de controle de velocidade na via.
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">2.1.1. Controle Eletrônico</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Presença de controle eletrônico de velocidade.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Valores interpolados (1 controle/500m = nota 10).
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">2.1.2. Controle em Nível</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Controles de velocidade no nível da via.
+                                        </div>
+                                        
+                                        <div class="tree-level-4">
+                                            <div class="criterion-header">
+                                                <h5 class="criterion-title">2.1.2.1. Tamanho de Quadra</h5>
+                                                <span class="weight-badge">25%</span>
+                                            </div>
+                                            <div class="calculation-method">
+                                                <strong>Método:</strong> Valor interpolado (quadras < 100m = nota 10; > 300m = nota 0).
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tree-level-4">
+                                            <div class="criterion-header">
+                                                <h5 class="criterion-title">2.1.2.2. Largura da Faixa</h5>
+                                                <span class="weight-badge">25%</span>
+                                            </div>
+                                            <div class="calculation-method">
+                                                <strong>Método:</strong> Valor interpolado (2,5m = nota 10; 3,5m = nota 0).
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tree-level-4">
+                                            <div class="criterion-header">
+                                                <h5 class="criterion-title">2.1.2.3. Outros Controles</h5>
+                                                <span class="weight-badge">25%</span>
+                                            </div>
+                                            <div class="calculation-method">
+                                                <strong>Método:</strong> Função binária.
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tree-level-4">
+                                            <div class="criterion-header">
+                                                <h5 class="criterion-title">2.1.2.4. Sinalização de Velocidade</h5>
+                                                <span class="weight-badge">25%</span>
+                                            </div>
+                                            <div class="calculation-method">
+                                                <strong>Método:</strong> Valor interpolado (1 placa/km = nota 10).
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">2.1.3. Controle em Desnível</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Controles de velocidade em desnível (lombadas físicas).
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Valores interpolados (1 controle/200m = nota 10).
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Nível 2: Conflitos ao Longo -->
+                                <div class="tree-level-2">
+                                    <div class="criterion-header">
+                                        <h3 class="criterion-title">2.2. Conflitos ao Longo</h3>
+                                        <span class="weight-badge">33,3%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Condições de conflitos com veículos motorizados ao longo da estrutura.
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">2.2.1. Riscos ao Longo da Estrutura</h4>
+                                            <span class="weight-badge">25%</span>
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Função binária.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">2.2.2. Conflitos com Ciclistas</h4>
+                                            <span class="weight-badge">25%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Avalia largura transitável, bidirecionalidade e sinuosidade.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">2.2.3. Sinalização da Estrutura</h4>
+                                            <span class="weight-badge">25%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Presença de sinalização vertical regulamentadora e condição da sinalização horizontal.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">2.2.4. Segregação da Estrutura</h4>
+                                            <span class="weight-badge">25%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Mesmo critério de segregação do item 1.1.3.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Nível 2: Conflitos nos Cruzamentos -->
+                                <div class="tree-level-2">
+                                    <div class="criterion-header">
+                                        <h3 class="criterion-title">2.3. Conflitos nos Cruzamentos</h3>
+                                        <span class="weight-badge">33,3%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Condições de conflitos nos cruzamentos.
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">2.3.1. Riscos nos Cruzamentos</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Função binária.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">2.3.2. Sinalização nos Cruzamentos</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Considera sinalização horizontal e vertical nos cruzamentos.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">2.3.3. Concepção do Projeto</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Mesmo critério do item 1.1.1.
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Nível 1: Conforto -->
+                            <div class="tree-level-1">
+                                <div class="criterion-header" onclick="toggleTreeNode(this)">
+                                    <h2 class="criterion-title">3. Manutenção e Urbanidade</h2>
+                                    <div>
+                                        <span class="weight-badge">33,3%</span>
+                                        <button class="tree-toggle">▼</button>
+                                    </div>
+                                </div>
+                                <div class="criterion-description">
+                                    Avalia as condições de conforto e urbanidade da estrutura.
+                                </div>
+                                <div class="tree-content">
+                                
+                                <!-- Nível 2: Manutenção -->
+                                <div class="tree-level-2">
+                                    <div class="criterion-header">
+                                        <h3 class="criterion-title">3.1. Manutenção</h3>
+                                        <span class="weight-badge">50%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Manutenção da estrutura e condições físicas.
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">3.1.1. Situação do Piso</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Qualidade de conservação do piso.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Padrões de avaliação (bom estado = 10; destruído = 0).
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">3.1.2. Condição da Sinalização Horizontal</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Condição de manutenção da sinalização horizontal interna.
+                                        </div>
+                                        
+                                        <div class="tree-level-4">
+                                            <div class="criterion-header">
+                                                <h5 class="criterion-title">3.1.2.1. Condição da Pintura Interna</h5>
+                                                <span class="weight-badge">33,3%</span>
+                                            </div>
+                                            <div class="calculation-method">
+                                                <strong>Método:</strong> Padrões de avaliação.
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tree-level-4">
+                                            <div class="criterion-header">
+                                                <h5 class="criterion-title">3.1.2.2. Condição dos Pictogramas e Setas</h5>
+                                                <span class="weight-badge">33,3%</span>
+                                            </div>
+                                            <div class="calculation-method">
+                                                <strong>Método:</strong> Valores interpolados.
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tree-level-4">
+                                            <div class="criterion-header">
+                                                <h5 class="criterion-title">3.1.2.3. Condição da Sinalização nos Cruzamentos</h5>
+                                                <span class="weight-badge">33,3%</span>
+                                            </div>
+                                            <div class="calculation-method">
+                                                <strong>Método:</strong> Proporcional (imperfeitas = meia sinalização).
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">3.1.3. Situação da Proteção</h4>
+                                            <span class="weight-badge">33,3%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Facilidade de invasão de veículos motorizados.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Padrões de avaliação.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Nível 2: Urbanidade -->
+                                <div class="tree-level-2">
+                                    <div class="criterion-header">
+                                        <h3 class="criterion-title">3.2. Urbanidade</h3>
+                                        <span class="weight-badge">50%</span>
+                                    </div>
+                                    <div class="criterion-description">
+                                        Questões urbanas que interferem na estrutura cicloviária.
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">3.2.1. Obstáculos</h4>
+                                            <span class="weight-badge">25%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Quantidade de obstáculos ao longo da estrutura.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Valores interpolados (0 obstáculos = 10; 2/km = 0).
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">3.2.2. Sombreamento</h4>
+                                            <span class="weight-badge">25%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Presença de árvores ao longo da estrutura.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Padrões de avaliação (sombra na maior parte = 10; sem árvores = 0).
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">3.2.3. Iluminação</h4>
+                                            <span class="weight-badge">25%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Qualidade da iluminação da via e da estrutura.
+                                        </div>
+                                        <div class="calculation-method">
+                                            <strong>Método:</strong> Valores interpolados baseados na largura da via.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tree-level-3">
+                                        <div class="criterion-header">
+                                            <h4 class="criterion-title">3.2.4. Acesso</h4>
+                                            <span class="weight-badge">25%</span>
+                                        </div>
+                                        <div class="criterion-description">
+                                            Mesmo critério do item 1.4.1 (facilidade de acesso à estrutura).
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="note">
+                            <strong>Observações:</strong>
+                            <ul>
+                                <li>Os pesos são distribuídos igualmente entre os critérios de cada nível</li>
+                                <li>Critérios marcados com asterisco (*) são repetições de folhas em outros locais da árvore</li>
+                                <li>Critérios marcados com (*!) não foram avaliados na edição atual</li>
+                                <li>A metodologia completa está disponível no documento oficial do IDECICLO</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>IDECICLO</h3>
+                    <p>Metodologia de Auditoria Cicloviária</p>
+                    <p>Camboriú e Balneário Camboriú</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="assets/js/methodology.js"></script>
+    
+    <script>
+        // Função para alternar seções retráteis
+        function toggleSection(button) {
+            const content = button.nextElementSibling;
+            const isActive = content.classList.contains('active');
+            
+            if (isActive) {
+                content.classList.remove('active');
+                button.classList.remove('active');
+                content.style.maxHeight = '0';
+            } else {
+                content.classList.add('active');
+                button.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        }
+        
+        // Funções para expandir/contrair todas as seções
+        function expandAllSections() {
+            const sections = document.querySelectorAll('.collapsible-section');
+            sections.forEach(section => {
+                const button = section.querySelector('.collapsible-header');
+                const content = section.querySelector('.collapsible-content');
+                
+                content.classList.add('active');
+                button.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            });
+        }
+        
+        function collapseAllSections() {
+            const sections = document.querySelectorAll('.collapsible-section');
+            sections.forEach(section => {
+                const button = section.querySelector('.collapsible-header');
+                const content = section.querySelector('.collapsible-content');
+                
+                content.classList.remove('active');
+                button.classList.remove('active');
+                content.style.maxHeight = '0';
+            });
+        }
+        
+        function toggleTreeNode(header) {
+            const content = header.nextElementSibling.nextElementSibling; // Skip description
+            const toggle = header.querySelector('.tree-toggle');
+            
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                toggle.classList.remove('collapsed');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.classList.add('collapsed');
+                toggle.classList.add('collapsed');
+                content.style.maxHeight = '0';
+            }
+        }
+        
+        // Inicializar Mermaid
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            themeVariables: {
+                primaryColor: '#2E7D32',
+                primaryTextColor: '#fff',
+                primaryBorderColor: '#1B5E20',
+                lineColor: '#666',
+                secondaryColor: '#E8F5E8',
+                tertiaryColor: '#f8f9fa'
+            }
+        });
+
+        // Carregar e renderizar metodologia
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadMethodology();
+        });
+
+        async function loadMethodology() {
+            try {
+                // Lista dos documentos separados
+                const documents = [
+                    { file: '01-indice-desenvolvimento-cicloviario.md', title: 'O Índice de Desenvolvimento Cicloviário' },
+                    { file: '02-objetivos.md', title: 'Objetivos' },
+                    { file: '03-metodologia.md', title: 'Metodologia' },
+                    { file: '04-avaliacao-infraestrutura.md', title: 'Avaliação de Infraestrutura' },
+                    { file: '05-apendices.md', title: 'Apêndice' }
+                ];
+                
+                let fullHtml = '<h1>Metodologia IDECICLO</h1>';
+                
+                // Carregar cada documento
+                for (let i = 0; i < documents.length; i++) {
+                    const doc = documents[i];
+                    try {
+                        const response = await fetch(`content/${doc.file}`);
+                        let markdown = await response.text();
+                        
+                        // Converter markdown para HTML
+                        const html = marked.parse(markdown);
+                        
+                        // Criar seção retrátil
+                        const sectionId = `section-${i + 1}`;
+                        fullHtml += `
+                            <div class="collapsible-section">
+                                <button class="collapsible-header" onclick="toggleSectionById('${sectionId}')">
+                                    <span class="section-number">${i + 1}.</span>
+                                    <span class="section-title">${doc.title}</span>
+                                    <span class="toggle-icon">▼</span>
+                                </button>
+                                <div class="collapsible-content" id="${sectionId}">
+                                    ${html}
+                                </div>
+                            </div>
+                        `;
+                    } catch (error) {
+                        console.error(`Erro ao carregar ${doc.file}:`, error);
+                        fullHtml += `<p>❌ Erro ao carregar ${doc.title}</p>`;
+                    }
+                }
+                
+                // Inserir no container
+                document.getElementById('methodology-text').innerHTML = fullHtml;
+                
+                // Re-inicializar Mermaid para novos diagramas
+                mermaid.init();
+                
+            } catch (error) {
+                console.error('Erro ao carregar metodologia:', error);
+                document.getElementById('methodology-text').innerHTML = 
+                    '<p>❌ Erro ao carregar metodologia. Verifique se o arquivo existe.</p>';
+            }
+        }
+
+        function toggleSectionById(sectionId) {
+            const content = document.getElementById(sectionId);
+            const header = content.previousElementSibling;
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                header.classList.remove('active');
+                content.style.maxHeight = '0';
+            } else {
+                content.classList.add('active');
+                header.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        }
+        
+        // Função para expandir todas as seções
+        function expandAllSections() {
+            const sections = document.querySelectorAll('.collapsible-content');
+            const headers = document.querySelectorAll('.collapsible-header');
+            
+            sections.forEach((section, index) => {
+                section.classList.add('active');
+                headers[index].classList.add('active');
+                section.style.maxHeight = section.scrollHeight + 'px';
+            });
+        }
+        
+        // Função para contrair todas as seções
+        function collapseAllSections() {
+            const sections = document.querySelectorAll('.collapsible-content');
+            const headers = document.querySelectorAll('.collapsible-header');
+            
+            sections.forEach((section, index) => {
+                section.classList.remove('active');
+                headers[index].classList.remove('active');
+                section.style.maxHeight = '0';
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comparação entre estruturas cicloviárias - IDECICLO">
+    <title>Comparação de Estruturas - IDECICLO</title>
+    
+    <!-- Mapbox CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/print.css">
+    
+    <style>
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .via-selector {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .selector-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .selector-item {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .selector-item label {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .selector-item select,
+        #typology-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #E0E0E0;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: white;
+            box-sizing: border-box;
+        }
+        
+        .selector-item select:focus,
+        #typology-select:focus {
+            outline: none;
+            border-color: #2E7D32;
+        }
+        
+        #typology-select {
+            max-width: 300px;
+        }
+        
+        .via-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .via-header {
+            background: #2E7D32;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .via-header h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+        
+        .via-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .via-content {
+            padding: 1.5rem;
+        }
+        
+        .score-section {
+            margin-bottom: 2rem;
+        }
+        
+        .score-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #ddd;
+        }
+        
+        .score-label {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .score-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px dashed #ddd;
+        }
+        
+        .empty-state h3 {
+            margin-bottom: 1rem;
+            color: #999;
+        }
+        
+        .comparison-actions {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 0.5rem;
+        }
+        
+        .btn-primary {
+            background: #2E7D32;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #1B5E20;
+        }
+        
+        .btn-secondary {
+            background: #455A64;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #37474F;
+        }
+        
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .typology-info {
+            background: #E8F5E8;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .typology-info h4 {
+            margin: 0 0 0.5rem 0;
+            color: #2E7D32;
+        }
+        
+        .typology-info p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .selector-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">IDECICLO</a></h1>
+                    <p>Auditoria Cicloviária</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
+                        <li><a href="comparacao.html" class="nav-link active">Comparação</a></li>
+                        <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h1>Comparação de Estruturas Cicloviárias</h1>
+                <p>Compare as notas de avaliação entre estruturas da mesma tipologia</p>
+            </div>
+
+            <!-- Seletor de Tipologia -->
+            <div class="via-selector">
+                <h2>Selecionar Tipologia</h2>
+                <div class="selector-item">
+                    <label for="typology-select">Tipologia:</label>
+                    <select id="typology-select" onchange="loadTypologyVias()">
+                        <option value="">Selecione uma tipologia...</option>
+                    </select>
+                </div>
+                
+                <div id="typology-info" class="typology-info" style="display: none;">
+                    <h4 id="typology-name">Tipologia Selecionada</h4>
+                    <p id="typology-count">0 estruturas disponíveis</p>
+                </div>
+            </div>
+
+            <!-- Seletores de Vias -->
+            <div class="via-selector" id="via-selectors" style="display: none;">
+                <h2>Selecionar Estruturas para Comparação</h2>
+                <div class="selector-group">
+                    <div class="selector-item">
+                        <label for="via1-select">Primeira Estrutura:</label>
+                        <select id="via1-select" onchange="loadViaComparison()">
+                            <option value="">Selecione uma estrutura...</option>
+                        </select>
+                    </div>
+                    <div class="selector-item">
+                        <label for="via2-select">Segunda Estrutura:</label>
+                        <select id="via2-select" onchange="loadViaComparison()">
+                            <option value="">Selecione uma estrutura...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ações de Comparação -->
+            <div class="comparison-actions" id="comparison-actions" style="display: none;">
+                <button class="btn btn-secondary" onclick="clearComparison()">🔄 Limpar Comparação</button>
+                <button class="btn btn-primary" onclick="exportComparison()" id="export-btn" disabled>📎 Exportar Comparação</button>
+            </div>
+
+            <!-- Container de Comparação -->
+            <div class="comparison-container" id="comparison-container">
+                <div class="via-card">
+                    <div class="empty-state">
+                        <h3>📊 Primeira Estrutura</h3>
+                        <p>Selecione uma tipologia e uma estrutura para começar a comparação</p>
+                    </div>
+                </div>
+                <div class="via-card">
+                    <div class="empty-state">
+                        <h3>📊 Segunda Estrutura</h3>
+                        <p>Selecione uma tipologia e uma estrutura para começar a comparação</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>IDECICLO</h3>
+                    <p>Relatório de Auditoria Cicloviária</p>
+                    <p>Camboriú e Balneário Camboriú</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="libs/cdn-config.js"></script>
+    
+    <script>
+        let allVias = [];
+        let scoreTree = {};
+        let currentTypology = '';
+        let typologyVias = [];
+        let selectedVia1 = null;
+        let selectedVia2 = null;
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadData();
+            populateTypologies();
+        });
+
+        // Carregar dados
+        async function loadData() {
+            try {
+                const [viasResponse, treeResponse] = await Promise.all([
+                    fetch('data/processed-data.json'),
+                    fetch('assets/data/score-tree.json')
+                ]);
+                
+                allVias = await viasResponse.json();
+                scoreTree = await treeResponse.json();
+                
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                alert('Erro ao carregar dados. Recarregue a página.');
+            }
+        }
+
+        // Popular tipologias
+        function populateTypologies() {
+            const typologies = [...new Set(allVias.map(via => via.typology))].sort();
+            const select = document.getElementById('typology-select');
+            
+            typologies.forEach(typology => {
+                const option = document.createElement('option');
+                option.value = typology;
+                option.textContent = typology;
+                select.appendChild(option);
+            });
+        }
+
+        // Carregar vias da tipologia selecionada
+        function loadTypologyVias() {
+            const typology = document.getElementById('typology-select').value;
+            
+            if (!typology) {
+                document.getElementById('typology-info').style.display = 'none';
+                document.getElementById('via-selectors').style.display = 'none';
+                document.getElementById('comparison-actions').style.display = 'none';
+                clearComparison();
+                return;
+            }
+            
+            currentTypology = typology;
+            typologyVias = allVias.filter(via => via.typology === typology);
+            
+            // Mostrar info da tipologia
+            document.getElementById('typology-name').textContent = typology;
+            document.getElementById('typology-count').textContent = `${typologyVias.length} estruturas disponíveis`;
+            document.getElementById('typology-info').style.display = 'block';
+            
+            // Popular seletores de vias
+            populateViaSelectors();
+            
+            // Mostrar seletores
+            document.getElementById('via-selectors').style.display = 'block';
+            document.getElementById('comparison-actions').style.display = 'block';
+            
+            // Limpar comparação anterior
+            clearComparison();
+        }
+
+        // Popular seletores de vias
+        function populateViaSelectors() {
+            const via1Select = document.getElementById('via1-select');
+            const via2Select = document.getElementById('via2-select');
+            
+            // Limpar opções existentes
+            via1Select.innerHTML = '<option value="">Selecione uma estrutura...</option>';
+            via2Select.innerHTML = '<option value="">Selecione uma estrutura...</option>';
+            
+            // Adicionar vias da tipologia
+            typologyVias.forEach(via => {
+                const option1 = document.createElement('option');
+                option1.value = via.id;
+                option1.textContent = `${via.structure_name} (${via.city})`;
+                via1Select.appendChild(option1);
+                
+                const option2 = document.createElement('option');
+                option2.value = via.id;
+                option2.textContent = `${via.structure_name} (${via.city})`;
+                via2Select.appendChild(option2);
+            });
+        }
+
+        // Carregar comparação das vias
+        function loadViaComparison() {
+            const via1Id = document.getElementById('via1-select').value;
+            const via2Id = document.getElementById('via2-select').value;
+            
+            selectedVia1 = via1Id ? allVias.find(via => via.id == via1Id) : null;
+            selectedVia2 = via2Id ? allVias.find(via => via.id == via2Id) : null;
+            
+            renderComparison();
+            
+            // Habilitar botão de exportar se ambas as vias estão selecionadas
+            const exportBtn = document.getElementById('export-btn');
+            exportBtn.disabled = !(selectedVia1 && selectedVia2);
+        }
+
+        // Renderizar comparação
+        function renderComparison() {
+            const container = document.getElementById('comparison-container');
+            
+            container.innerHTML = `
+                <div class="via-card">
+                    ${selectedVia1 ? renderViaCard(selectedVia1) : renderEmptyState('Primeira Estrutura')}
+                </div>
+                <div class="via-card">
+                    ${selectedVia2 ? renderViaCard(selectedVia2) : renderEmptyState('Segunda Estrutura')}
+                </div>
+            `;
+        }
+
+        // Renderizar card de via
+        function renderViaCard(via) {
+            const rates = via.full_rates || {};
+            
+            let scoresHtml = '';
+            
+            if (scoreTree.average) {
+                // Média Geral
+                const avgValue = rates[scoreTree.average.key];
+                const avgColor = getScoreColor(avgValue);
+                const avgClassification = getScoreClassification(avgValue);
+                
+                scoresHtml += `
+                    <div class="score-section">
+                        <h4>🏆 ${scoreTree.average.label}</h4>
+                        <div class="score-item" style="border-left-color: ${avgColor}">
+                            <span class="score-label">${scoreTree.average.label}</span>
+                            <span class="score-value" style="color: ${avgColor}">
+                                ${avgValue !== null && avgValue !== undefined ? avgValue.toFixed(1) : 'N/A'}
+                                ${avgValue !== null && avgValue !== undefined ? ` (${avgClassification})` : ''}
+                            </span>
+                        </div>
+                `;
+                
+                // Componentes principais
+                if (scoreTree.average.components) {
+                    scoreTree.average.components.forEach(comp => {
+                        const compValue = rates[comp.key];
+                        const compColor = getScoreColor(compValue);
+                        const compClassification = getScoreClassification(compValue);
+                        
+                        const icon = comp.label.includes('1.') ? '🏗️' : comp.label.includes('2.') ? '🛡️' : '😴';
+                        
+                        scoresHtml += `
+                            <div class="score-item" style="border-left-color: ${compColor}">
+                                <span class="score-label">${icon} ${comp.label}</span>
+                                <span class="score-value" style="color: ${compColor}">
+                                    ${compValue !== null && compValue !== undefined ? compValue.toFixed(1) : 'N/A'}
+                                    ${compValue !== null && compValue !== undefined ? ` (${compClassification})` : ''}
+                                </span>
+                            </div>
+                        `;
+                        
+                        // Subcomponentes
+                        if (comp.components) {
+                            comp.components.forEach(subComp => {
+                                const subValue = rates[subComp.key];
+                                const subColor = getScoreColor(subValue);
+                                const subClassification = getScoreClassification(subValue);
+                                
+                                scoresHtml += `
+                                    <div class="score-item" style="border-left-color: ${subColor}; margin-left: 1rem; font-size: 0.9rem;">
+                                        <span class="score-label">${subComp.label}</span>
+                                        <span class="score-value" style="color: ${subColor}">
+                                            ${subValue !== null && subValue !== undefined ? subValue.toFixed(1) : 'N/A'}
+                                        </span>
+                                    </div>
+                                `;
+                            });
+                        }
+                    });
+                }
+                
+                scoresHtml += '</div>';
+            }
+            
+            return `
+                <div class="via-header">
+                    <h3>${via.structure_name}</h3>
+                    <p>${via.city} • ${(via.length / 1000).toFixed(1)} km</p>
+                </div>
+                <div class="via-content">
+                    ${scoresHtml}
+                </div>
+            `;
+        }
+
+        // Renderizar estado vazio
+        function renderEmptyState(title) {
+            return `
+                <div class="empty-state">
+                    <h3>📊 ${title}</h3>
+                    <p>Selecione uma estrutura para comparação</p>
+                </div>
+            `;
+        }
+
+        // Função para obter cor da nota
+        function getScoreColor(score) {
+            if (score === null || score === undefined) return '#999';
+            if (score >= 8) return '#4CAF50';
+            if (score >= 6) return '#8BC34A';
+            if (score >= 4) return '#FFC107';
+            if (score >= 2) return '#FF9800';
+            return '#F44336';
+        }
+        
+        // Função para obter classificação da nota
+        function getScoreClassification(score) {
+            if (score === null || score === undefined) return 'N/A';
+            if (score >= 8) return 'Excelente';
+            if (score >= 6) return 'Bom';
+            if (score >= 4) return 'Regular';
+            if (score >= 2) return 'Ruim';
+            return 'Inadequado';
+        }
+
+        // Limpar comparação
+        function clearComparison() {
+            document.getElementById('via1-select').value = '';
+            document.getElementById('via2-select').value = '';
+            selectedVia1 = null;
+            selectedVia2 = null;
+            renderComparison();
+            document.getElementById('export-btn').disabled = true;
+        }
+
+        // Exportar comparação
+        function exportComparison() {
+            if (!selectedVia1 || !selectedVia2) {
+                alert('Selecione duas estruturas para exportar a comparação');
+                return;
+            }
+            
+            // Criar conteúdo do relatório
+            const content = generateComparisonReport();
+            
+            // Criar e baixar arquivo
+            const blob = new Blob([content], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `comparacao-${selectedVia1.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}-vs-${selectedVia2.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}.md`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Gerar relatório de comparação
+        function generateComparisonReport() {
+            const date = new Date().toLocaleDateString('pt-BR');
+            
+            let content = `# Comparação de Estruturas Cicloviárias\n\n`;
+            content += `**Data:** ${date}\n`;
+            content += `**Tipologia:** ${currentTypology}\n\n`;
+            
+            content += `## Estruturas Comparadas\n\n`;
+            content += `### ${selectedVia1.structure_name}\n`;
+            content += `- **Localização:** ${selectedVia1.city}\n`;
+            content += `- **Extensão:** ${(selectedVia1.length / 1000).toFixed(1)} km\n\n`;
+            
+            content += `### ${selectedVia2.structure_name}\n`;
+            content += `- **Localização:** ${selectedVia2.city}\n`;
+            content += `- **Extensão:** ${(selectedVia2.length / 1000).toFixed(1)} km\n\n`;
+            
+            content += `## Comparação de Notas\n\n`;
+            
+            if (scoreTree.average) {
+                const rates1 = selectedVia1.full_rates || {};
+                const rates2 = selectedVia2.full_rates || {};
+                
+                // Média Geral
+                const avg1 = rates1[scoreTree.average.key];
+                const avg2 = rates2[scoreTree.average.key];
+                
+                content += `### ${scoreTree.average.label}\n\n`;
+                content += `| Estrutura | Nota | Classificação |\n`;
+                content += `|-----------|------|---------------|\n`;
+                content += `| ${selectedVia1.structure_name} | ${avg1 !== null && avg1 !== undefined ? avg1.toFixed(1) : 'N/A'} | ${getScoreClassification(avg1)} |\n`;
+                content += `| ${selectedVia2.structure_name} | ${avg2 !== null && avg2 !== undefined ? avg2.toFixed(1) : 'N/A'} | ${getScoreClassification(avg2)} |\n\n`;
+                
+                // Componentes principais
+                if (scoreTree.average.components) {
+                    scoreTree.average.components.forEach(comp => {
+                        const comp1 = rates1[comp.key];
+                        const comp2 = rates2[comp.key];
+                        
+                        content += `### ${comp.label}\n\n`;
+                        content += `| Estrutura | Nota | Classificação |\n`;
+                        content += `|-----------|------|---------------|\n`;
+                        content += `| ${selectedVia1.structure_name} | ${comp1 !== null && comp1 !== undefined ? comp1.toFixed(1) : 'N/A'} | ${getScoreClassification(comp1)} |\n`;
+                        content += `| ${selectedVia2.structure_name} | ${comp2 !== null && comp2 !== undefined ? comp2.toFixed(1) : 'N/A'} | ${getScoreClassification(comp2)} |\n\n`;
+                    });
+                }
+            }
+            
+            content += `---\n\n`;
+            content += `*Relatório gerado automaticamente pelo sistema IDECICLO*\n`;
+            
+            return content;
+        }
+    </script>
+</body>
+</html>

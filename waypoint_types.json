@@ -1,0 +1,3906 @@
+{
+  "total_types": 780,
+  "total_waypoints": 9266,
+  "waypoint_types": [
+    {
+      "show": false,
+      "name": "Foto",
+      "count": 2449
+    },
+    {
+      "show": true,
+      "name": "Bueiro",
+      "count": 442
+    },
+    {
+      "show": true,
+      "name": "Em cruzamento BOA condição",
+      "count": 259
+    },
+    {
+      "show": true,
+      "name": "Buraco",
+      "count": 234
+    },
+    {
+      "show": true,
+      "name": "Travessia de pedestre em nível (lombofaixa)",
+      "count": 225
+    },
+    {
+      "show": false,
+      "name": "Área transitável da ciclo (cm)",
+      "count": 204
+    },
+    {
+      "show": false,
+      "name": "R-34",
+      "count": 181
+    },
+    {
+      "show": false,
+      "name": "Área de amortecimento da ciclo (cm)",
+      "count": 154
+    },
+    {
+      "show": false,
+      "name": "Total da via (incluindo a ciclo) (cm)",
+      "count": 151
+    },
+    {
+      "show": true,
+      "name": "Outro obstáculo",
+      "count": 143
+    },
+    {
+      "show": false,
+      "name": "Pictograma BOA condição",
+      "count": 139
+    },
+    {
+      "show": false,
+      "name": "Faixa de carros logo ao lado da ciclo (cm)",
+      "count": 134
+    },
+    {
+      "show": true,
+      "name": "Em cruzamento MÁ condição",
+      "count": 122
+    },
+    {
+      "show": false,
+      "name": "Bidirecional",
+      "count": 110
+    },
+    {
+      "show": true,
+      "name": "SEM pintura no cruzamento",
+      "count": 105
+    },
+    {
+      "show": false,
+      "name": "A ciclo é completamente reta.",
+      "count": 104
+    },
+    {
+      "show": true,
+      "name": "Lombadas físicas",
+      "count": 93
+    },
+    {
+      "show": false,
+      "name": "Asfalto",
+      "count": 92
+    },
+    {
+      "show": true,
+      "name": "Ausência de conexão entre ciclos.",
+      "count": 86
+    },
+    {
+      "show": true,
+      "name": "Semáforo para motorizado",
+      "count": 84
+    },
+    {
+      "show": false,
+      "name": "50km/h",
+      "count": 84
+    },
+    {
+      "show": false,
+      "name": "Ciclofaixa",
+      "count": 77
+    },
+    {
+      "show": false,
+      "name": "Complementar",
+      "count": 75
+    },
+    {
+      "show": false,
+      "name": "Tachões",
+      "count": 72
+    },
+    {
+      "show": false,
+      "name": "SE CICLOFAIXA: para invadir a ciclo parte do automóvel passa obrigatoriamente por cima de segregadores",
+      "count": 67
+    },
+    {
+      "show": false,
+      "name": "Não há árvores nem mudas",
+      "count": 65
+    },
+    {
+      "show": false,
+      "name": "SEM Semáforo exclusivo",
+      "count": 63
+    },
+    {
+      "show": true,
+      "name": "Grade alinhada ao pneu",
+      "count": 63
+    },
+    {
+      "show": false,
+      "name": "Mão Única",
+      "count": 61
+    },
+    {
+      "show": false,
+      "name": "Pictograma MÁ condição",
+      "count": 61
+    },
+    {
+      "show": false,
+      "name": "40km/h",
+      "count": 60
+    },
+    {
+      "show": false,
+      "name": "Bom estado",
+      "count": 60
+    },
+    {
+      "show": false,
+      "name": "Quantidade de vagas",
+      "count": 58
+    },
+    {
+      "show": false,
+      "name": "Desnível",
+      "count": 57
+    },
+    {
+      "show": false,
+      "name": "2 faixas",
+      "count": 55
+    },
+    {
+      "show": false,
+      "name": "Estacionamento proibido na via",
+      "count": 54
+    },
+    {
+      "show": false,
+      "name": "Iluminação geral na via do outro lado da infraestrutura",
+      "count": 53
+    },
+    {
+      "show": true,
+      "name": "U invertido",
+      "count": 53
+    },
+    {
+      "show": false,
+      "name": "A pintura está boa, COMPLETA e visível",
+      "count": 49
+    },
+    {
+      "show": false,
+      "name": "Estacionamento dedicado de um lado, segregado da circulação",
+      "count": 49
+    },
+    {
+      "show": false,
+      "name": "Semáforo para pedestres",
+      "count": 46
+    },
+    {
+      "show": false,
+      "name": "Via transversal COM acesso à ciclovia",
+      "count": 46
+    },
+    {
+      "show": false,
+      "name": "Mão Dupla",
+      "count": 45
+    },
+    {
+      "show": false,
+      "name": "Sombras em alguns trechos, SEM mudas novas",
+      "count": 45
+    },
+    {
+      "show": false,
+      "name": "1 faixa",
+      "count": 45
+    },
+    {
+      "show": false,
+      "name": "Iluminação geral na via do mesmo lado da estrutura",
+      "count": 44
+    },
+    {
+      "show": false,
+      "name": "Segregadores NÃO DIFICULTAM o acesso de ciclistas",
+      "count": 42
+    },
+    {
+      "show": true,
+      "name": "Outro risco. EXPLIQUE.",
+      "count": 42
+    },
+    {
+      "show": false,
+      "name": "Pequenas imperfeições, como fissuras",
+      "count": 42
+    },
+    {
+      "show": false,
+      "name": "No bordo esquerdo de Via de Mão Única",
+      "count": 42
+    },
+    {
+      "show": true,
+      "name": "poste",
+      "count": 40
+    },
+    {
+      "show": false,
+      "name": "Apenas faixas vermelhas nas bordas, com travessias pintadas nos cruzamentos",
+      "count": 38
+    },
+    {
+      "show": false,
+      "name": "Em bordo de Via de Mão Dupla",
+      "count": 37
+    },
+    {
+      "show": false,
+      "name": "Ponto de embarque de ônibus interrompe a ciclo",
+      "count": 33
+    },
+    {
+      "show": false,
+      "name": "Apenas faixas vermelhas nas bordas",
+      "count": 33
+    },
+    {
+      "show": true,
+      "name": "Cruzamento perigoso. EXPLIQUE.",
+      "count": 32
+    },
+    {
+      "show": false,
+      "name": "Gravação de voz",
+      "count": 29
+    },
+    {
+      "show": false,
+      "name": "Ambas: Alguns trechos sem segregadores. Automóvel consegue passar por entre estes com facilidade",
+      "count": 28
+    },
+    {
+      "show": false,
+      "name": "22",
+      "count": 28
+    },
+    {
+      "show": false,
+      "name": "SE CICLOVIA: segregação impede completamente a invasão de automóvel e não há trechos desprotegidos",
+      "count": 27
+    },
+    {
+      "show": false,
+      "name": "Ciclovia",
+      "count": 26
+    },
+    {
+      "show": false,
+      "name": "24",
+      "count": 25
+    },
+    {
+      "show": false,
+      "name": "Nenhum elemento de controle de velocidade na via",
+      "count": 25
+    },
+    {
+      "show": false,
+      "name": "Toda área de circulação pintada de vermelho",
+      "count": 24
+    },
+    {
+      "show": false,
+      "name": "23",
+      "count": 23
+    },
+    {
+      "show": false,
+      "name": "No bordo direito de Via de Mão Única",
+      "count": 23
+    },
+    {
+      "show": false,
+      "name": "A pintura está boa, mas FALHA em ALGUNS pontos",
+      "count": 23
+    },
+    {
+      "show": true,
+      "name": "COM Semáforo exclusivo",
+      "count": 22
+    },
+    {
+      "show": false,
+      "name": "10",
+      "count": 20
+    },
+    {
+      "show": true,
+      "name": "rampa",
+      "count": 20
+    },
+    {
+      "show": false,
+      "name": "Canteiros",
+      "count": 19
+    },
+    {
+      "show": false,
+      "name": "Seta MÁ condição",
+      "count": 18
+    },
+    {
+      "show": false,
+      "name": "Iluminação geral dos dois lados da via",
+      "count": 17
+    },
+    {
+      "show": false,
+      "name": "30km/h",
+      "count": 17
+    },
+    {
+      "show": false,
+      "name": "12",
+      "count": 16
+    },
+    {
+      "show": false,
+      "name": "170",
+      "count": 16
+    },
+    {
+      "show": false,
+      "name": "Pista dupla",
+      "count": 16
+    },
+    {
+      "show": false,
+      "name": "200",
+      "count": 15
+    },
+    {
+      "show": false,
+      "name": "Concreto",
+      "count": 15
+    },
+    {
+      "show": false,
+      "name": "Outras características. EXPLIQUE.",
+      "count": 15
+    },
+    {
+      "show": true,
+      "name": "Radar/Lombada Eletrônica",
+      "count": 15
+    },
+    {
+      "show": false,
+      "name": "Ciclovia começa/termina bem antes da esquina",
+      "count": 14
+    },
+    {
+      "show": false,
+      "name": "É privado",
+      "count": 13
+    },
+    {
+      "show": true,
+      "name": "Entorta roda",
+      "count": 13
+    },
+    {
+      "show": false,
+      "name": "25",
+      "count": 13
+    },
+    {
+      "show": false,
+      "name": "A pintura é MUITO falha, mostrando muito asfalto",
+      "count": 12
+    },
+    {
+      "show": false,
+      "name": "Início",
+      "count": 12
+    },
+    {
+      "show": false,
+      "name": "A-30",
+      "count": 12
+    },
+    {
+      "show": false,
+      "name": "Segregadores DIFICULTAM o acesso parcialmente de ciclistas",
+      "count": 12
+    },
+    {
+      "show": false,
+      "name": "190",
+      "count": 11
+    },
+    {
+      "show": false,
+      "name": "4 faixas",
+      "count": 11
+    },
+    {
+      "show": false,
+      "name": "180",
+      "count": 11
+    },
+    {
+      "show": false,
+      "name": "A pintura é falha em VÁRIOS pontos",
+      "count": 11
+    },
+    {
+      "show": false,
+      "name": "Irregularidades que demandam desvio para circulação",
+      "count": 10
+    },
+    {
+      "show": false,
+      "name": "Estacionamento de um lado, incluso na circulação",
+      "count": 10
+    },
+    {
+      "show": false,
+      "name": "Outro segregador",
+      "count": 10
+    },
+    {
+      "show": false,
+      "name": "Estacionamento dos dois lados",
+      "count": 10
+    },
+    {
+      "show": false,
+      "name": "Guias",
+      "count": 10
+    },
+    {
+      "show": false,
+      "name": "Calçada compartilhada",
+      "count": 10
+    },
+    {
+      "show": false,
+      "name": "30",
+      "count": 9
+    },
+    {
+      "show": false,
+      "name": "A ciclo é sinuosa, exigindo atenção",
+      "count": 9
+    },
+    {
+      "show": true,
+      "name": "Raíz",
+      "count": 9
+    },
+    {
+      "show": false,
+      "name": "150",
+      "count": 9
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Obstáculo 🗑️",
+      "count": 9
+    },
+    {
+      "show": false,
+      "name": "160",
+      "count": 9
+    },
+    {
+      "show": false,
+      "name": "Pintura APAGADA ou somente rastros de tinta",
+      "count": 9
+    },
+    {
+      "show": false,
+      "name": "75",
+      "count": 9
+    },
+    {
+      "show": false,
+      "name": "Ciclovia termina/começa bem antes da esquina",
+      "count": 9
+    },
+    {
+      "show": false,
+      "name": "315",
+      "count": 8
+    },
+    {
+      "show": true,
+      "name": "tampa de inspeção rebaixada",
+      "count": 8
+    },
+    {
+      "show": false,
+      "name": "No canteiro central",
+      "count": 8
+    },
+    {
+      "show": true,
+      "name": "Termina ciclo com ciclista na contramão",
+      "count": 7
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Largura 🗑️",
+      "count": 7
+    },
+    {
+      "show": false,
+      "name": "140",
+      "count": 7
+    },
+    {
+      "show": false,
+      "name": "165",
+      "count": 7
+    },
+    {
+      "show": false,
+      "name": "800",
+      "count": 7
+    },
+    {
+      "show": false,
+      "name": "130",
+      "count": 7
+    },
+    {
+      "show": false,
+      "name": "3 faixas",
+      "count": 7
+    },
+    {
+      "show": false,
+      "name": "Acesso sem uma via transversal",
+      "count": 7
+    },
+    {
+      "show": false,
+      "name": "R-36",
+      "count": 7
+    },
+    {
+      "show": false,
+      "name": "135",
+      "count": 6
+    },
+    {
+      "show": false,
+      "name": "pictograma para ciclista respeitar a prioridade do pedestre",
+      "count": 6
+    },
+    {
+      "show": false,
+      "name": "1000",
+      "count": 6
+    },
+    {
+      "show": false,
+      "name": "100",
+      "count": 6
+    },
+    {
+      "show": false,
+      "name": "Sobre calçada",
+      "count": 6
+    },
+    {
+      "show": false,
+      "name": "120",
+      "count": 6
+    },
+    {
+      "show": false,
+      "name": "300",
+      "count": 6
+    },
+    {
+      "show": true,
+      "name": "bueiro",
+      "count": 6
+    },
+    {
+      "show": true,
+      "name": "Via transversal SEM acesso à ciclovia",
+      "count": 6
+    },
+    {
+      "show": false,
+      "name": "Tem cobertura",
+      "count": 6
+    },
+    {
+      "show": false,
+      "name": "guias faltantes, pode entrar carro",
+      "count": 6
+    },
+    {
+      "show": true,
+      "name": "placa PARE (para ciclistas pararem)",
+      "count": 6
+    },
+    {
+      "show": false,
+      "name": "Picto Sinalização horizontal \"Pare\" para ciclista parar no cruzamento (entendo como indevida)",
+      "count": 6
+    },
+    {
+      "show": false,
+      "name": "Marcação EXTRA: Foram observados trechos com segregadores faltando (arrancados).",
+      "count": 5
+    },
+    {
+      "show": false,
+      "name": "175",
+      "count": 5
+    },
+    {
+      "show": false,
+      "name": "Fim",
+      "count": 5
+    },
+    {
+      "show": false,
+      "name": "350",
+      "count": 5
+    },
+    {
+      "show": false,
+      "name": "medir depois",
+      "count": 5
+    },
+    {
+      "show": false,
+      "name": "Nota",
+      "count": 5
+    },
+    {
+      "show": true,
+      "name": "pista elevada no cruzamento",
+      "count": 5
+    },
+    {
+      "show": false,
+      "name": "pictograma PARE",
+      "count": 5
+    },
+    {
+      "show": false,
+      "name": "Tijolo intertravado",
+      "count": 5
+    },
+    {
+      "show": false,
+      "name": "10 vagas",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "290",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "782",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "Sombras em alguns trechos, COM mudas plantadas",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "320",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "810",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "370",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "380",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "390",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "400",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "110",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "Iluminação dedicada para ciclistas",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "Não há pintura nem sinalização",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "Outro pavimento",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "pictograma PARE para pedestres (ciclista parar para pedestres)",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "acesso à ciclovia de má qualidade",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "guia caída na ciclovia",
+      "count": 4
+    },
+    {
+      "show": false,
+      "name": "20",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "305",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "780",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "8",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "280",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Placa 🗑️",
+      "count": 3
+    },
+    {
+      "show": true,
+      "name": "Vala profunda",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "210",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "60",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "195",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "197",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "AMBAS: Poucos trechos COM segregadores. Automóvel consegue passar POR ENTRE estes com facilidade.",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "188",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "335",
+      "count": 3
+    },
+    {
+      "show": true,
+      "name": "outro obstáculo poste",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "APENAS a Pintura",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "sinalização complementar entrada e saída de veículos",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "145",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "1050",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "153",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "2",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "198",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "960",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "310",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "Piso diferenciado",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "420",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "85",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "220",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "árvore baixa",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "45",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "lajota hexagonal de concreto",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "pictograma PARE (cilistas parar para pedestres)",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "pictograma PARE para carros (ciclista parar para carros)",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "80",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "70",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "aprox. 100 m \"Estacionamento dedicado de um lado, segregado da circulação\"",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "altura parapeito 120",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "Segregador: muro 80 cm",
+      "count": 3
+    },
+    {
+      "show": false,
+      "name": "816",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "cruzamento em rotatória sem sinalização",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "14",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "16",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "A ciclo troca de lado na via, sem redutores de velocidade ou semáforos",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Avaliação de Sombreamento 🗑️",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Estacionamento 🗑️",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Controle de Velocidade 🗑️",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "490",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "670",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Unidirecional no Fluxo",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Seta BOA condição",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "430",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "calçada quebrada",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "Risco: trecho em que a via atinge o nível da calçada - 100 m",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "Risco: entrada de posto de gasolina",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Pintada de vermelho com interrupções",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "fim ciclofaixa",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "Complementar: circuito cicloturismo jacaré",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "725",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "333",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "345",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "775",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "787",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "buraco",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "808",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "385",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "50",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "273",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "761",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "cruzamento com via de mão dupla",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "325",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "375",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "360",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "185",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "3 vagas",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "192",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "600",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "415",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "172",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "SEM Semáforo",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Avaliação de Pavimento 🗑️",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "poste na ciclofaixa",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "complementar: circuito cicloturismo jacaré",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "758",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "332",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "tampa de inspeção elevada",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Esta ciclofaixa é a mesma, sem divisão, do outro trecho analisado, mas aqui a via de motorizados muda de sentido",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "semáforo exclusivo mal posicionado",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "rotatória",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "250",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "1700",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Bidirecional com Mão Inglesa",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "Ciclovia começa/termina muito antes da esquina",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "trecho 20 m sobre calçada sem sinalização",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "entrada de posto sem pintura ou sinalização",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "155",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Falhas que demandam redução de velocidade ou parada",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "105",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "313",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "245",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "cruzamento de mão inglesa sobre a ciclovia sem sinalização para carros",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "cruzamento de mão inglesa sobre ciclovia, sem sinalização para os carros",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "cruzamento sobre entrada para rodovia, com alta velocidade, sem sinalização para carros",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "guia caída sobre a ciclovia",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "11 vagas",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Avaliação de Segregadores 🗑️",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Segregadores IMPEDEM o acesso de ciclistas",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "1056",
+      "count": 2
+    },
+    {
+      "show": true,
+      "name": "parte do poste dentro da ciclovia",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Padrão de pintura: sem pintura",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Mão Inglesa",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "altura da mureta 90 cm",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "altura do parapeito da ponte 100 cm",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "não há pintura",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Passarela compartilhada termina e transforma-se em calçada, mas sem sinalização para ciclistas e sem rampa para descer para a via",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Passarela sobre ponte - uma passarela de cada lado - arquivos GPX separados em editor UMAP",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "placa semelhante a r36",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "ponte sobre rio",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Segregador: muro",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "sem pintura",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "Ver FOTO AÉREA",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "via compartilhada entre ciclista de pedestres dos dois lados da ponte",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "sinalização complementar passeio compartilhado pedestre ciclistas",
+      "count": 2
+    },
+    {
+      "show": false,
+      "name": "137",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "144",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "265",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "830",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "6",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "8 vagas",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "235",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "260",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "alagado",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionamento: alguns recuos de estacionamento",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "pequeno trecho em ciclovia em volta da praça",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Risco: quiosque muito perto da ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "tampa de inspeção elevada e piso rachado",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "trecho alagado",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "trecho em construção da ciclovia que substituirá a ciclofaixa com 300 cm de largura",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "167",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "placa CICLOFAIXA DE SENTIDO DUPLO",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "3",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "4",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "5",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "997",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "BUEIRO",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Este GPX foi encerrado e depois reaberto para continuar gravação de trecho adicional",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "plantas paisagísticas invadindo ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "situação do pavimento: um pouco mais do que fissuras, mas não demandam desvios",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "306",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "322",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "972",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1006",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1015",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1092",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "entrada e saída de veículos",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionamento: acostamento outro lado da via",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "vala profunda na lateral",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "297",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "314",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "896",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "934",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r  Estacionamento 🗑️",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "270",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "a largura de 200 é na curva do recuo",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "continuação: a maioria destes recuos são elevados",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "diversos cruzamentos, como este, com lajota vermelha e com desvio/recuo",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Esta via foi separada no Editor de GPX em duas: esta CICLOFAIXA (T1) e a outra CICLOVIA (T2)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "estreitamento no cruzamento com muro de imóvel",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "uma quadra com canteiro e estacionamento",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "204",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "565",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "769",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "cicolofaixa muda de lado no cruzamento",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "apenas uma curva",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "considerando apenas a pista ao lado da ciclo",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Risco: falta de segurança na rotatória, carros invadem, entrada de posto",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "928",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "935",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "ciclofaixa muda de lado da via, com pintura",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "pictograma PARE (ciclista parar para pedestre)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "950",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "carros invadindo a ciclofaixa com estacionamento na transversal",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "este é o ponto de ônibus anterior estão no leito da ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Final de trecho compartilhado com pedestres ao lado de estacionamento de carros",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "ILUMINAÇÃO: via longa, altena o lado dos postes de iluminação",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Início de trecho compartilhado com pedestres ao lado de estacionamento de carros",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "outro obstáculo tampa de inspeção rebaixada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "rever a iluminação de qual lado da via que ela é",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "sinalização vertical travessia de ciclistas",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Iluminação geral na via alterna de lado ao longo do trecho",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "sinalização complementar atletas em treinamento",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "sinalização complementar travessia de ciclistas",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "sinalização complementar trecho em declive",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "COMPLEMENTAR ATLETAS EM TREINAMENTO",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "complementar mirante turístico",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "complementar rota Atlântica placa turística",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "complementar TRAVESSIA DE CICLISTAS",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "COMPLEMENTAR TRECHO EM DECLIVE",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "iluminação geral na via alterna ao longo do trecho",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "iluminação no canteiro central da avenida",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "o correto é pintura falha em alguns pontos",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Situação Pintura 🗑️",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "trecho com uma dupla canteiro central",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1460",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "buraco enorme",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Trecho 10 m sem pavimento de calçada",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Perigo: cruzamento sem pavimento",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Risco: saída do posto de gasolina",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Obstáculo: rampa íngreme no leito da ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Segregador: não tem segregador; sobre a calçada com pintura na lateral",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "ATENÇÃO: ciclofaixa sobre calçada sem segregador",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "560",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1570",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "7",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionamento: não existe acostamento do outro lado da via",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "área de estacionamento passando por coma da cicloffaixa",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "bolsão de estacionamento",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionamento:  acostamento da via",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "328",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "tachão redondo",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "386",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "804",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "rampa de acesso a lote",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r risco 🗑️",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Pintura de vermelho com interrupções",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "133",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "500",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "610",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "655",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "690",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "803",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "carros que convertem da direita invadem a ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "182",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "540",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "578",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "580",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "744",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Semáforo exclusivo",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "xxxxxxx",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "xxxxxxxxxxxxxx",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "480",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "908",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "152",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "<![CDATA[Área de amortecimento da ciclo (cm)]]>",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "<![CDATA[24]]>",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "349",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "603",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "174",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "294",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "806",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "estreitamento da ciclofaixa na esquina, com bueiro",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "227",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "926",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "estacionamento entre a ciclofaixa e a rua",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "38",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "359",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "765",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "801",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "meschk atacadista",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "primeiro trecho é novo, e não tem tachões ainda",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Se tiver um nome, descreva",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "termina em via estreita sobre a ponte",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "2 faixa",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "900",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "risco estacionamento em diagonal bolsão de estacionamento em diagonal cruzando a ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "27",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "410",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "831",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r ausência conectar",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "215",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "211",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "327",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "795",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "placa errada CICLOVIA de sentido duplo",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Esta rua é de mão dupla (a outro mão única)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Esta rua estacionamento proibido",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "88",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "166",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "912",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Ao longo da ciclofaixa, há trechos em que para estacionar o carro, o motorista passa obrigatoriamente por cima da ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Largura da ciclofaixa diminui no trecho da ponte",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "tachinhas no centro da ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "760",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "807",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Padrão de Pintura 🗑️",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Obstáculo: empoçamento de água",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Obstáculo: acúmulo de lixo e terra e sedimento",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Obstáculo: rampa para entrada em loja construída sobre a ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "814",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "faltam vários tachões",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1575",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "570",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "via com canteiro central mão dupla",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "pictograma para ciclista parar no cruzamento",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Primeiro trecho (quadra pequena) mão dupla",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Primeiro trecho (quadra pequena) estacionamento proibido",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1140",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "696",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "explicação do cruzamento: ciclofaixa troca de lado após o cruzamento",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Avaliação de Proteção 🗑️",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1180",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Obstáculo: rampa para subir a calçada construída sobre a ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Obstáculo: rampa de inspeção rebaixada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "460",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "857",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "primeiro trecho da via com estacionamento proibido, esquina",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "4 vagas",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "815",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "828",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Cruzamento sobre semirótula, sem sinalização",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionamento dedicado de um lado, segregado da circulação (DESTE TRECHO EM DIANTE)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionamento proibido na via (NESTE TRECHO)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Últimos 50 m: muda o sentido da via (fluxo contrário)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "163",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "344",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "376",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "427",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "513",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "701",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "720",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "915",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "a partir deste ponto estacionamento dedicado",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "acesso a estacionamento de farmácia cruzando pela ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "ciclofaixa termina com estreitamento",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "ciclofaixa termina em via movimentada sem conexão com outra ciclo",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "circuito contempla 3 ruas distintas mas com mesma características viária",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "conexão com rua Manoel pereira",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "estreitamento da ciclofaixa pelo avanço da calçada",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "saída de colégio com intenso fluxo de veículos cruzando a ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "saída de veículos com baixa visibilidade",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "695",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "tampa de inspeção rebaixada uns 12 m atrás",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "tampa de inspeção ressaltada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "257",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "274",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "276",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "999",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1012",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Localização 🗑️",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "214",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "796",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "cruzamento em final de ladeira",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Obstáculo: lama e sedimentos e poças d'água",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "404",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "809",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "832",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "117",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "691",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "ciclofaixa termina com estreitamento em curva de via movimentada com pouca visibilidade para os motoristas",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "rampa de acesso para automóveis",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "estacionamento: acostamento no outro lado da via",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "trechos sem iluminação",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "330",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionamento: acostamento do outro lado da via",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Início do trecho com tachoes  (até o final)",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "poste no meio da ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Trecho sem iluminação aprox. 100 m",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "APENAS a Pintura: trecho do início até começar a ter tachões",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "trecho sem iluminação aprox. 50 m",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "107",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "124",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "366",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "772",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "797",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "SE CICLOFAIXA: para invadir a ciclo parte do automóvel passa obrigatoriamente por cima\r\n            de segregadores",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "563",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "361",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "396",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "794",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "127",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "142",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "324",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "826",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "838",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "842",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Final da ciclofaixa",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "285",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "365",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "870",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "550",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "ATENÇAO: VER a FOTO AÉREA Rua da Praia T1 e Rua Nap. Vieira",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionamento proibido, mas tem um bolsão de estacionamento de um restaurante",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "860",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "ATENÇÃO: VER a FOTO AÉREA Rua da Praia T1 e Rua Nap. Vieira",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionameto proibido, mas tem uso irregular",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "semáforo mal posicionado",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "árvore pendida para o leito da ciclovia",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "placa \"Ciclista: o pedestre sempre tem a preferência\"",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "2 vagas",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "estacionamento cruzando sobre ciclovia",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Início da 1a. gravação (em 11/06/2024) - Trecho entre Rua 200 e a Rua 3100",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Início da 2a. gravação (em 20/08/2024, \"continuada\" sobre a primeira gravação de 11/06/2024) - Trecho entre R. África do Sul e Rua 200",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Presilha na parede",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "SEM emáforo exclusivo",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Término da 1a. gravação (em 11/06/2024) - Trecho entre Rua 200 e a Rua 3100",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Término da 2a. gravação (em 20/08/2024, \"continuada\" sobre a primeira gravação de 11/06/2024) - Trecho entre R. África do Sul e Rua 200",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "trecho do cruzamento sobre a calçada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "2 faixas cada pista = 4 faixas",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1536",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "altura da guia/mureta 29 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "altura das duas guias/muretas 29 cm",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "conexão entre ciclos por faixa de pedestres",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "cruzamento com ciclofaixa sem ligacão",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "cruzamento importante sem semáforo exclusivo",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "distância entre postes de iluminação 180 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionamento: diversas áreas de estacionamento em recuo, alternando lado direito e esquerdo",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "estreitamento nas guiars para os postes de iluminação: 162 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "largura das duas guias/muretas 15 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "largura faixa logo ao lado direito 314 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "largura faixa logo ao lado direito 318",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "largura faixa logo ao lado esquerdo 308 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "largura faixa logo ao lado esquerdo 313 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "largura total pista direita 645 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "largura total pista direita 664 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "largura total pista direta 640 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "largura total pista esquerda 652 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Mais faixas (especificar)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Total da via (incluindo a ciclo) (cm) 1502 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Total da via (incluindo a ciclo) (cm) 1536",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "272",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "602",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1496",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "não há pintura ou qualquer sinalização indicando ser ciclovia.",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "trecho sem segregador em um dos lados",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "340",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "652",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1609",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "alguns tachões marcam o traçado da ciclo na rotatória",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "ciclo demarcada por tachões no cruzamento",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "pintura de faixa amarela no centro da ciclo e setas direcionais",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "11",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "296",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "632",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1482",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Bicicletário 🗑️",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "R3m0v3r Tipo de Ciclo 🗑️",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "sem pintura ou sinalização",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "4 faixas (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "23 (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "50km/h (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "55",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "200 (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "A ciclo é completamente reta. (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "A pintura está boa, mas FALHA em ALGUNS pontos (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Apenas faixas vermelhas nas bordas (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Área de amortecimento da ciclo (cm) (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Área transitável da ciclo (cm) (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Asfalto (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Bidirecional (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "ciclovia muda de lado sem pintura",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "conexão ruim com outra ciclovia",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "conversão de carros sobre o cruzamento",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionamento em algumas áreas em lados alternados da via",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Estacionamento proibido na via (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Este levantamento/coleta inclui, no final, trecho de 45 m de ciclofaixa da 4a. Av.",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Iluminação geral dos dois lados da via (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Não há árvores nem mudas (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Nenhum elemento de controle de velocidade na via (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "No bordo direito de Via de Mão Única (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "SEM pintura no cruzamento (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "SEM Semáforo exclusivo (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Semáforo para motorizado (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Semáforo para pedestres (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Tachões (na ciclofaixa)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1430 sem ciclovia",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "223",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "conversão de carros sobre a travessia",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "cruzamentos com recuo sobre lajota vermelha gasta",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "quadra em calçada compartilhads com pedestres s sinalização",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "xxx rever no final estacionamento  e pavimento",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "tampa de inspeção de esgoto invade a ciclovia",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "65",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1840",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "cruzamento na entrada de universidade sem pintura",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "entrada de fórum sem pintura no cruzamento",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "inspeção",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Placa PARE (ciclista parar para carros)",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "saliência de concreto",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Trecho da ciclovia com canteiro de amortecimento ao nivel da ciclovia (mas elevado da rua))",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Trecho com 4 faixas, sendo uma, segregada, em fluxo contrário",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Trecho da Av. Marginal Leste em mão dupla para motorizados",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "15",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "154",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "158",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "357",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "861",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "940",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1018",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "ciclovia termina com degrau",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "ciclovia termina em lugar algum, com um buraco na entrada da pista",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "iluminação muda de lado no meio do trajeto",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "iluminação muda para o lado da ciclo",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "meio fio",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "mudança de concreto para asfalto",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1038",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1061",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1083",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1159",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "alguns trechos sinuosos e em declive",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "ciclofaixa termina no final de um longo trecho em declive, não há redutor de velocidade antes do acesso a rua",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Somente mudas novas",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "trecho em obras, sem sinalização de desvio",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "202",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "234",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1196",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Segregador: calçada entre a ciclo e a via",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "243",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "955",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "976",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "altura guia/mureta 20 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "altura guia/mureta guia 33 cm",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Conversão perigosa. EXPLIQUE.",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "cruzamento sobre saída de rodovia, com alta velocidade, sem sinalização para carros",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Sinalização horizontal outra: pictograma PARE (ciclista parar para carros)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Situação da pintura: não existe pintura",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "início trecho compartilhado sobre calçada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "árvore projetada para a ciclovia",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Esta via foi separada no Editor de GPX em duas: esta CICLOVIA (T2) e a outra CICLOFAIXA (T1)",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "grande rebaixamento da calçada lateral sem proteção ou mureta",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "pictograma e placa PARE",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "sinalização complementar placa compartilhamento com pedestres",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "trecho com guard rail",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "16000",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Ostáculo: acúmulo de água na pista",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Obstáculo: rampa de entrada de garagem",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Risco: trecho sem segregador 40 m",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Risco: saída de posto de gasolina",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Risco: trecho sem segregadores 50 m",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Risco: trecho sem segregador 15 m",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Risco: trecho sem segregador na curva 50 m",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Obstáculo: metade de poste na ciclovia",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Obstáculo: poste no meio da via",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Obstáculo: tampa de inspeção rebaixada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "57",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "225",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "503",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1112",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "poste de luz",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": ". final aqui",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "área de amortecimento mínima de 110 cm",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "sinalização vertical 10 km/h para ciclistas",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "240",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1650",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "205",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "343",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "395",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1013",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "ciclovia de conexão entre 2 grandes ciclovias, trecho em via sem saída, trecho em via de mão inglesa, travessia sobre calçada compartilhada",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Rua sem saída",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "trecho ao lado da mão inglesa: ciclovia 205, segregado 75, faixa ao lado 395, total 800, proibido estacionamento",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "12 vagas",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "OBS: sim, são dois tipos de iluminação na via",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "303",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1177",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "calçada",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "em dias de chuva acumula muito água",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Paralelepípedo",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "saída e entrada de hospital sem sinalização",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "299",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "623",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1578",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "cruzamento amplo e sem nenhuma sinalização horizontal",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Cruzamento perigoso. Explique",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "32",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Tijolo intertravado VERMELHO",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "148",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "910",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Altura da guia: 12 cm",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Ciclovia com várias depressões e acúmulo de água",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "ciclovia esfacelada",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Ciclovia torna-se calçada por cerca de 10 m, sem sinalização",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Ciclovia torna-se calçada por cerca de 20 m, sem sinalização",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "pavimento quebrado",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Pintura: ciclovia sem pintura nenhuma, nem faixas",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "poste dentro da ciclovia",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "saliência",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "635",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1584",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "cruzamento amplo sem nenhuma sinalização horizontal",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1450",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "sem segredador, sobre calçada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Cruzamento sobre avenida larga com semáforo distante, que abre para grande fluxo de carros",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Outro segregador: guardrail",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "área amortecimento: SEM (sobre calçada)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "cruzamento perigoso via de alta velocidade",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "obstáculo: rampa para calçada danificada",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "outro risco: passagem sobre canal fluvial sem segregação",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "padrão de pintura SEM pintura",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Padrão de pintura: SEM pintura",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "rampa de acesso a calçada péssima qualidade quebrada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "sem amortecimento calçada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "situação da pintura: SEM pintura",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Iluminação: SEM iluminação",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Ciclofaixa compartilhada (não é na calçada)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Aproximadamente 70 m extenção",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "850",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1900",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "450",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "1500",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Ver docto LEIAME",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "<![CDATA[2 faixas]]>",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Ver arquivo LEIAME",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "60km/h",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "PINTURA: SEM pintura no pavimento",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Segregador: muro 60 cm",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "TIPO: passarela para ciclistas e pedestres na ponte",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "altura mureta: 85 (lado barranco) e  70 (lado rodovia)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "altura guard rail: 55",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Segragador: mureta em ponte",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "mureta:  55 (lado rodovia) e 120 (lado rio)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "SEM segregador (Calçada)",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "padrão de pintura: SEM PINTURA",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "sem área de amortecimento: calçada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Outro Segregador: mureta em ponte",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Outro Segregador: Guard Rail",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Outro Obstáculo",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Outro Obstáculo: degrau na pista",
+      "count": 1
+    },
+    {
+      "show": true,
+      "name": "Outro obstáculo: rampa para calçada quebrada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "196",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Isolada",
+      "count": 1
+    },
+    {
+      "show": false,
+      "name": "Canteiros sem mureta",
+      "count": 1
+    }
+  ]
+}

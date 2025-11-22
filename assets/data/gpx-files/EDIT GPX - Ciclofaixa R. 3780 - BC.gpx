@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="@dwayneparton/geojson-to-gpx">
+    <wpt lat="-27.00651833333333" lon="-48.62525666666667">
+        <ele>7.9</ele>
+        <time>2024-08-25T14:02:34Z</time>
+        <name>
+            <![CDATA[Área de amortecimento da ciclo (cm)]]>
+        </name>
+        <sat>35</sat>
+    </wpt>
+    <wpt lat="-27.00651833333333" lon="-48.62525666666667">
+        <ele>7.9</ele>
+        <time>2024-08-25T14:02:35Z</time>
+        <name>
+            <![CDATA[24]]>
+        </name>
+        <sat>35</sat>
+    </wpt>
+    <wpt lat="-27.004466" lon="-48.623992">
+        <name>1 faixa</name>
+    </wpt>
+    <wpt lat="-27.004466" lon="-48.623992">
+        <name>A ciclo é completamente reta.</name>
+    </wpt>
+    <wpt lat="-27.005618" lon="-48.621792">
+        <name>23</name>
+    </wpt>
+    <wpt lat="-27.005555" lon="-48.621902">
+        <ele>3.4</ele>
+        <name>153</name>
+    </wpt>
+    <wpt lat="-27.005532" lon="-48.621898">
+        <ele>1.4</ele>
+        <name>385</name>
+    </wpt>
+    <wpt lat="-27.005578" lon="-48.621822">
+        <ele>0.8</ele>
+        <name>780</name>
+    </wpt>
+    <wpt lat="-27.005368" lon="-48.622077">
+        <name>A pintura está boa, COMPLETA e visível</name>
+    </wpt>
+    <wpt lat="-27.004461" lon="-48.623965">
+        <name>Apenas faixas vermelhas nas bordas, com travessias pintadas nos cruzamentos</name>
+    </wpt>
+    <wpt lat="-27.005603" lon="-48.621803">
+        <name>Área de amortecimento da ciclo (cm)</name>
+    </wpt>
+    <wpt lat="-27.005555" lon="-48.621902">
+        <ele>3.4</ele>
+        <name>Área transitável da ciclo (cm)</name>
+    </wpt>
+    <wpt lat="-27.004461" lon="-48.623992">
+        <name>Asfalto</name>
+    </wpt>
+    <wpt lat="-27.004461" lon="-48.62404">
+        <name>Bidirecional</name>
+    </wpt>
+    <wpt lat="-27.005412" lon="-48.622028">
+        <name>Bom estado</name>
+    </wpt>
+    <wpt lat="-27.004693" lon="-48.62361">
+        <ele>9</ele>
+        <name>Bueiro</name>
+    </wpt>
+    <wpt lat="-27.00471" lon="-48.623343">
+        <ele>17.9</ele>
+        <name>Bueiro</name>
+    </wpt>
+    <wpt lat="-27.00468" lon="-48.623388">
+        <ele>13.6</ele>
+        <name>Buraco</name>
+    </wpt>
+    <wpt lat="-27.004461" lon="-48.623986">
+        <name>Ciclofaixa</name>
+    </wpt>
+    <wpt lat="-27.004514" lon="-48.623938">
+        <name>Ciclofaixa</name>
+    </wpt>
+    <wpt lat="-27.004523" lon="-48.623847">
+        <name>Estacionamento de um lado, incluso na circulação</name>
+    </wpt>
+    <wpt lat="-27.005384" lon="-48.62205">
+        <name>Estacionamento dedicado de um lado, segregado da circulação</name>
+    </wpt>
+    <wpt lat="-27.005522" lon="-48.621893">
+        <ele>1.5</ele>
+        <name>Faixa de carros logo ao lado da ciclo (cm)</name>
+    </wpt>
+    <wpt lat="-27.004388" lon="-48.624262">
+        <ele>8.4</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.004355" lon="-48.624243">
+        <ele>9.5</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.004505" lon="-48.623945">
+        <ele>9.7</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.004615" lon="-48.623743">
+        <ele>5.9</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.004675" lon="-48.623557">
+        <ele>6.7</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.004705" lon="-48.623592">
+        <ele>8.7</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.004695" lon="-48.623418">
+        <ele>12.3</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.004677" lon="-48.623378">
+        <ele>13.2</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.004773" lon="-48.623018">
+        <ele>16.2</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.004692" lon="-48.623032">
+        <ele>4.4</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.00492" lon="-48.622647">
+        <ele>10.3</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.005628" lon="-48.621663">
+        <ele>1.5</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.005613" lon="-48.621863">
+        <ele>3.4</ele>
+        <name>Foto</name>
+    </wpt>
+    <wpt lat="-27.004475" lon="-48.623938">
+        <name>Iluminação geral na via do outro lado da infraestrutura</name>
+    </wpt>
+    <wpt lat="-27.004471" lon="-48.623981">
+        <name>Mão Única</name>
+    </wpt>
+    <wpt lat="-27.005116" lon="-48.622334">
+        <name>Não há árvores nem mudas</name>
+    </wpt>
+    <wpt lat="-27.00525" lon="-48.622168">
+        <name>Nenhum elemento de controle de velocidade na via</name>
+    </wpt>
+    <wpt lat="-27.004471" lon="-48.624018">
+        <name>No bordo esquerdo de Via de Mão Única</name>
+    </wpt>
+    <wpt lat="-27.004432" lon="-48.624098">
+        <name>Em cruzamento BOA condição</name>
+    </wpt>
+    <wpt lat="-27.00463" lon="-48.62365">
+        <name>Em cruzamento BOA condição</name>
+    </wpt>
+    <wpt lat="-27.00471" lon="-48.623357">
+        <name>Em cruzamento BOA condição</name>
+    </wpt>
+    <wpt lat="-27.004769" lon="-48.622849">
+        <name>Em cruzamento BOA condição</name>
+    </wpt>
+    <wpt lat="-27.004355" lon="-48.624243">
+        <ele>9.5</ele>
+        <name>R-34</name>
+    </wpt>
+    <wpt lat="-27.00451" lon="-48.62399">
+        <ele>10.3</ele>
+        <name>R-34</name>
+    </wpt>
+    <wpt lat="-27.004678" lon="-48.623558">
+        <ele>6.9</ele>
+        <name>R-34</name>
+    </wpt>
+    <wpt lat="-27.004559" lon="-48.623852">
+        <name>SE CICLOFAIXA: para invadir a ciclo parte do automóvel passa obrigatoriamente por cima de segregadores</name>
+    </wpt>
+    <wpt lat="-27.004542" lon="-48.623857">
+        <name>Tachões</name>
+    </wpt>
+    <wpt lat="-27.005585" lon="-48.621823">
+        <ele>0.6</ele>
+        <name>Total da via (incluindo a ciclo) (cm)</name>
+    </wpt>
+    <wpt lat="-27.004499" lon="-48.623943">
+        <name>Total da via (incluindo a ciclo) (cm)</name>
+    </wpt>
+    <wpt lat="-27.004868" lon="-48.622642">
+        <ele>14.5</ele>
+        <name>U invertido</name>
+    </wpt>
+    <trk>
+        <name>Ciclofaixa R. 3780 - BC</name>
+        <trkseg>
+            <trkpt lat="-27.004511" lon="-48.624052"/>
+            <trkpt lat="-27.00449" lon="-48.624122"/>
+            <trkpt lat="-27.00444" lon="-48.624107"/>
+            <trkpt lat="-27.004461" lon="-48.624055"/>
+            <trkpt lat="-27.00462" lon="-48.623689"/>
+            <trkpt lat="-27.004685" lon="-48.623501"/>
+            <trkpt lat="-27.004722" lon="-48.62322"/>
+            <trkpt lat="-27.00476" lon="-48.622956"/>
+            <trkpt lat="-27.004786" lon="-48.622764"/>
+            <trkpt lat="-27.004833" lon="-48.6226"/>
+            <trkpt lat="-27.004924" lon="-48.622463"/>
+            <trkpt lat="-27.005299" lon="-48.622146"/>
+            <trkpt lat="-27.005466" lon="-48.621971"/>
+            <trkpt lat="-27.005689" lon="-48.621781"/>
+            <trkpt lat="-27.005701" lon="-48.621735"/>
+            <trkpt lat="-27.00573" lon="-48.621733"/>
+            <trkpt lat="-27.005747" lon="-48.621744"/>
+            <trkpt lat="-27.005734" lon="-48.621771"/>
+            <trkpt lat="-27.005717" lon="-48.621784"/>
+            <trkpt lat="-27.005674" lon="-48.621781"/>
+        </trkseg>
+    </trk>
+</gpx>

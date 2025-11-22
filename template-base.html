@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Relatório de Auditoria Cicloviária - IDECICLO - Camboriú e Balneário Camboriú">
+    <meta name="keywords" content="ciclovia, auditoria, mobilidade urbana, Camboriú, Balneário Camboriú">
+    <title>{{PAGE_TITLE}} - IDECICLO</title>
+    
+    <!-- Mapbox CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- CSS específico da página -->
+    {{PAGE_CSS}}
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">IDECICLO</a></h1>
+                    <p>Auditoria Cicloviária</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main">
+        {{PAGE_CONTENT}}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>IDECICLO</h3>
+                    <p>Relatório de Auditoria Cicloviária</p>
+                    <p>Camboriú e Balneário Camboriú</p>
+                </div>
+                <div class="footer-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="total-structures">111</span>
+                        <span class="stat-label">Estruturas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="total-length">107.4km</span>
+                        <span class="stat-label">Extensão Total</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts das bibliotecas -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <!-- Configuração -->
+    <script src="libs/cdn-config.js"></script>
+    
+    <!-- Scripts principais -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Scripts específicos da página -->
+    {{PAGE_SCRIPTS}}
+</body>
+</html>

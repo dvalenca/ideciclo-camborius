@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Metodologia IDECICLO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .collapsible-section {
+            margin-bottom: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .collapsible-header {
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .collapsible-header:hover {
+            background: linear-gradient(135deg, #1B5E20, #2E7D32);
+        }
+        .section-number {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 0.75rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+            min-width: 2.5rem;
+            text-align: center;
+        }
+        .section-title {
+            flex: 1;
+            text-align: left;
+        }
+        .toggle-icon {
+            transition: transform 0.3s ease;
+            font-size: 1rem;
+        }
+        .collapsible-header.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: white;
+        }
+        .collapsible-content.active {
+            max-height: none;
+            padding: 2rem;
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #2E7D32;
+            color: #2E7D32;
+        }
+        .btn-outline:hover {
+            background: #2E7D32;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Teste - Metodologia IDECICLO com Seções Retráteis</h1>
+        
+        <div style="margin-bottom: 2rem; text-align: center;">
+            <button onclick="expandAllSections()" class="btn btn-outline">
+                ▼ Expandir Todas as Seções
+            </button>
+            <button onclick="collapseAllSections()" class="btn btn-outline">
+                ▲ Contrair Todas as Seções
+            </button>
+        </div>
+        
+        <div id="methodology-text">
+            <div>Carregando metodologia...</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadMethodology();
+        });
+
+        async function loadMethodology() {
+            try {
+                const documents = [
+                    { file: '01-indice-desenvolvimento-cicloviario.md', title: 'O Índice de Desenvolvimento Cicloviário' },
+                    { file: '02-objetivos.md', title: 'Objetivos' },
+                    { file: '03-metodologia.md', title: 'Metodologia' },
+                    { file: '04-avaliacao-infraestrutura.md', title: 'Avaliação de Infraestrutura' },
+                    { file: '05-apendices.md', title: 'Apêndices' }
+                ];
+                
+                let fullHtml = '';
+                
+                for (let i = 0; i < documents.length; i++) {
+                    const doc = documents[i];
+                    try {
+                        const response = await fetch(`content/${doc.file}`);
+                        let markdown = await response.text();
+                        
+                        const html = marked.parse(markdown);
+                        
+                        const sectionId = `section-${i + 1}`;
+                        fullHtml += `
+                            <div class="collapsible-section">
+                                <button class="collapsible-header" onclick="toggleSection('${sectionId}')">
+                                    <span class="section-number">${i + 1}.</span>
+                                    <span class="section-title">${doc.title}</span>
+                                    <span class="toggle-icon">▼</span>
+                                </button>
+                                <div class="collapsible-content" id="${sectionId}">
+                                    ${html}
+                                </div>
+                            </div>
+                        `;
+                    } catch (error) {
+                        console.error(`Erro ao carregar ${doc.file}:`, error);
+                        fullHtml += `<p>❌ Erro ao carregar ${doc.title}</p>`;
+                    }
+                }
+                
+                document.getElementById('methodology-text').innerHTML = fullHtml;
+                
+            } catch (error) {
+                console.error('Erro ao carregar metodologia:', error);
+                document.getElementById('methodology-text').innerHTML = 
+                    '<p>❌ Erro ao carregar metodologia.</p>';
+            }
+        }
+
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId);
+            const header = content.previousElementSibling;
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                header.classList.remove('active');
+                content.style.maxHeight = '0';
+            } else {
+                content.classList.add('active');
+                header.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        }
+        
+        function expandAllSections() {
+            const sections = document.querySelectorAll('.collapsible-content');
+            const headers = document.querySelectorAll('.collapsible-header');
+            
+            sections.forEach((section, index) => {
+                section.classList.add('active');
+                headers[index].classList.add('active');
+                section.style.maxHeight = section.scrollHeight + 'px';
+            });
+        }
+        
+        function collapseAllSections() {
+            const sections = document.querySelectorAll('.collapsible-content');
+            const headers = document.querySelectorAll('.collapsible-header');
+            
+            sections.forEach((section, index) => {
+                section.classList.remove('active');
+                headers[index].classList.remove('active');
+                section.style.maxHeight = '0';
+            });
+        }
+    </script>
+</body>
+</html>

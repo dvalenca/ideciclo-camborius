@@ -1,0 +1,383 @@
+{
+  "average": {
+    "label": "Média Geral",
+    "key": "average",
+    "components": [
+      {
+        "label": "1. Qualidade do Projeto",
+        "key": "project",
+        "weight": 0.333,
+        "components": [
+          {
+            "label": "1.1. Proteção contra a invasão",
+            "key": "protection",
+            "weight": 0.25,
+            "components": [
+              {
+                "label": "1.1.1. Concepção do projeto",
+                "key": "project_conception",
+                "weight": 0.333
+              },
+              {
+                "label": "1.1.2. Situações de riscos da estrutura",
+                "key": "project_risks",
+                "weight": 0.333
+              },
+              {
+                "label": "1.1.3. Segregação",
+                "key": "segregation",
+                "weight": 0.333,
+                "components": [
+                  {
+                    "label": "1.1.3.1. Tipo de segregador",
+                    "key": "segregation_type_rate",
+                    "weight": 0.5
+                  },
+                  {
+                    "label": "1.1.3.2. Faixa de amortecimento",
+                    "key": "buffer_size",
+                    "weight": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "1.2. Sinalização vertical",
+            "key": "vertical_signs",
+            "weight": 0.25,
+            "components": [
+              {
+                "label": "1.2.1. Sinalização vertical regulamentadora",
+                "key": "on_way_vertical_signs",
+                "weight": 0.2
+              },
+              {
+                "label": "1.2.2. Sinalização de início e fim",
+                "key": "start_end_signage",
+                "weight": 0.2,
+                "components": [
+                  {
+                    "label": "1.2.2.1. Sinalização de início",
+                    "key": "start_signage",
+                    "weight": 0.5
+                  },
+                  {
+                    "label": "1.2.2.2. Sinalização de fim",
+                    "key": "end_signage",
+                    "weight": 0.5
+                  }
+                ]
+              },
+              {
+                "label": "1.2.3. Sinalização vertical nas travessias",
+                "key": "cross_vertical_signs",
+                "weight": 0.2
+              },
+              {
+                "label": "1.2.4. Sinalização luminosa",
+                "key": "luminous_signage_vertical",
+                "weight": 0.2
+              },
+              {
+                "label": "1.2.5. Sinalização complementar",
+                "key": "complementary_signage",
+                "weight": 0.2
+              }
+            ]
+          },
+          {
+            "label": "1.3. Sinalização horizontal",
+            "key": "horizontal_signs",
+            "weight": 0.25,
+            "components": [
+              {
+                "label": "1.3.1. Padrão de Sinalização Horizontal",
+                "key": "horizontal_pattern",
+                "weight": 0.333
+              },
+              {
+                "label": "1.3.2. Pictogramas e Setas",
+                "key": "pictograms_arrows",
+                "weight": 0.333,
+                "components": [
+                  {
+                    "label": "1.3.2.1. Pictogramas",
+                    "key": "pictograms",
+                    "weight": 0.5
+                  },
+                  {
+                    "label": "1.3.2.2. Setas",
+                    "key": "arrows",
+                    "weight": 0.5
+                  }
+                ]
+              },
+              {
+                "label": "1.3.3. Sinalização horizontal nos cruzamentos",
+                "key": "cross_horizontal_signs",
+                "weight": 0.333
+              }
+            ]
+          },
+          {
+            "label": "1.4. Conforto da estrutura",
+            "key": "comfort",
+            "weight": 0.25,
+            "components": [
+              {
+                "label": "1.4.1. Acesso da estrutura",
+                "key": "structure_access",
+                "weight": 0.167
+              },
+              {
+                "label": "1.4.2. Tipo de pavimento",
+                "key": "pavement",
+                "weight": 0.167
+              },
+              {
+                "label": "1.4.3. Sinuosidade",
+                "key": "sinuosity",
+                "weight": 0.167
+              },
+              {
+                "label": "1.4.4. Largura transitável",
+                "key": "width_evaluation",
+                "weight": 0.167
+              },
+              {
+                "label": "1.4.5. Desníveis",
+                "key": "level_differences",
+                "weight": 0.167
+              },
+              {
+                "label": "1.4.6. Bidirecionalidade",
+                "key": "bidirectionality",
+                "weight": 0.167
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "2. Segurança viária",
+        "key": "safety",
+        "weight": 0.333,
+        "components": [
+          {
+            "label": "2.1. Controle de velocidade",
+            "key": "speed_control",
+            "weight": 0.333,
+            "components": [
+              {
+                "label": "2.1.1. Controle eletrônico",
+                "key": "electronic_control",
+                "weight": 0.333
+              },
+              {
+                "label": "2.1.2. Controle em nível",
+                "key": "level_control",
+                "weight": 0.333,
+                "components": [
+                  {
+                    "label": "2.1.2.1. Tamanho de quadra",
+                    "key": "block_size_control",
+                    "weight": 0.333
+                  },
+                  {
+                    "label": "2.1.2.2. Largura de faixa",
+                    "key": "lane_width_control",
+                    "weight": 0.333
+                  },
+                  {
+                    "label": "2.1.2.3. Outros controles de velocidade",
+                    "key": "other_speed_controls",
+                    "weight": 0.333
+                  }
+                ]
+              },
+              {
+                "label": "2.1.3. Controles em desnível",
+                "key": "unlevel_control",
+                "weight": 0.333
+              }
+            ]
+          },
+          {
+            "label": "2.2. Conflitos ao longo",
+            "key": "along_conflicts",
+            "weight": 0.333,
+            "components": [
+              {
+                "label": "2.2.1. Riscos ao longo da estrutura",
+                "key": "along_risks",
+                "weight": 0.2
+              },
+              {
+                "label": "2.2.2. Conflitos com ciclistas",
+                "key": "cyclist_conflicts",
+                "weight": 0.2,
+                "components": [
+                  {
+                    "label": "2.2.2.1. Sinuosidade",
+                    "key": "sinuosity",
+                    "weight": 0.333
+                  },
+                  {
+                    "label": "2.2.2.2. Largura transitável",
+                    "key": "width_evaluation",
+                    "weight": 0.333
+                  },
+                  {
+                    "label": "2.2.2.3. Bidirecionalidade",
+                    "key": "bidirectionality",
+                    "weight": 0.333
+                  }
+                ]
+              },
+              {
+                "label": "2.2.3. Sinalização vertical ao longo",
+                "key": "vertical_signage_along",
+                "weight": 0.2,
+                "components": [
+                  {
+                    "label": "2.2.3.1. Sinalização vertical regulamentadora",
+                    "key": "on_way_vertical_signs",
+                    "weight": 0.5
+                  },
+                  {
+                    "label": "2.2.3.2. Sinalização luminosa",
+                    "key": "luminous_signage_along",
+                    "weight": 0.5
+                  }
+                ]
+              },
+              {
+                "label": "2.2.4. Condição da sinalização horizontal",
+                "key": "horizontal_sign_conditions",
+                "weight": 0.2
+              },
+              {
+                "label": "2.2.5. Segregação",
+                "key": "segregation",
+                "weight": 0.2
+              }
+            ]
+          },
+          {
+            "label": "2.3. Conflitos nos cruzamentos",
+            "key": "cross_conflicts",
+            "weight": 0.333,
+            "components": [
+              {
+                "label": "2.3.1. Riscos nos cruzamentos",
+                "key": "cross_risks",
+                "weight": 0.25
+              },
+              {
+                "label": "2.3.2. Concepção do projeto",
+                "key": "project_conception",
+                "weight": 0.25
+              },
+              {
+                "label": "2.3.3. Condição da sinalização horizontal",
+                "key": "horizontal_cross_conditions",
+                "weight": 0.25
+              },
+              {
+                "label": "2.3.4. Sinalização vertical nas travessias",
+                "key": "cross_vertical_signs",
+                "weight": 0.25
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "3. Manutenção e Urbanidade",
+        "key": "maintenance_and_urbanity",
+        "weight": 0.333,
+        "components": [
+          {
+            "label": "3.1. Manutenção",
+            "key": "maintenance",
+            "weight": 0.5,
+            "components": [
+              {
+                "label": "3.1.1. Situação do piso",
+                "key": "pavement_condition",
+                "weight": 0.333
+              },
+              {
+                "label": "3.1.2. Condição da sinalização horizontal",
+                "key": "horizontal_sign_conditions",
+                "weight": 0.333,
+                "components": [
+                  {
+                    "label": "3.1.2.1. Condição da pintura interna",
+                    "key": "painting_condition",
+                    "weight": 0.333
+                  },
+                  {
+                    "label": "3.1.2.2. Condição da sinalização gráfica",
+                    "key": "graphic_signage_condition",
+                    "weight": 0.333,
+                    "components": [
+                      {
+                        "label": "3.1.2.2.1. Condição dos pictogramas",
+                        "key": "pictograms_condition",
+                        "weight": 0.5
+                      },
+                      {
+                        "label": "3.1.2.2.2. Condição das setas",
+                        "key": "arrows_condition",
+                        "weight": 0.5
+                      }
+                    ]
+                  },
+                  {
+                    "label": "3.1.2.3. Condição da sinalização horizontal no cruzamento",
+                    "key": "horizontal_cross_conditions",
+                    "weight": 0.333
+                  }
+                ]
+              },
+              {
+                "label": "3.1.3. Situação da proteção",
+                "key": "protection_conditions",
+                "weight": 0.333
+              }
+            ]
+          },
+          {
+            "label": "3.2. Urbanidade",
+            "key": "urbanity",
+            "weight": 0.5,
+            "components": [
+              {
+                "label": "3.2.1. Obstáculos",
+                "key": "obstacles",
+                "weight": 0.25
+              },
+              {
+                "label": "3.2.2. Sombreamento",
+                "key": "shading",
+                "weight": 0.25
+              },
+              {
+                "label": "3.2.3. Iluminação",
+                "key": "lighting",
+                "weight": 0.25
+              },
+              {
+                "label": "3.2.4. Acesso da estrutura",
+                "key": "structure_access_urbanity",
+                "weight": 0.25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

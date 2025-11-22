@@ -1,0 +1,58 @@
+{
+  "Balneario": {
+    "city": "Balneario",
+    "coverage": {
+      "arterial": {
+        "ciclovia": 14834.535,
+        "ciclofaixa": 11323.644999999995,
+        "compartilhada": 1048.7350000000001,
+        "baixa_velocidade": 0
+      },
+      "coletora": {
+        "ciclovia": 1856.889,
+        "ciclofaixa": 27391.099999999984,
+        "compartilhada": 6.052,
+        "baixa_velocidade": 0
+      },
+      "local": {
+        "ciclovia": 738.576,
+        "ciclofaixa": 2775.256,
+        "compartilhada": 1980.2150000000001,
+        "baixa_velocidade": 0
+      }
+    },
+    "totalExtensions": {
+      "arterial": 77194.163,
+      "coletora": 79655.50000000001,
+      "local": 226777.81100000002
+    }
+  },
+  "Camboriu": {
+    "city": "Camboriu",
+    "coverage": {
+      "arterial": {
+        "ciclovia": 1410,
+        "ciclofaixa": 1110,
+        "compartilhada": 0,
+        "baixa_velocidade": 0
+      },
+      "coletora": {
+        "ciclovia": 7310,
+        "ciclofaixa": 25087.249,
+        "compartilhada": 182.735,
+        "baixa_velocidade": 0
+      },
+      "local": {
+        "ciclovia": 250,
+        "ciclofaixa": 6116.745000000001,
+        "compartilhada": 17.265,
+        "baixa_velocidade": 0
+      }
+    },
+    "totalExtensions": {
+      "arterial": 12477.612,
+      "coletora": 97658.93999999999,
+      "local": 370105.158
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "cities": [
+    "Camboriú",
+    "Balneário Camboriú"
+  ],
+  "typologies": [
+    "Ciclovia",
+    "Ciclofaixa",
+    "Ciclorrota",
+    "Calçada compartilhada"
+  ],
+  "total_structures": 111,
+  "total_length": 107369,
+  "by_city": {
+    "Camboriú": 41,
+    "Balneário Camboriú": 70
+  },
+  "by_typology": {
+    "Ciclovia": 26,
+    "Ciclofaixa": 74,
+    "Ciclorrota": 0,
+    "Calçada compartilhada": 9
+  },
+  "score_ranges": {
+    "excellent": 0,
+    "good": 37,
+    "regular": 73,
+    "poor": 1,
+    "inadequate": 0
+  }
+}

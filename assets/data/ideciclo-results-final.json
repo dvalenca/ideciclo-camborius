@@ -1,0 +1,3245 @@
+{
+  "Balneario": {
+    "city": "Balneario",
+    "totalExtensions": {
+      "arterial": 77194.163,
+      "coletora": 79655.50000000001,
+      "local": 226777.81100000002
+    },
+    "results": {
+      "arterial": {
+        "structures": [
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 18.397,
+            "score": 6.300189686213993,
+            "product": 11.590458965727883
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 26.41,
+            "score": 6.300189686213993,
+            "product": 16.638800961291157
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 18.126,
+            "score": 6.300189686213993,
+            "product": 11.419723825231486
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 21.399,
+            "score": 6.300189686213993,
+            "product": 13.481775909529325
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 46.426,
+            "score": 6.300189686213993,
+            "product": 29.249260637217084
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 107.676,
+            "score": 6.300189686213993,
+            "product": 67.8379224652778
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 81.244,
+            "score": 6.300189686213993,
+            "product": 51.18526108667697
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 24.303,
+            "score": 6.300189686213993,
+            "product": 15.311350994405869
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 125.226,
+            "score": 6.300189686213993,
+            "product": 78.89475536458335
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 210.802,
+            "score": 6.300189686213993,
+            "product": 132.8092586233282
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 17.335,
+            "score": 6.300189686213993,
+            "product": 10.921378821051958
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 72.656,
+            "score": 6.300189686213993,
+            "product": 45.774658184156394
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 62.297,
+            "score": 6.300189686213993,
+            "product": 39.24829168820731
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 16.009,
+            "score": 6.300189686213993,
+            "product": 10.085973668659982
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 5.364,
+            "score": 6.300189686213993,
+            "product": 3.3794217476851856
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 17.365,
+            "score": 6.300189686213993,
+            "product": 10.940279390110598
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 88.35,
+            "score": 6.300189686213993,
+            "product": 55.662175877700626
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 24.687,
+            "score": 6.300189686213993,
+            "product": 15.553278278356485
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 133.124,
+            "score": 6.300189686213993,
+            "product": 83.87064517875517
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 4.846,
+            "score": 6.300189686213993,
+            "product": 3.053071921939301
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 157.715,
+            "score": 6.300189686213993,
+            "product": 99.363441636124
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 24.989,
+            "score": 6.300189686213993,
+            "product": 15.74354400688015
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 35.601,
+            "score": 6.300189686213993,
+            "product": 22.429305301890437
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 27.26,
+            "score": 6.300189686213993,
+            "product": 17.174317084619346
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 82.095,
+            "score": 6.300189686213993,
+            "product": 51.721407228973774
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 27.619,
+            "score": 6.300189686213993,
+            "product": 17.400493894354426
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 94.655,
+            "score": 6.300189686213993,
+            "product": 59.63444547485855
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 32.628,
+            "score": 6.300189686213993,
+            "product": 20.556258908179018
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 55.557,
+            "score": 6.300189686213993,
+            "product": 35.00196383969908
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 39.015,
+            "score": 6.300189686213993,
+            "product": 24.580190060763897
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 151.465,
+            "score": 6.300189686213993,
+            "product": 95.42582308224024
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 26.164,
+            "score": 6.300189686213993,
+            "product": 16.483816295010293
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 35.143,
+            "score": 6.300189686213993,
+            "product": 22.140756614261836
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 62.638,
+            "score": 6.300189686213993,
+            "product": 39.46312815650721
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 16.603,
+            "score": 6.588308579702023,
+            "product": 10.93856873487927
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 1024.39,
+            "score": 6.588308579702023,
+            "product": 674.8997425960956
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 326.858,
+            "score": 6.588308579702023,
+            "product": 215.3441365744244
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 24.386,
+            "score": 6.588308579702023,
+            "product": 16.066249302461355
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 26.856,
+            "score": 6.588308579702023,
+            "product": 17.693561521647755
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 86.065,
+            "score": 6.588308579702023,
+            "product": 56.70227779120546
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 30.349,
+            "score": 6.588308579702023,
+            "product": 19.99485770853767
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 8.942,
+            "score": 6.588308579702023,
+            "product": 5.891265531969549
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 13.299,
+            "score": 6.588308579702023,
+            "product": 8.76179158014572
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 159.955,
+            "score": 6.588308579702023,
+            "product": 105.38328988662373
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 26.138,
+            "score": 6.588308579702023,
+            "product": 17.220520965625152
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 20.468,
+            "score": 6.588308579702023,
+            "product": 13.4849500009341
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 132.209,
+            "score": 6.074241488963712,
+            "product": 80.30693930144035
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 125.848,
+            "score": 6.074241488963712,
+            "product": 76.44311429031052
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 88.958,
+            "score": 6.074241488963712,
+            "product": 54.03523743752339
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 7.27,
+            "score": 6.074241488963712,
+            "product": 4.415973562476618
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 101.745,
+            "score": 6.074241488963712,
+            "product": 61.802370029461294
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 61.212,
+            "score": 6.074241488963712,
+            "product": 37.18164700224468
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 55.682,
+            "score": 6.074241488963712,
+            "product": 33.82259145884775
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 200.486,
+            "score": 6.074241488963712,
+            "product": 121.78003791563788
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 9.216,
+            "score": 6.074241488963712,
+            "product": 5.598020956228957
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 107.202,
+            "score": 6.074241488963712,
+            "product": 65.1170836099888
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 38.874,
+            "score": 6.074241488963712,
+            "product": 23.613006364197535
+          },
+          {
+            "name": "Ciclovia Av. Estado T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 171.297,
+            "score": 6.074241488963712,
+            "product": 104.0499344335017
+          },
+          {
+            "name": "Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 100.474,
+            "score": 5.020588784348866,
+            "product": 50.4438637518668
+          },
+          {
+            "name": "Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 30.017,
+            "score": 5.020588784348866,
+            "product": 15.070301353979993
+          },
+          {
+            "name": "Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 240.174,
+            "score": 5.020588784348866,
+            "product": 120.58148906922045
+          },
+          {
+            "name": "Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 155.214,
+            "score": 5.020588784348866,
+            "product": 77.9265667573925
+          },
+          {
+            "name": "Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 56.373,
+            "score": 5.020588784348866,
+            "product": 28.30256515400986
+          },
+          {
+            "name": "Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 77.208,
+            "score": 5.020588784348866,
+            "product": 38.76296188620073
+          },
+          {
+            "name": "Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 423.382,
+            "score": 5.020588784348866,
+            "product": 212.56269206951916
+          },
+          {
+            "name": "Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 105.546,
+            "score": 5.020588784348866,
+            "product": 52.99030638328855
+          },
+          {
+            "name": "Ciclovia Estr. da Rainha - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 25.469,
+            "score": 5.487517806267806,
+            "product": 13.976159100783477
+          },
+          {
+            "name": "Ciclovia R. 3100 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 96.925,
+            "score": 6.239761396011396,
+            "product": 60.47888733084045
+          },
+          {
+            "name": "Ciclovia R. 3100 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 58.978,
+            "score": 6.239761396011396,
+            "product": 36.800864761396014
+          },
+          {
+            "name": "Ciclovia R. 3100 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 30.062,
+            "score": 6.239761396011396,
+            "product": 18.75797070868946
+          },
+          {
+            "name": "Ciclovia R. 3100 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 10.177,
+            "score": 6.239761396011396,
+            "product": 6.3502051727207975
+          },
+          {
+            "name": "Ciclovia R. 3100 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 63.857,
+            "score": 6.239761396011396,
+            "product": 39.84524434650997
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 740.57,
+            "score": 6.925779727095517,
+            "product": 512.9024692495127
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 19.43,
+            "score": 6.925779727095517,
+            "product": 13.456790009746591
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 131.474,
+            "score": 6.434940349002848,
+            "product": 84.60273474448005
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 76.246,
+            "score": 6.434940349002848,
+            "product": 49.063846185007115
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 183.647,
+            "score": 6.434940349002848,
+            "product": 118.17574902733261
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 44.979,
+            "score": 6.434940349002848,
+            "product": 28.943718195779912
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 10.711,
+            "score": 6.434940349002848,
+            "product": 6.892464607816951
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 23.184,
+            "score": 6.434940349002848,
+            "product": 14.918765705128203
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 6.102,
+            "score": 6.434940349002848,
+            "product": 3.9266006009615384
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 78.387,
+            "score": 6.434940349002848,
+            "product": 50.44156691372863
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 51.577,
+            "score": 6.434940349002848,
+            "product": 33.189491838051985
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 30.77,
+            "score": 6.434940349002848,
+            "product": 19.800311453881765
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 58.11,
+            "score": 6.434940349002848,
+            "product": 37.39343836805555
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 42.753,
+            "score": 6.434940349002848,
+            "product": 27.51130047409188
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 111.776,
+            "score": 6.434940349002848,
+            "product": 71.92718924501423
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 64.964,
+            "score": 6.434940349002848,
+            "product": 41.80394648326211
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 15.575,
+            "score": 6.434940349002848,
+            "product": 10.022419593571936
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 16.868,
+            "score": 6.434940349002848,
+            "product": 10.854457380698003
+          },
+          {
+            "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 92.878,
+            "score": 6.434940349002848,
+            "product": 59.76643897346866
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 1118.64,
+            "score": 6.119078055753403,
+            "product": 684.5045476287987
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 96.807,
+            "score": 6.119078055753403,
+            "product": 59.23695893433197
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 6.645,
+            "score": 6.119078055753403,
+            "product": 4.066127368048136
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 9.023,
+            "score": 6.119078055753403,
+            "product": 5.521244129706296
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 60.273,
+            "score": 6.119078055753403,
+            "product": 36.88151916544249
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 36.795,
+            "score": 6.119078055753403,
+            "product": 22.515147706144646
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 33.697,
+            "score": 6.119078055753403,
+            "product": 20.619457324472243
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 31.103,
+            "score": 6.119078055753403,
+            "product": 19.03216847680981
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 96.25,
+            "score": 6.119078055753403,
+            "product": 58.8961262866265
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 244.003,
+            "score": 6.119078055753403,
+            "product": 149.30734028379976
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 47.457,
+            "score": 6.119078055753403,
+            "product": 29.039308729188924
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 97.607,
+            "score": 6.119078055753403,
+            "product": 59.72648517879224
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 8.789,
+            "score": 6.119078055753403,
+            "product": 5.378057703201666
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 27.598,
+            "score": 6.119078055753403,
+            "product": 16.88743161826824
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 17.914,
+            "score": 6.119078055753403,
+            "product": 10.961716429076647
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 34.845,
+            "score": 6.119078055753403,
+            "product": 21.321927485272735
+          },
+          {
+            "name": "Compart. Av. Flores T1 e R. Aqueduto - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 105.211,
+            "score": 4.812037037037038,
+            "product": 50.627922870370384
+          },
+          {
+            "name": "Compart. Av. Flores T1 e R. Aqueduto - BC",
+            "structureType": "Compart.",
+            "highway": "primary_link",
+            "length": 40.952,
+            "score": 4.812037037037038,
+            "product": 19.706254074074078
+          },
+          {
+            "name": "Compart. Av. Flores T1 e R. Aqueduto - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 56.67,
+            "score": 4.812037037037038,
+            "product": 27.269813888888894
+          },
+          {
+            "name": "Compart. Pass. Pte. Rio Camboriú BR 101 - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 19.36,
+            "score": 4.742592592592593,
+            "product": 9.181659259259261
+          },
+          {
+            "name": "Compart. Pass. Pte. Rio Camboriú BR 101 - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 7.193,
+            "score": 4.742592592592593,
+            "product": 3.4113468518518517
+          },
+          {
+            "name": "Compart. Pass. Pte. Rio Camboriú BR 101 - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 10.815,
+            "score": 4.742592592592593,
+            "product": 5.129113888888889
+          },
+          {
+            "name": "Compart. Pass. Pte. Rio Camboriú BR 101 - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 3.853,
+            "score": 4.742592592592593,
+            "product": 1.8273209259259262
+          },
+          {
+            "name": "Compart. Pte. Rio Camboriú BR 101 T2 Oeste e Av. Marg. Oeste T2 - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 22.796,
+            "score": 4.857678410117434,
+            "product": 11.073563703703703
+          },
+          {
+            "name": "Ciclovia R. 290 e R. 200 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 0.603,
+            "score": 6.219195156695157,
+            "product": 0.375017467948718
+          },
+          {
+            "name": "Ciclovia R. 290 e R. 200 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 25.929,
+            "score": 6.219195156695157,
+            "product": 16.125751121794874
+          },
+          {
+            "name": "Compart. Pte. Rio Camboriú BR 101 T1 - Leste - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 6.274,
+            "score": 4.974151234567902,
+            "product": 3.120782484567902
+          },
+          {
+            "name": "Compart. Pte. Rio Camboriú BR 101 T1 - Leste - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 13.063,
+            "score": 4.974151234567902,
+            "product": 6.497733757716052
+          },
+          {
+            "name": "Ciclovia Av. Marg. Oeste BR 101 T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 6.367,
+            "score": 5.701147894469813,
+            "product": 3.62992086440893
+          },
+          {
+            "name": "Ciclovia 5a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 8.831,
+            "score": 6.902677133655395,
+            "product": 6.095754176731079
+          },
+          {
+            "name": "Compart. Av. Marg. Oeste BR 101 T3 - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 108.981,
+            "score": 3.841550925925926,
+            "product": 41.86560614583334
+          },
+          {
+            "name": "Compart. Av. Marg. Oeste BR 101 T3 - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 131.826,
+            "score": 3.841550925925926,
+            "product": 50.64162923611111
+          },
+          {
+            "name": "Compart. Av. Marg. Oeste BR 101 T3 - BC",
+            "structureType": "Compart.",
+            "highway": "primary",
+            "length": 198.172,
+            "score": 3.841550925925926,
+            "product": 76.12878300925927
+          },
+          {
+            "name": "Compart. Pass. Viaduto BR 101 - 1 (R. 3100) - BC",
+            "structureType": "Compart.",
+            "highway": "primary_link",
+            "length": 50.817,
+            "score": 5.5740740740740735,
+            "product": 28.32577222222222
+          }
+        ],
+        "totalProduct": 6607.946891024205,
+        "totalExtension": 77194.163,
+        "result": 0.08560163922010794
+      },
+      "coletora": {
+        "structures": [
+          {
+            "name": "Ciclofaixa R. Indonésia - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 150,
+            "score": 5.537037037037037,
+            "product": 83.05555555555556
+          },
+          {
+            "name": "Ciclofaixa R. José Fco. Vitor - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 270,
+            "score": 4.889197530864197,
+            "product": 132.00833333333333
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T1 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 385,
+            "score": 5.617574555074555,
+            "product": 216.27662037037035
+          },
+          {
+            "name": "Ciclofaixa R. Paulo Marciano Cunha - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 565,
+            "score": 6.198148148148147,
+            "product": 350.1953703703703
+          },
+          {
+            "name": "Ciclofaixa Av. Carlos Drummond de Andrade - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 60,
+            "score": 5.471296296296297,
+            "product": 32.82777777777778
+          },
+          {
+            "name": "Ciclovia Pref. Gilberto A. Meirinho - BC",
+            "structureType": "Ciclovia",
+            "highway": "tertiary",
+            "length": 135,
+            "score": 6.241100823045268,
+            "product": 84.25486111111113
+          },
+          {
+            "name": "Ciclovia R. José Cesário Pereira - BC",
+            "structureType": "Ciclovia",
+            "highway": "tertiary",
+            "length": 1250,
+            "score": 5.081962962962963,
+            "product": 635.2453703703704
+          },
+          {
+            "name": "Ciclofaixa R. Emanuel R. Santos - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 437.393,
+            "score": 5.139373897707231,
+            "product": 224.7926167239859
+          },
+          {
+            "name": "Ciclofaixa R. Emanuel R. Santos - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 216.106,
+            "score": 5.139373897707231,
+            "product": 111.0649535537919
+          },
+          {
+            "name": "Ciclofaixa R. Emanuel R. Santos - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 247.299,
+            "score": 5.139373897707231,
+            "product": 127.09620255291007
+          },
+          {
+            "name": "Ciclofaixa R. Emanuel R. Santos - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 20.448,
+            "score": 5.139373897707231,
+            "product": 10.508991746031747
+          },
+          {
+            "name": "Ciclofaixa R. Emanuel R. Santos - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 23.755,
+            "score": 5.139373897707231,
+            "product": 12.208582694003528
+          },
+          {
+            "name": "Ciclofaixa R. 3700 T1 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 214.411,
+            "score": 6.11144781144781,
+            "product": 131.03616367003366
+          },
+          {
+            "name": "Ciclofaixa Av. Brasil T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 27.538,
+            "score": 6.20001485442662,
+            "product": 17.073600906120028
+          },
+          {
+            "name": "Ciclofaixa Av. Brasil T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 10.639,
+            "score": 6.20001485442662,
+            "product": 6.59619580362448
+          },
+          {
+            "name": "Ciclofaixa Av. Brasil T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 13.264,
+            "score": 6.20001485442662,
+            "product": 8.223699702911468
+          },
+          {
+            "name": "Ciclofaixa Av. Brasil T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 2.597,
+            "score": 6.20001485442662,
+            "product": 1.6101438576945932
+          },
+          {
+            "name": "Ciclofaixa Av. Brasil T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 18.813,
+            "score": 6.20001485442662,
+            "product": 11.6640879456328
+          },
+          {
+            "name": "Ciclofaixa Av. Brasil T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 16.713,
+            "score": 6.20001485442662,
+            "product": 10.36208482620321
+          },
+          {
+            "name": "Ciclofaixa R. 3700 T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 13.957,
+            "score": 5.628703703703704,
+            "product": 7.85598175925926
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 9.871,
+            "score": 5.638046280575993,
+            "product": 5.565315483556564
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 8.667,
+            "score": 5.638046280575993,
+            "product": 4.886494711375214
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 10.759,
+            "score": 5.638046280575993,
+            "product": 6.065973993271712
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 9.418,
+            "score": 5.638046280575993,
+            "product": 5.30991198704647
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 11.928,
+            "score": 5.638046280575993,
+            "product": 6.725061603471045
+          },
+          {
+            "name": "Ciclofaixa R. Dom Felipe - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 574.394,
+            "score": 5.7224922037422035,
+            "product": 328.69651868763
+          },
+          {
+            "name": "Ciclofaixa R. Dom Felipe - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 8.814,
+            "score": 5.7224922037422035,
+            "product": 5.043804628378378
+          },
+          {
+            "name": "Ciclofaixa R. Dom Felipe - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 11.576,
+            "score": 5.7224922037422035,
+            "product": 6.624356975051976
+          },
+          {
+            "name": "Ciclofaixa R. Dom Henrique - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 17.95,
+            "score": 6.251711833785005,
+            "product": 11.221822741644083
+          },
+          {
+            "name": "Ciclofaixa R. Dom Henrique - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 269.069,
+            "score": 6.251711833785005,
+            "product": 168.21418514046977
+          },
+          {
+            "name": "Ciclofaixa R. Dom Henrique - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 71.432,
+            "score": 6.251711833785005,
+            "product": 44.65722797109305
+          },
+          {
+            "name": "Ciclofaixa R. Dom Henrique - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 10.205,
+            "score": 6.251711833785005,
+            "product": 6.379871926377597
+          },
+          {
+            "name": "Ciclofaixa R. Dom Henrique - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 8.282,
+            "score": 6.251711833785005,
+            "product": 5.177667740740741
+          },
+          {
+            "name": "Ciclofaixa R. Dom Henrique - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 173.033,
+            "score": 6.251711833785005,
+            "product": 108.17524537353206
+          },
+          {
+            "name": "Ciclofaixa R. Dom Henrique - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 215.431,
+            "score": 6.251711833785005,
+            "product": 134.68125320641374
+          },
+          {
+            "name": "Ciclofaixa R. Dom Daniel - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 223.066,
+            "score": 6.176907407407408,
+            "product": 137.78580277407409
+          },
+          {
+            "name": "Ciclofaixa R. Dom Daniel - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 10.118,
+            "score": 6.176907407407408,
+            "product": 6.249794914814816
+          },
+          {
+            "name": "Ciclofaixa R. Dom Daniel - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 531.911,
+            "score": 6.176907407407408,
+            "product": 328.55649959814815
+          },
+          {
+            "name": "Ciclofaixa R. Dom Daniel - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 96.412,
+            "score": 6.176907407407408,
+            "product": 59.55279969629632
+          },
+          {
+            "name": "Ciclofaixa R. Dom Daniel - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 13.493,
+            "score": 6.176907407407408,
+            "product": 8.334501164814816
+          },
+          {
+            "name": "Ciclofaixa Rua 3208 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 45.278,
+            "score": 6.142592592592592,
+            "product": 27.81243074074074
+          },
+          {
+            "name": "Ciclofaixa Rua 3208 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 42.218,
+            "score": 6.142592592592592,
+            "product": 25.932797407407406
+          },
+          {
+            "name": "Ciclofaixa Rua 3780 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 11.859,
+            "score": 6.084113060428851,
+            "product": 7.215149678362575
+          },
+          {
+            "name": "Ciclofaixa R. Angelina - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 357.245,
+            "score": 6.121064814814815,
+            "product": 218.6719799768519
+          },
+          {
+            "name": "Ciclovia R. Angelina - BC",
+            "structureType": "Ciclovia",
+            "highway": "tertiary",
+            "length": 8.707,
+            "score": 4.187126642771804,
+            "product": 3.6457311678614097
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "secondary",
+            "length": 41.984,
+            "score": 6.300189686213993,
+            "product": 26.45071637860083
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "secondary",
+            "length": 39.274,
+            "score": 6.300189686213993,
+            "product": 24.743364973636837
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "tertiary",
+            "length": 39.707,
+            "score": 6.300189686213993,
+            "product": 25.0161631870499
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "secondary",
+            "length": 20.994,
+            "score": 6.588308579702023,
+            "product": 13.831495032226428
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "secondary",
+            "length": 3.528,
+            "score": 6.588308579702023,
+            "product": 2.324355266918874
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "secondary",
+            "length": 22.562,
+            "score": 6.588308579702023,
+            "product": 14.864541817523705
+          },
+          {
+            "name": "Ciclovia 3a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "tertiary",
+            "length": 18.606,
+            "score": 6.588308579702023,
+            "product": 12.258206943393585
+          },
+          {
+            "name": "Ciclofaixa R. 2550 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 1029.806,
+            "score": 5.4942448914431665,
+            "product": 565.8006354677522
+          },
+          {
+            "name": "Ciclofaixa R. 2550 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary_link",
+            "length": 23.638,
+            "score": 5.4942448914431665,
+            "product": 12.98729607439336
+          },
+          {
+            "name": "Ciclofaixa Av. Brasil T1 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 21.825,
+            "score": 6.438087606837608,
+            "product": 14.051126201923081
+          },
+          {
+            "name": "Ciclofaixa Av. Brasil T1 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 15.211,
+            "score": 6.438087606837608,
+            "product": 9.792975058760687
+          },
+          {
+            "name": "Ciclofaixa Av. Brasil T1 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 12.628,
+            "score": 6.438087606837608,
+            "product": 8.130017029914532
+          },
+          {
+            "name": "Ciclofaixa R. 1901 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 100.004,
+            "score": 5.503703703703704,
+            "product": 55.03923851851853
+          },
+          {
+            "name": "Ciclofaixa R. 1001 T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 22.41,
+            "score": 5.246560846560846,
+            "product": 11.757542857142857
+          },
+          {
+            "name": "Ciclofaixa R. 1001 T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 275.861,
+            "score": 5.246560846560846,
+            "product": 144.73215216931214
+          },
+          {
+            "name": "Ciclofaixa R. 1001 T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 34.423,
+            "score": 5.246560846560846,
+            "product": 18.060236402116402
+          },
+          {
+            "name": "Ciclofaixa R. 1001 T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 9.756,
+            "score": 5.246560846560846,
+            "product": 5.1185447619047615
+          },
+          {
+            "name": "Ciclofaixa R. 1001 T1 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 131.105,
+            "score": 5.972453703703704,
+            "product": 78.30185428240742
+          },
+          {
+            "name": "Ciclofaixa R. 1001 T1 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 0.624,
+            "score": 5.972453703703704,
+            "product": 0.37268111111111113
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T3 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 108.78,
+            "score": 6.365037037037037,
+            "product": 69.23887288888889
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T3 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 85.409,
+            "score": 6.365037037037037,
+            "product": 54.36314482962963
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T3 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 22.861,
+            "score": 6.365037037037037,
+            "product": 14.55111117037037
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T3 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 28.099,
+            "score": 6.365037037037037,
+            "product": 17.88511757037037
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T3 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 1.771,
+            "score": 6.365037037037037,
+            "product": 1.1272480592592593
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T3 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 3.08,
+            "score": 6.365037037037037,
+            "product": 1.9604314074074072
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 48.074,
+            "score": 6.225910915181394,
+            "product": 29.930444133643036
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 6954.196,
+            "score": 6.225910915181394,
+            "product": 4329.620478271079
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 105.902,
+            "score": 6.225910915181394,
+            "product": 65.933641773954
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 21.897,
+            "score": 6.225910915181394,
+            "product": 13.632877130972696
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 7.878,
+            "score": 6.225910915181394,
+            "product": 4.904772618979902
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 195.087,
+            "score": 6.225910915181394,
+            "product": 121.45942827099925
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 117.773,
+            "score": 6.225910915181394,
+            "product": 73.32442062136583
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 47.211,
+            "score": 6.225910915181394,
+            "product": 29.393148021662878
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 262.86,
+            "score": 6.225910915181394,
+            "product": 163.65429431645813
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 994.367,
+            "score": 6.225910915181394,
+            "product": 619.0840358996177
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 8.543,
+            "score": 6.225910915181394,
+            "product": 5.318795694839465
+          },
+          {
+            "name": "Ciclofaixa R. Ver. Domingos Fonseca - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 21.468,
+            "score": 5.6969338190649665,
+            "product": 12.23017752276867
+          },
+          {
+            "name": "Ciclofaixa R. Ver. Domingos Fonseca - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 893.532,
+            "score": 5.6969338190649665,
+            "product": 509.0392669216758
+          },
+          {
+            "name": "Ciclofaixa R. da Praia T1 e R. Napoleão Vieira - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 15.238,
+            "score": 5.920370370370371,
+            "product": 9.021460370370372
+          },
+          {
+            "name": "Ciclovia Estr. da Rainha - BC",
+            "structureType": "Ciclovia",
+            "highway": "secondary",
+            "length": 27.431,
+            "score": 5.487517806267806,
+            "product": 15.052810094373221
+          },
+          {
+            "name": "Ciclofaixa R. Doralice L. B. e R. Alécio D. L. - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 14.061,
+            "score": 6.418794326241136,
+            "product": 9.025466702127662
+          },
+          {
+            "name": "Ciclofaixa R. Doralice L. B. e R. Alécio D. L. - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 339.381,
+            "score": 6.418794326241136,
+            "product": 217.8416837234043
+          },
+          {
+            "name": "Ciclofaixa R. Doralice L. B. e R. Alécio D. L. - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 4.657,
+            "score": 6.418794326241136,
+            "product": 2.9892325177304975
+          },
+          {
+            "name": "Ciclofaixa R. Doralice L. B. e R. Alécio D. L. - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 281.225,
+            "score": 6.418794326241136,
+            "product": 180.51254343971638
+          },
+          {
+            "name": "Ciclofaixa R. Doralice L. B. e R. Alécio D. L. - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 65.677,
+            "score": 6.418794326241136,
+            "product": 42.15671549645392
+          },
+          {
+            "name": "Ciclofaixa R. Edgar Linhares T1 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 8.018,
+            "score": 5.480331663630844,
+            "product": 4.394129927899211,
+            "duplicateInfo": "Média de 2 GPX"
+          },
+          {
+            "name": "Ciclofaixa R. Edgar Linhares T1 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 291.667,
+            "score": 5.480331663630844,
+            "product": 159.84318953362174,
+            "duplicateInfo": "Média de 2 GPX"
+          },
+          {
+            "name": "Ciclofaixa R. Edgar Linhares T1 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 5.315,
+            "score": 5.480331663630844,
+            "product": 2.912796279219794,
+            "duplicateInfo": "Média de 2 GPX"
+          },
+          {
+            "name": "Ciclofaixa R. José Honorato da Silva - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 26.471,
+            "score": 5.935504469987229,
+            "product": 15.711873882503193
+          },
+          {
+            "name": "Ciclofaixa R. José Honorato da Silva - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 374.216,
+            "score": 5.935504469987229,
+            "product": 222.1160740740741
+          },
+          {
+            "name": "Ciclofaixa R. José Honorato da Silva - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 11.442,
+            "score": 5.935504469987229,
+            "product": 6.791404214559387
+          },
+          {
+            "name": "Ciclofaixa R. José Honorato da Silva - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 24.744,
+            "score": 5.935504469987229,
+            "product": 14.6868122605364
+          },
+          {
+            "name": "Ciclofaixa R. José Honorato da Silva - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 40.005,
+            "score": 5.935504469987229,
+            "product": 23.744985632183912
+          },
+          {
+            "name": "Ciclofaixa R. José Honorato da Silva - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 248.123,
+            "score": 5.935504469987229,
+            "product": 147.2735175606641
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "tertiary",
+            "length": 0.767,
+            "score": 6.119078055753403,
+            "product": 0.469333286876286
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "tertiary",
+            "length": 32.895,
+            "score": 6.119078055753403,
+            "product": 20.12870726440082
+          },
+          {
+            "name": "Ciclofaixa Av. Ruy Barbosa - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 17.779,
+            "score": 5.83461099086099,
+            "product": 10.373354880651755,
+            "duplicateInfo": "Média de 2 GPX"
+          },
+          {
+            "name": "Ciclofaixa Av. Ruy Barbosa - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 642.221,
+            "score": 5.83461099086099,
+            "product": 374.71097051617363,
+            "duplicateInfo": "Média de 2 GPX"
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 25.614,
+            "score": 5.584422657952071,
+            "product": 14.303940196078436
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 26.529,
+            "score": 5.584422657952071,
+            "product": 14.814914869281049
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 208.926,
+            "score": 5.584422657952071,
+            "product": 116.67310882352943
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 46.443,
+            "score": 5.584422657952071,
+            "product": 25.9357341503268
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 51.753,
+            "score": 5.584422657952071,
+            "product": 28.901062581699353
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 27.174,
+            "score": 5.584422657952071,
+            "product": 15.175110130718958
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 181.152,
+            "score": 5.584422657952071,
+            "product": 101.16293333333334
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 20.17,
+            "score": 5.584422657952071,
+            "product": 11.263780501089329
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 91.462,
+            "score": 5.584422657952071,
+            "product": 51.076246514161234
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 20.249,
+            "score": 5.584422657952071,
+            "product": 11.307897440087148
+          },
+          {
+            "name": "Ciclofaixa R. 995 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 7.237,
+            "score": 5.4401620370370365,
+            "product": 3.9370452662037034
+          },
+          {
+            "name": "Ciclofaixa R. 995 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 22.549,
+            "score": 5.4401620370370365,
+            "product": 12.267021377314814
+          },
+          {
+            "name": "Ciclofaixa R. 995 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 10.214,
+            "score": 5.4401620370370365,
+            "product": 5.55658150462963
+          },
+          {
+            "name": "Ciclofaixa R. Jardim da Saudade - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 426.42,
+            "score": 6.305555555555556,
+            "product": 268.8815000000001
+          },
+          {
+            "name": "Ciclofaixa R. Jardim da Saudade - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 30.377,
+            "score": 6.305555555555556,
+            "product": 19.154386111111112
+          },
+          {
+            "name": "Ciclofaixa R. Jardim da Saudade - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 426.07,
+            "score": 6.305555555555556,
+            "product": 268.6608055555556
+          },
+          {
+            "name": "Ciclofaixa R. Jardim da Saudade - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 92.133,
+            "score": 6.305555555555556,
+            "product": 58.094975000000005
+          },
+          {
+            "name": "Ciclofaixa R. Maria Mansoto - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 131.089,
+            "score": 6.301933251933252,
+            "product": 82.61141280626782
+          },
+          {
+            "name": "Ciclofaixa R. Maria Mansoto - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 33.488,
+            "score": 6.301933251933252,
+            "product": 21.103914074074076
+          },
+          {
+            "name": "Ciclofaixa R. Maria Mansoto - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 68.247,
+            "score": 6.301933251933252,
+            "product": 43.00880386446887
+          },
+          {
+            "name": "Ciclofaixa R. Maria Mansoto - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 5.744,
+            "score": 6.301933251933252,
+            "product": 3.61983045991046
+          },
+          {
+            "name": "Ciclofaixa R. Maria Mansoto - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 59.027,
+            "score": 6.301933251933252,
+            "product": 37.198421406186405
+          },
+          {
+            "name": "Ciclofaixa R. Maria Mansoto - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 157.406,
+            "score": 6.301933251933252,
+            "product": 99.19621054538055
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T4 - Sul - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 716.916,
+            "score": 6.4496569611780465,
+            "product": 462.3862269979921,
+            "duplicateInfo": "Média de 2 GPX"
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T4 - Sul - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 60.997,
+            "score": 6.4496569611780465,
+            "product": 39.34097256609773,
+            "duplicateInfo": "Média de 2 GPX"
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T4 - Sul - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 1658.315,
+            "score": 6.4496569611780465,
+            "product": 1069.5562883575974,
+            "duplicateInfo": "Média de 2 GPX"
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T4 - Sul - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 53.772,
+            "score": 6.4496569611780465,
+            "product": 34.68109541164659,
+            "duplicateInfo": "Média de 2 GPX"
+          },
+          {
+            "name": "Ciclofaixa R. 2000 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 200.383,
+            "score": 5.194038873584328,
+            "product": 104.07970916054485
+          },
+          {
+            "name": "Ciclofaixa R. 2000 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 936.143,
+            "score": 5.194038873584328,
+            "product": 486.2363133233854
+          },
+          {
+            "name": "Ciclofaixa R. 3000 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 416.988,
+            "score": 5.528776601186823,
+            "product": 230.5433497375691
+          },
+          {
+            "name": "Ciclofaixa R. 3000 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 227.574,
+            "score": 5.528776601186823,
+            "product": 125.82058062384903
+          },
+          {
+            "name": "Ciclofaixa R. 3000 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 118.636,
+            "score": 5.528776601186823,
+            "product": 65.59119408583999
+          },
+          {
+            "name": "Compart. Pass. Viaduto BR 101 - 2 (R. 2500) - BC",
+            "structureType": "Compart.",
+            "highway": "secondary_link",
+            "length": 6.052,
+            "score": 5.616402116402116,
+            "product": 3.3990465608465605
+          },
+          {
+            "name": "Ciclovia Av. Marg. Oeste BR 101 T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "tertiary",
+            "length": 5.193,
+            "score": 5.701147894469813,
+            "product": 2.9606061015981737
+          },
+          {
+            "name": "Ciclofaixa R. Biguaçu - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 334.356,
+            "score": 5.523168572984749,
+            "product": 184.67045513888888
+          },
+          {
+            "name": "Ciclofaixa R. Biguaçu - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 980.866,
+            "score": 5.523168572984749,
+            "product": 541.7488265509259
+          },
+          {
+            "name": "Ciclovia 5a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "tertiary",
+            "length": 7.78,
+            "score": 6.902677133655395,
+            "product": 5.370282809983898
+          },
+          {
+            "name": "Ciclovia 5a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "tertiary",
+            "length": 8.758,
+            "score": 6.902677133655395,
+            "product": 6.045364633655395
+          },
+          {
+            "name": "Ciclovia 5a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "tertiary",
+            "length": 7.069,
+            "score": 6.902677133655395,
+            "product": 4.879502465780999
+          },
+          {
+            "name": "Ciclovia 5a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "secondary",
+            "length": 11.78,
+            "score": 6.902677133655395,
+            "product": 8.131353663446054
+          },
+          {
+            "name": "Ciclofaixa R. 991 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 15.861,
+            "score": 5.962037037037038,
+            "product": 9.456386944444446
+          },
+          {
+            "name": "Ciclofaixa R. 991 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 49.139,
+            "score": 5.962037037037038,
+            "product": 29.296853796296304
+          }
+        ],
+        "totalProduct": 17273.281351678394,
+        "totalExtension": 79655.50000000001,
+        "result": 0.21684982646117834
+      },
+      "local": {
+        "structures": [
+          {
+            "name": "Ciclovia Al. Delfim P. Peixoto Filho - BC",
+            "structureType": "Ciclovia",
+            "highway": "residential",
+            "length": 285,
+            "score": 6.216167153996101,
+            "product": 177.16076388888888
+          },
+          {
+            "name": "Ciclofaixa R. 3700 T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 12.433,
+            "score": 5.628703703703704,
+            "product": 6.998167314814815
+          },
+          {
+            "name": "Ciclofaixa R. 3700 T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "footway",
+            "length": 13.408,
+            "score": 5.628703703703704,
+            "product": 7.546965925925926
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "cycleway",
+            "length": 15.18,
+            "score": 5.638046280575993,
+            "product": 8.558554253914357
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 23.164,
+            "score": 5.638046280575993,
+            "product": 13.059970404326231
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 18.787,
+            "score": 5.638046280575993,
+            "product": 10.592197547318118
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 21.623,
+            "score": 5.638046280575993,
+            "product": 12.19114747248947
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 126.357,
+            "score": 5.638046280575993,
+            "product": 71.24066138747408
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 18.66,
+            "score": 5.638046280575993,
+            "product": 10.520594359554803
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 89.018,
+            "score": 5.638046280575993,
+            "product": 50.188760380431376
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 9.389,
+            "score": 5.638046280575993,
+            "product": 5.2935616528328
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 115.188,
+            "score": 5.638046280575993,
+            "product": 64.94352749669875
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 11.285,
+            "score": 5.638046280575993,
+            "product": 6.3625352276300084
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 97.583,
+            "score": 5.638046280575993,
+            "product": 55.01774701974471
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 11.688,
+            "score": 5.638046280575993,
+            "product": 6.589748492737221
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 56.837,
+            "score": 5.638046280575993,
+            "product": 32.04496364490978
+          },
+          {
+            "name": "Ciclofaixa Av. Atlântica - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 11.786,
+            "score": 5.638046280575993,
+            "product": 6.645001346286866
+          },
+          {
+            "name": "Ciclofaixa R. Dom Felipe - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 145.216,
+            "score": 5.7224922037422035,
+            "product": 83.09974278586279
+          },
+          {
+            "name": "Ciclofaixa R. Dom Henrique - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "cycleway",
+            "length": 36.385,
+            "score": 6.251711833785005,
+            "product": 22.746853507226742
+          },
+          {
+            "name": "Ciclofaixa R. Dom Henrique - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "cycleway",
+            "length": 18.213,
+            "score": 6.251711833785005,
+            "product": 11.38624276287263
+          },
+          {
+            "name": "Ciclofaixa Rua 3208 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 14.369,
+            "score": 6.142592592592592,
+            "product": 8.826291296296295
+          },
+          {
+            "name": "Ciclofaixa Rua 3208 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 230.4,
+            "score": 6.142592592592592,
+            "product": 141.52533333333335
+          },
+          {
+            "name": "Ciclofaixa Rua 3208 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 57.736,
+            "score": 6.142592592592592,
+            "product": 35.46487259259259
+          },
+          {
+            "name": "Ciclofaixa Rua 3780 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 251.107,
+            "score": 6.084113060428851,
+            "product": 152.77633782651074
+          },
+          {
+            "name": "Ciclofaixa R. Angelina - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 27.755,
+            "score": 6.121064814814815,
+            "product": 16.98901539351852
+          },
+          {
+            "name": "Ciclovia R. Angelina - BC",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 1.131,
+            "score": 4.187126642771804,
+            "product": 0.4735640232974911
+          },
+          {
+            "name": "Ciclovia R. Angelina - BC",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 125.308,
+            "score": 4.187126642771804,
+            "product": 52.46804653524492
+          },
+          {
+            "name": "Ciclovia R. Angelina - BC",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 174.854,
+            "score": 4.187126642771804,
+            "product": 73.21358419952212
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "residential",
+            "length": 17.004,
+            "score": 6.300189686213993,
+            "product": 10.712842542438274
+          },
+          {
+            "name": "Ciclovia 4a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "residential",
+            "length": 47.447,
+            "score": 6.300189686213993,
+            "product": 29.892510004179538
+          },
+          {
+            "name": "Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC",
+            "structureType": "Ciclovia",
+            "highway": "residential",
+            "length": 51.613,
+            "score": 5.020588784348866,
+            "product": 25.9127648926598
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 14.557,
+            "score": 6.225910915181394,
+            "product": 9.063058519229555
+          },
+          {
+            "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 11.658,
+            "score": 6.225910915181394,
+            "product": 7.258166944918469
+          },
+          {
+            "name": "Ciclofaixa R. da Praia T1 e R. Napoleão Vieira - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 19.48,
+            "score": 5.920370370370371,
+            "product": 11.532881481481484
+          },
+          {
+            "name": "Ciclofaixa R. da Praia T1 e R. Napoleão Vieira - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 62.335,
+            "score": 5.920370370370371,
+            "product": 36.90462870370371
+          },
+          {
+            "name": "Ciclofaixa R. da Praia T1 e R. Napoleão Vieira - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 197.947,
+            "score": 5.920370370370371,
+            "product": 117.19195537037038
+          },
+          {
+            "name": "Ciclovia Estr. da Rainha - BC",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 207.1,
+            "score": 5.487517806267806,
+            "product": 113.64649376780626
+          },
+          {
+            "name": "Ciclofaixa R. da Praia T2 e R. Vergílio R. Pereira - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 243.418,
+            "score": 6.309259259259259,
+            "product": 153.57872703703705
+          },
+          {
+            "name": "Ciclofaixa R. da Praia T2 e R. Vergílio R. Pereira - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 170.078,
+            "score": 6.309259259259259,
+            "product": 107.30661962962964
+          },
+          {
+            "name": "Ciclofaixa R. da Praia T2 e R. Vergílio R. Pereira - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 6.504,
+            "score": 6.309259259259259,
+            "product": 4.103542222222223
+          },
+          {
+            "name": "Ciclofaixa R. Síria - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 639.026,
+            "score": 5.0546840958605666,
+            "product": 323.0074559041394
+          },
+          {
+            "name": "Ciclofaixa Av. Martin Luther T2 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 22.785,
+            "score": 6.400473532893624,
+            "product": 14.583478944698124
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "residential",
+            "length": 2.244,
+            "score": 6.119078055753403,
+            "product": 1.3731211157110639
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "footway",
+            "length": 46.798,
+            "score": 6.119078055753403,
+            "product": 28.636061485314777
+          },
+          {
+            "name": "Ciclovia Av. Estado T2 - BC",
+            "structureType": "Ciclovia",
+            "highway": "footway",
+            "length": 29.848,
+            "score": 6.119078055753403,
+            "product": 18.264224180812757
+          },
+          {
+            "name": "Compart. Av. Flores T1 e R. Aqueduto - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 7.167,
+            "score": 4.812037037037038,
+            "product": 3.448786944444445
+          },
+          {
+            "name": "Compart. Pass. Pte. Rio Camboriú BR 101 - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 11.281,
+            "score": 4.742592592592593,
+            "product": 5.350118703703704
+          },
+          {
+            "name": "Compart. Pass. Pte. Rio Camboriú BR 101 - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 11.439,
+            "score": 4.742592592592593,
+            "product": 5.4250516666666675
+          },
+          {
+            "name": "Compart. Pass. Pte. Rio Camboriú BR 101 - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 1.059,
+            "score": 4.742592592592593,
+            "product": 0.5022405555555556
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "cycleway",
+            "length": 5.874,
+            "score": 5.584422657952071,
+            "product": 3.280289869281046
+          },
+          {
+            "name": "Ciclofaixa R. Dom Afonso - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "footway",
+            "length": 11.107,
+            "score": 5.584422657952071,
+            "product": 6.202618246187365
+          },
+          {
+            "name": "Compart. Pte. Rio Camboriú BR 101 T2 Oeste e Av. Marg. Oeste T2 - BC",
+            "structureType": "Compart.",
+            "highway": "cycleway",
+            "length": 124.62,
+            "score": 4.857678410117434,
+            "product": 60.53638834688346
+          },
+          {
+            "name": "Compart. Pte. Rio Camboriú BR 101 T2 Oeste e Av. Marg. Oeste T2 - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 180.454,
+            "score": 4.857678410117434,
+            "product": 87.65874998193316
+          },
+          {
+            "name": "Compart. Pte. Rio Camboriú BR 101 T2 Oeste e Av. Marg. Oeste T2 - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 144.669,
+            "score": 4.857678410117434,
+            "product": 70.27554779132792
+          },
+          {
+            "name": "Compart. Pte. Rio Camboriú BR 101 T2 Oeste e Av. Marg. Oeste T2 - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 142.461,
+            "score": 4.857678410117434,
+            "product": 69.20297239837399
+          },
+          {
+            "name": "Ciclovia R. 290 e R. 200 - BC",
+            "structureType": "Ciclovia",
+            "highway": "residential",
+            "length": 47.441,
+            "score": 6.219195156695157,
+            "product": 29.5044837428775
+          },
+          {
+            "name": "Ciclovia R. 290 e R. 200 - BC",
+            "structureType": "Ciclovia",
+            "highway": "residential",
+            "length": 30.07,
+            "score": 6.219195156695157,
+            "product": 18.70111983618234
+          },
+          {
+            "name": "Ciclovia R. 290 e R. 200 - BC",
+            "structureType": "Ciclovia",
+            "highway": "footway",
+            "length": 25.958,
+            "score": 6.219195156695157,
+            "product": 16.14378678774929
+          },
+          {
+            "name": "Compart. Pte. Rio Camboriú BR 101 T1 - Leste - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 257.759,
+            "score": 4.974151234567902,
+            "product": 128.2132248070988
+          },
+          {
+            "name": "Compart. Pte. Rio Camboriú BR 101 T1 - Leste - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 407.973,
+            "score": 4.974151234567902,
+            "product": 202.93194016203708
+          },
+          {
+            "name": "Compart. Pte. Rio Camboriú BR 101 T1 - Leste - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 394.932,
+            "score": 4.974151234567902,
+            "product": 196.44514953703708
+          },
+          {
+            "name": "Ciclofaixa R. 2000 - BC",
+            "structureType": "Ciclofaixa",
+            "highway": null,
+            "length": 12.572,
+            "score": 5.194038873584328,
+            "product": 6.529945671870218
+          },
+          {
+            "name": "Compart. Pass. Viaduto BR 101 - 2 (R. 2500) - BC",
+            "structureType": "Compart.",
+            "highway": "cycleway",
+            "length": 19.892,
+            "score": 5.616402116402116,
+            "product": 11.172147089947089
+          },
+          {
+            "name": "Compart. Pass. Viaduto BR 101 - 2 (R. 2500) - BC",
+            "structureType": "Compart.",
+            "highway": "cycleway",
+            "length": 79.057,
+            "score": 5.616402116402116,
+            "product": 44.40159021164021
+          },
+          {
+            "name": "Ciclovia Av. Marg. Oeste BR 101 T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 1232.042,
+            "score": 5.701147894469813,
+            "product": 702.4053654198377
+          },
+          {
+            "name": "Ciclovia Av. Marg. Oeste BR 101 T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 18.168,
+            "score": 5.701147894469813,
+            "product": 10.357845494672755
+          },
+          {
+            "name": "Ciclovia Av. Marg. Oeste BR 101 T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 773.077,
+            "score": 5.701147894469813,
+            "product": 440.7426310813039
+          },
+          {
+            "name": "Ciclovia Av. Marg. Oeste BR 101 T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "footway",
+            "length": 3.564,
+            "score": 5.701147894469813,
+            "product": 2.031889109589041
+          },
+          {
+            "name": "Ciclovia Av. Marg. Oeste BR 101 T1 - BC",
+            "structureType": "Ciclovia",
+            "highway": "footway",
+            "length": 151.589,
+            "score": 5.701147894469813,
+            "product": 86.42313081747845
+          },
+          {
+            "name": "Ciclofaixa R. Biguaçu - BC",
+            "structureType": "Ciclofaixa",
+            "highway": "cycleway",
+            "length": 44.778,
+            "score": 5.523168572984749,
+            "product": 24.73164423611111
+          },
+          {
+            "name": "Ciclovia 5a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 2174.215,
+            "score": 6.902677133655395,
+            "product": 1500.7904164150566
+          },
+          {
+            "name": "Ciclovia 5a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 156.47,
+            "score": 6.902677133655395,
+            "product": 108.00618911030597
+          },
+          {
+            "name": "Ciclovia 5a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 12.019,
+            "score": 6.902677133655395,
+            "product": 8.29632764694042
+          },
+          {
+            "name": "Ciclovia 5a. Av. - BC",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 13.078,
+            "score": 6.902677133655395,
+            "product": 9.027321155394525
+          },
+          {
+            "name": "Compart. Av. Marg. Oeste BR 101 T3 - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 41.021,
+            "score": 3.841550925925926,
+            "product": 15.75842605324074
+          },
+          {
+            "name": "Compart. Pass. Viaduto BR 101 - 1 (R. 3100) - BC",
+            "structureType": "Compart.",
+            "highway": "cycleway",
+            "length": 49.183,
+            "score": 5.5740740740740735,
+            "product": 27.414968518518517
+          },
+          {
+            "name": "Compart. Pte. Altamiro D. Castilho T1 - Oeste - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 80.665,
+            "score": 5.141179337231969,
+            "product": 41.47132312378168
+          },
+          {
+            "name": "Compart. Pte. Altamiro D. Castilho T1 - Oeste - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 79.271,
+            "score": 5.141179337231969,
+            "product": 40.75464272417154
+          },
+          {
+            "name": "Compart. Pte. Altamiro D. Castilho T1 - Oeste - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 30.064,
+            "score": 5.141179337231969,
+            "product": 15.456441559454191
+          },
+          {
+            "name": "Compart. Pte. Altamiro D. Castilho T2 - Leste - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 80.624,
+            "score": 5.141179337231969,
+            "product": 41.45024428849902
+          },
+          {
+            "name": "Compart. Pte. Altamiro D. Castilho T2 - Leste - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 78.188,
+            "score": 5.141179337231969,
+            "product": 40.19785300194932
+          },
+          {
+            "name": "Compart. Pte. Altamiro D. Castilho T2 - Leste - BC",
+            "structureType": "Compart.",
+            "highway": "footway",
+            "length": 31.188,
+            "score": 5.141179337231969,
+            "product": 16.034310116959062
+          }
+        ],
+        "totalProduct": 6254.17040704267,
+        "totalExtension": 226777.81100000002,
+        "result": 0.027578405398060175
+      }
+    },
+    "ideciclo": 0.10971020095706836
+  },
+  "Camboriu": {
+    "city": "Camboriu",
+    "totalExtensions": {
+      "arterial": 12477.612,
+      "coletora": 97658.93999999999,
+      "local": 370105.158
+    },
+    "results": {
+      "arterial": {
+        "structures": [
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 46.616,
+            "score": 4.984283884948779,
+            "product": 23.23473775807723
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 7.737,
+            "score": 4.984283884948779,
+            "product": 3.8563404417848703
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 52.065,
+            "score": 4.984283884948779,
+            "product": 25.950674046985814
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 41.162,
+            "score": 4.984283884948779,
+            "product": 20.516309327226164
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 28.057,
+            "score": 4.984283884948779,
+            "product": 13.984405296000787
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 37.331,
+            "score": 4.984283884948779,
+            "product": 18.60683017090229
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 25.279,
+            "score": 4.984283884948779,
+            "product": 12.599771232762018
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary_link",
+            "length": 29.053,
+            "score": 4.984283884948779,
+            "product": 14.480839970941688
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 152.693,
+            "score": 4.984283884948779,
+            "product": 76.1065259244484
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 496.726,
+            "score": 4.984283884948779,
+            "product": 247.5823397035067
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 51.447,
+            "score": 4.984283884948779,
+            "product": 25.642645302895986
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 72.31,
+            "score": 4.984283884948779,
+            "product": 36.041356772064624
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 45.816,
+            "score": 4.984283884948779,
+            "product": 22.83599504728133
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 36.937,
+            "score": 4.984283884948779,
+            "product": 18.410449385835303
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 248.353,
+            "score": 4.984283884948779,
+            "product": 123.78618556786842
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "primary",
+            "length": 24.779,
+            "score": 4.984283884948779,
+            "product": 12.35055703851458
+          }
+        ],
+        "totalProduct": 695.9859629870962,
+        "totalExtension": 12477.612,
+        "result": 0.05577877906342145
+      },
+      "coletora": {
+        "structures": [
+          {
+            "name": "Ciclofaixa R. Guaraparim - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 9,
+            "score": 5.385182506290862,
+            "product": 4.846664255661776,
+            "duplicateInfo": "Média de 20 GPX"
+          },
+          {
+            "name": "Ciclofaixa Av. Santo Amaro T1 - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 23.362,
+            "score": 4.364814814814815,
+            "product": 10.19708037037037
+          },
+          {
+            "name": "Ciclofaixa Av. Santo Amaro T1 - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 12.332,
+            "score": 4.364814814814815,
+            "product": 5.38268962962963
+          },
+          {
+            "name": "Ciclofaixa Av. Santo Amaro T1 - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 40.884,
+            "score": 4.364814814814815,
+            "product": 17.845108888888888
+          },
+          {
+            "name": "Ciclofaixa Av. Santo Amaro T1 - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 36.119,
+            "score": 4.364814814814815,
+            "product": 15.76527462962963
+          },
+          {
+            "name": "Ciclofaixa Av. Santo Amaro T1 - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 58.231,
+            "score": 4.364814814814815,
+            "product": 25.41675314814815
+          },
+          {
+            "name": "Ciclofaixa Av. Santo Amaro T1 - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "secondary",
+            "length": 19.071,
+            "score": 4.364814814814815,
+            "product": 8.324138333333334
+          },
+          {
+            "name": "Ciclofaixa R. Porto Velho e R. Minas Gerais T1 - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 201.406,
+            "score": 5.881298206782579,
+            "product": 118.45287466352521,
+            "duplicateInfo": "Média de 7 GPX"
+          },
+          {
+            "name": "Ciclofaixa R. Porto Velho e R. Minas Gerais T1 - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 163.594,
+            "score": 5.881298206782579,
+            "product": 96.21450988403893,
+            "duplicateInfo": "Média de 7 GPX"
+          },
+          {
+            "name": "Ciclofaixa Estr. dos Macacos - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 360.687,
+            "score": 5.014912520723783,
+            "product": 180.88137523622993,
+            "duplicateInfo": "Média de 4 GPX"
+          },
+          {
+            "name": "Ciclofaixa Estr. dos Macacos - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 567.004,
+            "score": 5.014912520723783,
+            "product": 284.3475458900468,
+            "duplicateInfo": "Média de 4 GPX"
+          },
+          {
+            "name": "Ciclofaixa Estr. dos Macacos - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 992.286,
+            "score": 5.014912520723783,
+            "product": 497.622748553892,
+            "duplicateInfo": "Média de 4 GPX"
+          },
+          {
+            "name": "Ciclofaixa Estr. dos Macacos - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 4600.022,
+            "score": 5.014912520723783,
+            "product": 2306.870792340486,
+            "duplicateInfo": "Média de 4 GPX"
+          },
+          {
+            "name": "Ciclofaixa R. Monte Acaraí - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 54.984,
+            "score": 6.236200869236583,
+            "product": 34.28912685941043
+          },
+          {
+            "name": "Ciclofaixa R. Monte Acaraí - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 140.863,
+            "score": 6.236200869236583,
+            "product": 87.8449963043273
+          },
+          {
+            "name": "Ciclofaixa R. Monte Acaraí - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 207.868,
+            "score": 6.236200869236583,
+            "product": 129.630660228647
+          },
+          {
+            "name": "Ciclofaixa R. Monte Acaraí - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 85.548,
+            "score": 6.236200869236583,
+            "product": 53.34945119614513
+          },
+          {
+            "name": "Ciclofaixa R. Monte Acaraí - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 56.308,
+            "score": 6.236200869236583,
+            "product": 35.114799854497356
+          },
+          {
+            "name": "Ciclofaixa R. Monte Acaraí - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 62.118,
+            "score": 6.236200869236583,
+            "product": 38.738032559523816
+          },
+          {
+            "name": "Ciclofaixa R. Monte Acaraí - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 48.281,
+            "score": 6.236200869236583,
+            "product": 30.109001416761146
+          },
+          {
+            "name": "Ciclofaixa R. Monte Acaraí - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 56.164,
+            "score": 6.236200869236583,
+            "product": 35.02499856198035
+          },
+          {
+            "name": "Ciclofaixa R. Monte Acaraí - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 55.46,
+            "score": 6.236200869236583,
+            "product": 34.58597002078609
+          },
+          {
+            "name": "Ciclofaixa R. Monte Acaraí - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "tertiary",
+            "length": 212.405,
+            "score": 6.236200869236583,
+            "product": 132.46002456301966
+          }
+        ],
+        "totalProduct": 4183.314617388979,
+        "totalExtension": 97658.93999999999,
+        "result": 0.04283596173979545
+      },
+      "local": {
+        "structures": [
+          {
+            "name": "Ciclofaixa Av. Áustria - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 9.124,
+            "score": 5.942914808359526,
+            "product": 5.422315471147233,
+            "duplicateInfo": "Média de 5 GPX"
+          },
+          {
+            "name": "Ciclofaixa Av. Áustria - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 52.605,
+            "score": 5.942914808359526,
+            "product": 31.262703349375286,
+            "duplicateInfo": "Média de 5 GPX"
+          },
+          {
+            "name": "Ciclofaixa Av. Áustria - Cb",
+            "structureType": "Ciclofaixa",
+            "highway": "residential",
+            "length": 243.271,
+            "score": 5.942914808359526,
+            "product": 144.57388283444303,
+            "duplicateInfo": "Média de 5 GPX"
+          },
+          {
+            "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+            "structureType": "Ciclovia",
+            "highway": "cycleway",
+            "length": 13.639,
+            "score": 4.984283884948779,
+            "product": 6.798064790681639
+          }
+        ],
+        "totalProduct": 188.0569664456472,
+        "totalExtension": 370105.158,
+        "result": 0.0005081176589428867
+      }
+    },
+    "ideciclo": 0.044252475521843165
+  }
+}

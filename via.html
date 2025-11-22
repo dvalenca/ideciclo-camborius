@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalhes da estrutura cicloviária - IDECICLO">
+    <title id="page-title">Estrutura Cicloviária - IDECICLO</title>
+    
+    <!-- Mapbox CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/print.css">
+    
+    <style>
+        .map-container {
+            height: 500px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+        
+        .via-info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .via-header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+        
+        .via-actions {
+            flex-shrink: 0;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: #2E7D32;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #1B5E20;
+        }
+        
+        .btn-secondary {
+            background: #455A64;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #37474F;
+        }
+        
+
+        
+        .score-section {
+            margin-bottom: 2rem;
+        }
+        
+        .score-display {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .score-number {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .score-class {
+            font-size: 0.8rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .field-data {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .data-item {
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        
+        .parent-separator {
+            height: 1px;
+            background: linear-gradient(to right, #E8F5E8, transparent);
+            margin: 1rem 0;
+        }
+        
+        .parent-item {
+            background: #f8fff8 !important;
+            font-weight: 600;
+            border-left-width: 6px !important;
+            margin-top: 0.5rem;
+            margin-left: 0 !important;
+            grid-column: 1 / -1;
+        }
+        
+        .child-item {
+            background: #f0f8f0;
+            font-size: 0.95rem;
+            border-left-width: 3px !important;
+            margin-left: 1rem !important;
+        }
+        
+        .data-label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .data-value {
+            color: #666;
+        }
+        
+        .field-section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            color: #2E7D32;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #E8F5E8;
+        }
+        
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2E7D32;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        
+        .back-button:hover {
+            text-decoration: underline;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .image-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .image-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .score-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .score-modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .score-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #E8F5E8;
+        }
+        
+        .score-modal-title {
+            color: #2E7D32;
+            margin: 0;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+
+        
+        @media (max-width: 768px) {
+            .map-container {
+                height: 400px;
+            }
+            
+            .via-header-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .score-modal-content {
+                width: 95%;
+                margin: 2% auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">IDECICLO</a></h1>
+                    <p>Auditoria Cicloviária</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
+                        <li><a href="comparacao.html" class="nav-link">Comparação</a></li>
+                        <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+                        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <a href="index.html" class="back-button">
+                ← Voltar para lista de estruturas
+            </a>
+
+            <div id="loading" class="loading">Carregando dados da estrutura...</div>
+            
+            <div id="via-content" style="display: none;">
+                <!-- Cabeçalho da Via -->
+                <div class="via-info-card">
+                    <div class="via-header-content">
+                        <div>
+                            <h1 id="via-name">Nome da Estrutura</h1>
+                            <p id="via-location">Cidade</p>
+                            <span id="via-typology" class="typology-badge">Tipologia</span>
+                        </div>
+                        <div class="via-actions">
+                            <button class="btn btn-primary" onclick="exportToPDF()">
+                                📎 Exportar PDF
+                            </button>
+                            <button class="btn btn-secondary" onclick="exportToMarkdown()" style="margin-left: 0.5rem;">
+                                📝 Exportar Markdown
+                            </button>
+                            <button class="btn btn-secondary" onclick="downloadGPX()" style="margin-left: 0.5rem;">
+                                📍 Baixar GPX
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa -->
+                <div class="field-data">
+                    <h2>Localização</h2>
+                    <div id="map" class="map-container"></div>
+                </div>
+
+                <!-- Notas de Avaliação -->
+                <div class="field-data">
+                    <h2>Notas de Avaliação</h2>
+                    <div id="scores-container">
+                        <!-- Notas serão inseridas aqui -->
+                    </div>
+                </div>
+
+                <!-- Galeria de Imagens -->
+                <div class="field-data" id="gallery-section" style="display: none;">
+                    <h2>Galeria de Imagens</h2>
+                    <div class="image-gallery" id="image-gallery">
+                        <!-- Imagens serão inseridas aqui -->
+                    </div>
+                </div>
+
+                <!-- Dados de Campo -->
+                <div class="field-data">
+                    <h2>Dados Coletados em Campo</h2>
+                    <div id="field-data-container">
+                        <!-- Seções serão inseridas aqui -->
+                    </div>
+                </div>
+
+                <!-- Navegação entre vias -->
+                <div class="field-data">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <button id="prev-via" class="btn btn-secondary" onclick="navigateVia(-1)" style="display: none;">
+                            ← Via Anterior
+                        </button>
+                        <span id="via-counter" style="color: #666; font-size: 0.9rem;"></span>
+                        <button id="next-via" class="btn btn-secondary" onclick="navigateVia(1)" style="display: none;">
+                            Próxima Via →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal de Detalhes da Nota -->
+        <div id="score-modal" class="score-modal">
+            <div class="score-modal-content">
+                <div class="score-modal-header">
+                    <h3 id="modal-title" class="score-modal-title">Detalhes da Nota</h3>
+                    <button class="close-modal" onclick="closeScoreModal()">&times;</button>
+                </div>
+                <div id="modal-content">
+                    <!-- Conteúdo será inserido aqui -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>IDECICLO</h3>
+                    <p>Relatório de Auditoria Cicloviária</p>
+                    <p>Camboriú e Balneário Camboriú</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="libs/cdn-config.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/pdf-export.js"></script>
+    <script src="assets/js/markdown-export.js"></script>
+    
+    <script>
+        let viaMap;
+        let currentVia;
+        let allVias = [];
+        let scoreTree = {};
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const viaId = urlParams.get('id');
+            
+            if (!viaId) {
+                showError('ID da estrutura não fornecido');
+                return;
+            }
+            
+            await loadViaData(viaId);
+        });
+
+        // Carregar dados da via
+        async function loadViaData(viaId) {
+            try {
+                const [viasResponse, treeResponse] = await Promise.all([
+                    fetch('data/processed-data.json'),
+                    fetch('assets/data/score-tree.json')
+                ]);
+                
+                allVias = await viasResponse.json();
+                scoreTree = await treeResponse.json();
+                
+                currentVia = allVias.find(via => via.id == viaId);
+                
+                if (!currentVia) {
+                    showError('Estrutura não encontrada');
+                    return;
+                }
+                
+                renderViaData();
+                setupNavigation();
+                initMap();
+                loadImageGallery();
+                
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                showError('Erro ao carregar dados da estrutura');
+            }
+        }
+
+        // Renderizar dados da via
+        function renderViaData() {
+            document.getElementById('page-title').textContent = `${currentVia.structure_name} - IDECICLO`;
+            document.getElementById('via-name').textContent = currentVia.structure_name;
+            document.getElementById('via-location').textContent = currentVia.city;
+            
+            const typologyBadge = document.getElementById('via-typology');
+            typologyBadge.textContent = currentVia.typology;
+            typologyBadge.className = `typology-badge typology-${currentVia.typology.toLowerCase().replace(/\s+/g, '-')}`;
+            
+            renderScores();
+            renderFieldData();
+            
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('via-content').style.display = 'block';
+        }
+
+        // Renderizar notas
+        function renderScores() {
+            const container = document.getElementById('scores-container');
+            const rates = currentVia.full_rates || {};
+            
+            if (!scoreTree.average) return;
+            
+            let html = '';
+            
+            // Média Geral com componentes principais
+            const avgValue = rates[scoreTree.average.key];
+            const avgColor = getScoreColor(avgValue);
+            const avgClassification = getScoreClassification(avgValue);
+            
+            html += `
+                <div class="score-section">
+                    <h3 class="section-title">🏆 ${scoreTree.average.label}</h3>
+                    <div class="section-grid">
+                        <div class="data-item score-item parent-item" style="border-left: 6px solid ${avgColor}">
+                            <div class="data-label">${scoreTree.average.label}</div>
+                            <div class="data-value score-display">
+                                <span class="score-number" style="color: ${avgColor}">${avgValue !== null && avgValue !== undefined ? avgValue.toFixed(1) : 'N/A'}</span>
+                                ${avgValue !== null && avgValue !== undefined ? `<span class="score-class">(${avgClassification})</span>` : ''}
+                            </div>
+                        </div>
+            `;
+            
+            // Componentes principais como subitens (1, 2, 3)
+            if (scoreTree.average.components) {
+                scoreTree.average.components.forEach(comp => {
+                    const compValue = rates[comp.key];
+                    const compColor = getScoreColor(compValue);
+                    const compClassification = getScoreClassification(compValue);
+                    
+                    html += `
+                        <div class="data-item score-item child-item" style="border-left: 3px solid ${compColor}">
+                            <div class="data-label">${comp.label}</div>
+                            <div class="data-value score-display">
+                                <span class="score-number" style="color: ${compColor}">${compValue !== null && compValue !== undefined ? compValue.toFixed(1) : 'N/A'}</span>
+                                ${compValue !== null && compValue !== undefined ? `<span class="score-class">(${compClassification})</span>` : ''}
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+            
+            html += `
+                    </div>
+                </div>
+            `;
+            
+            // Seções detalhadas para cada componente principal
+            if (scoreTree.average.components) {
+                scoreTree.average.components.forEach(comp => {
+                    const compValue = rates[comp.key];
+                    const compColor = getScoreColor(compValue);
+                    const compClassification = getScoreClassification(compValue);
+                    
+                    const icon = comp.label.includes('1.') ? '🏗️' : comp.label.includes('2.') ? '🛡️' : '😴';
+                    
+                    html += `
+                        <div class="score-section">
+                            <h3 class="section-title">${icon} ${comp.label}</h3>
+                            <div class="section-grid">
+                    `;
+                    
+                    // Segundo nível (1.1, 1.2, 1.3, 1.4, etc.)
+                    if (comp.components) {
+                        comp.components.forEach((subComp, index) => {
+                            const subValue = rates[subComp.key];
+                            const subColor = getScoreColor(subValue);
+                            const subClassification = getScoreClassification(subValue);
+                            
+                            // Adicionar separador visual antes de cada item pai (exceto o primeiro)
+                            if (index > 0) {
+                                html += `<div class="parent-separator"></div>`;
+                            }
+                            
+                            // Mostrar o item do segundo nível com destaque de pai
+                            html += `
+                                <div class="data-item score-item parent-item" style="border-left: 6px solid ${subColor}">
+                                    <div class="data-label">${subComp.label}</div>
+                                    <div class="data-value score-display">
+                                        <span class="score-number" style="color: ${subColor}">${subValue !== null && subValue !== undefined ? subValue.toFixed(1) : 'N/A'}</span>
+                                        ${subValue !== null && subValue !== undefined ? `<span class="score-class">(${subClassification})</span>` : ''}
+                                    </div>
+                                </div>
+                            `;
+                            
+                            // Imediatamente mostrar seus subitens do terceiro nível
+                            if (subComp.components) {
+                                subComp.components.forEach(subSubComp => {
+                                    const subSubValue = rates[subSubComp.key];
+                                    const subSubColor = getScoreColor(subSubValue);
+                                    const subSubClassification = getScoreClassification(subSubValue);
+                                    
+                                    html += `
+                                        <div class="data-item score-item child-item" style="border-left: 3px solid ${subSubColor}">
+                                            <div class="data-label">${subSubComp.label}</div>
+                                            <div class="data-value score-display">
+                                                <span class="score-number" style="color: ${subSubColor}">${subSubValue !== null && subSubValue !== undefined ? subSubValue.toFixed(1) : 'N/A'}</span>
+                                                ${subSubValue !== null && subSubValue !== undefined ? `<span class="score-class">(${subSubClassification})</span>` : ''}
+                                            </div>
+                                        </div>
+                                    `;
+                                });
+                            }
+                        });
+                    }
+                    
+                    html += `
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+            
+            container.innerHTML = html;
+        }
+        
+        // Função para obter cor da nota
+        function getScoreColor(score) {
+            if (score === null || score === undefined) return '#999';
+            if (score >= 8) return '#4CAF50';
+            if (score >= 6) return '#8BC34A';
+            if (score >= 4) return '#FFC107';
+            if (score >= 2) return '#FF9800';
+            return '#F44336';
+        }
+        
+        // Função para obter classificação da nota
+        function getScoreClassification(score) {
+            if (score === null || score === undefined) return 'N/A';
+            if (score >= 8) return 'Excelente';
+            if (score >= 6) return 'Bom';
+            if (score >= 4) return 'Regular';
+            if (score >= 2) return 'Ruim';
+            return 'Inadequado';
+        }
+
+        // Renderizar dados de campo
+        function renderFieldData() {
+            const container = document.getElementById('field-data-container');
+            const data = currentVia.full_data;
+            
+            // Organizar dados em seções
+            const sections = [
+                {
+                    title: '📍 Informações Básicas',
+                    items: [
+                        { label: 'Extensão', value: `${(currentVia.length / 1000).toFixed(1)} km` },
+                        { label: 'Tipologia Avaliada', value: data.typology_evaluated || currentVia.typology || 'N/A' },
+                        { label: 'Direção do Fluxo', value: data.flow_direction || 'N/A' },
+                        { label: 'Fluxo do Tráfego', value: data.traffic_flow || 'N/A' },
+                        { label: 'Localização', value: data.localization || 'N/A' },
+                        { label: 'Limite de Velocidade', value: data.speed_limit || 'N/A' },
+                        { label: 'Cruzamentos', value: data.crosses || 0 },
+                        { label: 'Faixas Contíguas', value: data.contiguos_lanes || 'N/A' }
+                    ]
+                },
+                {
+                    title: '🛣️ Características Físicas',
+                    items: [
+                        { label: 'Tipo de Pavimento', value: data.pavement_type || 'N/A' },
+                        { label: 'Condição do Pavimento', value: data.pavement_condition_evaluation || 'N/A' },
+                        { label: 'Largura Transitável', value: data.ridable_width ? `${data.ridable_width} cm` : 'N/A' },
+                        { label: 'Largura do Buffer', value: data.buffer_width ? `${data.buffer_width} cm` : 'N/A' },
+                        { label: 'Largura da Via', value: data.road_width ? `${data.road_width} cm` : 'N/A' },
+                        { label: 'Tipo de Segregador', value: data.segregator_type || 'N/A' },
+                        { label: 'Estacionamento', value: data.parking || 'N/A' }
+                    ]
+                },
+                {
+                    title: '🛡️ Avaliações de Segurança',
+                    items: [
+                        { label: 'Proteção', value: data.protection_conditions_evaluation || 'N/A' },
+                        { label: 'Acesso de Ciclistas', value: data.access_evaluation || 'N/A' },
+                        { label: 'Arborização', value: data.shading_evaluation || 'N/A' },
+                        { label: 'Sinuosidade', value: data.sinuosity_evaluation || 'N/A' },
+                        { label: 'Situações de Risco', value: data.car_risk_situations || 'Nenhuma' },
+                        { label: 'Total de Riscos', value: data.all_risks_situations_count || 0 }
+                    ]
+                },
+                {
+                    title: '🚦 Sinalização',
+                    items: [
+                        { label: 'Padrão Horizontal', value: data.horizontal_pattern_evaluation || 'N/A' },
+                        { label: 'Condição da Pintura', value: data.painting_condition_evaluation || 'N/A' },
+                        { label: 'Em cruzamento BOA condição', value: data.good_conditions_crossing_signs || 0 },
+                        { label: 'Em cruzamento MÁ condição', value: data.bad_conditions_crossing_signs || 0 },
+                        { label: 'SEM pintura no cruzamento', value: data.no_visible_crossing_signs || 0 },
+                        { label: 'Placas Verticais', value: data.on_way_vertical_signs_count || 0 },
+                        { label: 'Semáforo Exclusivo', value: data.exclusive_traffic_lights || 0 },
+                        { label: 'Semáforo Motorizado', value: data.motorized_traffic_lights || 0 },
+                        { label: 'Pictogramas (Bom)', value: data.good_conditions_picto_signs || 0 },
+                        { label: 'Pictogramas (Má)', value: data.bad_conditions_picto_signs || 0 },
+                        { label: 'Setas (Bom)', value: data.good_conditions_arrow_signs || 0 },
+                        { label: 'Setas (Má)', value: data.bad_conditions_arrow_signs || 0 },
+                        { label: 'Sinalização Complementar', value: data.complementary_signage || 0 }
+                    ]
+                },
+                {
+                    title: '⚠️ Obstáculos',
+                    items: [
+                        { label: 'Total de Obstáculos', value: data.all_obstacles_count || 0 },
+                        { label: 'Bueiros', value: data.manhole_covers || 0 },
+                        { label: 'Buracos', value: data.potholes || 0 },
+                        { label: 'Raízes', value: data.roots || 0 },
+                        { label: 'Desníveis', value: data.unevenness_obstacles || 0 },
+                        { label: 'Outros Obstáculos', value: data.other_obstacles || 0 },
+                        { label: 'Pontos de Ônibus', value: data.bus_stops_along || 0 }
+                    ]
+                },
+                {
+                    title: '💡 Infraestrutura',
+                    items: [
+                        { label: 'Iluminação Dedicada', value: data.dedicated_ligthing || 0 },
+                        { label: 'Iluminação Mesmo Lado', value: data.same_side_ligthing || 0 },
+                        { label: 'Iluminação Outro Lado', value: data.other_side_ligthing || 0 },
+                        { label: 'Iluminação Ambos Lados', value: data.both_side_ligthing || 0 },
+                        { label: 'Travessias de Pedestres', value: data.pedestrian_crossings_count || 0 },
+                        { label: 'Lombadas', value: data.speed_bumps_count || 0 }
+                    ]
+                }
+            ];
+            
+            // Adicionar seção de comentários se existir
+            if (data.comments && data.comments.length > 0) {
+                sections.push({
+                    title: '💬 Comentários de Campo',
+                    items: data.comments.map((comment, index) => ({
+                        label: `Observação ${index + 1}`,
+                        value: comment
+                    }))
+                });
+            }
+            
+            container.innerHTML = sections.map(section => `
+                <div class="field-section">
+                    <h3 class="section-title">${section.title}</h3>
+                    <div class="section-grid">
+                        ${section.items.map(item => `
+                            <div class="data-item">
+                                <div class="data-label">${item.label}</div>
+                                <div class="data-value">${item.value}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Inicializar mapa
+        function initMap() {
+            viaMap = new ViaMap('map');
+            viaMap.init();
+            
+            // Destacar via quando mapa carregar
+            viaMap.map.on('load', () => {
+                viaMap.highlightVia(currentVia);
+                loadWaypoints();
+            });
+        }
+
+        // Carregar waypoints
+        async function loadWaypoints() {
+            try {
+                const response = await fetch('data/waypoints-by-file.json');
+                const waypointsByFile = await response.json();
+                const waypoints = waypointsByFile[currentVia.gpx_name] || [];
+                
+                if (waypoints.length > 0) {
+                    await viaMap.addWaypoints(waypoints);
+                }
+            } catch (error) {
+                console.error('Erro ao carregar waypoints:', error);
+            }
+        }
+
+        // Mostrar erro
+        function showError(message) {
+            document.getElementById('loading').innerHTML = `❌ ${message}`;
+        }
+        
+        // Carregar galeria de imagens
+        function loadImageGallery() {
+            const gpxName = currentVia.gpx_name.replace('EDIT GPX - ', '').replace('.gpx', '');
+            const imageExtensions = ['jpg', 'jpeg', 'png'];
+            const maxImages = 4;
+            const images = [];
+            
+            // Tentar carregar até 4 imagens
+            for (let i = 1; i <= maxImages; i++) {
+                for (const ext of imageExtensions) {
+                    const imagePath = `assets/images/${gpxName}-${i}.${ext}`;
+                    images.push({ path: imagePath, index: i });
+                    break; // Usar apenas a primeira extensão por número
+                }
+            }
+            
+            renderImageGallery(images);
+        }
+        
+        // Renderizar galeria de imagens
+        function renderImageGallery(images) {
+            const container = document.getElementById('image-gallery');
+            const section = document.getElementById('gallery-section');
+            
+            let validImages = [];
+            let loadedCount = 0;
+            
+            images.forEach(imageInfo => {
+                const img = new Image();
+                img.onload = function() {
+                    validImages.push(imageInfo);
+                    loadedCount++;
+                    if (loadedCount === images.length) {
+                        displayGallery();
+                    }
+                };
+                img.onerror = function() {
+                    loadedCount++;
+                    if (loadedCount === images.length) {
+                        displayGallery();
+                    }
+                };
+                img.src = imageInfo.path;
+            });
+            
+            function displayGallery() {
+                if (validImages.length > 0) {
+                    container.innerHTML = validImages.map(imageInfo => `
+                        <div class="image-item" onclick="openImageModal('${imageInfo.path}')">
+                            <img src="${imageInfo.path}" alt="Imagem ${imageInfo.index} da estrutura" loading="lazy">
+                            <div class="image-overlay">
+                                Imagem ${imageInfo.index}
+                            </div>
+                        </div>
+                    `).join('');
+                    section.style.display = 'block';
+                } else {
+                    // Mostrar placeholder se não houver imagens
+                    container.innerHTML = `
+                        <div class="image-placeholder">
+                            📷 Nenhuma imagem disponível para esta estrutura
+                        </div>
+                    `;
+                    section.style.display = 'block';
+                }
+            }
+        }
+        
+        // Abrir modal de imagem (placeholder)
+        function openImageModal(imagePath) {
+            window.open(imagePath, '_blank');
+        }
+        
+        // Exportar para PDF
+        async function exportToPDF() {
+            if (!currentVia) {
+                alert('Dados da via não carregados');
+                return;
+            }
+            
+            try {
+                // Mostrar loading
+                const btn = document.querySelector('.btn-primary');
+                const originalText = btn.textContent;
+                btn.textContent = '🔄 Gerando PDF...';
+                btn.disabled = true;
+                
+                // Criar exportador e gerar PDF
+                const exporter = new PDFExporter();
+                await exporter.exportVia(currentVia);
+                
+                // Restaurar botão
+                btn.textContent = originalText;
+                btn.disabled = false;
+                
+            } catch (error) {
+                console.error('Erro na exportação:', error);
+                alert('Erro ao gerar PDF. Tente novamente.');
+                
+                // Restaurar botão
+                const btn = document.querySelector('.btn-primary');
+                btn.textContent = '📎 Exportar PDF';
+                btn.disabled = false;
+            }
+        }
+        
+        // Exportar para Markdown
+        async function exportToMarkdown() {
+            if (!currentVia) {
+                alert('Dados da via não carregados');
+                return;
+            }
+            
+            try {
+                // Mostrar loading
+                const btn = document.querySelector('.btn-secondary');
+                const originalText = btn.textContent;
+                btn.textContent = '🔄 Gerando...';
+                btn.disabled = true;
+                
+                // Criar exportador e gerar Markdown
+                const exporter = new MarkdownExporter();
+                await exporter.exportVia(currentVia);
+                
+                // Restaurar botão
+                btn.textContent = originalText;
+                btn.disabled = false;
+                
+            } catch (error) {
+                console.error('Erro na exportação:', error);
+                alert('Erro ao gerar relatório. Tente novamente.');
+                
+                // Restaurar botão
+                const btn = document.querySelector('.btn-secondary');
+                btn.textContent = '📝 Exportar Markdown';
+                btn.disabled = false;
+            }
+        }
+        
+        // Baixar arquivo GPX
+        function downloadGPX() {
+            if (!currentVia) {
+                alert('Dados da via não carregados');
+                return;
+            }
+            
+            const gpxPath = `assets/data/gpx-files/${currentVia.gpx_name}`;
+            const link = document.createElement('a');
+            link.href = gpxPath;
+            link.download = currentVia.gpx_name;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        
+        // Configurar navegação entre vias
+        function setupNavigation() {
+            const currentIndex = allVias.findIndex(via => via.id === currentVia.id);
+            const totalVias = allVias.length;
+            
+            // Atualizar contador
+            document.getElementById('via-counter').textContent = `Via ${currentIndex + 1} de ${totalVias}`;
+            
+            // Mostrar/ocultar botões
+            const prevBtn = document.getElementById('prev-via');
+            const nextBtn = document.getElementById('next-via');
+            
+            if (currentIndex > 0) {
+                prevBtn.style.display = 'block';
+            }
+            
+            if (currentIndex < totalVias - 1) {
+                nextBtn.style.display = 'block';
+            }
+        }
+        
+        // Navegar para via anterior/próxima
+        function navigateVia(direction) {
+            const currentIndex = allVias.findIndex(via => via.id === currentVia.id);
+            const newIndex = currentIndex + direction;
+            
+            if (newIndex >= 0 && newIndex < allVias.length) {
+                const newViaId = allVias[newIndex].id;
+                window.location.href = `via.html?id=${newViaId}`;
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

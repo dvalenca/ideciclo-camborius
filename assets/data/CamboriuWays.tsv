@@ -1,0 +1,11 @@
+type	highway	length
+arterial	motorway	4503.989
+arterial	motorway_link	171.01
+arterial	primary	7650.286
+arterial	primary_link	152.327
+local	residential	273732.739
+coletora	secondary	17094.767
+coletora	secondary_link	75.212
+coletora	tertiary	80431.324
+coletora	tertiary_link	57.637
+local	unclassified	96372.419

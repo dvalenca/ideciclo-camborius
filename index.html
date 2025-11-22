@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDECICLO - Auditoria Cicloviária</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .dashboard-hero {
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .dashboard-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .dashboard-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .dashboard-stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .dashboard-stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .dashboard-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2E7D32;
+            display: block;
+        }
+        
+        .dashboard-stat-label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .chart-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .chart-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .chart-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+        
+        .chart-canvas {
+            position: relative;
+            height: 300px;
+        }
+        
+        .filters-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            align-items: end;
+        }
+        
+        .filter-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .filter-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .filter-select:focus {
+            outline: none;
+            border-color: #2E7D32;
+        }
+        
+        .results-info {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .cities-overview {
+            margin: 2rem 0;
+        }
+        
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .info-card.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .info-card h3 {
+            color: #2E7D32;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .city-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-row.highlight {
+            background: #E8F5E8;
+            padding: 0.75rem;
+            border-radius: 6px;
+            border: none;
+            font-weight: 600;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .stat-value {
+            color: #2E7D32;
+            font-weight: 600;
+        }
+        
+        .audit-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .summary-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .summary-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2E7D32;
+            margin-bottom: 0.5rem;
+        }
+        
+        .summary-label {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .dashboard-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .filters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .audit-summary {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">IDECICLO</a></h1>
+                    <p>Auditoria Cicloviária</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
+                        <li><a href="comparacao.html" class="nav-link">Comparação</a></li>
+                        <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="dashboard-hero">
+        <div class="container">
+            <h1>IDECICLO</h1>
+            <p>Auditoria Cicloviária - Camboriú e Balneário Camboriú</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Loading -->
+            <div id="loading" class="loading">Carregando dados...</div>
+            
+            <!-- Dashboard Content -->
+            <div id="dashboard-content" style="display: none;">
+                <!-- Informações Gerais -->
+                <section class="dashboard-stats" id="stats-container">
+                    <div class="dashboard-stat-card">
+                        <span class="dashboard-stat-number" id="totalStructures">-</span>
+                        <span class="dashboard-stat-label">Estruturas Avaliadas</span>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <span class="dashboard-stat-number" id="totalKilometers">-</span>
+                        <span class="dashboard-stat-label">km Avaliados</span>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <span class="dashboard-stat-number" id="totalWays">-</span>
+                        <span class="dashboard-stat-label">km Total de Vias</span>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <span class="dashboard-stat-number" id="overallAverage">-</span>
+                        <span class="dashboard-stat-label">Total Comentários</span>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <span class="dashboard-stat-number" id="totalGpxPoints">-</span>
+                        <span class="dashboard-stat-label">Pontos GPX</span>
+                    </div>
+                </section>
+
+                <!-- Cidades -->
+                <section class="cities-overview">
+                    <div class="cities-grid">
+                        <!-- Balneário Camboriú -->
+                        <div class="info-card">
+                            <h3>Balneário Camboriú</h3>
+                            <div class="city-stats">
+                                <div class="stat-row highlight">
+                                    <span class="stat-label">IDECICLO</span>
+                                    <span class="stat-value" id="balnearioIdeciclo">-</span>
+                                </div>
+                                <h4 style="margin: 1rem 0 0.5rem 0; color: #2E7D32;">Estruturas Viárias</h4>
+                                <div class="stat-row highlight">
+                                    <span class="stat-label">Total</span>
+                                    <span class="stat-value" id="balnearioTotalVias">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Vias Arteriais</span>
+                                    <span class="stat-value" id="balnearioArterial">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Vias Coletoras</span>
+                                    <span class="stat-value" id="balnearioColetora">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Vias Locais</span>
+                                    <span class="stat-value" id="balnearioLocal">-</span>
+                                </div>
+                                <h4 style="margin: 1rem 0 0.5rem 0; color: #2E7D32;">Estruturas Cicloviárias</h4>
+                                <div class="stat-row highlight">
+                                    <span class="stat-label">Total</span>
+                                    <span class="stat-value" id="balnearioTotalCiclo">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Ciclovias</span>
+                                    <span class="stat-value" id="balnearioCiclovias">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Ciclofaixas</span>
+                                    <span class="stat-value" id="balnearioCiclofaixas">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Compartilhadas</span>
+                                    <span class="stat-value" id="balnearioCompartilhadas">-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Camboriú -->
+                        <div class="info-card">
+                            <h3>Camboriú</h3>
+                            <div class="city-stats">
+                                <div class="stat-row highlight">
+                                    <span class="stat-label">IDECICLO</span>
+                                    <span class="stat-value" id="camboriuIdeciclo">-</span>
+                                </div>
+                                <h4 style="margin: 1rem 0 0.5rem 0; color: #2E7D32;">Estruturas Viárias</h4>
+                                <div class="stat-row highlight">
+                                    <span class="stat-label">Total</span>
+                                    <span class="stat-value" id="camboriuTotalVias">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Vias Arteriais</span>
+                                    <span class="stat-value" id="camboriuArterial">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Vias Coletoras</span>
+                                    <span class="stat-value" id="camboriuColetora">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Vias Locais</span>
+                                    <span class="stat-value" id="camboriuLocal">-</span>
+                                </div>
+                                <h4 style="margin: 1rem 0 0.5rem 0; color: #2E7D32;">Estruturas Cicloviárias</h4>
+                                <div class="stat-row highlight">
+                                    <span class="stat-label">Total</span>
+                                    <span class="stat-value" id="camboriuTotalCiclo">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Ciclovias</span>
+                                    <span class="stat-value" id="camboriuCiclovias">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Ciclofaixas</span>
+                                    <span class="stat-value" id="camboriuCiclofaixas">-</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="stat-label">Compartilhadas</span>
+                                    <span class="stat-value" id="camboriuCompartilhadas">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tabelas de Cobertura -->
+                <section class="info-card full-width">
+                    <h3>Cobertura por Hierarquia Viária e Tipologia Cicloviária</h3>
+                    
+                    <h4 style="margin: 2rem 0 1rem 0; color: #2E7D32;">Balneário Camboriú</h4>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem;">
+                            <thead>
+                                <tr style="background: #f8f9fa;">
+                                    <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Hierarquia</th>
+                                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Ciclovias (km)</th>
+                                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Ciclofaixas (km)</th>
+                                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Compartilhadas (km)</th>
+                                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Total (km)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="balnearioCoverageTable">
+                                <!-- Dados serão carregados aqui -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h4 style="margin: 2rem 0 1rem 0; color: #2E7D32;">Camboriú</h4>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background: #f8f9fa;">
+                                    <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Hierarquia</th>
+                                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Ciclovias (km)</th>
+                                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Ciclofaixas (km)</th>
+                                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Compartilhadas (km)</th>
+                                    <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Total (km)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="camboriuCoverageTable">
+                                <!-- Dados serão carregados aqui -->
+                            </tbody>
+                        </table>
+                    </div>
+              
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>IDECICLO</h3>
+                    <p>Dashboard Analítico</p>
+                    <p>Camboriú e Balneário Camboriú</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        async function loadDashboardData() {
+            try {
+                const [data, balnearioWays, camboriuWays, idecicloResults, coverageAnalysis, gpxAnalysis] = await Promise.all([
+                    fetch('assets/data/rated-data.json').then(r => r.json()),
+                    fetch('assets/data/BalnearioWays.json').then(r => r.json()),
+                    fetch('assets/data/CamboriuWays.json').then(r => r.json()),
+                    fetch('assets/data/ideciclo-results-final.json').then(r => r.json()),
+                    fetch('assets/data/coverage-analysis.json').then(r => r.json()),
+                    fetch('assets/data/gpx-analysis.json').then(r => r.json())
+                ]);
+
+                const totalStructures = data.length;
+                const totalKilometers = data.reduce((sum, item) => {
+                    const segLength = parseFloat(item.result.seg_length) || 0;
+                    return sum + (segLength / 1000);
+                }, 0);
+
+                const balnearioTotal = balnearioWays.reduce((sum, way) => sum + way.length, 0) / 1000;
+                const camboriuTotal = camboriuWays.reduce((sum, way) => sum + way.length, 0) / 1000;
+                
+                const balnearioStructures = Object.values(idecicloResults.Balneario.results)
+                    .reduce((sum, category) => sum + category.structures.length, 0);
+                const camboriuStructures = Object.values(idecicloResults.Camboriu.results)
+                    .reduce((sum, category) => sum + category.structures.length, 0);
+
+                const balnearioEvaluated = Object.values(coverageAnalysis.Balneario.coverage)
+                    .reduce((sum, category) => sum + Object.values(category).reduce((s, v) => s + v, 0), 0) / 1000;
+                const camboriuEvaluated = Object.values(coverageAnalysis.Camboriu.coverage)
+                    .reduce((sum, category) => sum + Object.values(category).reduce((s, v) => s + v, 0), 0) / 1000;
+
+                document.getElementById('totalStructures').textContent = totalStructures;
+                document.getElementById('totalKilometers').textContent = totalKilometers.toFixed(1) + 'km';
+                document.getElementById('totalWays').textContent = (balnearioTotal + camboriuTotal).toFixed(1) + 'km';
+                document.getElementById('overallAverage').textContent = gpxAnalysis.summary.total_comments;
+                document.getElementById('totalGpxPoints').textContent = gpxAnalysis.summary.gpx_points;
+
+                updateCityData('balneario', balnearioWays, coverageAnalysis.Balneario, idecicloResults.Balneario.ideciclo);
+                updateCityData('camboriu', camboriuWays, coverageAnalysis.Camboriu, idecicloResults.Camboriu.ideciclo);
+                populateCoverageTable(coverageAnalysis);
+
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('dashboard-content').style.display = 'block';
+
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                document.getElementById('loading').textContent = 'Erro ao carregar dados';
+            }
+        }
+
+        function updateCityData(cityPrefix, waysData, coverage, ideciclo) {
+            const groupedWays = waysData.reduce((acc, way) => {
+                if (!acc[way.type]) acc[way.type] = 0;
+                acc[way.type] += way.length;
+                return acc;
+            }, {});
+
+            const totalVias = (groupedWays.arterial + groupedWays.coletora + groupedWays.local) / 1000 || 0;
+            document.getElementById(cityPrefix + 'TotalVias').textContent = totalVias.toFixed(1) + 'km';
+            document.getElementById(cityPrefix + 'Arterial').textContent = (groupedWays.arterial / 1000 || 0).toFixed(1) + 'km';
+            document.getElementById(cityPrefix + 'Coletora').textContent = (groupedWays.coletora / 1000 || 0).toFixed(1) + 'km';
+            document.getElementById(cityPrefix + 'Local').textContent = (groupedWays.local / 1000 || 0).toFixed(1) + 'km';
+
+            const totalCiclovias = Object.values(coverage.coverage).reduce((sum, category) => sum + category.ciclovia, 0) / 1000;
+            const totalCiclofaixas = Object.values(coverage.coverage).reduce((sum, category) => sum + category.ciclofaixa, 0) / 1000;
+            const totalCompartilhadas = Object.values(coverage.coverage).reduce((sum, category) => sum + category.compartilhada, 0) / 1000;
+            const totalCiclo = totalCiclovias + totalCiclofaixas + totalCompartilhadas;
+
+            document.getElementById(cityPrefix + 'TotalCiclo').textContent = totalCiclo.toFixed(1) + 'km';
+            document.getElementById(cityPrefix + 'Ciclovias').textContent = totalCiclovias.toFixed(1) + 'km';
+            document.getElementById(cityPrefix + 'Ciclofaixas').textContent = totalCiclofaixas.toFixed(1) + 'km';
+            document.getElementById(cityPrefix + 'Compartilhadas').textContent = totalCompartilhadas.toFixed(1) + 'km';
+            
+            document.getElementById(cityPrefix + 'Ideciclo').textContent = ideciclo.toFixed(3);
+        }
+
+        function populateCoverageTable(coverageAnalysis) {
+            const hierarchyMap = {
+                'arterial': 'Arterial',
+                'coletora': 'Coletora', 
+                'local': 'Local'
+            };
+
+            // Tabela Balneário Camboriú
+            const balnearioTbody = document.getElementById('balnearioCoverageTable');
+            Object.entries(coverageAnalysis.Balneario.coverage).forEach(([hierarchy, data]) => {
+                const row = balnearioTbody.insertRow();
+                const ciclovia = (data.ciclovia / 1000).toFixed(1);
+                const ciclofaixa = (data.ciclofaixa / 1000).toFixed(1);
+                const compartilhada = (data.compartilhada / 1000).toFixed(1);
+                const total = (parseFloat(ciclovia) + parseFloat(ciclofaixa) + parseFloat(compartilhada)).toFixed(1);
+                
+                row.innerHTML = `
+                    <td style="padding: 12px; border: 1px solid #ddd;">${hierarchyMap[hierarchy]}</td>
+                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd;">${ciclovia}</td>
+                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd;">${ciclofaixa}</td>
+                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd;">${compartilhada}</td>
+                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd; font-weight: 600;">${total}</td>
+                `;
+            });
+
+            // Tabela Camboriú
+            const camboriuTbody = document.getElementById('camboriuCoverageTable');
+            Object.entries(coverageAnalysis.Camboriu.coverage).forEach(([hierarchy, data]) => {
+                const row = camboriuTbody.insertRow();
+                const ciclovia = (data.ciclovia / 1000).toFixed(1);
+                const ciclofaixa = (data.ciclofaixa / 1000).toFixed(1);
+                const compartilhada = (data.compartilhada / 1000).toFixed(1);
+                const total = (parseFloat(ciclovia) + parseFloat(ciclofaixa) + parseFloat(compartilhada)).toFixed(1);
+                
+                row.innerHTML = `
+                    <td style="padding: 12px; border: 1px solid #ddd;">${hierarchyMap[hierarchy]}</td>
+                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd;">${ciclovia}</td>
+                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd;">${ciclofaixa}</td>
+                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd;">${compartilhada}</td>
+                    <td style="padding: 12px; text-align: center; border: 1px solid #ddd; font-weight: 600;">${total}</td>
+                `;
+            });
+        }
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadDashboardData();
+        });
+    </script>
+
+</body>
+</html>

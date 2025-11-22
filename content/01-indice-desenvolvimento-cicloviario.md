@@ -1,0 +1,9 @@
+# **O Índice de Desenvolvimento Cicloviário** {#o-índice-de-desenvolvimento-cicloviário}
+
+O IDECICLO é uma metodologia estabelecida pela Associação Metropolitana de Ciclistas do Recife, a Ameciclo, em 2016, inicialmente aplicada no Recife. Foi desenvolvida por uma equipe multidisciplinar de ciclistas e cicloativistas voluntários da Ameciclo, com o objetivo principal de avaliar e qualificar a eficácia das estruturas cicloviárias. A metodologia responde à necessidade de fornecer indicadores objetivos sobre a qualidade das infraestruturas ciclísticas, orientando assim propostas de melhorias ao poder público e decisões relativas à expansão da malha cicloviária.
+
+Em 2018, a metodologia foi revisada e expandida para incluir a Região Metropolitana do Recife. No mesmo ano, foi também replicada e adaptada em São Paulo, Distrito Federal, Belo Horizonte, Campo Grande e Salvador, visando a criação de uma metodologia conjunta, adequada às especificidades de cada cidade. Em 2024, uma nova aplicação foi realizada na Região Metropolitana do Recife e, também, nas cidades de Camboriú e Balneário Camboriú.
+
+O reconhecimento da eficácia da ferramenta veio em 2019, com uma menção honrosa no Prêmio da Mobilidade por Bicicleta da Transporte Ativo. Além da apresentação da metodologia nos fóruns regionais, nacionais e mundiais da Bicicleta (Fórum Nordestino da Bicicleta, Bicicultura e Fórum Mundial da Bicicleta). Em 2024 e 2025, o IDECICLO recebeu o selo Bicicleta Brasil, além de ter sido o vencedor do Prêmio Promovendo a Mobilidade por Bicicleta de 2025. A metodologia aplicada foi distinta da que aqui se encontra.
+
+Os resultados obtidos por meio do IDECICLO influenciaram diretamente a política de implantação e manutenção de estruturas cicloviárias nas cidades onde foi aplicado. A avaliação contribuiu significativamente para decisões que levaram a melhorias na infraestrutura ao longo do tempo.

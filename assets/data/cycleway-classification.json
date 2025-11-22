@@ -1,0 +1,150 @@
+{
+  "Balneário": [
+    {
+      "wayId": "390978978",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclovia Av. Marg. Oeste BR 101 T1 - BC.gpx",
+      "closestHighway": "motorway",
+      "closestName": "Rodovia Governador Mário Covas",
+      "priority": 1
+    },
+    {
+      "wayId": "390978983",
+      "name": "Ciclovia da 5ª Avenida",
+      "src": "EDIT GPX - Ciclofaixa R. Dom Henrique - BC.gpx",
+      "closestHighway": "primary",
+      "closestName": "Rua Dom Henrique",
+      "priority": 5
+    },
+    {
+      "wayId": "395471243",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclovia Av. Marg. Oeste BR 101 T1 - BC.gpx",
+      "closestHighway": "motorway",
+      "closestName": "Rodovia Governador Mário Covas",
+      "priority": 1
+    },
+    {
+      "wayId": "658547628",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclofaixa R. Dom Henrique - BC.gpx",
+      "closestHighway": "motorway",
+      "closestName": "Rodovia Governador Mário Covas",
+      "priority": 1
+    },
+    {
+      "wayId": "909472392",
+      "name": "Ciclovia da 5ª Avenida",
+      "src": "EDIT GPX - Ciclofaixa R. Dom Afonso - BC.gpx",
+      "closestHighway": "primary",
+      "closestName": "5ª Avenida",
+      "priority": 5
+    },
+    {
+      "wayId": "959104465",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclovia R. Angelina - BC.gpx",
+      "closestHighway": "primary",
+      "closestName": "sem nome",
+      "priority": 5
+    },
+    {
+      "wayId": "1005191237",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclofaixa Av. Atlântica - BC.gpx",
+      "closestHighway": "primary",
+      "closestName": "Avenida Atlântica",
+      "priority": 5
+    },
+    {
+      "wayId": "1074645113",
+      "name": "Ciclovia da 5ª Avenida",
+      "src": "EDIT GPX - Ciclovia 5a. Av. - BC.gpx",
+      "closestHighway": "primary",
+      "closestName": "5ª Avenida",
+      "priority": 5
+    },
+    {
+      "wayId": "1128250453",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclovia R. Angelina - BC.gpx",
+      "closestHighway": "tertiary",
+      "closestName": "Rua Angelina",
+      "priority": 9
+    }
+  ],
+  "Camboriú": [
+    {
+      "wayId": "867784079",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclovia Av. Santa Catarina T2 - Cb.gpx",
+      "closestHighway": "primary",
+      "closestName": "5ª Avenida",
+      "priority": 5
+    },
+    {
+      "wayId": "1007842709",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclovia Av. Santo Amaro T2 - Cb.gpx",
+      "closestHighway": "secondary",
+      "closestName": "Rua Santo Amaro",
+      "priority": 7
+    },
+    {
+      "wayId": "1007849510",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclovia Al. Belo Horizonte - Cb.gpx",
+      "closestHighway": "tertiary",
+      "closestName": "Avenida Brasília",
+      "priority": 9
+    },
+    {
+      "wayId": "1007850394",
+      "name": "Ciclovia Avenida Brasília",
+      "src": "EDIT GPX - Ciclovia Av. Brasilia - Cb.gpx",
+      "closestHighway": "tertiary",
+      "closestName": "Avenida Brasília",
+      "priority": 9
+    },
+    {
+      "wayId": "1017155458",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclovia R. Roma - Cb.gpx",
+      "closestHighway": "tertiary",
+      "closestName": "Avenida Brasília",
+      "priority": 9
+    },
+    {
+      "wayId": "1336260102",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclovia R. Bogotá - Cb.gpx",
+      "closestHighway": "tertiary",
+      "closestName": "Rua Belo Horizonte",
+      "priority": 9
+    },
+    {
+      "wayId": "1336268241",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclovia Av. Buenos Aires - Cb.gpx",
+      "closestHighway": "tertiary",
+      "closestName": "Avenida Brasília",
+      "priority": 9
+    },
+    {
+      "wayId": "1336282198",
+      "name": "sem nome",
+      "src": "EDIT GPX - Compart. R. Cel. Benjamin Vieira T1 - Cb.gpx",
+      "closestHighway": "secondary",
+      "closestName": "Rua Coronel Benjamin Vieira",
+      "priority": 7
+    },
+    {
+      "wayId": "1336286820",
+      "name": "sem nome",
+      "src": "EDIT GPX - Ciclovia Av. João Acácio Simas - Cb.gpx",
+      "closestHighway": "tertiary",
+      "closestName": "Rua Monte Sotara",
+      "priority": 9
+    }
+  ]
+}

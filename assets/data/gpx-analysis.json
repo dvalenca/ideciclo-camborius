@@ -1,0 +1,1059 @@
+{
+  "summary": {
+    "total_structures": 111,
+    "total_km": 107.4,
+    "total_comments": 482,
+    "total_obstacles": 949,
+    "total_risks": 115,
+    "avg_width_cm": 182,
+    "gpx_points": 332
+  },
+  "structure_types": {
+    "ciclofaixas": 75,
+    "ciclovias": 26,
+    "compartilhadas": 10
+  },
+  "top_problems": [
+    {
+      "comment": "Ausência de conexão entre ciclos.",
+      "frequency": 37
+    },
+    {
+      "comment": "Largura da via calculada automaticamente: 2 faixas × 3,5m = 700cm",
+      "frequency": 13
+    },
+    {
+      "comment": "Largura da via calculada automaticamente: 4 faixas × 3,5m = 1400cm",
+      "frequency": 8
+    },
+    {
+      "comment": "Ausência de conexão entre ciclos.: 2",
+      "frequency": 7
+    },
+    {
+      "comment": "Marcação EXTRA: Foram observados trechos com segregadores faltando (arrancados).",
+      "frequency": 5
+    },
+    {
+      "comment": "tampa de inspeção rebaixada",
+      "frequency": 5
+    },
+    {
+      "comment": "rampa",
+      "frequency": 5
+    },
+    {
+      "comment": "Ausência de conexão entre ciclos.: 3",
+      "frequency": 5
+    },
+    {
+      "comment": "Nota",
+      "frequency": 5
+    },
+    {
+      "comment": "rampa ",
+      "frequency": 4
+    }
+  ],
+  "structures": [
+    {
+      "id": 1,
+      "name": "Ciclofaixa Al. Cap. Ernesto Nunes e R. Osvaldo Minela - Cb",
+      "length_km": 1.2,
+      "comments_count": 3,
+      "obstacles_count": 40,
+      "risks_count": 2,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 2,
+      "name": "Ciclofaixa Av. Atlântica - BC",
+      "length_km": 5.9,
+      "comments_count": 11,
+      "obstacles_count": 99,
+      "risks_count": 17,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 3,
+      "name": "Ciclofaixa Av. Brasil T1 - BC",
+      "length_km": 0.8,
+      "comments_count": 1,
+      "obstacles_count": 5,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 4,
+      "name": "Ciclofaixa Av. Brasil T2 - BC",
+      "length_km": 1.9,
+      "comments_count": 6,
+      "obstacles_count": 34,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 5,
+      "name": "Ciclofaixa Av. Carlos Drummond de Andrade - BC",
+      "length_km": 0.1,
+      "comments_count": 2,
+      "obstacles_count": 1,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 6,
+      "name": "EDIT GPX - Ciclofaixa Av. João Costa T3 e Estr. Rio",
+      "length_km": 3.6,
+      "comments_count": 3,
+      "obstacles_count": 2,
+      "risks_count": 2,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 7,
+      "name": "Ciclofaixa Av. João da Costa T2 - Cb",
+      "length_km": 1.1,
+      "comments_count": 0,
+      "obstacles_count": 2,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 8,
+      "name": "Ciclofaixa Av. Martin Luther T2 - BC",
+      "length_km": 0.7,
+      "comments_count": 8,
+      "obstacles_count": 2,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 9,
+      "name": "Ciclofaixa Av. Minas Gerais T2 - Cb",
+      "length_km": 0.9,
+      "comments_count": 2,
+      "obstacles_count": 16,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 10,
+      "name": "Ciclofaixa Av. Minas Gerais T3 - Cb",
+      "length_km": 1,
+      "comments_count": 4,
+      "obstacles_count": 31,
+      "risks_count": 2,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 11,
+      "name": "Ciclofaixa Av. Normando Tedesco - BC",
+      "length_km": 1.9,
+      "comments_count": 4,
+      "obstacles_count": 15,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 12,
+      "name": "Ciclofaixa Av. Rodesindo Pavan T1 - BC",
+      "length_km": 0.4,
+      "comments_count": 2,
+      "obstacles_count": 4,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 13,
+      "name": "Ciclofaixa Av. Rodesindo Pavan T2 - BC",
+      "length_km": 8.8,
+      "comments_count": 10,
+      "obstacles_count": 2,
+      "risks_count": 14,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 14,
+      "name": "Ciclofaixa Av. Rodesindo Pavan T3 - BC",
+      "length_km": 0.3,
+      "comments_count": 0,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 15,
+      "name": "Ciclofaixa Av. Rodesindo Pavan T4 - Norte - BC",
+      "length_km": 2.5,
+      "comments_count": 5,
+      "obstacles_count": 1,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 16,
+      "name": "Ciclofaixa Av. Rodesindo Pavan T4 - Sul - BC",
+      "length_km": 2.5,
+      "comments_count": 6,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 17,
+      "name": "Ciclofaixa Av. Ruy Barbosa - BC",
+      "length_km": 0.7,
+      "comments_count": 4,
+      "obstacles_count": 1,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 18,
+      "name": "Ciclofaixa Av. Santa Catarina T1 - Cb",
+      "length_km": 1.1,
+      "comments_count": 11,
+      "obstacles_count": 8,
+      "risks_count": 5,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 19,
+      "name": "Ciclofaixa Av. Santo Amaro T1 - Cb",
+      "length_km": 0.2,
+      "comments_count": 2,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 20,
+      "name": "Ciclofaixa Av. Áustria - Cb",
+      "length_km": 0.3,
+      "comments_count": 1,
+      "obstacles_count": 2,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 21,
+      "name": "Ciclofaixa Estr. Paulo J. Lorenzetti - Cb",
+      "length_km": 0.9,
+      "comments_count": 2,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 22,
+      "name": "Ciclofaixa Estr. da Rainha - BC",
+      "length_km": 0.8,
+      "comments_count": 3,
+      "obstacles_count": 0,
+      "risks_count": 2,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 23,
+      "name": "Ciclofaixa Estr. dos Macacos - Cb",
+      "length_km": 6.5,
+      "comments_count": 4,
+      "obstacles_count": 1,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 24,
+      "name": "Ciclofaixa R. 1001 T1 - BC",
+      "length_km": 0.2,
+      "comments_count": 2,
+      "obstacles_count": 2,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 25,
+      "name": "Ciclofaixa R. 1001 T2 - BC",
+      "length_km": 0.3,
+      "comments_count": 3,
+      "obstacles_count": 9,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 26,
+      "name": "Ciclofaixa R. 1901 - BC",
+      "length_km": 0.2,
+      "comments_count": 1,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 27,
+      "name": "Ciclofaixa R. 2000 - BC",
+      "length_km": 1.2,
+      "comments_count": 3,
+      "obstacles_count": 8,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 28,
+      "name": "Ciclofaixa R. 2550 - BC",
+      "length_km": 1.2,
+      "comments_count": 4,
+      "obstacles_count": 5,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 29,
+      "name": "Ciclofaixa R. 3000 - BC",
+      "length_km": 0.9,
+      "comments_count": 1,
+      "obstacles_count": 12,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 30,
+      "name": "Ciclofaixa R. 3208 - BC",
+      "length_km": 0.4,
+      "comments_count": 2,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 31,
+      "name": "Ciclofaixa R. 3700 T1 - BC",
+      "length_km": 0.3,
+      "comments_count": 1,
+      "obstacles_count": 4,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 32,
+      "name": "Ciclofaixa R. 3700 T2 - BC",
+      "length_km": 0.2,
+      "comments_count": 3,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 33,
+      "name": "Ciclofaixa R. 3780 - BC",
+      "length_km": 0.3,
+      "comments_count": 1,
+      "obstacles_count": 3,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 34,
+      "name": "Ciclofaixa R. 991 - BC",
+      "length_km": 0.1,
+      "comments_count": 1,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 35,
+      "name": "Ciclofaixa R. 995 - BC",
+      "length_km": 0,
+      "comments_count": 1,
+      "obstacles_count": 1,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 36,
+      "name": "Ciclofaixa R. Angelina - BC",
+      "length_km": 0.4,
+      "comments_count": 1,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 37,
+      "name": "Ciclofaixa R. Biguaçu - BC",
+      "length_km": 1.4,
+      "comments_count": 5,
+      "obstacles_count": 18,
+      "risks_count": 3,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 38,
+      "name": "Ciclofaixa R. Dom Afonso - BC",
+      "length_km": 0.8,
+      "comments_count": 2,
+      "obstacles_count": 8,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 39,
+      "name": "Ciclofaixa R. Dom Daniel - BC",
+      "length_km": 0.9,
+      "comments_count": 1,
+      "obstacles_count": 9,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 40,
+      "name": "Ciclofaixa R. Dom Felipe - BC",
+      "length_km": 0.7,
+      "comments_count": 1,
+      "obstacles_count": 8,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 41,
+      "name": "Ciclofaixa R. Dom Henrique - BC",
+      "length_km": 0.8,
+      "comments_count": 2,
+      "obstacles_count": 6,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 42,
+      "name": "Ciclofaixa R. Doralice L. B. e R. Alécio D. L. - BC",
+      "length_km": 0.7,
+      "comments_count": 3,
+      "obstacles_count": 4,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 43,
+      "name": "Ciclofaixa R. Edgar Linhares T1 - BC",
+      "length_km": 0.3,
+      "comments_count": 2,
+      "obstacles_count": 1,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 44,
+      "name": "Ciclofaixa R. Edgar Linhares T2 - BC",
+      "length_km": 0.6,
+      "comments_count": 1,
+      "obstacles_count": 3,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 45,
+      "name": "Ciclofaixa R. Emanuel R. Santos - BC",
+      "length_km": 0.9,
+      "comments_count": 4,
+      "obstacles_count": 2,
+      "risks_count": 3,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 46,
+      "name": "Ciclofaixa R. Guamirim - Cb",
+      "length_km": 0.5,
+      "comments_count": 0,
+      "obstacles_count": 9,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 47,
+      "name": "Ciclofaixa R. Guaraparim - Cb",
+      "length_km": 0,
+      "comments_count": 0,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 48,
+      "name": "Ciclofaixa R. Imbuia - Cb",
+      "length_km": 0.5,
+      "comments_count": 3,
+      "obstacles_count": 9,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 49,
+      "name": "Ciclofaixa R. Indonésia - BC",
+      "length_km": 0.1,
+      "comments_count": 3,
+      "obstacles_count": 3,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 50,
+      "name": "Ciclofaixa R. Itália - Cb",
+      "length_km": 0.5,
+      "comments_count": 2,
+      "obstacles_count": 1,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 51,
+      "name": "Ciclofaixa R. Jardim da Saudade - BC",
+      "length_km": 1,
+      "comments_count": 4,
+      "obstacles_count": 13,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 52,
+      "name": "Ciclofaixa R. Jesuino A. Pereira T2 - Cb",
+      "length_km": 0.4,
+      "comments_count": 0,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 53,
+      "name": "Ciclofaixa R. Jesuíno A. Pereira T1 - Cb",
+      "length_km": 0.2,
+      "comments_count": 2,
+      "obstacles_count": 9,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 54,
+      "name": "Ciclofaixa R. Joaquim Garcia - Cb",
+      "length_km": 0.5,
+      "comments_count": 2,
+      "obstacles_count": 2,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 55,
+      "name": "Ciclofaixa R. José Fco Bernardes - Cb",
+      "length_km": 0.1,
+      "comments_count": 3,
+      "obstacles_count": 3,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 56,
+      "name": "Ciclofaixa R. José Fco. Vitor - BC",
+      "length_km": 0.3,
+      "comments_count": 2,
+      "obstacles_count": 8,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 57,
+      "name": "Ciclofaixa R. José Honorato da Silva - BC",
+      "length_km": 0.7,
+      "comments_count": 5,
+      "obstacles_count": 4,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 58,
+      "name": "Ciclofaixa R. Just. Neves, Pedro Saut, Manoel Pereira - Cb",
+      "length_km": 1.1,
+      "comments_count": 11,
+      "obstacles_count": 15,
+      "risks_count": 6,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 59,
+      "name": "Ciclofaixa R. Maria Mansoto - BC",
+      "length_km": 0.5,
+      "comments_count": 2,
+      "obstacles_count": 12,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 60,
+      "name": "Ciclofaixa R. Marmeleiro - Cb",
+      "length_km": 1.2,
+      "comments_count": 0,
+      "obstacles_count": 37,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 61,
+      "name": "Ciclofaixa R. Monte Acaraí - Cb",
+      "length_km": 1,
+      "comments_count": 4,
+      "obstacles_count": 17,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 62,
+      "name": "Ciclofaixa R. Monte Alto - Cb",
+      "length_km": 0.8,
+      "comments_count": 1,
+      "obstacles_count": 12,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 63,
+      "name": "Ciclofaixa R. Monte Bandeiras - Cb",
+      "length_km": 0.9,
+      "comments_count": 2,
+      "obstacles_count": 13,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 64,
+      "name": "Ciclofaixa R. Padre André Aneza - Cb",
+      "length_km": 0.5,
+      "comments_count": 2,
+      "obstacles_count": 17,
+      "risks_count": 2,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 65,
+      "name": "Ciclofaixa R. Paulo Dallago T1 - Cb",
+      "length_km": 0.9,
+      "comments_count": 4,
+      "obstacles_count": 2,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 66,
+      "name": "Ciclofaixa R. Paulo Dallago T2 - Cb",
+      "length_km": 4.7,
+      "comments_count": 9,
+      "obstacles_count": 2,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 67,
+      "name": "Ciclofaixa R. Paulo Faquetti - Cb",
+      "length_km": 0.6,
+      "comments_count": 1,
+      "obstacles_count": 24,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 68,
+      "name": "Ciclofaixa R. Paulo Marciano Cunha - BC",
+      "length_km": 0.6,
+      "comments_count": 1,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 69,
+      "name": "Ciclofaixa R. Porto Velho e R. Minas Gerais T1 - Cb",
+      "length_km": 0.4,
+      "comments_count": 2,
+      "obstacles_count": 4,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 70,
+      "name": "Ciclofaixa R. São Miguel - Cb",
+      "length_km": 0.7,
+      "comments_count": 2,
+      "obstacles_count": 8,
+      "risks_count": 2,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 71,
+      "name": "Ciclofaixa R. Síria - BC",
+      "length_km": 0.7,
+      "comments_count": 2,
+      "obstacles_count": 18,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 72,
+      "name": "Ciclofaixa R. Ver. Domingos Fonseca - BC",
+      "length_km": 0.9,
+      "comments_count": 3,
+      "obstacles_count": 4,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 73,
+      "name": "Ciclofaixa R. da Praia T1 e R. Napoleão Vieira - BC",
+      "length_km": 0.3,
+      "comments_count": 3,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 74,
+      "name": "Ciclofaixa R. da Praia T2 e R. Vergílio R. Pereira - BC",
+      "length_km": 0.4,
+      "comments_count": 3,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 75,
+      "name": "Ciclovia 3a. Av. - BC",
+      "length_km": 1.8,
+      "comments_count": 6,
+      "obstacles_count": 16,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 76,
+      "name": "Ciclovia 4a. Av. - BC",
+      "length_km": 2.2,
+      "comments_count": 17,
+      "obstacles_count": 29,
+      "risks_count": 1,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 77,
+      "name": "Ciclovia 5a. Av. - BC",
+      "length_km": 2.4,
+      "comments_count": 9,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 78,
+      "name": "Ciclovia Al. Belo Horizonte - Cb",
+      "length_km": 0.7,
+      "comments_count": 4,
+      "obstacles_count": 34,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 79,
+      "name": "Ciclovia Al. Delfim P. Peixoto Filho - BC",
+      "length_km": 0.3,
+      "comments_count": 0,
+      "obstacles_count": 2,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 80,
+      "name": "Ciclovia Av. Brasilia - Cb",
+      "length_km": 0.6,
+      "comments_count": 6,
+      "obstacles_count": 25,
+      "risks_count": 1,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 81,
+      "name": "Ciclovia Av. Buenos Aires - Cb",
+      "length_km": 0.3,
+      "comments_count": 4,
+      "obstacles_count": 1,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 82,
+      "name": "Ciclovia Av. Estado T1 - BC",
+      "length_km": 1.1,
+      "comments_count": 31,
+      "obstacles_count": 4,
+      "risks_count": 1,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 83,
+      "name": "Ciclovia Av. Estado T2 - BC",
+      "length_km": 2.1,
+      "comments_count": 13,
+      "obstacles_count": 27,
+      "risks_count": 3,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 84,
+      "name": "Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC",
+      "length_km": 1.2,
+      "comments_count": 12,
+      "obstacles_count": 15,
+      "risks_count": 1,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 85,
+      "name": "Ciclovia Av. José Fco Bernardes - Cb",
+      "length_km": 2,
+      "comments_count": 8,
+      "obstacles_count": 30,
+      "risks_count": 1,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 86,
+      "name": "Ciclovia Av. João Acácio Simas - Cb",
+      "length_km": 1.4,
+      "comments_count": 3,
+      "obstacles_count": 2,
+      "risks_count": 2,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 87,
+      "name": "Ciclovia Av. João da Costa T1 - Cb",
+      "length_km": 0.2,
+      "comments_count": 1,
+      "obstacles_count": 9,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 88,
+      "name": "Ciclovia Av. Marg. Oeste BR 101 T1 - BC",
+      "length_km": 2.2,
+      "comments_count": 14,
+      "obstacles_count": 29,
+      "risks_count": 17,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 89,
+      "name": "Ciclovia Av. Martin Luther T1 - BC",
+      "length_km": 0.8,
+      "comments_count": 6,
+      "obstacles_count": 1,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 90,
+      "name": "Ciclovia Av. Martin Luther T3 e R. África do Sul - BC",
+      "length_km": 1,
+      "comments_count": 9,
+      "obstacles_count": 7,
+      "risks_count": 1,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 91,
+      "name": "Ciclovia Av. Santa Catarina T2 - Cb",
+      "length_km": 1.4,
+      "comments_count": 13,
+      "obstacles_count": 14,
+      "risks_count": 6,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 92,
+      "name": "Ciclovia Av. Santo Amaro T2 - Cb",
+      "length_km": 0.9,
+      "comments_count": 2,
+      "obstacles_count": 8,
+      "risks_count": 2,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 93,
+      "name": "Ciclovia Estr. da Rainha - BC",
+      "length_km": 0.3,
+      "comments_count": 2,
+      "obstacles_count": 3,
+      "risks_count": 0,
+      "type": "Ciclofaixa"
+    },
+    {
+      "id": 94,
+      "name": "Ciclovia Pref. Gilberto A. Meirinho - BC",
+      "length_km": 0.1,
+      "comments_count": 0,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 95,
+      "name": "Ciclovia R. 290 e R. 200 - BC",
+      "length_km": 0.1,
+      "comments_count": 4,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 96,
+      "name": "Ciclovia R. 3100 - BC",
+      "length_km": 0.3,
+      "comments_count": 4,
+      "obstacles_count": 7,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 97,
+      "name": "Ciclovia R. Angelina - BC",
+      "length_km": 0.3,
+      "comments_count": 3,
+      "obstacles_count": 3,
+      "risks_count": 1,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 98,
+      "name": "Ciclovia R. Bogotá - Cb",
+      "length_km": 0.5,
+      "comments_count": 6,
+      "obstacles_count": 0,
+      "risks_count": 1,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 99,
+      "name": "Ciclovia R. Cel. Benjamin Vieira T2 - Cb",
+      "length_km": 0.3,
+      "comments_count": 1,
+      "obstacles_count": 2,
+      "risks_count": 0,
+      "type": "Compartilhada"
+    },
+    {
+      "id": 100,
+      "name": "Ciclovia R. José Cesário Pereira - BC",
+      "length_km": 1.3,
+      "comments_count": 13,
+      "obstacles_count": 36,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 101,
+      "name": "Ciclovia R. Roma - Cb",
+      "length_km": 0.7,
+      "comments_count": 4,
+      "obstacles_count": 9,
+      "risks_count": 3,
+      "type": "Ciclovia"
+    },
+    {
+      "id": 102,
+      "name": "Compart. Av. Flores T1 e R. Aqueduto - BC",
+      "length_km": 0.2,
+      "comments_count": 5,
+      "obstacles_count": 0,
+      "risks_count": 1,
+      "type": "Compartilhada"
+    },
+    {
+      "id": 103,
+      "name": "Compart. Av. Marg. Oeste BR 101 T3 - BC",
+      "length_km": 0.5,
+      "comments_count": 13,
+      "obstacles_count": 13,
+      "risks_count": 2,
+      "type": "Compartilhada"
+    },
+    {
+      "id": 104,
+      "name": "Compart. Pass. Pte. Rio Camboriú BR 101 - BC",
+      "length_km": 0.1,
+      "comments_count": 4,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Compartilhada"
+    },
+    {
+      "id": 105,
+      "name": "Compart. Pass. Viaduto BR 101 - 1 (R. 3100) - BC",
+      "length_km": 0.1,
+      "comments_count": 1,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Compartilhada"
+    },
+    {
+      "id": 106,
+      "name": "Compart. Pass. Viaduto BR 101 - 2 (R. 2500) - BC",
+      "length_km": 0.1,
+      "comments_count": 1,
+      "obstacles_count": 2,
+      "risks_count": 0,
+      "type": "Compartilhada"
+    },
+    {
+      "id": 107,
+      "name": "Compart. Pte. Altamiro D. Castilho T1 - Oeste - BC",
+      "length_km": 0.2,
+      "comments_count": 12,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Compartilhada"
+    },
+    {
+      "id": 108,
+      "name": "Compart. Pte. Altamiro D. Castilho T2 - Leste - BC",
+      "length_km": 0.2,
+      "comments_count": 12,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Compartilhada"
+    },
+    {
+      "id": 109,
+      "name": "Compart. Pte. Rio Camboriú BR 101 T1 - Leste - BC",
+      "length_km": 1.1,
+      "comments_count": 6,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Compartilhada"
+    },
+    {
+      "id": 110,
+      "name": "Compart. Pte. Rio Camboriú BR 101 T2 Oeste e Av. Marg. Oeste T2 - BC",
+      "length_km": 0.6,
+      "comments_count": 15,
+      "obstacles_count": 6,
+      "risks_count": 0,
+      "type": "Compartilhada"
+    },
+    {
+      "id": 111,
+      "name": "Compart. R. Cel. Benjamin Vieira T1 - Cb",
+      "length_km": 0.2,
+      "comments_count": 1,
+      "obstacles_count": 0,
+      "risks_count": 0,
+      "type": "Ciclovia"
+    }
+  ]
+}
