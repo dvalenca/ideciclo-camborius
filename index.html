@@ -319,11 +319,11 @@
                     </div>
                     <div class="dashboard-stat-card">
                         <span class="dashboard-stat-number" id="totalKilometers">-</span>
-                        <span class="dashboard-stat-label">km Avaliados</span>
+                        <span class="dashboard-stat-label">Avaliados</span>
                     </div>
                     <div class="dashboard-stat-card">
                         <span class="dashboard-stat-number" id="totalWays">-</span>
-                        <span class="dashboard-stat-label">km Total de Vias</span>
+                        <span class="dashboard-stat-label">Total de Vias</span>
                     </div>
                     <div class="dashboard-stat-card">
                         <span class="dashboard-stat-number" id="overallAverage">-</span>
@@ -502,10 +502,11 @@
                 ]);
 
                 const totalStructures = data.length;
-                const totalKilometers = data.reduce((sum, item) => {
-                    const segLength = parseFloat(item.result.seg_length) || 0;
-                    return sum + (segLength / 1000);
-                }, 0);
+                const balnearioEvaluatedKm = Object.values(coverageAnalysis.Balneario.coverage)
+                    .reduce((sum, category) => sum + Object.values(category).reduce((s, v) => s + v, 0), 0) / 1000;
+                const camboriuEvaluatedKm = Object.values(coverageAnalysis.Camboriu.coverage)
+                    .reduce((sum, category) => sum + Object.values(category).reduce((s, v) => s + v, 0), 0) / 1000;
+                const totalKilometers = balnearioEvaluatedKm + camboriuEvaluatedKm;
 
                 const balnearioTotal = balnearioWays.reduce((sum, way) => sum + way.length, 0) / 1000;
                 const camboriuTotal = camboriuWays.reduce((sum, way) => sum + way.length, 0) / 1000;
