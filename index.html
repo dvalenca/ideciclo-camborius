@@ -579,7 +579,7 @@
                 const ciclovia = (data.ciclovia / 1000).toFixed(1);
                 const ciclofaixa = (data.ciclofaixa / 1000).toFixed(1);
                 const compartilhada = (data.compartilhada / 1000).toFixed(1);
-                const total = (parseFloat(ciclovia) + parseFloat(ciclofaixa) + parseFloat(compartilhada)).toFixed(1);
+                const total = ((data.ciclovia + data.ciclofaixa + data.compartilhada) / 1000).toFixed(1);
                 
                 row.innerHTML = `
                     <td style="padding: 12px; border: 1px solid #ddd;">${hierarchyMap[hierarchy]}</td>
@@ -597,7 +597,7 @@
                 const ciclovia = (data.ciclovia / 1000).toFixed(1);
                 const ciclofaixa = (data.ciclofaixa / 1000).toFixed(1);
                 const compartilhada = (data.compartilhada / 1000).toFixed(1);
-                const total = (parseFloat(ciclovia) + parseFloat(ciclofaixa) + parseFloat(compartilhada)).toFixed(1);
+                const total = ((data.ciclovia + data.ciclofaixa + data.compartilhada) / 1000).toFixed(1);
                 
                 row.innerHTML = `
                     <td style="padding: 12px; border: 1px solid #ddd;">${hierarchyMap[hierarchy]}</td>
