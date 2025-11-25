@@ -90,7 +90,18 @@ function renderVias() {
     return;
   }
   
-  container.innerHTML = filteredVias.map(via => `
+  const scoreType = document.getElementById('score-type-filter')?.value || 'average';
+  const scoreLabels = {
+    'average': 'Nota Média',
+    'project': 'Projeto',
+    'urbanity': 'Urbanidade',
+    'maintenance': 'Manutenção',
+    'safety': 'Segurança'
+  };
+  
+  container.innerHTML = filteredVias.map(via => {
+    const score = via[`${scoreType}_score`] || 0;
+    return `
     <div class="via-card" onclick="openVia(${via.id})">
       <div class="via-header">
         <h3 class="via-name">${via.structure_name}</h3>
@@ -102,22 +113,22 @@ function renderVias() {
       <div class="via-body">
         <div class="via-info">
           <div class="info-item">
-            <div class="info-value">${via.average_score.toFixed(1)}</div>
-            <div class="info-label">Nota Média</div>
+            <div class="info-value">${score.toFixed(1)}</div>
+            <div class="info-label">${scoreLabels[scoreType]}</div>
           </div>
           <div class="info-item">
             <div class="info-value">${(via.length / 1000).toFixed(1)}km</div>
             <div class="info-label">Extensão</div>
           </div>
           <div class="info-item">
-            <div class="score-badge ${getScoreClass(via.average_score)}">
-              ${getScoreLabel(via.average_score)}
+            <div class="score-badge ${getScoreClass(score)}">
+              ${getScoreLabel(score)}
             </div>
           </div>
         </div>
       </div>
     </div>
-  `).join('');
+  `}).join('');
 }
 
 // Configurar filtros e busca
@@ -125,6 +136,7 @@ function setupFilters() {
   const searchInput = document.getElementById('search-input');
   const cityFilter = document.getElementById('city-filter');
   const typologyFilter = document.getElementById('typology-filter');
+  const scoreTypeFilter = document.getElementById('score-type-filter');
   const sortSelect = document.getElementById('sort-select');
   
   if (searchInput) {
@@ -137,6 +149,13 @@ function setupFilters() {
   
   if (typologyFilter) {
     typologyFilter.addEventListener('change', applyFilters);
+  }
+  
+  if (scoreTypeFilter) {
+    scoreTypeFilter.addEventListener('change', () => {
+      // Mantém a ordenação atual, apenas reaplica com o novo tipo de nota
+      applyFilters();
+    });
   }
   
   if (sortSelect) {
@@ -160,12 +179,13 @@ function applyFilters() {
   });
   
   // Ordenar
+  const scoreType = document.getElementById('score-type-filter')?.value || 'average';
   filteredVias.sort((a, b) => {
     switch (sortBy) {
       case 'score-desc':
-        return b.average_score - a.average_score;
+        return (b[`${scoreType}_score`] || 0) - (a[`${scoreType}_score`] || 0);
       case 'score-asc':
-        return a.average_score - b.average_score;
+        return (a[`${scoreType}_score`] || 0) - (b[`${scoreType}_score`] || 0);
       case 'length-desc':
         return b.length - a.length;
       case 'length-asc':

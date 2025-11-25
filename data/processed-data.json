@@ -490,8 +490,8 @@
     ],
     "average_score": 4.505316606929511,
     "project_score": 2.916666666666667,
-    "protection_score": 2,
-    "comfort_score": 6.166666666666667,
+    "urbanity_score": 5.709677419354839,
+    "maintenance_score": 5.666666666666667,
     "safety_score": 4.911111111111111,
     "full_data": {
       "error": {
@@ -1962,8 +1962,8 @@
     ],
     "average_score": 5.526765390177954,
     "project_score": 4.083333333333334,
-    "protection_score": 3.3333333333333335,
-    "comfort_score": 8,
+    "urbanity_score": 4.638370118845501,
+    "maintenance_score": 9.333333333333334,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -2299,8 +2299,8 @@
     ],
     "average_score": 6.229700854700854,
     "project_score": 5.833333333333333,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 6.989316239316239,
+    "maintenance_score": 8.166666666666666,
     "safety_score": 5.277777777777778,
     "full_data": {
       "error": {},
@@ -2910,8 +2910,8 @@
     ],
     "average_score": 5.967171717171717,
     "project_score": 5,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 7.96969696969697,
+    "maintenance_score": 7.246031746031746,
     "safety_score": 5.2936507936507935,
     "full_data": {
       "error": {},
@@ -3111,8 +3111,8 @@
     ],
     "average_score": 5.471296296296297,
     "project_score": 4.25,
-    "protection_score": 8,
-    "comfort_score": 8,
+    "urbanity_score": 3.305555555555556,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -4237,8 +4237,8 @@
     ],
     "average_score": 5.242477808386899,
     "project_score": 2.708333333333333,
-    "protection_score": 2,
-    "comfort_score": 7.833333333333333,
+    "urbanity_score": 7.749311294765841,
+    "maintenance_score": 7.666666666666667,
     "safety_score": 5.311111111111111,
     "full_data": {
       "error": {
@@ -4799,8 +4799,8 @@
     ],
     "average_score": 5.131109457671958,
     "project_score": 2.875,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 6.166666666666667,
+    "urbanity_score": 6.747767857142858,
+    "maintenance_score": 7.666666666666667,
     "safety_score": 5.311111111111111,
     "full_data": {
       "error": {
@@ -5141,8 +5141,8 @@
     ],
     "average_score": 6.36960933536276,
     "project_score": 5.7,
-    "protection_score": 9.333333333333334,
-    "comfort_score": 7.8,
+    "urbanity_score": 6.995433789954338,
+    "maintenance_score": 8.761904761904761,
     "safety_score": 5.530158730158729,
     "full_data": {
       "error": {},
@@ -5554,8 +5554,8 @@
     ],
     "average_score": 5.702627916934276,
     "project_score": 4.416666666666667,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 5.726878612716763,
+    "maintenance_score": 8.833333333333334,
     "safety_score": 5.411111111111111,
     "full_data": {
       "error": {},
@@ -6221,8 +6221,8 @@
     ],
     "average_score": 5.275149782135077,
     "project_score": 4.083333333333334,
-    "protection_score": 4,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 5.7120098039215685,
+    "maintenance_score": 6.916666666666667,
     "safety_score": 5.427777777777777,
     "full_data": {
       "error": {},
@@ -6887,8 +6887,8 @@
     ],
     "average_score": 5.970638594944151,
     "project_score": 5.333344356261023,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 8,
+    "urbanity_score": 5.653439153439154,
+    "maintenance_score": 8.629629629629628,
     "safety_score": 5.437037037037037,
     "full_data": {
       "error": {},
@@ -7181,8 +7181,8 @@
     ],
     "average_score": 5.617574555074555,
     "project_score": 4.250270562770563,
-    "protection_score": 3.3333333333333335,
-    "comfort_score": 8,
+    "urbanity_score": 5.649350649350649,
+    "maintenance_score": 9.333333333333334,
     "safety_score": 5.111111111111112,
     "full_data": {
       "error": {
@@ -10073,8 +10073,8 @@
     ],
     "average_score": 6.364787163443307,
     "project_score": 4.750106655290102,
-    "protection_score": 2,
-    "comfort_score": 8,
+    "urbanity_score": 7.666287447857414,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -10353,8 +10353,8 @@
     ],
     "average_score": 6.503925925925927,
     "project_score": 6.834,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 4.333333333333333,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -11387,8 +11387,8 @@
     ],
     "average_score": 6.716594154395359,
     "project_score": 6.750117135207496,
-    "protection_score": 8,
-    "comfort_score": 10,
+    "urbanity_score": 5.332663989290495,
+    "maintenance_score": 10,
     "safety_score": 5.733333333333333,
     "full_data": {
       "error": {},
@@ -12327,8 +12327,8 @@
     ],
     "average_score": 6.4602521195894695,
     "project_score": 6.000200803212851,
-    "protection_score": 8,
-    "comfort_score": 10,
+    "urbanity_score": 5.333333333333333,
+    "maintenance_score": 9.972222222222221,
     "safety_score": 5.727777777777778,
     "full_data": {
       "error": {
@@ -12682,8 +12682,8 @@
     ],
     "average_score": 5.7347643097643095,
     "project_score": 5.666666666666667,
-    "protection_score": 8,
-    "comfort_score": 8,
+    "urbanity_score": 5.664141414141414,
+    "maintenance_score": 6.833333333333333,
     "safety_score": 5.288888888888889,
     "full_data": {
       "error": {
@@ -13291,8 +13291,8 @@
     ],
     "average_score": 4.583646146146147,
     "project_score": 3.5125,
-    "protection_score": 3.75,
-    "comfort_score": 7.8,
+    "urbanity_score": 5.654654654654654,
+    "maintenance_score": 4.666666666666667,
     "safety_score": 5.077777777777778,
     "full_data": {
       "error": {
@@ -13546,8 +13546,8 @@
     ],
     "average_score": 4.364814814814815,
     "project_score": 3.583333333333333,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 4.333333333333333,
+    "maintenance_score": 5,
     "safety_score": 4.844444444444444,
     "full_data": {
       "error": {
@@ -13802,8 +13802,8 @@
     ],
     "average_score": 5.121497419550699,
     "project_score": 4.7088456284153,
-    "protection_score": 7.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 3.3224043715846996,
+    "maintenance_score": 7.833333333333333,
     "safety_score": 5.077777777777778,
     "full_data": {
       "error": {
@@ -14447,8 +14447,8 @@
     ],
     "average_score": 5.994452335858585,
     "project_score": 4.750023674242424,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 7,
+    "maintenance_score": 8.88888888888889,
     "safety_score": 5.288888888888889,
     "full_data": {
       "error": {},
@@ -14939,8 +14939,8 @@
     ],
     "average_score": 5.934259259259259,
     "project_score": 4.5,
-    "protection_score": 3,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 6.75,
+    "maintenance_score": 9.166666666666666,
     "safety_score": 5.344444444444444,
     "full_data": {
       "error": {},
@@ -17217,8 +17217,8 @@
     ],
     "average_score": 5.836973131106568,
     "project_score": 2.75,
-    "protection_score": 2,
-    "comfort_score": 8,
+    "urbanity_score": 8.499616564417177,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -17425,8 +17425,8 @@
     ],
     "average_score": 5.972453703703704,
     "project_score": 5.416666666666666,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 5.645833333333333,
+    "maintenance_score": 8.333333333333334,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -17631,8 +17631,8 @@
     ],
     "average_score": 5.246560846560846,
     "project_score": 4.416666666666666,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 3.29047619047619,
+    "maintenance_score": 8.333333333333334,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -17843,8 +17843,8 @@
     ],
     "average_score": 5.503703703703704,
     "project_score": 5.833333333333333,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 4.333333333333333,
+    "maintenance_score": 6.666666666666667,
     "safety_score": 5.177777777777778,
     "full_data": {
       "error": {},
@@ -18169,8 +18169,8 @@
     ],
     "average_score": 5.19399295990205,
     "project_score": 3,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 6.741735537190083,
+    "maintenance_score": 7.666666666666667,
     "safety_score": 5.377777777777777,
     "full_data": {
       "error": {
@@ -18473,8 +18473,8 @@
     ],
     "average_score": 5.285839719029374,
     "project_score": 4.833333333333334,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 6,
+    "urbanity_score": 4.326149425287356,
+    "maintenance_score": 7.166666666666667,
     "safety_score": 5.277777777777778,
     "full_data": {
       "error": {},
@@ -18747,8 +18747,8 @@
     ],
     "average_score": 5.320397227337835,
     "project_score": 4.583367863720074,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 6.733425414364641,
+    "maintenance_score": 5.666666666666667,
     "safety_score": 5.177777777777778,
     "full_data": {
       "error": {
@@ -19037,8 +19037,8 @@
     ],
     "average_score": 6.142592592592592,
     "project_score": 5.083333333333334,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 8,
+    "urbanity_score": 5.666666666666667,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -19299,8 +19299,8 @@
     ],
     "average_score": 6.11144781144781,
     "project_score": 5.583333333333333,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 5.646464646464646,
+    "maintenance_score": 9.166666666666666,
     "safety_score": 5.344444444444444,
     "full_data": {
       "error": {},
@@ -19565,8 +19565,8 @@
     ],
     "average_score": 5.420370370370371,
     "project_score": 4.583333333333333,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 5.666666666666667,
+    "maintenance_score": 7.333333333333333,
     "safety_score": 5.177777777777778,
     "full_data": {
       "error": {
@@ -19877,8 +19877,8 @@
     ],
     "average_score": 6.084113060428851,
     "project_score": 5.583333333333333,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 4.315789473684211,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -20063,8 +20063,8 @@
     ],
     "average_score": 5.962037037037038,
     "project_score": 4.5,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 5.75,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -20253,8 +20253,8 @@
     ],
     "average_score": 5.4401620370370365,
     "project_score": 3.25,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 7.71875,
+    "maintenance_score": 7.666666666666667,
     "safety_score": 5.377777777777777,
     "full_data": {
       "error": {
@@ -20493,8 +20493,8 @@
     ],
     "average_score": 5.843287037037038,
     "project_score": 4.427083333333334,
-    "protection_score": 8.375,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 5.75,
+    "maintenance_score": 9.333333333333334,
     "safety_score": 5.561111111111111,
     "full_data": {
       "error": {
@@ -20803,8 +20803,8 @@
     ],
     "average_score": 5.523168572984749,
     "project_score": 4.375,
-    "protection_score": 5.166666666666667,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 6.733455882352941,
+    "maintenance_score": 7.166666666666667,
     "safety_score": 5.2444444444444445,
     "full_data": {
       "error": {},
@@ -21244,8 +21244,8 @@
     ],
     "average_score": 5.584422657952071,
     "project_score": 2.75,
-    "protection_score": 2,
-    "comfort_score": 8,
+    "urbanity_score": 6.984313725490196,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -21525,8 +21525,8 @@
     ],
     "average_score": 6.176780423280422,
     "project_score": 5.5833571428571425,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 5.649523809523809,
+    "maintenance_score": 9.444444444444445,
     "safety_score": 5.3999999999999995,
     "full_data": {
       "error": {},
@@ -21842,8 +21842,8 @@
     ],
     "average_score": 5.722342053592054,
     "project_score": 4.250394144144144,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 6,
+    "urbanity_score": 5.648648648648649,
+    "maintenance_score": 9.401709401709402,
     "safety_score": 5.391452991452991,
     "full_data": {
       "error": {},
@@ -22158,8 +22158,8 @@
     ],
     "average_score": 6.335004516711834,
     "project_score": 6.833333333333333,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 5.654471544715446,
+    "maintenance_score": 8.333333333333334,
     "safety_score": 5.177777777777778,
     "full_data": {
       "error": {},
@@ -22415,8 +22415,8 @@
     ],
     "average_score": 6.418794326241136,
     "project_score": 4.75,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 7.990543735224587,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -22628,8 +22628,8 @@
     ],
     "average_score": 5.375015179113539,
     "project_score": 3.583333333333333,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 5.661202185792351,
+    "maintenance_score": 8.666666666666666,
     "safety_score": 5.377777777777777,
     "full_data": {
       "error": {
@@ -22899,8 +22899,8 @@
     ],
     "average_score": 5.585648148148148,
     "project_score": 4.416666666666666,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 5.658333333333334,
+    "maintenance_score": 8,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -23349,8 +23349,8 @@
     ],
     "average_score": 5.139373897707231,
     "project_score": 2.8333333333333335,
-    "protection_score": 2,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 6.747354497354497,
+    "maintenance_score": 7.666666666666667,
     "safety_score": 5.377777777777777,
     "full_data": {
       "error": {
@@ -23573,8 +23573,8 @@
     ],
     "average_score": 6.090891706924315,
     "project_score": 5.333423913043479,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 8,
+    "urbanity_score": 5.634057971014492,
+    "maintenance_score": 9.444444444444445,
     "safety_score": 5.3999999999999995,
     "full_data": {
       "error": {},
@@ -23782,8 +23782,8 @@
     ],
     "average_score": 5.939814814814814,
     "project_score": 4.666666666666666,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 5.75,
+    "maintenance_score": 9.666666666666666,
     "safety_score": 5.4444444444444455,
     "full_data": {
       "error": {},
@@ -24033,8 +24033,8 @@
     ],
     "average_score": 6.026407785336356,
     "project_score": 5.333418367346939,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 8,
+    "urbanity_score": 5.636054421768708,
+    "maintenance_score": 9.166666666666666,
     "safety_score": 5.344444444444444,
     "full_data": {
       "error": {},
@@ -24246,8 +24246,8 @@
     ],
     "average_score": 5.537037037037037,
     "project_score": 3.916666666666667,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 8,
+    "urbanity_score": 6.966666666666666,
+    "maintenance_score": 7.666666666666667,
     "safety_score": 5.377777777777777,
     "full_data": {
       "error": {
@@ -24523,8 +24523,8 @@
     ],
     "average_score": 5.203300477897252,
     "project_score": 4.833915770609319,
-    "protection_score": 7.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 3.329749103942652,
+    "maintenance_score": 8,
     "safety_score": 5.111111111111112,
     "full_data": {
       "error": {},
@@ -24865,8 +24865,8 @@
     ],
     "average_score": 6.416666666666667,
     "project_score": 5.416666666666667,
-    "protection_score": 8,
-    "comfort_score": 8,
+    "urbanity_score": 6.644444444444445,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -25089,8 +25089,8 @@
     ],
     "average_score": 5.203816316316316,
     "project_score": 4.333671171171171,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 4.333333333333333,
+    "maintenance_score": 8,
     "safety_score": 5.111111111111112,
     "full_data": {
       "error": {},
@@ -25333,8 +25333,8 @@
     ],
     "average_score": 5.556235827664399,
     "project_score": 4.833333333333334,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 5.704081632653061,
+    "maintenance_score": 7.055555555555556,
     "safety_score": 5.455555555555556,
     "full_data": {
       "error": {},
@@ -25836,8 +25836,8 @@
     ],
     "average_score": 6.474836601307189,
     "project_score": 5.416666666666666,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 6.993464052287582,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -26067,8 +26067,8 @@
     ],
     "average_score": 6.511640211640212,
     "project_score": 5.666666666666666,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 6.714285714285714,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -26325,8 +26325,8 @@
     ],
     "average_score": 4.889197530864197,
     "project_score": 4,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 5.712962962962963,
+    "maintenance_score": 5.666666666666667,
     "safety_score": 4.977777777777778,
     "full_data": {
       "error": {
@@ -26716,8 +26716,8 @@
     ],
     "average_score": 5.935504469987229,
     "project_score": 4.583333333333333,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 5.657471264367817,
+    "maintenance_score": 9.833333333333334,
     "safety_score": 5.477777777777778,
     "full_data": {
       "error": {},
@@ -27132,8 +27132,8 @@
     ],
     "average_score": 5.986973905723906,
     "project_score": 4.416666666666667,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 6.732954545454545,
+    "maintenance_score": 9.333333333333334,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -27396,8 +27396,8 @@
     ],
     "average_score": 6.301933251933252,
     "project_score": 5.583333333333333,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 5.622710622710623,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -27688,8 +27688,8 @@
     ],
     "average_score": 5.516881210478772,
     "project_score": 3.833333333333334,
-    "protection_score": 3,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 6.71239837398374,
+    "maintenance_score": 8.166666666666666,
     "safety_score": 5.277777777777778,
     "full_data": {
       "error": {},
@@ -28085,8 +28085,8 @@
     ],
     "average_score": 6.236200869236583,
     "project_score": 4.666666666666667,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 7.728316326530612,
+    "maintenance_score": 9.333333333333334,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -28444,8 +28444,8 @@
     ],
     "average_score": 6.193901863647086,
     "project_score": 5.833333333333333,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 5.6411889596602975,
+    "maintenance_score": 9.166666666666666,
     "safety_score": 5.344444444444444,
     "full_data": {
       "error": {},
@@ -28810,8 +28810,8 @@
     ],
     "average_score": 6.320122077384647,
     "project_score": 5.916666666666666,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 5.731843575418994,
+    "maintenance_score": 9.333333333333334,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -29087,8 +29087,8 @@
     ],
     "average_score": 6.245039075773022,
     "project_score": 4.416666666666667,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 7.614678899082569,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -29541,8 +29541,8 @@
     ],
     "average_score": 5.819728109612503,
     "project_score": 3.583333333333333,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 7.66281310211946,
+    "maintenance_score": 9.333333333333334,
     "safety_score": 5.377777777777777,
     "full_data": {
       "error": {
@@ -31314,8 +31314,8 @@
     ],
     "average_score": 5.742414529914529,
     "project_score": 3.5,
-    "protection_score": 5,
-    "comfort_score": 8,
+    "urbanity_score": 8.498931623931623,
+    "maintenance_score": 8.333333333333334,
     "safety_score": 5.311111111111111,
     "full_data": {
       "error": {
@@ -31567,8 +31567,8 @@
     ],
     "average_score": 6.037370370370371,
     "project_score": 5.25,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 5.702,
+    "maintenance_score": 9,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -31833,8 +31833,8 @@
     ],
     "average_score": 6.198148148148147,
     "project_score": 5.166666666666666,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 7,
+    "maintenance_score": 9.166666666666666,
     "safety_score": 5.344444444444444,
     "full_data": {
       "error": {},
@@ -32134,8 +32134,8 @@
     ],
     "average_score": 6.404198376458651,
     "project_score": 5.666666666666666,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 6.736301369863014,
+    "maintenance_score": 9.333333333333334,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -32496,8 +32496,8 @@
     ],
     "average_score": 5.076444314032342,
     "project_score": 2.916930751173709,
-    "protection_score": 2,
-    "comfort_score": 6.166666666666667,
+    "urbanity_score": 7.735915492957746,
+    "maintenance_score": 6.666666666666667,
     "safety_score": 5.111111111111112,
     "full_data": {
       "error": {
@@ -32787,8 +32787,8 @@
     ],
     "average_score": 5.2630174291939,
     "project_score": 5.666666666666666,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 5.622549019607843,
+    "maintenance_score": 4.666666666666667,
     "safety_score": 4.977777777777778,
     "full_data": {
       "error": {
@@ -33129,8 +33129,8 @@
     ],
     "average_score": 5.6969338190649665,
     "project_score": 4.333333333333333,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 5.659380692167577,
+    "maintenance_score": 9.166666666666666,
     "safety_score": 5.344444444444444,
     "full_data": {
       "error": {},
@@ -33372,8 +33372,8 @@
     ],
     "average_score": 5.920370370370371,
     "project_score": 3.916666666666667,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 8,
+    "urbanity_score": 6.666666666666667,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {
@@ -33659,8 +33659,8 @@
     ],
     "average_score": 6.309259259259259,
     "project_score": 5.583333333333333,
-    "protection_score": 8.666666666666666,
-    "comfort_score": 8,
+    "urbanity_score": 5.666666666666667,
+    "maintenance_score": 10,
     "safety_score": 5.511111111111112,
     "full_data": {
       "error": {},
@@ -34162,8 +34162,8 @@
     ],
     "average_score": 6.541981925178646,
     "project_score": 5.958333333333334,
-    "protection_score": 10,
-    "comfort_score": 8.166666666666666,
+    "urbanity_score": 5.989071038251366,
+    "maintenance_score": 9.850427350427351,
     "safety_score": 5.747863247863248,
     "full_data": {
       "error": {},
@@ -34978,8 +34978,8 @@
     ],
     "average_score": 6.248106352880659,
     "project_score": 5.166753472222222,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 7.733217592592593,
+    "maintenance_score": 8.285493827160494,
     "safety_score": 5.56820987654321,
     "full_data": {
       "error": {},
@@ -35581,8 +35581,8 @@
     ],
     "average_score": 6.793981481481481,
     "project_score": 6,
-    "protection_score": 10,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 7.5,
+    "maintenance_score": 9.791666666666666,
     "safety_score": 5.736111111111112,
     "full_data": {
       "error": {},
@@ -35835,8 +35835,8 @@
     ],
     "average_score": 4.763171622326552,
     "project_score": 3.958333333333333,
-    "protection_score": 10,
-    "comfort_score": 5.833333333333333,
+    "urbanity_score": 5.440140845070422,
+    "maintenance_score": 5,
     "safety_score": 5.111111111111112,
     "full_data": {
       "error": {
@@ -36088,8 +36088,8 @@
     ],
     "average_score": 6.216167153996101,
     "project_score": 4.000109649122807,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 7.741228070175438,
+    "maintenance_score": 10,
     "safety_score": 5.777777777777779,
     "full_data": {
       "error": {
@@ -36381,8 +36381,8 @@
     ],
     "average_score": 4.875752314814815,
     "project_score": 3.1255208333333333,
-    "protection_score": 5,
-    "comfort_score": 7.5,
+    "urbanity_score": 5.447916666666666,
+    "maintenance_score": 6.666666666666667,
     "safety_score": 5.4444444444444455,
     "full_data": {
       "error": {
@@ -36606,8 +36606,8 @@
     ],
     "average_score": 5.489907407407408,
     "project_score": 3.666666666666667,
-    "protection_score": 10,
-    "comfort_score": 4.666666666666667,
+    "urbanity_score": 4.495,
+    "maintenance_score": 10,
     "safety_score": 5.555555555555556,
     "full_data": {
       "error": {
@@ -37108,8 +37108,8 @@
     ],
     "average_score": 6.282574822297046,
     "project_score": 5.916818181818183,
-    "protection_score": 4.666666666666667,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 4.995454545454546,
+    "maintenance_score": 9.507716049382715,
     "safety_score": 5.679320987654322,
     "full_data": {
       "error": {},
@@ -37804,8 +37804,8 @@
     ],
     "average_score": 6.314390555753403,
     "project_score": 5.750050080128205,
-    "protection_score": 4.666666666666667,
-    "comfort_score": 7.666666666666667,
+    "urbanity_score": 5.983774038461538,
+    "maintenance_score": 9.271604938271604,
     "safety_score": 5.565432098765432,
     "full_data": {
       "error": {},
@@ -38282,8 +38282,8 @@
     ],
     "average_score": 5.020543981481482,
     "project_score": 2.791918682795699,
-    "protection_score": 4.666666666666667,
-    "comfort_score": 6.5,
+    "urbanity_score": 5.983870967741936,
+    "maintenance_score": 7.666666666666667,
     "safety_score": 5.4444444444444455,
     "full_data": {
       "error": {
@@ -38941,8 +38941,8 @@
     ],
     "average_score": 4.442197781537883,
     "project_score": 2.8333333333333335,
-    "protection_score": 5.166666666666667,
-    "comfort_score": 5.166666666666667,
+    "urbanity_score": 7.230964467005077,
+    "maintenance_score": 4,
     "safety_score": 4.877777777777777,
     "full_data": {
       "error": {
@@ -39568,8 +39568,8 @@
     ],
     "average_score": 5.8618263090676885,
     "project_score": 4.208563218390805,
-    "protection_score": 3.3333333333333335,
-    "comfort_score": 6.833333333333333,
+    "urbanity_score": 5.998275862068965,
+    "maintenance_score": 9.333333333333334,
     "safety_score": 5.711111111111111,
     "full_data": {
       "error": {},
@@ -39846,8 +39846,8 @@
     ],
     "average_score": 5.13411306042885,
     "project_score": 4.770833333333333,
-    "protection_score": 8.75,
-    "comfort_score": 5.333333333333333,
+    "urbanity_score": 4.440789473684211,
+    "maintenance_score": 6.666666666666667,
     "safety_score": 5.077777777777778,
     "full_data": {
       "error": {
@@ -40391,8 +40391,8 @@
     ],
     "average_score": 5.700944951801116,
     "project_score": 4.75,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 6.733447488584475,
+    "maintenance_score": 7.25,
     "safety_score": 5.361111111111112,
     "full_data": {
       "error": {},
@@ -40870,8 +40870,8 @@
     ],
     "average_score": 6.925779727095517,
     "project_score": 6.250383771929824,
-    "protection_score": 10,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 7.498355263157895,
+    "maintenance_score": 10,
     "safety_score": 5.777777777777779,
     "full_data": {
       "error": {},
@@ -41391,8 +41391,8 @@
     ],
     "average_score": 6.43488693019943,
     "project_score": 5.0625,
-    "protection_score": 6.25,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 7.741586538461538,
+    "maintenance_score": 9.538461538461538,
     "safety_score": 5.602136752136752,
     "full_data": {
       "error": {},
@@ -42050,8 +42050,8 @@
     ],
     "average_score": 5.123172773837667,
     "project_score": 4.666681442080378,
-    "protection_score": 5,
-    "comfort_score": 8,
+    "urbanity_score": 4.31678486997636,
+    "maintenance_score": 6.333333333333333,
     "safety_score": 5.377777777777777,
     "full_data": {
       "error": {},
@@ -42463,8 +42463,8 @@
     ],
     "average_score": 4.590740740740741,
     "project_score": 3.416666666666667,
-    "protection_score": 3.3333333333333335,
-    "comfort_score": 5.333333333333333,
+    "urbanity_score": 5.488888888888889,
+    "maintenance_score": 5,
     "safety_score": 5.111111111111112,
     "full_data": {
       "error": {
@@ -42959,8 +42959,8 @@
     ],
     "average_score": 5.484633190883192,
     "project_score": 3.875,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 5.333333333333333,
+    "urbanity_score": 3.7355769230769234,
+    "maintenance_score": 10,
     "safety_score": 5.711111111111111,
     "full_data": {
       "error": {
@@ -43165,8 +43165,8 @@
     ],
     "average_score": 6.241100823045268,
     "project_score": 5.167746913580247,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 5.75,
+    "maintenance_score": 9.861111111111112,
     "safety_score": 5.75,
     "full_data": {
       "error": {},
@@ -43394,8 +43394,8 @@
     ],
     "average_score": 6.495690883190885,
     "project_score": 5.459294871794873,
-    "protection_score": 10,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 6.5,
+    "maintenance_score": 10,
     "safety_score": 5.777777777777779,
     "full_data": {
       "error": {
@@ -43688,8 +43688,8 @@
     ],
     "average_score": 6.406428062678063,
     "project_score": 5.583333333333334,
-    "protection_score": 10,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 7.466346153846154,
+    "maintenance_score": 8.75,
     "safety_score": 5.527777777777779,
     "full_data": {
       "error": {},
@@ -43962,8 +43962,8 @@
     ],
     "average_score": 4.180182198327359,
     "project_score": 2.3375,
-    "protection_score": 3.75,
-    "comfort_score": 4.6,
+    "urbanity_score": 5.650537634408603,
+    "maintenance_score": 5,
     "safety_score": 4.877777777777777,
     "full_data": {
       "error": {
@@ -44246,8 +44246,8 @@
     ],
     "average_score": 4.342592592592593,
     "project_score": 2.833333333333333,
-    "protection_score": 5,
-    "comfort_score": 6.333333333333333,
+    "urbanity_score": 4.5,
+    "maintenance_score": 5.666666666666667,
     "safety_score": 5.111111111111112,
     "full_data": {
       "error": {
@@ -44516,8 +44516,8 @@
     ],
     "average_score": 5.6631481481481485,
     "project_score": 5.541666666666667,
-    "protection_score": 9.333333333333334,
-    "comfort_score": 7.833333333333333,
+    "urbanity_score": 5.74,
+    "maintenance_score": 6.666666666666667,
     "safety_score": 5.2444444444444445,
     "full_data": {
       "error": {
@@ -45021,8 +45021,8 @@
     ],
     "average_score": 5.081962962962963,
     "project_score": 3.3333333333333335,
-    "protection_score": 6.666666666666667,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 6.714,
+    "maintenance_score": 6,
     "safety_score": 5.555555555555556,
     "full_data": {
       "error": {
@@ -45326,8 +45326,8 @@
     ],
     "average_score": 4.256580687830688,
     "project_score": 2.416666666666667,
-    "protection_score": 5,
-    "comfort_score": 4.666666666666667,
+    "urbanity_score": 4.483928571428571,
+    "maintenance_score": 6,
     "safety_score": 5.111111111111112,
     "full_data": {
       "error": {
@@ -45634,8 +45634,8 @@
     ],
     "average_score": 4.812037037037038,
     "project_score": 4.075,
-    "protection_score": 3.5,
-    "comfort_score": 7.8,
+    "urbanity_score": 3.3333333333333335,
+    "maintenance_score": 7.5,
     "safety_score": 4.944444444444445,
     "full_data": {
       "error": {},
@@ -45944,8 +45944,8 @@
     ],
     "average_score": 3.841550925925926,
     "project_score": 2.575,
-    "protection_score": 2.5,
-    "comfort_score": 7.8,
+    "urbanity_score": 5.621527777777779,
+    "maintenance_score": 2,
     "safety_score": 5.138888888888889,
     "full_data": {
       "error": {
@@ -46201,8 +46201,8 @@
     ],
     "average_score": 4.464814814814814,
     "project_score": 3.583333333333333,
-    "protection_score": 5.333333333333333,
-    "comfort_score": 8,
+    "urbanity_score": 3.3333333333333335,
+    "maintenance_score": 6.333333333333333,
     "safety_score": 4.977777777777778,
     "full_data": {
       "error": {
@@ -46434,8 +46434,8 @@
     ],
     "average_score": 5.62962962962963,
     "project_score": 5.833333333333334,
-    "protection_score": 10,
-    "comfort_score": 6.666666666666667,
+    "urbanity_score": 2.5,
+    "maintenance_score": 8.61111111111111,
     "safety_score": 5.5,
     "full_data": {
       "error": {},
@@ -46641,8 +46641,8 @@
     ],
     "average_score": 5.616402116402116,
     "project_score": 5.666666666666667,
-    "protection_score": 9.333333333333334,
-    "comfort_score": 8.333333333333334,
+    "urbanity_score": 4.976190476190476,
+    "maintenance_score": 6.833333333333333,
     "safety_score": 5.277777777777778,
     "full_data": {
       "error": {},
@@ -46872,8 +46872,8 @@
     ],
     "average_score": 5.140740740740742,
     "project_score": 3.408333333333333,
-    "protection_score": 5.833333333333333,
-    "comfort_score": 7.8,
+    "urbanity_score": 3.3333333333333335,
+    "maintenance_score": 10,
     "safety_score": 5.347222222222222,
     "full_data": {
       "error": {
@@ -47098,8 +47098,8 @@
     ],
     "average_score": 5.140740740740742,
     "project_score": 3.408333333333333,
-    "protection_score": 5.833333333333333,
-    "comfort_score": 7.8,
+    "urbanity_score": 3.3333333333333335,
+    "maintenance_score": 10,
     "safety_score": 5.347222222222222,
     "full_data": {
       "error": {
@@ -47529,8 +47529,8 @@
     ],
     "average_score": 4.974074074074075,
     "project_score": 3.325,
-    "protection_score": 5.5,
-    "comfort_score": 7.8,
+    "urbanity_score": 3.3333333333333335,
+    "maintenance_score": 10,
     "safety_score": 4.930555555555556,
     "full_data": {
       "error": {
@@ -47824,8 +47824,8 @@
     ],
     "average_score": 4.857542908762421,
     "project_score": 3.658333333333333,
-    "protection_score": 6.833333333333333,
-    "comfort_score": 7.8,
+    "urbanity_score": 5.6504065040650415,
+    "maintenance_score": 0,
     "safety_score": 5.263888888888889,
     "full_data": {
       "error": {
@@ -48058,8 +48058,8 @@
     ],
     "average_score": 5.553703703703704,
     "project_score": 5.5,
-    "protection_score": 10,
-    "comfort_score": 7,
+    "urbanity_score": 4.5,
+    "maintenance_score": 7.333333333333333,
     "safety_score": 5.2444444444444445,
     "full_data": {
       "error": {

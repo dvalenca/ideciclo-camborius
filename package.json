@@ -2,6 +2,7 @@
   "name": "ideciclo-hotsite",
   "version": "1.0.0",
   "description": "Site de relatório para visualização dos dados de auditoria cicloviária de Camboriú e Balneário Camboriú",
+  "type": "module",
   "main": "index.html",
   "scripts": {
     "dev": "python3 -m http.server 3000",
