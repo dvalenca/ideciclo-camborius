@@ -26,14 +26,27 @@ function initOverviewMap() {
 // Carregar dados
 async function loadData() {
   try {
-    const [viasResponse, metadataResponse] = await Promise.all([
+    const [viasResponse, metadataResponse, coverageResponse] = await Promise.all([
       fetch('data/processed-data.json'),
-      fetch('data/vias-metadata.json')
+      fetch('data/vias-metadata.json'),
+      fetch('assets/data/coverage-analysis.json')
     ]);
     
     allVias = await viasResponse.json();
     metadata = await metadataResponse.json();
+    const coverageAnalysis = await coverageResponse.json();
     filteredVias = [...allVias];
+    
+    // Calcular totais do coverage-analysis
+    const balnearioTotal = Object.values(coverageAnalysis.Balneario.coverage)
+      .reduce((sum, category) => sum + Object.values(category).reduce((s, v) => s + v, 0), 0);
+    const camboriuTotal = Object.values(coverageAnalysis.Camboriu.coverage)
+      .reduce((sum, category) => sum + Object.values(category).reduce((s, v) => s + v, 0), 0);
+    
+    // Atualizar metadata com dados do coverage
+    metadata.coverage_total_length = balnearioTotal + camboriuTotal;
+    metadata.coverage_balneario = balnearioTotal;
+    metadata.coverage_camboriu = camboriuTotal;
     
     console.log(`✅ Carregados ${allVias.length} estruturas`);
   } catch (error) {
@@ -47,26 +60,22 @@ function renderStats() {
   const statsContainer = document.getElementById('stats-container');
   if (!statsContainer) return;
   
-  // Calcular extensões por cidade
-  const camboriuLength = allVias.filter(v => v.city === 'Camboriú').reduce((sum, v) => sum + v.length, 0);
-  const bcLength = allVias.filter(v => v.city === 'Balneário Camboriú').reduce((sum, v) => sum + v.length, 0);
-  
   statsContainer.innerHTML = `
     <div class="stat-card">
       <span class="stat-number">${metadata.total_structures}</span>
       <span class="stat-label">Estruturas Avaliadas</span>
     </div>
     <div class="stat-card">
-      <span class="stat-number">${(metadata.total_length / 1000).toFixed(1)}km</span>
+      <span class="stat-number">${(metadata.coverage_total_length / 1000).toFixed(1)}km</span>
       <span class="stat-label">Extensão Total</span>
     </div>
     <div class="stat-card">
       <span class="stat-number">${metadata.by_city['Camboriú']}</span>
-      <span class="stat-label">Camboriú (${(camboriuLength / 1000).toFixed(1)}km)</span>
+      <span class="stat-label">Camboriú (${(metadata.coverage_camboriu / 1000).toFixed(1)}km)</span>
     </div>
     <div class="stat-card">
       <span class="stat-number">${metadata.by_city['Balneário Camboriú']}</span>
-      <span class="stat-label">Balneário Camboriú (${(bcLength / 1000).toFixed(1)}km)</span>
+      <span class="stat-label">Balneário Camboriú (${(metadata.coverage_balneario / 1000).toFixed(1)}km)</span>
     </div>
   `;
 }
