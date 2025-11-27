@@ -3284,7 +3284,7 @@
   {
     "id": 6,
     "gpx_name": "EDIT GPX - Ciclofaixa Av. João Costa T3 e Estr. Rio - Cb.gpx",
-    "structure_name": "EDIT GPX - Ciclofaixa Av. João Costa T3 e Estr. Rio",
+    "structure_name": "Ciclofaixa Av. João Costa T3 e Estr. Rio",
     "city": "Camboriú",
     "typology": "Ciclofaixa",
     "length": 3630,
@@ -4330,7 +4330,7 @@
       ],
       "photos": [],
       "audios": [],
-      "structure_name": "EDIT GPX - Ciclofaixa Av. João Costa T3 e Estr. Rio",
+      "structure_name": "Ciclofaixa Av. João Costa T3 e Estr. Rio",
       "exclusive_traffic_lights": 0,
       "no_exclusive_traffic_lights": 0,
       "motorized_traffic_lights": 0,
@@ -4400,13 +4400,13 @@
     "metadata": {
       "cod": "codigo de area nao informado",
       "gpx_name": "EDIT GPX - Ciclofaixa Av. João Costa T3 e Estr. Rio - Cb.gpx",
-      "structure_name": "EDIT GPX - Ciclofaixa Av. João Costa T3 e Estr. Rio",
+      "structure_name": "Ciclofaixa Av. João Costa T3 e Estr. Rio",
       "city": "Camboriú",
       "Carimbo de data/hora": "Falha ao encontrar Data e Hora",
       "Data": "Falha ao encontrar Data",
       "Hora Início": "Falha ao encontrar Hora Início"
     },
-    "searchable_text": "edit gpx - ciclofaixa av. joão costa t3 e estr. rio camboriú ciclofaixa"
+    "searchable_text": "ciclofaixa av. joão costa t3 e estr. rio camboriú ciclofaixa"
   },
   {
     "id": 7,
