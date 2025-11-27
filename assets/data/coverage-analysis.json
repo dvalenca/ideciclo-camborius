@@ -3,21 +3,21 @@
     "city": "Balneario",
     "coverage": {
       "arterial": {
-        "ciclovia": 14834.535,
-        "ciclofaixa": 11323.644999999995,
-        "compartilhada": 1048.7350000000001,
+        "ciclovia": 8990,
+        "ciclofaixa": 5265,
+        "compartilhada": 2655,
         "baixa_velocidade": 0
       },
       "coletora": {
-        "ciclovia": 1856.889,
-        "ciclofaixa": 27391.099999999984,
-        "compartilhada": 6.052,
+        "ciclovia": 5685,
+        "ciclofaixa": 38585,
+        "compartilhada": 0,
         "baixa_velocidade": 0
       },
       "local": {
-        "ciclovia": 738.576,
-        "ciclofaixa": 2775.256,
-        "compartilhada": 1980.2150000000001,
+        "ciclovia": 2495,
+        "ciclofaixa": 1830,
+        "compartilhada": 380,
         "baixa_velocidade": 0
       }
     },
@@ -37,15 +37,15 @@
         "baixa_velocidade": 0
       },
       "coletora": {
-        "ciclovia": 7310,
-        "ciclofaixa": 25087.249,
-        "compartilhada": 182.735,
+        "ciclovia": 7510,
+        "ciclofaixa": 25929,
+        "compartilhada": 0,
         "baixa_velocidade": 0
       },
       "local": {
-        "ciclovia": 250,
-        "ciclofaixa": 6116.745000000001,
-        "compartilhada": 17.265,
+        "ciclovia": 0,
+        "ciclofaixa": 5275,
+        "compartilhada": 250,
         "baixa_velocidade": 0
       }
     },

@@ -49,9 +49,10 @@ function mapHighwayToViaType(highway) {
 function analyzeCoverage(cityName) {
     console.log(`\n=== ANÁLISE DE COBERTURA - ${cityName.toUpperCase()} ===\n`);
     
-    const waysData = readJSON(`../data/${cityName}Ways.json`);
-    const geoData = readGeoJSON(`../data/${cityName}-OSM-enriched-fixed.geojson`);
-    const cyclewayClassification = readJSON('../data/cycleway-classification.json');
+    const waysData = readJSON(`./assets/data/${cityName}Ways.json`);
+    const processedData = readJSON('./data/processed-data.json');
+    const geoData = readGeoJSON(`./assets/data/${cityName}-OSM-enriched-fixed.geojson`);
+    const cyclewayClassification = readJSON('./assets/data/cycleway-classification.json');
     
     // Extensões totais por tipo de via
     const totalExtensions = {
@@ -71,77 +72,51 @@ function analyzeCoverage(cityName) {
         local: { ciclovia: 0, ciclofaixa: 0, compartilhada: 0, baixa_velocidade: 0 }
     };
     
-    // Agrupar por src para evitar duplicatas
-    const srcGroups = {};
-    geoData.features.forEach(feature => {
-        const src = feature.properties.src;
-        if (src) {
-            if (!srcGroups[src]) {
-                srcGroups[src] = [];
-            }
-            srcGroups[src].push(feature);
-        }
-    });
+    // Mapear nomes das cidades
+    const cityMapping = {
+        'Balneario': 'Balneário Camboriú',
+        'Camboriu': 'Camboriú'
+    };
+    const mappedCityName = cityMapping[cityName] || cityName;
     
-    // Identificar duplicatas usando uma assinatura mais robusta
-    const duplicateGroups = {};
-    Object.entries(srcGroups).forEach(([src, features]) => {
-        // Usar múltiplos campos para criar uma assinatura mais única
-        const signature = features
-            .map(f => {
-                const length = Math.round(parseFloat(f.properties.length || f.properties.osm_length || 0));
-                const type = f.properties.tipo || f.properties.type || 'unknown';
-                const highway = f.properties.highway || 'unknown';
-                return `${length}-${type}-${highway}`;
-            })
-            .sort()
-            .join('|');
+    // Filtrar estruturas da cidade usando processed-data.json
+    const cityStructures = processedData.filter(item => item.city === mappedCityName);
+    
+    // Para cada estrutura, encontrar sua classificação de via no GeoJSON
+    cityStructures.forEach(structure => {
+        // Encontrar feature correspondente no GeoJSON
+        const geoFeature = geoData.features.find(f => 
+            f.properties.src === structure.gpx_name
+        );
         
-        if (!duplicateGroups[signature]) {
-            duplicateGroups[signature] = [];
-        }
-        duplicateGroups[signature].push(src);
-    });
-    
-    const processedSrcs = new Set();
-    
-    Object.entries(duplicateGroups).forEach(([signature, srcs]) => {
-        const representativeSrc = srcs[0]; // Usar apenas o primeiro para evitar duplicatas
-        const features = srcGroups[representativeSrc];
-        
-        features.forEach(feature => {
-            const highway = getHighwayClassification(feature, cyclewayClassification, cityName);
+        if (geoFeature) {
+            const highway = getHighwayClassification(geoFeature, cyclewayClassification, cityName);
             const viaType = mapHighwayToViaType(highway);
-            const structureType = feature.properties.tipo || feature.properties.type;
+            const length = structure.length; // Usar comprimento do processed-data.json
             
-            // Usar múltiplas fontes para o comprimento, priorizando comp_proportional
-            let length = parseFloat(feature.properties.comp_proportional || 
-                                  feature.properties.comp_new || 
-                                  feature.properties.length_new || 
-                                  feature.properties.length || 
-                                  feature.properties.osm_length || 0);
-            
-            if (length > 0 && viaType && structureType) {
-                // Normalizar tipos de estrutura
-                const normalizedType = structureType.toLowerCase().trim();
-                
-                if (normalizedType.includes('ciclovia')) {
+            if (length > 0 && viaType) {
+                if (structure.typology === 'Ciclovia') {
                     coverage[viaType].ciclovia += length;
-                } else if (normalizedType.includes('ciclofaixa')) {
+                } else if (structure.typology === 'Ciclofaixa') {
                     coverage[viaType].ciclofaixa += length;
-                } else if (normalizedType.includes('compart')) {
+                } else if (structure.typology === 'Calçada compartilhada') {
                     coverage[viaType].compartilhada += length;
-                } else if (normalizedType.includes('baixa velocidade')) {
-                    coverage[viaType].baixa_velocidade += length;
-                } else {
-                    console.warn(`Tipo de estrutura não reconhecido: ${structureType}`);
                 }
             }
-        });
-        
-        srcs.forEach(src => processedSrcs.add(src));
+        } else {
+            // Fallback: assumir via local se não encontrar no GeoJSON
+            const length = structure.length;
+            if (length > 0) {
+                if (structure.typology === 'Ciclovia') {
+                    coverage.local.ciclovia += length;
+                } else if (structure.typology === 'Ciclofaixa') {
+                    coverage.local.ciclofaixa += length;
+                } else if (structure.typology === 'Calçada compartilhada') {
+                    coverage.local.compartilhada += length;
+                }
+            }
+        }
     });
-    
     // Gerar tabela
     console.log('TABELA DE COBERTURA (em metros):');
     console.log('Via Type'.padEnd(12) + '| Ciclovia'.padEnd(12) + '| Ciclofaixa'.padEnd(12) + '| Compartilh.'.padEnd(12) + '| Baixa Vel.'.padEnd(12) + '| Total Cob.'.padEnd(12) + '| Total Malha'.padEnd(12) + '| % Cobertura');
@@ -216,8 +191,8 @@ function main() {
         }
     });
     
-    fs.writeFileSync('../data/coverage-analysis.json', JSON.stringify(allResults, null, 2));
-    console.log('\n✅ Resultados salvos em: ../data/coverage-analysis.json');
+    fs.writeFileSync('./assets/data/coverage-analysis.json', JSON.stringify(allResults, null, 2));
+    console.log('\n✅ Resultados salvos em: assets/data/coverage-analysis.json');
 }
 
 main();

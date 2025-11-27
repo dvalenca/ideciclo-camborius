@@ -323,7 +323,7 @@
                     </div>
                     <div class="dashboard-stat-card">
                         <span class="dashboard-stat-number" id="totalWays">-</span>
-                        <span class="dashboard-stat-label">Total de Vias</span>
+                        <span class="dashboard-stat-label">km Total de Vias</span>
                     </div>
                     <div class="dashboard-stat-card">
                         <span class="dashboard-stat-number" id="overallAverage">-</span>
@@ -502,11 +502,10 @@
                 ]);
 
                 const totalStructures = data.length;
-                const balnearioEvaluatedKm = Object.values(coverageAnalysis.Balneario.coverage)
-                    .reduce((sum, category) => sum + Object.values(category).reduce((s, v) => s + v, 0), 0) / 1000;
-                const camboriuEvaluatedKm = Object.values(coverageAnalysis.Camboriu.coverage)
-                    .reduce((sum, category) => sum + Object.values(category).reduce((s, v) => s + v, 0), 0) / 1000;
-                const totalKilometers = balnearioEvaluatedKm + camboriuEvaluatedKm;
+                const totalKilometers = data.reduce((sum, item) => {
+                    const segLength = parseFloat(item.result.seg_length) || 0;
+                    return sum + (segLength / 1000);
+                }, 0);
 
                 const balnearioTotal = balnearioWays.reduce((sum, way) => sum + way.length, 0) / 1000;
                 const camboriuTotal = camboriuWays.reduce((sum, way) => sum + way.length, 0) / 1000;
@@ -527,8 +526,8 @@
                 document.getElementById('overallAverage').textContent = gpxAnalysis.summary.total_comments;
                 document.getElementById('totalGpxPoints').textContent = gpxAnalysis.summary.gpx_points;
 
-                updateCityData('balneario', balnearioWays, coverageAnalysis.Balneario, idecicloResults.Balneario.ideciclo);
-                updateCityData('camboriu', camboriuWays, coverageAnalysis.Camboriu, idecicloResults.Camboriu.ideciclo);
+                updateCityData('balneario', balnearioWays, coverageAnalysis.Balneario, idecicloResults.Balneario.ideciclo, data);
+                updateCityData('camboriu', camboriuWays, coverageAnalysis.Camboriu, idecicloResults.Camboriu.ideciclo, data);
                 populateCoverageTable(coverageAnalysis);
 
                 document.getElementById('loading').style.display = 'none';
@@ -540,7 +539,22 @@
             }
         }
 
-        function updateCityData(cityPrefix, waysData, coverage, ideciclo) {
+        function getTypologyFromData(data) {
+            if (data.tipo_da_via?.Ciclovia > 0) return 'Ciclovia';
+            if (data.tipo_da_via?.Ciclofaixa > 0) return 'Ciclofaixa';
+            if (data.tipo_da_via?.Ciclorrota > 0) return 'Ciclorrota';
+            if (data.tipo_da_via?.['Calçada compartilhada'] > 0) return 'Calçada compartilhada';
+            
+            const structureName = data.result?.structure_name || '';
+            if (structureName.includes('Ciclofaixa')) return 'Ciclofaixa';
+            if (structureName.includes('Ciclovia')) return 'Ciclovia';
+            if (structureName.includes('Compart.')) return 'Calçada compartilhada';
+            if (structureName.includes('Ciclorrota')) return 'Ciclorrota';
+            
+            return 'Não identificada';
+        }
+        
+        function updateCityData(cityPrefix, waysData, coverage, ideciclo, processedData) {
             const groupedWays = waysData.reduce((acc, way) => {
                 if (!acc[way.type]) acc[way.type] = 0;
                 acc[way.type] += way.length;
@@ -553,15 +567,25 @@
             document.getElementById(cityPrefix + 'Coletora').textContent = (groupedWays.coletora / 1000 || 0).toFixed(1) + 'km';
             document.getElementById(cityPrefix + 'Local').textContent = (groupedWays.local / 1000 || 0).toFixed(1) + 'km';
 
-            const totalCiclovias = Object.values(coverage.coverage).reduce((sum, category) => sum + category.ciclovia, 0) / 1000;
-            const totalCiclofaixas = Object.values(coverage.coverage).reduce((sum, category) => sum + category.ciclofaixa, 0) / 1000;
-            const totalCompartilhadas = Object.values(coverage.coverage).reduce((sum, category) => sum + category.compartilhada, 0) / 1000;
-            const totalCiclo = totalCiclovias + totalCiclofaixas + totalCompartilhadas;
+            // Usar rated-data.json para totais corretos
+            const cityName = cityPrefix === 'balneario' ? 'Balneário Camboriú' : 'Camboriú';
+            const cityStructures = processedData.filter(item => item.result.city === cityName);
+            
+            const totals = cityStructures.reduce((acc, item) => {
+                const lengthKm = parseFloat(item.result.seg_length) / 1000 || 0;
+                const typology = getTypologyFromData(item);
+                if (typology === 'Ciclovia') acc.ciclovias += lengthKm;
+                else if (typology === 'Ciclofaixa') acc.ciclofaixas += lengthKm;
+                else if (typology === 'Calçada compartilhada') acc.compartilhadas += lengthKm;
+                return acc;
+            }, { ciclovias: 0, ciclofaixas: 0, compartilhadas: 0 });
+            
+            const totalCiclo = totals.ciclovias + totals.ciclofaixas + totals.compartilhadas;
 
             document.getElementById(cityPrefix + 'TotalCiclo').textContent = totalCiclo.toFixed(1) + 'km';
-            document.getElementById(cityPrefix + 'Ciclovias').textContent = totalCiclovias.toFixed(1) + 'km';
-            document.getElementById(cityPrefix + 'Ciclofaixas').textContent = totalCiclofaixas.toFixed(1) + 'km';
-            document.getElementById(cityPrefix + 'Compartilhadas').textContent = totalCompartilhadas.toFixed(1) + 'km';
+            document.getElementById(cityPrefix + 'Ciclovias').textContent = totals.ciclovias.toFixed(1) + 'km';
+            document.getElementById(cityPrefix + 'Ciclofaixas').textContent = totals.ciclofaixas.toFixed(1) + 'km';
+            document.getElementById(cityPrefix + 'Compartilhadas').textContent = totals.compartilhadas.toFixed(1) + 'km';
             
             document.getElementById(cityPrefix + 'Ideciclo').textContent = ideciclo.toFixed(3);
         }
@@ -580,7 +604,7 @@
                 const ciclovia = (data.ciclovia / 1000).toFixed(1);
                 const ciclofaixa = (data.ciclofaixa / 1000).toFixed(1);
                 const compartilhada = (data.compartilhada / 1000).toFixed(1);
-                const total = ((data.ciclovia + data.ciclofaixa + data.compartilhada) / 1000).toFixed(1);
+                const total = (parseFloat(ciclovia) + parseFloat(ciclofaixa) + parseFloat(compartilhada)).toFixed(1);
                 
                 row.innerHTML = `
                     <td style="padding: 12px; border: 1px solid #ddd;">${hierarchyMap[hierarchy]}</td>
@@ -598,7 +622,7 @@
                 const ciclovia = (data.ciclovia / 1000).toFixed(1);
                 const ciclofaixa = (data.ciclofaixa / 1000).toFixed(1);
                 const compartilhada = (data.compartilhada / 1000).toFixed(1);
-                const total = ((data.ciclovia + data.ciclofaixa + data.compartilhada) / 1000).toFixed(1);
+                const total = (parseFloat(ciclovia) + parseFloat(ciclofaixa) + parseFloat(compartilhada)).toFixed(1);
                 
                 row.innerHTML = `
                     <td style="padding: 12px; border: 1px solid #ddd;">${hierarchyMap[hierarchy]}</td>

@@ -8,17 +8,26 @@ const __dirname = path.dirname(__filename);
 
 // Carregar dados
 const ratedData = JSON.parse(fs.readFileSync('../assets/data/rated-data.json', 'utf8'));
-const balnearioGeoJSON = JSON.parse(fs.readFileSync('../assets/data/Balneario.geojson', 'utf8'));
-const camboriuGeoJSON = JSON.parse(fs.readFileSync('../assets/data/Camboriu.geojson', 'utf8'));
+const balnearioGeoJSON = JSON.parse(fs.readFileSync('../../crosses/Balneario.geojson', 'utf8'));
+const camboriuGeoJSON = JSON.parse(fs.readFileSync('../../crosses/Camboriu.geojson', 'utf8'));
 
 
 
 // Função para determinar tipologia
 function getTypology(data) {
-  if (data.tipo_da_via?.Ciclovia === 1) return 'Ciclovia';
-  if (data.tipo_da_via?.Ciclofaixa === 1) return 'Ciclofaixa';
-  if (data.tipo_da_via?.Ciclorrota === 1) return 'Ciclorrota';
-  if (data.tipo_da_via?.['Calçada compartilhada'] === 1) return 'Calçada compartilhada';
+  // Primeiro, tentar detectar pelo campo tipo_da_via (aceitar valores > 0)
+  if (data.tipo_da_via?.Ciclovia > 0) return 'Ciclovia';
+  if (data.tipo_da_via?.Ciclofaixa > 0) return 'Ciclofaixa';
+  if (data.tipo_da_via?.Ciclorrota > 0) return 'Ciclorrota';
+  if (data.tipo_da_via?.['Calçada compartilhada'] > 0) return 'Calçada compartilhada';
+  
+  // Fallback: detectar pelo nome da estrutura
+  const structureName = data.result?.structure_name || '';
+  if (structureName.includes('Ciclofaixa')) return 'Ciclofaixa';
+  if (structureName.includes('Ciclovia')) return 'Ciclovia';
+  if (structureName.includes('Compart.')) return 'Calçada compartilhada';
+  if (structureName.includes('Ciclorrota')) return 'Ciclorrota';
+  
   return 'Não identificada';
 }
 
@@ -56,8 +65,8 @@ const processedData = ratedData.map(item => {
     // Notas principais
     average_score: item.rates?.average || 0,
     project_score: item.rates?.project || 0,
-    urbanity_score: item.rates?.urbanity || 0,
-    maintenance_score: item.rates?.maintenance || 0,
+    protection_score: item.rates?.protection || 0,
+    comfort_score: item.rates?.comfort || 0,
     safety_score: item.rates?.safety || 0,
     
     // Dados completos para página individual
