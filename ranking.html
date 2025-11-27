@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Nacional - IDECICLO</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .ranking-hero {
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .ranking-table {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        
+        .ranking-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .ranking-table th {
+            background: #2E7D32;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .ranking-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .ranking-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .position {
+            font-weight: 700;
+            color: #2E7D32;
+            font-size: 1.1rem;
+        }
+        
+        .city-name {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .state {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .score {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .score-excellent { color: #2E7D32; }
+        .score-good { color: #689F38; }
+        .score-regular { color: #F57C00; }
+        .score-poor { color: #FF9800; }
+        .score-inadequate { color: #F44336; }
+        
+        .highlight-local {
+            background: #E8F5E8 !important;
+            font-weight: 600;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2E7D32;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">IDECICLO</a></h1>
+                    <p>Auditoria Cicloviária</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
+                        <li><a href="comparacao.html" class="nav-link">Comparação</a></li>
+                        <li><a href="ranking.html" class="nav-link">Ranking Nacional</a></li>
+                        <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="ranking-hero">
+        <div class="container">
+            <h1>Ranking Nacional IDECICLO</h1>
+            <p>Comparação entre cidades brasileiras avaliadas</p>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">16</span>
+                    <span class="stat-label">Cidades Avaliadas</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Estados</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">0,110</span>
+                    <span class="stat-label">Melhor IDECICLO</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">2016-2025</span>
+                    <span class="stat-label">Período de Avaliação</span>
+                </div>
+            </div>
+
+            <div class="ranking-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Cidade</th>
+                            <th>Estado</th>
+                            <th>Ano</th>
+                            <th>IDECICLO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rankingTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>IDECICLO</h3>
+                    <p>Ranking Nacional</p>
+                    <p>Auditoria Cicloviária</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const rankingData = [
+            { cidade: "Balneário Camboriú", estado: "SC", ano: 2025, ideciclo: 0.110 },
+            { cidade: "Salvador", estado: "BA", ano: 2023, ideciclo: 0.093 },
+            { cidade: "Olinda", estado: "PE", ano: 2018, ideciclo: 0.092 },
+            { cidade: "Brasília", estado: "DF", ano: 2019, ideciclo: 0.078 },
+            { cidade: "São Paulo", estado: "SP", ano: 2018, ideciclo: 0.070 },
+            { cidade: "Campo Grande", estado: "MS", ano: 2020, ideciclo: 0.051 },
+            { cidade: "Recife", estado: "PE", ano: 2021, ideciclo: 0.050 },
+            { cidade: "Camboriú", estado: "SC", ano: 2025, ideciclo: 0.044 },
+            { cidade: "Paulista", estado: "PE", ano: 2018, ideciclo: 0.041 },
+            { cidade: "Recife", estado: "PE", ano: 2018, ideciclo: 0.035 },
+            { cidade: "São Lourenço da Mata", estado: "PE", ano: 2018, ideciclo: 0.031 },
+            { cidade: "Belo Horizonte", estado: "MG", ano: 2018, ideciclo: 0.029 },
+            { cidade: "Recife", estado: "PE", ano: 2016, ideciclo: 0.028 },
+            { cidade: "Cabo de Santo Agostinho", estado: "PE", ano: 2018, ideciclo: 0.022 },
+            { cidade: "Ipojuca", estado: "PE", ano: 2018, ideciclo: 0.016 },
+            { cidade: "Jaboatão dos Guararapes", estado: "PE", ano: 2018, ideciclo: 0.011 }
+        ];
+
+        function getScoreClass(score) {
+            if (score >= 0.080) return 'score-excellent';
+            if (score >= 0.060) return 'score-good';
+            if (score >= 0.040) return 'score-regular';
+            if (score >= 0.020) return 'score-poor';
+            return 'score-inadequate';
+        }
+
+        function isLocalCity(cidade) {
+            return cidade === "Balneário Camboriú" || cidade === "Camboriú";
+        }
+
+        function populateRankingTable() {
+            const tbody = document.getElementById('rankingTableBody');
+            
+            rankingData.forEach((item, index) => {
+                const row = tbody.insertRow();
+                const isLocal = isLocalCity(item.cidade);
+                
+                if (isLocal) {
+                    row.classList.add('highlight-local');
+                }
+                
+                row.innerHTML = `
+                    <td class="position">${index + 1}º</td>
+                    <td class="city-name">${item.cidade}</td>
+                    <td class="state">${item.estado}</td>
+                    <td>${item.ano}</td>
+                    <td class="score ${getScoreClass(item.ideciclo)}">${item.ideciclo.toFixed(3)}</td>
+                `;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            populateRankingTable();
+        });
+    </script>
+</body>
+</html>
