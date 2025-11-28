@@ -476,7 +476,17 @@
                             </tbody>
                         </table>
                     </div>
-              
+
+                <!-- Botões de Exportação -->
+                <section class="info-card full-width" style="margin-top: 3rem;">
+                    <h3>📊 Exportar Relatórios</h3>
+                    <p>Gere relatórios completos dos dados apresentados nesta página:</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem;">
+                        <button class="btn btn-primary" onclick="exportMarkdown()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📄 Exportar .MD</button>
+                        <button class="btn btn-primary" onclick="exportJSON()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📋 Exportar .JSON</button>
+                        <button class="btn btn-secondary" onclick="showCSVModal()" style="padding: 0.75rem 1.5rem; background: #666; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📊 Exportar .CSV</button>
+                    </div>
+                </section>
 
             </div>
         </div>
@@ -513,6 +523,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal CSV -->
+    <div id="csv-modal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+        <div class="modal-content" style="background: white; margin: 15% auto; padding: 2rem; width: 80%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <span class="close" onclick="closeCSVModal()" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+            <h2>📊 Exportar CSV</h2>
+            <p>Escolha qual seção deseja exportar:</p>
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+                <button class="btn btn-primary" onclick="exportCSV('geral')" style="padding: 0.75rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer;">📈 Dados Gerais</button>
+                <button class="btn btn-primary" onclick="exportCSV('balneario')" style="padding: 0.75rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer;">🏖️ Balneário Camboriú</button>
+                <button class="btn btn-primary" onclick="exportCSV('camboriu')" style="padding: 0.75rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer;">🏢 Camboriú</button>
+                <button class="btn btn-primary" onclick="exportCSV('cobertura')" style="padding: 0.75rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer;">📋 Tabelas de Cobertura</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script>
@@ -661,6 +686,137 @@
         }
 
 
+
+        // Funções de exportação
+        function exportMarkdown() {
+            const content = generateMarkdownReport();
+            downloadFile(content, 'ideciclo-dashboard.md', 'text/markdown');
+        }
+
+        function exportJSON() {
+            const data = collectAllData();
+            downloadFile(JSON.stringify(data, null, 2), 'ideciclo-dashboard.json', 'application/json');
+        }
+
+        function showCSVModal() {
+            document.getElementById('csv-modal').style.display = 'block';
+        }
+
+        function closeCSVModal() {
+            document.getElementById('csv-modal').style.display = 'none';
+        }
+
+        function exportCSV(section) {
+            closeCSVModal();
+            const csvContent = generateCSVContent(section);
+            downloadFile(csvContent, `ideciclo-${section}.csv`, 'text/csv');
+        }
+
+        function generateMarkdownReport() {
+            let md = `# IDECICLO - Relatório Dashboard\n\n## Dados Gerais\n\n- **Estruturas Avaliadas:** ${document.getElementById('totalStructures').textContent}\n- **Quilômetros Avaliados:** ${document.getElementById('totalKilometers').textContent}\n- **Total de Vias:** ${document.getElementById('totalWays').textContent}\n- **Total de Comentários:** ${document.getElementById('overallAverage').textContent}\n- **Pontos GPX:** ${document.getElementById('totalGpxPoints').textContent}\n\n## Balneário Camboriú\n\n- **IDECICLO:** ${document.getElementById('balnearioIdeciclo').textContent}\n- **Total Vias:** ${document.getElementById('balnearioTotalVias').textContent}\n- **Total Cicloviário:** ${document.getElementById('balnearioTotalCiclo').textContent}\n\n## Camboriú\n\n- **IDECICLO:** ${document.getElementById('camboriuIdeciclo').textContent}\n- **Total Vias:** ${document.getElementById('camboriuTotalVias').textContent}\n- **Total Cicloviário:** ${document.getElementById('camboriuTotalCiclo').textContent}\n\n## Tabelas de Cobertura\n\n### Balneário Camboriú\n\n| Hierarquia | Ciclovias (km) | Ciclofaixas (km) | Compartilhadas (km) | Total (km) |\n|------------|----------------|------------------|---------------------|------------|\n`;
+            
+            const balTable = document.getElementById('balnearioCoverageTable');
+            Array.from(balTable.rows).forEach(row => {
+                const cells = Array.from(row.cells).map(cell => cell.textContent);
+                md += `| ${cells.join(' | ')} |\n`;
+            });
+            
+            md += `\n### Camboriú\n\n| Hierarquia | Ciclovias (km) | Ciclofaixas (km) | Compartilhadas (km) | Total (km) |\n|------------|----------------|------------------|---------------------|------------|\n`;
+            
+            const camTable = document.getElementById('camboriuCoverageTable');
+            Array.from(camTable.rows).forEach(row => {
+                const cells = Array.from(row.cells).map(cell => cell.textContent);
+                md += `| ${cells.join(' | ')} |\n`;
+            });
+            
+            md += `\n*Relatório gerado em ${new Date().toLocaleDateString('pt-BR')}*`;
+            return md;
+        }
+
+        function collectAllData() {
+            const balTable = document.getElementById('balnearioCoverageTable');
+            const camTable = document.getElementById('camboriuCoverageTable');
+            
+            const balnearioCobertura = Array.from(balTable.rows).map(row => {
+                const cells = Array.from(row.cells).map(cell => cell.textContent);
+                return { hierarquia: cells[0], ciclovias: cells[1], ciclofaixas: cells[2], compartilhadas: cells[3], total: cells[4] };
+            });
+            
+            const camboriuCobertura = Array.from(camTable.rows).map(row => {
+                const cells = Array.from(row.cells).map(cell => cell.textContent);
+                return { hierarquia: cells[0], ciclovias: cells[1], ciclofaixas: cells[2], compartilhadas: cells[3], total: cells[4] };
+            });
+            
+            return {
+                timestamp: new Date().toISOString(),
+                geral: {
+                    estruturas_avaliadas: document.getElementById('totalStructures').textContent,
+                    km_avaliados: document.getElementById('totalKilometers').textContent,
+                    total_vias: document.getElementById('totalWays').textContent,
+                    comentarios: document.getElementById('overallAverage').textContent,
+                    pontos_gpx: document.getElementById('totalGpxPoints').textContent
+                },
+                balneario: {
+                    ideciclo: document.getElementById('balnearioIdeciclo').textContent,
+                    total_vias: document.getElementById('balnearioTotalVias').textContent,
+                    total_cicloviario: document.getElementById('balnearioTotalCiclo').textContent
+                },
+                camboriu: {
+                    ideciclo: document.getElementById('camboriuIdeciclo').textContent,
+                    total_vias: document.getElementById('camboriuTotalVias').textContent,
+                    total_cicloviario: document.getElementById('camboriuTotalCiclo').textContent
+                },
+                tabelas_cobertura: {
+                    balneario_camboriu: balnearioCobertura,
+                    camboriu: camboriuCobertura
+                }
+            };
+        }
+
+        function generateCSVContent(section) {
+            if (section === 'geral') {
+                return 'Métrica,Valor\nEstruturas Avaliadas,' + document.getElementById('totalStructures').textContent + '\nKm Avaliados,' + document.getElementById('totalKilometers').textContent + '\nTotal Vias,' + document.getElementById('totalWays').textContent + '\nComentários,' + document.getElementById('overallAverage').textContent + '\nPontos GPX,' + document.getElementById('totalGpxPoints').textContent;
+            } else if (section === 'balneario') {
+                return 'Métrica,Valor\nIDECICLO,' + document.getElementById('balnearioIdeciclo').textContent + '\nTotal Vias,' + document.getElementById('balnearioTotalVias').textContent + '\nVias Arteriais,' + document.getElementById('balnearioArterial').textContent + '\nVias Coletoras,' + document.getElementById('balnearioColetora').textContent + '\nVias Locais,' + document.getElementById('balnearioLocal').textContent + '\nTotal Cicloviário,' + document.getElementById('balnearioTotalCiclo').textContent + '\nCiclovias,' + document.getElementById('balnearioCiclovias').textContent + '\nCiclofaixas,' + document.getElementById('balnearioCiclofaixas').textContent + '\nCompartilhadas,' + document.getElementById('balnearioCompartilhadas').textContent;
+            } else if (section === 'camboriu') {
+                return 'Métrica,Valor\nIDECICLO,' + document.getElementById('camboriuIdeciclo').textContent + '\nTotal Vias,' + document.getElementById('camboriuTotalVias').textContent + '\nVias Arteriais,' + document.getElementById('camboriuArterial').textContent + '\nVias Coletoras,' + document.getElementById('camboriuColetora').textContent + '\nVias Locais,' + document.getElementById('camboriuLocal').textContent + '\nTotal Cicloviário,' + document.getElementById('camboriuTotalCiclo').textContent + '\nCiclovias,' + document.getElementById('camboriuCiclovias').textContent + '\nCiclofaixas,' + document.getElementById('camboriuCiclofaixas').textContent + '\nCompartilhadas,' + document.getElementById('camboriuCompartilhadas').textContent;
+            } else if (section === 'cobertura') {
+                let csv = 'Cidade,Hierarquia,Ciclovias (km),Ciclofaixas (km),Compartilhadas (km),Total (km)\n';
+                const balTable = document.getElementById('balnearioCoverageTable');
+                const camTable = document.getElementById('camboriuCoverageTable');
+                
+                Array.from(balTable.rows).forEach(row => {
+                    const cells = Array.from(row.cells).map(cell => cell.textContent);
+                    csv += 'Balneário Camboriú,' + cells.join(',') + '\n';
+                });
+                
+                Array.from(camTable.rows).forEach(row => {
+                    const cells = Array.from(row.cells).map(cell => cell.textContent);
+                    csv += 'Camboriú,' + cells.join(',') + '\n';
+                });
+                
+                return csv;
+            }
+        }
+
+        function downloadFile(content, filename, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('csv-modal');
+            if (event.target === modal) {
+                closeCSVModal();
+            }
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
             loadDashboardData();

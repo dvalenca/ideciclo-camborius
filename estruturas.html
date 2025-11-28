@@ -52,6 +52,17 @@
                 <div class="loading">Carregando estatísticas...</div>
             </section>
 
+            <!-- Exportar Relatórios -->
+            <section class="export-section" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: 2rem 0;">
+                <h3 style="color: #2E7D32; margin-bottom: 1rem;">📊 Exportar Estruturas</h3>
+                <p style="margin-bottom: 1.5rem; color: #666;">Gere relatórios das estruturas cicloviárias avaliadas:</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <button onclick="exportStructuresMarkdown()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📄 Exportar .MD</button>
+                    <button onclick="exportStructuresJSON()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📋 Exportar .JSON</button>
+                    <button onclick="exportStructuresCSV()" style="padding: 0.75rem 1.5rem; background: #666; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📊 Exportar .CSV</button>
+                </div>
+            </section>
+
             <!-- Mapa Geral -->
             <section class="map-section">
                 <h2>Mapa das Estruturas</h2>
@@ -73,15 +84,24 @@
 
             <!-- Filtros -->
             <section class="filters">
-                <div class="filters-row">
-                    <div class="filter-group">
-                        <label for="city-filter">Cidade</label>
-                        <select id="city-filter" class="filter-select">
-                            <option value="">Todas as cidades</option>
-                            <option value="Camboriú">Camboriú</option>
-                            <option value="Balneário Camboriú">Balneário Camboriú</option>
-                        </select>
+                <!-- Botões de Cidade -->
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                        <button id="city-all" class="city-btn active" onclick="setCityFilter('')" style="padding: 0.75rem 1.5rem; border: 2px solid #2E7D32; background: #2E7D32; color: white; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s;">Todas Cidades</button>
+                        <button id="city-camboriu" class="city-btn" onclick="setCityFilter('Camboriú')" style="padding: 0.75rem 1.5rem; border: 2px solid #2E7D32; background: white; color: #2E7D32; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s;">Camboriú</button>
+                        <button id="city-balneario" class="city-btn" onclick="setCityFilter('Balneário Camboriú')" style="padding: 0.75rem 1.5rem; border: 2px solid #2E7D32; background: white; color: #2E7D32; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s;">Balneário Camboriú</button>
                     </div>
+                </div>
+                
+                <!-- Select oculto para compatibilidade -->
+                <select id="city-filter" style="display: none;">
+                    <option value="">Todas as cidades</option>
+                    <option value="Camboriú">Camboriú</option>
+                    <option value="Balneário Camboriú">Balneário Camboriú</option>
+                </select>
+                
+                <!-- Outros Filtros -->
+                <div class="filters-row">
                     <div class="filter-group">
                         <label for="typology-filter">Tipologia</label>
                         <select id="typology-filter" class="filter-select">
@@ -110,11 +130,6 @@
                             <option value="length-desc">Extensão (maior → menor)</option>
                             <option value="length-asc">Extensão (menor → maior)</option>
                         </select>
-                    </div>
-                    <div class="filter-group">
-                        <button class="btn btn-report" onclick="showReportModal()">
-                            📊 Relatórios
-                        </button>
                     </div>
                 </div>
                 <div class="results-info">
@@ -163,70 +178,153 @@
         </div>
     </footer>
 
-    <!-- Modal de Relatórios -->
-    <div id="report-modal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close" onclick="closeReportModal()">&times;</span>
-            <h2>📊 Gerar Relatórios</h2>
-            <p>Escolha o tipo de relatório que deseja gerar:</p>
-            <div class="report-options">
-                <button class="btn btn-primary" onclick="generateCityReport('Camboriú')">
-                    🏢 Relatório Camboriú
-                </button>
-                <button class="btn btn-primary" onclick="generateCityReport('Balneário Camboriú')">
-                    🏖️ Relatório Balneário Camboriú
-                </button>
-                <button class="btn btn-secondary" onclick="generateFullReport()">
-                    📊 Relatório Completo
-                </button>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Scripts -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
     <script src="assets/js/map.js"></script>
     <script src="assets/js/overview-map.js"></script>
-    <script src="assets/js/markdown-export.js"></script>
-    <script src="assets/js/report-generator.js"></script>
+
     <script src="assets/js/main.js"></script>
     
     <script>
-        let reportGenerator;
+        let allStructuresData = [];
         
-        // Inicializar gerador de relatórios
-        document.addEventListener('DOMContentLoaded', () => {
-            reportGenerator = new ReportGenerator();
-        });
-        
-        // Mostrar modal de relatórios
-        function showReportModal() {
-            document.getElementById('report-modal').style.display = 'block';
+        // Funções de exportação de estruturas
+        async function exportStructuresMarkdown() {
+            if (!allStructuresData.length) {
+                allStructuresData = await fetch('assets/data/rated-data.json').then(r => r.json());
+            }
+            
+            let md = `# IDECICLO - Estruturas Avaliadas\n\n`;
+            md += `**Total de estruturas:** ${allStructuresData.length}\n\n`;
+            
+            allStructuresData.forEach(item => {
+                const result = item.result;
+                const scores = result.scores || item.scores || {};
+                const typology = getTypologyFromData(item);
+                md += `## ${result.structure_name}\n\n`;
+                md += `- **Cidade:** ${result.city}\n`;
+                md += `- **Tipologia:** ${typology}\n`;
+                md += `- **Extensão:** ${(parseFloat(result.seg_length) / 1000).toFixed(2)} km\n`;
+                md += `- **Nota Geral:** ${scores.average ? scores.average.toFixed(2) : 'N/A'}\n`;
+                md += `- **Projeto:** ${scores.project ? scores.project.toFixed(2) : 'N/A'}\n`;
+                md += `- **Urbanidade:** ${scores.urbanity ? scores.urbanity.toFixed(2) : 'N/A'}\n`;
+                md += `- **Manutenção:** ${scores.maintenance ? scores.maintenance.toFixed(2) : 'N/A'}\n`;
+                md += `- **Segurança:** ${scores.safety ? scores.safety.toFixed(2) : 'N/A'}\n\n`;
+            });
+            
+            md += `\n*Relatório gerado em ${new Date().toLocaleDateString('pt-BR')}*`;
+            downloadFile(md, 'estruturas-ideciclo.md', 'text/markdown');
         }
         
-        // Fechar modal
-        function closeReportModal() {
-            document.getElementById('report-modal').style.display = 'none';
+        async function exportStructuresJSON() {
+            if (!allStructuresData.length) {
+                allStructuresData = await fetch('assets/data/rated-data.json').then(r => r.json());
+            }
+            
+            const data = {
+                timestamp: new Date().toISOString(),
+                total_estruturas: allStructuresData.length,
+                estruturas: allStructuresData.map(item => {
+                    const result = item.result;
+                    const scores = result.scores || item.scores || {};
+                    const typology = getTypologyFromData(item);
+                    return {
+                        nome: result.structure_name,
+                        cidade: result.city,
+                        tipologia: typology,
+                        extensao_km: (parseFloat(result.seg_length) / 1000).toFixed(2),
+                        notas: {
+                            geral: scores.average ? scores.average.toFixed(2) : null,
+                            projeto: scores.project ? scores.project.toFixed(2) : null,
+                            urbanidade: scores.urbanity ? scores.urbanity.toFixed(2) : null,
+                            manutencao: scores.maintenance ? scores.maintenance.toFixed(2) : null,
+                            seguranca: scores.safety ? scores.safety.toFixed(2) : null
+                        },
+                        coordenadas: result.coordinates
+                    };
+                })
+            };
+            downloadFile(JSON.stringify(data, null, 2), 'estruturas-ideciclo.json', 'application/json');
         }
         
-        // Gerar relatório por cidade
-        async function generateCityReport(city) {
-            closeReportModal();
-            await reportGenerator.generateCityReport(city);
+        async function exportStructuresCSV() {
+            if (!allStructuresData.length) {
+                allStructuresData = await fetch('assets/data/rated-data.json').then(r => r.json());
+            }
+            
+            let csv = 'Nome,Cidade,Tipologia,Extensão (km),Nota Geral,Projeto,Urbanidade,Manutenção,Segurança\n';
+            
+            allStructuresData.forEach(item => {
+                const result = item.result;
+                const scores = result.scores || item.scores || {};
+                const typology = getTypologyFromData(item);
+                const extensao = (parseFloat(result.seg_length) / 1000).toFixed(2);
+                csv += `"${result.structure_name}","${result.city}","${typology}",${extensao},${scores.average ? scores.average.toFixed(2) : 'N/A'},${scores.project ? scores.project.toFixed(2) : 'N/A'},${scores.urbanity ? scores.urbanity.toFixed(2) : 'N/A'},${scores.maintenance ? scores.maintenance.toFixed(2) : 'N/A'},${scores.safety ? scores.safety.toFixed(2) : 'N/A'}\n`;
+            });
+            
+            downloadFile(csv, 'estruturas-ideciclo.csv', 'text/csv');
         }
         
-        // Gerar relatório completo
-        async function generateFullReport() {
-            closeReportModal();
-            await reportGenerator.generateFullReport();
+        function downloadFile(content, filename, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         }
         
-        // Fechar modal ao clicar fora
-        window.onclick = function(event) {
-            const modal = document.getElementById('report-modal');
-            if (event.target === modal) {
-                closeReportModal();
+        function getTypologyFromData(data) {
+            if (data.tipo_da_via?.Ciclovia > 0) return 'Ciclovia';
+            if (data.tipo_da_via?.Ciclofaixa > 0) return 'Ciclofaixa';
+            if (data.tipo_da_via?.Ciclorrota > 0) return 'Ciclorrota';
+            if (data.tipo_da_via?.['Calçada compartilhada'] > 0) return 'Calçada compartilhada';
+            
+            const structureName = data.result?.structure_name || '';
+            if (structureName.includes('Ciclofaixa')) return 'Ciclofaixa';
+            if (structureName.includes('Ciclovia')) return 'Ciclovia';
+            if (structureName.includes('Compart.')) return 'Calçada compartilhada';
+            if (structureName.includes('Ciclorrota')) return 'Ciclorrota';
+            
+            return 'Não identificada';
+        }
+        
+        // Função para filtro de cidade com botões
+        function setCityFilter(city) {
+            // Atualizar aparência dos botões
+            document.querySelectorAll('.city-btn').forEach(btn => {
+                btn.style.background = 'white';
+                btn.style.color = '#2E7D32';
+                btn.classList.remove('active');
+            });
+            
+            if (city === '') {
+                document.getElementById('city-all').style.background = '#2E7D32';
+                document.getElementById('city-all').style.color = 'white';
+                document.getElementById('city-all').classList.add('active');
+            } else if (city === 'Camboriú') {
+                document.getElementById('city-camboriu').style.background = '#2E7D32';
+                document.getElementById('city-camboriu').style.color = 'white';
+                document.getElementById('city-camboriu').classList.add('active');
+            } else if (city === 'Balneário Camboriú') {
+                document.getElementById('city-balneario').style.background = '#2E7D32';
+                document.getElementById('city-balneario').style.color = 'white';
+                document.getElementById('city-balneario').classList.add('active');
+            }
+            
+            // Sincronizar com o select oculto e chamar applyFilters diretamente
+            const citySelect = document.getElementById('city-filter');
+            if (citySelect) {
+                citySelect.value = city;
+                if (typeof applyFilters === 'function') {
+                    applyFilters();
+                }
             }
         }
     </script>
