@@ -295,7 +295,9 @@
             <!-- Ações de Comparação -->
             <div class="comparison-actions" id="comparison-actions" style="display: none;">
                 <button class="btn btn-secondary" onclick="clearComparison()">🔄 Limpar Comparação</button>
-                <button class="btn btn-primary" onclick="exportComparison()" id="export-btn" disabled>📎 Exportar Comparação</button>
+                <button class="btn btn-primary" onclick="exportMarkdown()" id="export-btn" disabled>📄 Exportar .MD</button>
+                <button class="btn btn-primary" onclick="exportJSON()" id="export-json-btn" disabled>📋 Exportar .JSON</button>
+                <button class="btn btn-secondary" onclick="exportCSV()" id="export-csv-btn" disabled>📊 Exportar .CSV</button>
             </div>
 
             <!-- Container de Comparação -->
@@ -460,9 +462,11 @@
             
             renderComparison();
             
-            // Habilitar botão de exportar se ambas as vias estão selecionadas
-            const exportBtn = document.getElementById('export-btn');
-            exportBtn.disabled = !(selectedVia1 && selectedVia2);
+            // Habilitar botões de exportar se ambas as vias estão selecionadas
+            const hasComparison = selectedVia1 && selectedVia2;
+            document.getElementById('export-btn').disabled = !hasComparison;
+            document.getElementById('export-json-btn').disabled = !hasComparison;
+            document.getElementById('export-csv-btn').disabled = !hasComparison;
         }
 
         // Renderizar comparação
@@ -594,24 +598,50 @@
             selectedVia2 = null;
             renderComparison();
             document.getElementById('export-btn').disabled = true;
+            document.getElementById('export-json-btn').disabled = true;
+            document.getElementById('export-csv-btn').disabled = true;
         }
 
-        // Exportar comparação
-        function exportComparison() {
+        // Exportar comparação em Markdown
+        function exportMarkdown() {
             if (!selectedVia1 || !selectedVia2) {
                 alert('Selecione duas estruturas para exportar a comparação');
                 return;
             }
             
-            // Criar conteúdo do relatório
             const content = generateComparisonReport();
+            downloadFile(content, `comparacao-${selectedVia1.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}-vs-${selectedVia2.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}.md`, 'text/markdown');
+        }
+        
+        // Exportar comparação em JSON
+        function exportJSON() {
+            if (!selectedVia1 || !selectedVia2) {
+                alert('Selecione duas estruturas para exportar a comparação');
+                return;
+            }
             
-            // Criar e baixar arquivo
-            const blob = new Blob([content], { type: 'text/markdown' });
+            const data = generateComparisonJSON();
+            downloadFile(JSON.stringify(data, null, 2), `comparacao-${selectedVia1.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}-vs-${selectedVia2.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}.json`, 'application/json');
+        }
+        
+        // Exportar comparação em CSV
+        function exportCSV() {
+            if (!selectedVia1 || !selectedVia2) {
+                alert('Selecione duas estruturas para exportar a comparação');
+                return;
+            }
+            
+            const csv = generateComparisonCSV();
+            downloadFile(csv, `comparacao-${selectedVia1.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}-vs-${selectedVia2.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}.csv`, 'text/csv');
+        }
+        
+        // Função auxiliar para download
+        function downloadFile(content, filename, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `comparacao-${selectedVia1.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}-vs-${selectedVia2.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}.md`;
+            a.download = filename;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -622,20 +652,20 @@
         function generateComparisonReport() {
             const date = new Date().toLocaleDateString('pt-BR');
             
-            let content = `# Comparação de Estruturas Cicloviárias\\n\\n`;
-            content += `**Data:** ${date}\\n`;
-            content += `**Tipologia:** ${currentTypology}\\n\\n`;
+            let content = `# Comparação de Estruturas Cicloviárias\n\n`;
+            content += `**Data:** ${date}\n`;
+            content += `**Tipologia:** ${currentTypology}\n\n`;
             
-            content += `## Estruturas Comparadas\\n\\n`;
-            content += `### ${selectedVia1.structure_name}\\n`;
-            content += `- **Localização:** ${selectedVia1.city}\\n`;
-            content += `- **Extensão:** ${(selectedVia1.length / 1000).toFixed(1)} km\\n\\n`;
+            content += `## Estruturas Comparadas\n\n`;
+            content += `### ${selectedVia1.structure_name}\n`;
+            content += `- **Localização:** ${selectedVia1.city}\n`;
+            content += `- **Extensão:** ${(selectedVia1.length / 1000).toFixed(1)} km\n\n`;
             
-            content += `### ${selectedVia2.structure_name}\\n`;
-            content += `- **Localização:** ${selectedVia2.city}\\n`;
-            content += `- **Extensão:** ${(selectedVia2.length / 1000).toFixed(1)} km\\n\\n`;
+            content += `### ${selectedVia2.structure_name}\n`;
+            content += `- **Localização:** ${selectedVia2.city}\n`;
+            content += `- **Extensão:** ${(selectedVia2.length / 1000).toFixed(1)} km\n\n`;
             
-            content += `## Comparação de Notas\\n\\n`;
+            content += `## Comparação de Notas\n\n`;
             
             if (scoreTree.average) {
                 const rates1 = selectedVia1.full_rates || {};
@@ -645,11 +675,11 @@
                 const avg1 = rates1[scoreTree.average.key];
                 const avg2 = rates2[scoreTree.average.key];
                 
-                content += `### ${scoreTree.average.label}\\n\\n`;
-                content += `| Estrutura | Nota | Classificação |\\n`;
-                content += `|-----------|------|---------------|\\n`;
-                content += `| ${selectedVia1.structure_name} | ${avg1 !== null && avg1 !== undefined ? avg1.toFixed(1) : 'N/A'} | ${getScoreClassification(avg1)} |\\n`;
-                content += `| ${selectedVia2.structure_name} | ${avg2 !== null && avg2 !== undefined ? avg2.toFixed(1) : 'N/A'} | ${getScoreClassification(avg2)} |\\n\\n`;
+                content += `### ${scoreTree.average.label}\n\n`;
+                content += `| Estrutura | Nota | Classificação |\n`;
+                content += `|-----------|------|---------------|\n`;
+                content += `| ${selectedVia1.structure_name} | ${avg1 !== null && avg1 !== undefined ? avg1.toFixed(1) : 'N/A'} | ${getScoreClassification(avg1)} |\n`;
+                content += `| ${selectedVia2.structure_name} | ${avg2 !== null && avg2 !== undefined ? avg2.toFixed(1) : 'N/A'} | ${getScoreClassification(avg2)} |\n\n`;
                 
                 // Componentes principais
                 if (scoreTree.average.components) {
@@ -657,19 +687,115 @@
                         const comp1 = rates1[comp.key];
                         const comp2 = rates2[comp.key];
                         
-                        content += `### ${comp.label}\\n\\n`;
-                        content += `| Estrutura | Nota | Classificação |\\n`;
-                        content += `|-----------|------|---------------|\\n`;
-                        content += `| ${selectedVia1.structure_name} | ${comp1 !== null && comp1 !== undefined ? comp1.toFixed(1) : 'N/A'} | ${getScoreClassification(comp1)} |\\n`;
-                        content += `| ${selectedVia2.structure_name} | ${comp2 !== null && comp2 !== undefined ? comp2.toFixed(1) : 'N/A'} | ${getScoreClassification(comp2)} |\\n\\n`;
+                        const icon = comp.label.includes('1.') ? '🏗️' : comp.label.includes('2.') ? '🛡️' : '😴';
+                        
+                        content += `### ${icon} ${comp.label}\n\n`;
+                        content += `| Estrutura | Nota | Classificação |\n`;
+                        content += `|-----------|------|---------------|\n`;
+                        content += `| ${selectedVia1.structure_name} | ${comp1 !== null && comp1 !== undefined ? comp1.toFixed(1) : 'N/A'} | ${getScoreClassification(comp1)} |\n`;
+                        content += `| ${selectedVia2.structure_name} | ${comp2 !== null && comp2 !== undefined ? comp2.toFixed(1) : 'N/A'} | ${getScoreClassification(comp2)} |\n\n`;
+                        
+                        // Subcomponentes
+                        if (comp.components) {
+                            comp.components.forEach(subComp => {
+                                const sub1 = rates1[subComp.key];
+                                const sub2 = rates2[subComp.key];
+                                
+                                content += `#### ${subComp.label}\n\n`;
+                                content += `| Estrutura | Nota |\n`;
+                                content += `|-----------|------|\n`;
+                                content += `| ${selectedVia1.structure_name} | ${sub1 !== null && sub1 !== undefined ? sub1.toFixed(1) : 'N/A'} |\n`;
+                                content += `| ${selectedVia2.structure_name} | ${sub2 !== null && sub2 !== undefined ? sub2.toFixed(1) : 'N/A'} |\n\n`;
+                            });
+                        }
                     });
                 }
             }
             
-            content += `---\\n\\n`;
-            content += `*Relatório gerado automaticamente pelo sistema IDECICLO*\\n`;
+            content += `---\n\n`;
+            content += `*Relatório gerado automaticamente pelo sistema IDECICLO*\n`;
             
             return content;
+        }
+        
+        // Gerar dados JSON da comparação
+        function generateComparisonJSON() {
+            const rates1 = selectedVia1.full_rates || {};
+            const rates2 = selectedVia2.full_rates || {};
+            
+            const estruturaData = (via, rates) => {
+                const data = {
+                    nome: via.structure_name,
+                    cidade: via.city,
+                    extensao_km: (via.length / 1000).toFixed(1),
+                    notas: {
+                        geral: rates[scoreTree.average?.key] || null
+                    },
+                    notas_detalhadas: {}
+                };
+                
+                // Adicionar componentes principais
+                if (scoreTree.average?.components) {
+                    scoreTree.average.components.forEach(comp => {
+                        data.notas[comp.key] = rates[comp.key] || null;
+                        
+                        // Adicionar subcomponentes
+                        if (comp.components) {
+                            comp.components.forEach(subComp => {
+                                data.notas_detalhadas[subComp.key] = rates[subComp.key] || null;
+                            });
+                        }
+                    });
+                }
+                
+                return data;
+            };
+            
+            return {
+                timestamp: new Date().toISOString(),
+                tipologia: currentTypology,
+                estruturas: {
+                    estrutura1: estruturaData(selectedVia1, rates1),
+                    estrutura2: estruturaData(selectedVia2, rates2)
+                },
+                arvore_notas: scoreTree.average
+            };
+        }
+        
+        // Gerar CSV da comparação
+        function generateComparisonCSV() {
+            const rates1 = selectedVia1.full_rates || {};
+            const rates2 = selectedVia2.full_rates || {};
+            
+            let csv = 'Métrica,Estrutura 1,Estrutura 2,Classificação 1,Classificação 2\n';
+            csv += `Nome,"${selectedVia1.structure_name}","${selectedVia2.structure_name}",,\n`;
+            csv += `Cidade,"${selectedVia1.city}","${selectedVia2.city}",,\n`;
+            csv += `Extensão (km),${(selectedVia1.length / 1000).toFixed(1)},${(selectedVia2.length / 1000).toFixed(1)},,\n`;
+            
+            // Nota geral
+            const avg1 = rates1[scoreTree.average?.key];
+            const avg2 = rates2[scoreTree.average?.key];
+            csv += `Nota Geral,${avg1 !== null && avg1 !== undefined ? avg1.toFixed(1) : 'N/A'},${avg2 !== null && avg2 !== undefined ? avg2.toFixed(1) : 'N/A'},${getScoreClassification(avg1)},${getScoreClassification(avg2)}\n`;
+            
+            // Componentes principais
+            if (scoreTree.average?.components) {
+                scoreTree.average.components.forEach(comp => {
+                    const comp1 = rates1[comp.key];
+                    const comp2 = rates2[comp.key];
+                    csv += `${comp.label},${comp1 !== null && comp1 !== undefined ? comp1.toFixed(1) : 'N/A'},${comp2 !== null && comp2 !== undefined ? comp2.toFixed(1) : 'N/A'},${getScoreClassification(comp1)},${getScoreClassification(comp2)}\n`;
+                    
+                    // Subcomponentes
+                    if (comp.components) {
+                        comp.components.forEach(subComp => {
+                            const sub1 = rates1[subComp.key];
+                            const sub2 = rates2[subComp.key];
+                            csv += `  ${subComp.label},${sub1 !== null && sub1 !== undefined ? sub1.toFixed(1) : 'N/A'},${sub2 !== null && sub2 !== undefined ? sub2.toFixed(1) : 'N/A'},,\n`;
+                        });
+                    }
+                });
+            }
+            
+            return csv;
         }
     </script>
 </body>
