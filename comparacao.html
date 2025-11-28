@@ -433,6 +433,8 @@
         function populateViaSelectors() {
             const via1Select = document.getElementById('via1-select');
             const via2Select = document.getElementById('via2-select');
+            const via1Id = via1Select.value;
+            const via2Id = via2Select.value;
             
             // Limpar opções existentes
             via1Select.innerHTML = '<option value="">Selecione uma estrutura...</option>';
@@ -440,16 +442,26 @@
             
             // Adicionar vias da tipologia
             typologyVias.forEach(via => {
-                const option1 = document.createElement('option');
-                option1.value = via.id;
-                option1.textContent = `${via.structure_name} (${via.city})`;
-                via1Select.appendChild(option1);
+                // Via 1: excluir a via selecionada em via2
+                if (via.id != via2Id) {
+                    const option1 = document.createElement('option');
+                    option1.value = via.id;
+                    option1.textContent = `${via.structure_name} (${via.city})`;
+                    via1Select.appendChild(option1);
+                }
                 
-                const option2 = document.createElement('option');
-                option2.value = via.id;
-                option2.textContent = `${via.structure_name} (${via.city})`;
-                via2Select.appendChild(option2);
+                // Via 2: excluir a via selecionada em via1
+                if (via.id != via1Id) {
+                    const option2 = document.createElement('option');
+                    option2.value = via.id;
+                    option2.textContent = `${via.structure_name} (${via.city})`;
+                    via2Select.appendChild(option2);
+                }
             });
+            
+            // Restaurar seleções
+            if (via1Id) via1Select.value = via1Id;
+            if (via2Id) via2Select.value = via2Id;
         }
 
         // Carregar comparação das vias
@@ -459,6 +471,9 @@
             
             selectedVia1 = via1Id ? allVias.find(via => via.id == via1Id) : null;
             selectedVia2 = via2Id ? allVias.find(via => via.id == via2Id) : null;
+            
+            // Atualizar opções para excluir estruturas já selecionadas
+            populateViaSelectors();
             
             renderComparison();
             
