@@ -60,6 +60,7 @@
                     <button onclick="exportStructuresMarkdown()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📄 Exportar .MD</button>
                     <button onclick="exportStructuresJSON()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📋 Exportar .JSON</button>
                     <button onclick="exportStructuresCSV()" style="padding: 0.75rem 1.5rem; background: #666; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📊 Exportar .CSV</button>
+                    <button onclick="exportStructuresGeoJSON()" style="padding: 0.75rem 1.5rem; background: #1976D2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">🗺️ Exportar .GeoJSON</button>
                 </div>
             </section>
 
@@ -202,7 +203,13 @@
             
             allStructuresData.forEach(item => {
                 const result = item.result;
-                const scores = result.scores || item.scores || {};
+                const scores = {
+                    average: item.rates?.average,
+                    project: item.rates?.project,
+                    urbanity: item.rates?.urbanity,
+                    maintenance: item.rates?.maintenance,
+                    safety: item.rates?.safety
+                };
                 const typology = getTypologyFromData(item);
                 md += `## ${result.structure_name}\n\n`;
                 md += `- **Cidade:** ${result.city}\n`;
@@ -229,7 +236,13 @@
                 total_estruturas: allStructuresData.length,
                 estruturas: allStructuresData.map(item => {
                     const result = item.result;
-                    const scores = result.scores || item.scores || {};
+                    const scores = {
+                        average: item.rates?.average,
+                        project: item.rates?.project,
+                        urbanity: item.rates?.urbanity,
+                        maintenance: item.rates?.maintenance,
+                        safety: item.rates?.safety
+                    };
                     const typology = getTypologyFromData(item);
                     return {
                         nome: result.structure_name,
@@ -259,13 +272,74 @@
             
             allStructuresData.forEach(item => {
                 const result = item.result;
-                const scores = result.scores || item.scores || {};
+                const scores = {
+                    average: item.rates?.average,
+                    project: item.rates?.project,
+                    urbanity: item.rates?.urbanity,
+                    maintenance: item.rates?.maintenance,
+                    safety: item.rates?.safety
+                };
                 const typology = getTypologyFromData(item);
                 const extensao = (parseFloat(result.seg_length) / 1000).toFixed(2);
                 csv += `"${result.structure_name}","${result.city}","${typology}",${extensao},${scores.average ? scores.average.toFixed(2) : 'N/A'},${scores.project ? scores.project.toFixed(2) : 'N/A'},${scores.urbanity ? scores.urbanity.toFixed(2) : 'N/A'},${scores.maintenance ? scores.maintenance.toFixed(2) : 'N/A'},${scores.safety ? scores.safety.toFixed(2) : 'N/A'}\n`;
             });
             
             downloadFile(csv, 'estruturas-ideciclo.csv', 'text/csv');
+        }
+        
+        async function exportStructuresGeoJSON() {
+            const [camboriuGeo, balnearioGeo, ratedData] = await Promise.all([
+                fetch('assets/data/Camboriu.geojson').then(r => r.json()),
+                fetch('assets/data/Balneario.geojson').then(r => r.json()),
+                fetch('assets/data/rated-data.json').then(r => r.json())
+            ]);
+            
+            // Combinar os GeoJSONs existentes
+            const combinedFeatures = [...camboriuGeo.features, ...balnearioGeo.features];
+            
+            // Enriquecer com dados de avaliação
+            combinedFeatures.forEach(feature => {
+                const featureName = feature.properties.Name || feature.properties.name || '';
+                const featureSrc = feature.properties.src || '';
+                
+                const ratedItem = ratedData.find(item => {
+                    const gpxName = item.result?.gpx_name || '';
+                    const structureName = item.result?.structure_name || '';
+                    
+                    return (
+                        featureName.includes(structureName) ||
+                        structureName.includes(featureName) ||
+                        featureSrc.includes(gpxName) ||
+                        gpxName.includes(featureSrc) ||
+                        featureName === gpxName ||
+                        item.id === feature.properties.id
+                    );
+                });
+                
+                if (ratedItem) {
+                    feature.properties.cidade = ratedItem.result?.city;
+                    feature.properties.tipologia = getTypologyFromData(ratedItem);
+                    feature.properties.notas = {
+                        geral: ratedItem.rates?.average,
+                        projeto: ratedItem.rates?.project,
+                        urbanidade: ratedItem.rates?.urbanity,
+                        manutencao: ratedItem.rates?.maintenance,
+                        seguranca: ratedItem.rates?.safety,
+                        conforto: ratedItem.rates?.comfort,
+                        protecao: ratedItem.rates?.protection,
+                        segregacao: ratedItem.rates?.segregation
+                    };
+                    feature.properties.notas_detalhadas = ratedItem.rates;
+                    feature.properties.dados_auditoria = ratedItem.result;
+                }
+            });
+            
+            const geojson = {
+                type: "FeatureCollection",
+                features: combinedFeatures
+            };
+            
+            downloadFile(JSON.stringify(geojson, null, 2), 'estruturas-ideciclo.geojson', 'application/geo+json');
         }
         
         function downloadFile(content, filename, mimeType) {
