@@ -14,6 +14,24 @@
     <link rel="stylesheet" href="assets/css/print.css">
     
     <style>
+        .comparison-hero {
+            background: url('assets/cover.png') center/cover, linear-gradient(135deg, rgba(46, 125, 50, 0.8), rgba(76, 175, 80, 0.8));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .comparison-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .comparison-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
         .comparison-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -212,7 +230,7 @@
             <div class="header-content">
                 <div class="logo">
                     <h1><a href="index.html">IDECICLO</a></h1>
-                    <p>Auditoria Cicloviária</p>
+                    <p>Camboriú e Balneário Camboriú</p>
                 </div>
                 <nav class="nav">
                     <ul>
@@ -227,14 +245,17 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="comparison-hero">
+        <div class="container">
+            <h1>Comparação de Estruturas Cicloviárias</h1>
+            <p>Compare as notas de avaliação entre estruturas da mesma tipologia</p>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="main">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <h1>Comparação de Estruturas Cicloviárias</h1>
-                <p>Compare as notas de avaliação entre estruturas da mesma tipologia</p>
-            </div>
-
             <!-- Seletor de Tipologia -->
             <div class="via-selector">
                 <h2>Selecionar Tipologia</h2>
@@ -581,20 +602,20 @@
         function generateComparisonReport() {
             const date = new Date().toLocaleDateString('pt-BR');
             
-            let content = `# Comparação de Estruturas Cicloviárias\n\n`;
-            content += `**Data:** ${date}\n`;
-            content += `**Tipologia:** ${currentTypology}\n\n`;
+            let content = `# Comparação de Estruturas Cicloviárias\\n\\n`;
+            content += `**Data:** ${date}\\n`;
+            content += `**Tipologia:** ${currentTypology}\\n\\n`;
             
-            content += `## Estruturas Comparadas\n\n`;
-            content += `### ${selectedVia1.structure_name}\n`;
-            content += `- **Localização:** ${selectedVia1.city}\n`;
-            content += `- **Extensão:** ${(selectedVia1.length / 1000).toFixed(1)} km\n\n`;
+            content += `## Estruturas Comparadas\\n\\n`;
+            content += `### ${selectedVia1.structure_name}\\n`;
+            content += `- **Localização:** ${selectedVia1.city}\\n`;
+            content += `- **Extensão:** ${(selectedVia1.length / 1000).toFixed(1)} km\\n\\n`;
             
-            content += `### ${selectedVia2.structure_name}\n`;
-            content += `- **Localização:** ${selectedVia2.city}\n`;
-            content += `- **Extensão:** ${(selectedVia2.length / 1000).toFixed(1)} km\n\n`;
+            content += `### ${selectedVia2.structure_name}\\n`;
+            content += `- **Localização:** ${selectedVia2.city}\\n`;
+            content += `- **Extensão:** ${(selectedVia2.length / 1000).toFixed(1)} km\\n\\n`;
             
-            content += `## Comparação de Notas\n\n`;
+            content += `## Comparação de Notas\\n\\n`;
             
             if (scoreTree.average) {
                 const rates1 = selectedVia1.full_rates || {};
@@ -604,11 +625,11 @@
                 const avg1 = rates1[scoreTree.average.key];
                 const avg2 = rates2[scoreTree.average.key];
                 
-                content += `### ${scoreTree.average.label}\n\n`;
-                content += `| Estrutura | Nota | Classificação |\n`;
-                content += `|-----------|------|---------------|\n`;
-                content += `| ${selectedVia1.structure_name} | ${avg1 !== null && avg1 !== undefined ? avg1.toFixed(1) : 'N/A'} | ${getScoreClassification(avg1)} |\n`;
-                content += `| ${selectedVia2.structure_name} | ${avg2 !== null && avg2 !== undefined ? avg2.toFixed(1) : 'N/A'} | ${getScoreClassification(avg2)} |\n\n`;
+                content += `### ${scoreTree.average.label}\\n\\n`;
+                content += `| Estrutura | Nota | Classificação |\\n`;
+                content += `|-----------|------|---------------|\\n`;
+                content += `| ${selectedVia1.structure_name} | ${avg1 !== null && avg1 !== undefined ? avg1.toFixed(1) : 'N/A'} | ${getScoreClassification(avg1)} |\\n`;
+                content += `| ${selectedVia2.structure_name} | ${avg2 !== null && avg2 !== undefined ? avg2.toFixed(1) : 'N/A'} | ${getScoreClassification(avg2)} |\\n\\n`;
                 
                 // Componentes principais
                 if (scoreTree.average.components) {
@@ -616,17 +637,17 @@
                         const comp1 = rates1[comp.key];
                         const comp2 = rates2[comp.key];
                         
-                        content += `### ${comp.label}\n\n`;
-                        content += `| Estrutura | Nota | Classificação |\n`;
-                        content += `|-----------|------|---------------|\n`;
-                        content += `| ${selectedVia1.structure_name} | ${comp1 !== null && comp1 !== undefined ? comp1.toFixed(1) : 'N/A'} | ${getScoreClassification(comp1)} |\n`;
-                        content += `| ${selectedVia2.structure_name} | ${comp2 !== null && comp2 !== undefined ? comp2.toFixed(1) : 'N/A'} | ${getScoreClassification(comp2)} |\n\n`;
+                        content += `### ${comp.label}\\n\\n`;
+                        content += `| Estrutura | Nota | Classificação |\\n`;
+                        content += `|-----------|------|---------------|\\n`;
+                        content += `| ${selectedVia1.structure_name} | ${comp1 !== null && comp1 !== undefined ? comp1.toFixed(1) : 'N/A'} | ${getScoreClassification(comp1)} |\\n`;
+                        content += `| ${selectedVia2.structure_name} | ${comp2 !== null && comp2 !== undefined ? comp2.toFixed(1) : 'N/A'} | ${getScoreClassification(comp2)} |\\n\\n`;
                     });
                 }
             }
             
-            content += `---\n\n`;
-            content += `*Relatório gerado automaticamente pelo sistema IDECICLO*\n`;
+            content += `---\\n\\n`;
+            content += `*Relatório gerado automaticamente pelo sistema IDECICLO*\\n`;
             
             return content;
         }
