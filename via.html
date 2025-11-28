@@ -332,18 +332,25 @@
                             <span id="via-typology" class="typology-badge">Tipologia</span>
                         </div>
                         <div class="via-actions">
-                            <button class="btn btn-primary" onclick="exportToPDF()">
-                                📎 Exportar PDF
-                            </button>
-                            <button class="btn btn-secondary" onclick="exportToMarkdown()" style="margin-left: 0.5rem;">
-                                📝 Exportar Markdown
-                            </button>
-                            <button class="btn btn-secondary" onclick="downloadGPX()" style="margin-left: 0.5rem;">
-                                📍 Baixar GPX
-                            </button>
+                            <a href="estruturas.html" class="btn btn-secondary">
+                                ← Voltar
+                            </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Exportar Relatórios -->
+                <section class="export-section" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: 2rem 0;">
+                    <h3 style="color: #2E7D32; margin-bottom: 1rem;">📊 Exportar Estrutura</h3>
+                    <p style="margin-bottom: 1.5rem; color: #666;">Gere relatórios detalhados desta estrutura cicloviária:</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+
+                        <button onclick="exportToMarkdown()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📝 Exportar .MD</button>
+                        <button onclick="exportToJSON()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📋 Exportar .JSON</button>
+                        <button onclick="exportToCSV()" style="padding: 0.75rem 1.5rem; background: #666; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📊 Exportar .CSV</button>
+                        <button onclick="downloadGPX()" style="padding: 0.75rem 1.5rem; background: #1976D2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📍 Baixar .GPX</button>
+                    </div>
+                </section>
 
                 <!-- Mapa -->
                 <div class="field-data">
@@ -914,6 +921,96 @@
             }
         }
         
+        // Exportar para JSON
+        function exportToJSON() {
+            if (!currentVia) {
+                alert('Dados da via não carregados');
+                return;
+            }
+            
+            const data = {
+                timestamp: new Date().toISOString(),
+                estrutura: {
+                    id: currentVia.id,
+                    nome: currentVia.structure_name,
+                    cidade: currentVia.city,
+                    tipologia: currentVia.typology,
+                    extensao_km: (currentVia.length / 1000).toFixed(2),
+                    gpx_name: currentVia.gpx_name
+                },
+                notas: currentVia.full_rates || {},
+                dados_campo: currentVia.full_data || {},
+                arvore_notas: scoreTree
+            };
+            
+            downloadFile(JSON.stringify(data, null, 2), `${currentVia.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}.json`, 'application/json');
+        }
+        
+        // Exportar para CSV
+        function exportToCSV() {
+            if (!currentVia) {
+                alert('Dados da via não carregados');
+                return;
+            }
+            
+            let csv = 'Campo,Valor\n';
+            
+            // Informações básicas
+            csv += `"Nome","${currentVia.structure_name}"\n`;
+            csv += `"Cidade","${currentVia.city}"\n`;
+            csv += `"Tipologia","${currentVia.typology}"\n`;
+            csv += `"Extensão (km)","${(currentVia.length / 1000).toFixed(2)}"\n`;
+            
+            // Notas principais
+            const rates = currentVia.full_rates || {};
+            if (scoreTree.average) {
+                csv += `"${scoreTree.average.label}","${rates[scoreTree.average.key] || 'N/A'}"\n`;
+                
+                if (scoreTree.average.components) {
+                    scoreTree.average.components.forEach(comp => {
+                        csv += `"${comp.label}","${rates[comp.key] || 'N/A'}"\n`;
+                        
+                        if (comp.components) {
+                            comp.components.forEach(subComp => {
+                                csv += `"  ${subComp.label}","${rates[subComp.key] || 'N/A'}"\n`;
+                                
+                                if (subComp.components) {
+                                    subComp.components.forEach(subSubComp => {
+                                        csv += `"    ${subSubComp.label}","${rates[subSubComp.key] || 'N/A'}"\n`;
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+            }
+            
+            // Dados de campo principais
+            const data = currentVia.full_data || {};
+            const fieldMappings = [
+                { key: 'flow_direction', label: 'Direção do Fluxo' },
+                { key: 'traffic_flow', label: 'Fluxo do Tráfego' },
+                { key: 'localization', label: 'Localização' },
+                { key: 'speed_limit', label: 'Limite de Velocidade' },
+                { key: 'crosses', label: 'Cruzamentos' },
+                { key: 'pavement_type', label: 'Tipo de Pavimento' },
+                { key: 'ridable_width', label: 'Largura Transitável (cm)' },
+                { key: 'buffer_width', label: 'Largura do Buffer (cm)' },
+                { key: 'segregator_type', label: 'Tipo de Segregador' },
+                { key: 'all_obstacles_count', label: 'Total de Obstáculos' },
+                { key: 'bus_stops_along', label: 'Pontos de Ônibus' }
+            ];
+            
+            fieldMappings.forEach(field => {
+                const value = data[field.key];
+                if (value !== undefined && value !== null) {
+                    csv += `"${field.label}","${value}"\n`;
+                }
+            });
+            
+            downloadFile(csv, `${currentVia.structure_name.replace(/[^a-zA-Z0-9]/g, '-')}.csv`, 'text/csv');
+        }
+        
         // Baixar arquivo GPX
         function downloadGPX() {
             if (!currentVia) {
@@ -928,6 +1025,19 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+        }
+        
+        // Função auxiliar para download
+        function downloadFile(content, filename, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         }
         
         // Configurar navegação entre vias
