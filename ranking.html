@@ -179,6 +179,17 @@
                     </tbody>
                 </table>
             </div>
+
+            <!-- Exportar Relatórios -->
+            <section class="export-section" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: 2rem 0;">
+                <h3 style="color: #2E7D32; margin-bottom: 1rem;">📊 Exportar Ranking</h3>
+                <p style="margin-bottom: 1.5rem; color: #666;">Gere relatórios do ranking nacional IDECICLO:</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <button onclick="exportRankingMarkdown()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📄 Exportar .MD</button>
+                    <button onclick="exportRankingJSON()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📋 Exportar .JSON</button>
+                    <button onclick="exportRankingCSV()" style="padding: 0.75rem 1.5rem; background: #666; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📊 Exportar .CSV</button>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -264,6 +275,74 @@
                     <td class="score ${getScoreClass(item.ideciclo)}">${item.ideciclo.toFixed(3)}</td>
                 `;
             });
+        }
+
+        // Funções de exportação
+        function exportRankingMarkdown() {
+            let md = `# Ranking Nacional IDECICLO\n\n`;
+            md += `**Data:** ${new Date().toLocaleDateString('pt-BR')}\n`;
+            md += `**Total de cidades:** ${rankingData.length}\n\n`;
+            
+            md += `## Ranking Completo\n\n`;
+            md += `| Posição | Cidade | Estado | Ano | IDECICLO |\n`;
+            md += `|---------|--------|--------|-----|----------|\n`;
+            
+            rankingData.forEach((item, index) => {
+                md += `| ${index + 1}º | ${item.cidade} | ${item.estado} | ${item.ano} | ${item.ideciclo.toFixed(3)} |\n`;
+            });
+            
+            md += `\n## Destaques\n\n`;
+            md += `- **Melhor colocação:** ${rankingData[0].cidade} (${rankingData[0].estado}) - ${rankingData[0].ideciclo.toFixed(3)}\n`;
+            md += `- **Camboriú:** ${rankingData.findIndex(item => item.cidade === 'Camboriú') + 1}º lugar\n`;
+            md += `- **Balneário Camboriú:** ${rankingData.findIndex(item => item.cidade === 'Balneário Camboriú') + 1}º lugar\n\n`;
+            
+            md += `*Relatório gerado em ${new Date().toLocaleDateString('pt-BR')}*`;
+            downloadFile(md, 'ranking-ideciclo.md', 'text/markdown');
+        }
+        
+        function exportRankingJSON() {
+            const data = {
+                timestamp: new Date().toISOString(),
+                total_cidades: rankingData.length,
+                ranking: rankingData.map((item, index) => ({
+                    posicao: index + 1,
+                    cidade: item.cidade,
+                    estado: item.estado,
+                    ano: item.ano,
+                    ideciclo: item.ideciclo
+                }))
+            };
+            downloadFile(JSON.stringify(data, null, 2), 'ranking-ideciclo.json', 'application/json');
+        }
+        
+        function exportRankingCSV() {
+            let csv = 'Posição,Cidade,Estado,Ano,IDECICLO\n';
+            
+            rankingData.forEach((item, index) => {
+                csv += `${index + 1},"${item.cidade}","${item.estado}",${item.ano},${item.ideciclo.toFixed(3)}\n`;
+            });
+            
+            downloadFile(csv, 'ranking-ideciclo.csv', 'text/csv');
+        }
+        
+        function getScoreClassification(score) {
+            if (score >= 0.080) return 'Excelente';
+            if (score >= 0.060) return 'Bom';
+            if (score >= 0.040) return 'Regular';
+            if (score >= 0.020) return 'Ruim';
+            return 'Inadequado';
+        }
+        
+        function downloadFile(content, filename, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
