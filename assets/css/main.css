@@ -335,22 +335,27 @@ body {
 
 .typology-ciclovia {
   background: #fecaca;
-  color: #dc2626;
+  color: #CE4831;
 }
 
 .typology-ciclofaixa {
-  background: #bbf7d0;
-  color: #16a34a;
+  background: #fef3c7;
+  color: #EFC345;
 }
 
 .typology-calçada-compartilhada {
   background: #dbeafe;
-  color: #2563eb;
+  color: #5AC2E1;
 }
 
 .typology-compartilhada {
   background: #dbeafe;
-  color: #2563eb;
+  color: #5AC2E1;
+}
+
+.typology-ciclorrota {
+  background: #d1fae5;
+  color: #6DBFAC;
 }
 
 /* Score Badge */

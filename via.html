@@ -329,8 +329,8 @@
                         <li><a href="index.html" class="nav-link">Início</a></li>
                         <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
                         <li><a href="comparacao.html" class="nav-link">Comparação</a></li>
+                        <li><a href="ranking.html" class="nav-link">Ranking Nacional</a></li>
                         <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
-                        <li><a href="https://ideciclo.org/ranking" class="nav-link" target="_blank">Ranking Nacional</a></li>
                     </ul>
                 </nav>
             </div>
@@ -366,7 +366,7 @@
                 <!-- Exportar Relatórios -->
                 <section class="export-section" style="background: white; padding: 2rem; border-radius: 40px; box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25); margin: 2rem 0; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0px 8px 12px rgba(0, 0, 0, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0px 6px 8px rgba(0, 0, 0, 0.25)'">
                     <h3 style="color: var(--ideciclo-teal); margin-bottom: 1rem; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; gap: 0.75rem;">
-                        <img src="assets/icones/qualidade-do-projeto.svg" style="width: 36px; height: 36px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                        <img src="assets/icones/acesso-da-estrutura.svg" style="width: 36px; height: 36px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
                         📊 Exportar Estrutura
                     </h3>
                     <p style="margin-bottom: 1.5rem; color: #666;">Gere relatórios detalhados desta estrutura cicloviária:</p>
@@ -390,7 +390,7 @@
                 <!-- Notas de Avaliação -->
                 <div class="field-data">
                     <h2 class="section-title">
-                        <img src="assets/icones/qualidade-do-projeto.svg" alt="">
+                        <img src="assets/icones/condicao-da-sinalizacao-horizontal.svg" alt="">
                         Notas de Avaliação
                     </h2>
                     <div id="scores-container">
@@ -401,7 +401,7 @@
                 <!-- Galeria de Imagens -->
                 <div class="field-data" id="gallery-section" style="display: none;">
                     <h2 class="section-title">
-                        <img src="assets/icones/urbanidade.svg" alt="">
+                        <img src="assets/icones/conforto-da-estrutura.svg" alt="">
                         Galeria de Imagens
                     </h2>
                     <div class="image-gallery" id="image-gallery">
@@ -412,7 +412,7 @@
                 <!-- Dados de Campo -->
                 <div class="field-data">
                     <h2 class="section-title">
-                        <img src="assets/icones/manutencao.svg" alt="">
+                        <img src="assets/icones/sinalizacao-horizontal.svg" alt="">
                         Dados Coletados em Campo
                     </h2>
                     <div id="field-data-container">
@@ -553,7 +553,7 @@
             html += `
                 <div class="score-section">
                     <h3 class="section-title">
-                        <img src="assets/icones/qualidade-do-projeto.svg" alt="">
+                        <img src="assets/icones/urbanidade.svg" alt="">
                         ${scoreTree.average.label}
                     </h3>
                     <div class="section-grid">
@@ -597,7 +597,7 @@
                     const compColor = getScoreColor(compValue);
                     const compClassification = getScoreClassification(compValue);
                     
-                    const icon = comp.label.includes('1.') ? '<img src="assets/icones/qualidade-do-projeto.svg" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px;">' : comp.label.includes('2.') ? '<img src="assets/icones/seguranca-viaria.svg" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px;">' : '<img src="assets/icones/manutencao.svg" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px;">';
+                    const icon = comp.label.includes('1.') ? '<img src="assets/icones/qualidade-do-projeto.svg" alt="">' : comp.label.includes('2.') ? '<img src="assets/icones/seguranca-viaria.svg" alt="">' : '<img src="assets/icones/manutencao.svg" alt="">';
                     
                     html += `
                         <div class="score-section">
@@ -726,7 +726,7 @@
                     ]
                 },
                 {
-                    title: '<img src="assets/icones/sinalizacao-horizontal.svg" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;"> Sinalização',
+                    title: '<img src="assets/icones/sinalizacao-vertical.svg" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;"> Sinalização',
                     items: [
                         { label: 'Padrão Horizontal', value: data.horizontal_pattern_evaluation || 'N/A' },
                         { label: 'Condição da Pintura', value: data.painting_condition_evaluation || 'N/A' },
@@ -771,7 +771,7 @@
             // Adicionar seção de comentários se existir
             if (data.comments && data.comments.length > 0) {
                 sections.push({
-                    title: '<img src="assets/icones/urbanidade.svg" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;"> Comentários de Campo',
+                    title: '<img src="assets/icones/condicao-da-sinalizacao-horizontal.svg" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;"> Comentários de Campo',
                     items: data.comments.map((comment, index) => ({
                         label: `Observação ${index + 1}`,
                         value: comment
