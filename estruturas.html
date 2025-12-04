@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Relatório de Auditoria Cicloviária - IDECICLO - Camboriú e Balneário Camboriú">
     <meta name="keywords" content="ciclovia, auditoria, mobilidade urbana, Camboriú, Balneário Camboriú">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <title>Estruturas Avaliadas - IDECICLO</title>
     
     <!-- CSS Principal -->
@@ -18,13 +18,14 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1><a href="index.html">IDECICLO</a></h1>
-                    <p>Camboriú e Balneário Camboriú</p>
+                    <a href="index.html">
+                        <img src="assets/ideciclo_logo.png" alt="IDECICLO" style="height: 64px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                    </a>
                 </div>
                 <nav class="nav">
                     <ul>
                         <li><a href="index.html" class="nav-link">Início</a></li>
-                        <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
+                        <li><a href="estruturas.html" class="nav-link active">Estruturas avaliadas</a></li>
                         <li><a href="comparacao.html" class="nav-link">Comparação</a></li>
                         <li><a href="ranking.html" class="nav-link">Ranking Nacional</a></li>
                         <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
@@ -53,14 +54,14 @@
             </section>
 
             <!-- Exportar Relatórios -->
-            <section class="export-section" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: 2rem 0;">
-                <h3 style="color: #2E7D32; margin-bottom: 1rem;">📊 Exportar Estruturas</h3>
+            <section class="export-section" style="background: white; padding: 2rem; border-radius: 40px; box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25); margin: 2rem 0;">
+                <h3 style="color: var(--ideciclo-teal); margin-bottom: 1rem;">📊 Exportar Estruturas</h3>
                 <p style="margin-bottom: 1.5rem; color: #666;">Gere relatórios das estruturas cicloviárias avaliadas:</p>
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-                    <button onclick="exportStructuresMarkdown()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📄 Exportar .MD</button>
-                    <button onclick="exportStructuresJSON()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📋 Exportar .JSON</button>
-                    <button onclick="exportStructuresCSV()" style="padding: 0.75rem 1.5rem; background: #666; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📊 Exportar .CSV</button>
-                    <button onclick="exportStructuresGeoJSON()" style="padding: 0.75rem 1.5rem; background: #1976D2; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">🗺️ Exportar .GeoJSON</button>
+                    <button onclick="exportStructuresMarkdown()" class="ideciclo-button">📄 Exportar .MD</button>
+                    <button onclick="exportStructuresJSON()" class="ideciclo-button teal">📋 Exportar .JSON</button>
+                    <button onclick="exportStructuresCSV()" class="ideciclo-button yellow">📊 Exportar .CSV</button>
+                    <button onclick="exportStructuresGeoJSON()" class="ideciclo-button red">🗺️ Exportar .GeoJSON</button>
                 </div>
             </section>
 
@@ -88,9 +89,9 @@
                 <!-- Botões de Cidade -->
                 <div style="margin-bottom: 1.5rem;">
                     <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
-                        <button id="city-all" class="city-btn active" onclick="setCityFilter('')" style="padding: 0.75rem 1.5rem; border: 2px solid #2E7D32; background: #2E7D32; color: white; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s;">Todas Cidades</button>
-                        <button id="city-camboriu" class="city-btn" onclick="setCityFilter('Camboriú')" style="padding: 0.75rem 1.5rem; border: 2px solid #2E7D32; background: white; color: #2E7D32; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s;">Camboriú</button>
-                        <button id="city-balneario" class="city-btn" onclick="setCityFilter('Balneário Camboriú')" style="padding: 0.75rem 1.5rem; border: 2px solid #2E7D32; background: white; color: #2E7D32; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s;">Balneário Camboriú</button>
+                        <button id="city-all" class="city-btn active" onclick="setCityFilter('')" style="padding: 0.75rem 1.5rem; border: 2px solid var(--ideciclo-teal); background: var(--ideciclo-teal); color: white; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);">Todas Cidades</button>
+                        <button id="city-camboriu" class="city-btn" onclick="setCityFilter('Camboriú')" style="padding: 0.75rem 1.5rem; border: 2px solid var(--ideciclo-teal); background: white; color: var(--ideciclo-teal); border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s;">Camboriú</button>
+                        <button id="city-balneario" class="city-btn" onclick="setCityFilter('Balneário Camboriú')" style="padding: 0.75rem 1.5rem; border: 2px solid var(--ideciclo-teal); background: white; color: var(--ideciclo-teal); border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s;">Balneário Camboriú</button>
                     </div>
                 </div>
                 
@@ -374,21 +375,25 @@
             // Atualizar aparência dos botões
             document.querySelectorAll('.city-btn').forEach(btn => {
                 btn.style.background = 'white';
-                btn.style.color = '#2E7D32';
+                btn.style.color = 'var(--ideciclo-teal)';
+                btn.style.boxShadow = 'none';
                 btn.classList.remove('active');
             });
             
             if (city === '') {
-                document.getElementById('city-all').style.background = '#2E7D32';
+                document.getElementById('city-all').style.background = 'var(--ideciclo-teal)';
                 document.getElementById('city-all').style.color = 'white';
+                document.getElementById('city-all').style.boxShadow = '0px 4px 8px rgba(0,0,0,0.2)';
                 document.getElementById('city-all').classList.add('active');
             } else if (city === 'Camboriú') {
-                document.getElementById('city-camboriu').style.background = '#2E7D32';
+                document.getElementById('city-camboriu').style.background = 'var(--ideciclo-teal)';
                 document.getElementById('city-camboriu').style.color = 'white';
+                document.getElementById('city-camboriu').style.boxShadow = '0px 4px 8px rgba(0,0,0,0.2)';
                 document.getElementById('city-camboriu').classList.add('active');
             } else if (city === 'Balneário Camboriú') {
-                document.getElementById('city-balneario').style.background = '#2E7D32';
+                document.getElementById('city-balneario').style.background = 'var(--ideciclo-teal)';
                 document.getElementById('city-balneario').style.color = 'white';
+                document.getElementById('city-balneario').style.boxShadow = '0px 4px 8px rgba(0,0,0,0.2)';
                 document.getElementById('city-balneario').classList.add('active');
             }
             

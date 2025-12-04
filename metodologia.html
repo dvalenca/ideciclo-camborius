@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Metodologia de Avaliação Cicloviária - IDECICLO">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <title>Metodologia - IDECICLO</title>
     
     <!-- CSS Principal -->
@@ -17,45 +17,47 @@
         .methodology-content {
             background: white;
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 40px;
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
             margin-bottom: 2rem;
             line-height: 1.6;
         }
         
         .methodology-content h1 {
-            color: #2E7D32;
-            border-bottom: 3px solid #E8F5E8;
+            color: var(--ideciclo-teal);
+            border-bottom: 3px solid var(--ideciclo-yellow);
             padding-bottom: 1rem;
             margin-bottom: 2rem;
         }
         
         .methodology-content h2 {
-            color: #2E7D32;
+            color: var(--ideciclo-teal);
             margin-top: 2rem;
             margin-bottom: 1rem;
         }
         
         .methodology-content h3 {
-            color: #4CAF50;
+            color: var(--ideciclo-blue);
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
         }
         
         .diagram-container {
-            background: #f8f9fa;
+            background: var(--background-grey);
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 40px;
             margin: 2rem 0;
             text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
         
         .formula-box {
-            background: #E8F5E8;
-            border-left: 4px solid #2E7D32;
+            background: var(--ideciclo-yellow);
+            border-left: 4px solid var(--ideciclo-teal);
             padding: 1rem;
             margin: 1rem 0;
-            border-radius: 4px;
+            border-radius: 20px;
+            color: var(--text-grey);
         }
         
         .criteria-grid {
@@ -63,19 +65,20 @@
         }
         
         .criteria-card {
-            background: #f8f9fa;
+            background: white;
             padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #2E7D32;
+            border-radius: 40px;
+            border-left: 4px solid var(--ideciclo-teal);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
         
         .criteria-card h4 {
-            color: #2E7D32;
+            color: var(--ideciclo-teal);
             margin-bottom: 1rem;
         }
         
         .weight-badge {
-            background: #2E7D32;
+            background: var(--ideciclo-blue);
             color: white;
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
@@ -87,28 +90,34 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: #2E7D32;
+            color: var(--ideciclo-teal);
             text-decoration: none;
             font-weight: 500;
             margin-bottom: 2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
         }
         
         .back-button:hover {
-            text-decoration: underline;
+            background-color: var(--ideciclo-yellow);
+            color: var(--text-grey);
+            text-decoration: none;
         }
         
         /* Estilos para seções retráteis */
         .collapsible-section {
             margin-bottom: 1rem;
             border: 1px solid #e0e0e0;
-            border-radius: 8px;
+            border-radius: 40px;
             overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
         
         .collapsible-header {
             width: 100%;
             padding: 1.5rem;
-            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            background: linear-gradient(135deg, var(--ideciclo-teal), var(--ideciclo-blue));
             color: white;
             border: none;
             cursor: pointer;
@@ -121,7 +130,8 @@
         }
         
         .collapsible-header:hover {
-            background: linear-gradient(135deg, #1B5E20, #2E7D32);
+            background: linear-gradient(135deg, var(--ideciclo-blue), var(--ideciclo-teal));
+            transform: translateY(-1px);
         }
         
         .section-number {
@@ -164,17 +174,17 @@
         }
         
         .collapsible-content h2 {
-            color: #2E7D32;
-            border-bottom: 2px solid #E8F5E8;
+            color: var(--ideciclo-teal);
+            border-bottom: 2px solid var(--ideciclo-yellow);
             padding-bottom: 0.5rem;
         }
         
         .collapsible-content h3 {
-            color: #4CAF50;
+            color: var(--ideciclo-blue);
         }
         
         .collapsible-content h4 {
-            color: #66BB6A;
+            color: var(--ideciclo-green);
         }
         
         .collapsible-content table {
@@ -191,8 +201,9 @@
         }
         
         .collapsible-content table th {
-            background: #E8F5E8;
+            background: var(--ideciclo-yellow);
             font-weight: 600;
+            color: var(--text-grey);
         }
         
         .collapsible-content ul {
@@ -216,13 +227,17 @@
         
         .btn-outline {
             background: transparent;
-            border: 2px solid #2E7D32;
-            color: #2E7D32;
+            border: 2px solid var(--ideciclo-teal);
+            color: var(--ideciclo-teal);
+            border-radius: 40px;
+            transition: all 0.3s ease;
         }
         
         .btn-outline:hover {
-            background: #2E7D32;
+            background: var(--ideciclo-teal);
             color: white;
+            transform: translateY(-1px);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         
         .loading {
@@ -252,35 +267,43 @@
         }
         
         .tree-level-1 {
-            background: #E8F5E8;
-            border-left: 6px solid #2E7D32;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-left: 6px solid var(--ideciclo-teal);
             padding: 1.5rem;
             margin: 1rem 0;
             display: block !important;
             width: 100% !important;
             clear: both !important;
             float: none !important;
+            border-radius: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
         
         .tree-level-2 {
-            background: #F1F8E9;
-            border-left: 4px solid #4CAF50;
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            border-left: 4px solid var(--ideciclo-blue);
             padding: 1.25rem;
             margin: 0.75rem 0 0 1rem;
+            border-radius: 15px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
         }
         
         .tree-level-3 {
-            background: #F9FBE7;
-            border-left: 3px solid #8BC34A;
+            background: #ffffff;
+            border-left: 3px solid var(--ideciclo-green);
             padding: 1rem;
             margin: 0.5rem 0 0 1rem;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
         }
         
         .tree-level-4 {
-            background: #FCFFF4;
-            border-left: 2px solid #C8E6C9;
+            background: #fafbfc;
+            border-left: 2px solid var(--ideciclo-yellow);
             padding: 0.75rem;
             margin: 0.25rem 0 0 1rem;
+            border-radius: 8px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
         }
         
         .criterion-header {
@@ -293,15 +316,15 @@
         }
         
         .criterion-header:hover {
-            background: rgba(46, 125, 50, 0.1);
-            border-radius: 4px;
+            background: rgba(109, 191, 172, 0.1);
+            border-radius: 10px;
             padding: 0.5rem;
             margin: -0.5rem -0.5rem 0.5rem -0.5rem;
         }
         
         .criterion-title {
             font-weight: bold;
-            color: #2E7D32;
+            color: var(--ideciclo-teal);
             margin: 0;
             flex: 1;
         }
@@ -313,18 +336,20 @@
         }
         
         .calculation-method {
-            background: #FFF3E0;
-            border-left: 4px solid #FF9800;
+            background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+            border-left: 4px solid var(--ideciclo-blue);
             padding: 0.75rem;
             margin: 0.5rem 0;
-            border-radius: 4px;
+            border-radius: 15px;
             font-size: 0.85rem;
+            color: var(--text-grey);
+            border: 1px solid rgba(90, 194, 225, 0.2);
         }
         
         .tree-toggle {
             background: none;
             border: none;
-            color: #2E7D32;
+            color: var(--ideciclo-teal);
             font-size: 1rem;
             cursor: pointer;
             padding: 0.25rem;
@@ -346,15 +371,16 @@
         }
         
         .note {
-            background: #FFF8E1;
-            border-left: 4px solid #FFC107;
+            background: var(--ideciclo-yellow);
+            border-left: 4px solid var(--ideciclo-red);
             padding: 1rem;
             margin: 1rem 0;
-            border-radius: 4px;
+            border-radius: 20px;
+            color: var(--text-grey);
         }
         
         .note strong {
-            color: #F57C00;
+            color: var(--ideciclo-red);
         }
     </style>
 </head>
@@ -364,8 +390,9 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1><a href="index.html">IDECICLO</a></h1>
-                    <p>Camboriú e Balneário Camboriú</p>
+                    <a href="index.html">
+                        <img src="assets/ideciclo_logo.png" alt="IDECICLO" style="height: 64px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                    </a>
                 </div>
                 <nav class="nav">
                     <ul>
@@ -373,7 +400,7 @@
                         <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
                         <li><a href="comparacao.html" class="nav-link">Comparação</a></li>
                         <li><a href="ranking.html" class="nav-link">Ranking Nacional</a></li>
-                        <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+                        <li><a href="metodologia.html" class="nav-link active">Metodologia</a></li>
                     </ul>
                 </nav>
             </div>
@@ -399,10 +426,10 @@
 
             <div class="methodology-content">
                 <div class="section-controls" style="margin-bottom: 2rem; text-align: center;">
-                    <button onclick="expandAllSections()" class="btn btn-outline" style="margin-right: 1rem;">
+                    <button onclick="expandAllSections()" class="ideciclo-button" style="margin-right: 1rem;">
                         ▼ Expandir Todas as Seções
                     </button>
-                    <button onclick="collapseAllSections()" class="btn btn-outline">
+                    <button onclick="collapseAllSections()" class="ideciclo-button teal">
                         ▲ Contrair Todas as Seções
                     </button>
                 </div>
@@ -426,7 +453,7 @@
 
                         <div class="formula-box">
                             <strong>Fórmula Principal:</strong><br>
-                            Nota Final = (Projeto + Proteção + Conforto)/3
+                            Nota Final = (Qualidade do Projeto + Segurança Viária + Manutenção e Urbanidade)/3
                         </div>
 
                         <div class="tree-container">

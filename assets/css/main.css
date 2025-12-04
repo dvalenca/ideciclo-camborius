@@ -1,3 +1,21 @@
+/* Importar fontes IDECICLO */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700;900&display=swap');
+
+/* Variáveis de cores IDECICLO */
+:root {
+  --ideciclo-red: #CE4831;
+  --ideciclo-teal: #6DBFAC;
+  --ideciclo-blue: #5AC2E1;
+  --ideciclo-yellow: #EFC345;
+  --ideciclo-pink: #F5BDBF;
+  --ideciclo-green: #69BFAF;
+  --background-grey: #E5E8E9;
+  --text-grey: #334454;
+  --custom-grey: #F1F1F1;
+  --ameciclo: #008080;
+  --ideciclo: #5050aa;
+}
+
 /* Reset e Base */
 * {
   margin: 0;
@@ -6,10 +24,10 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: #f8f9fa;
+  color: var(--text-grey);
+  background: white;
 }
 
 .container {
@@ -18,31 +36,39 @@ body {
   padding: 0 20px;
 }
 
-/* Header */
+/* Header IDECICLO */
 .header {
-  background: #fff;
+  background: white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-bottom: 2px solid var(--ideciclo-teal);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  height: 80px;
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+.logo img {
+  height: 64px;
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));
 }
 
 .logo h1 a {
-  color: #2E7D32;
+  color: var(--ideciclo-teal);
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: 700;
 }
 
 .logo p {
-  color: #666;
+  color: var(--text-grey);
   font-size: 0.9rem;
 }
 
@@ -53,14 +79,23 @@ body {
 }
 
 .nav-link {
-  color: #333;
+  color: var(--text-grey);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #2E7D32;
+  background-color: var(--ideciclo-yellow);
+  color: var(--text-grey);
+}
+
+.nav-link.active {
+  background-color: var(--ideciclo-red);
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Main Content */
@@ -69,12 +104,18 @@ body {
   padding: 2rem 0;
 }
 
-/* Hero Section */
+/* Hero Section IDECICLO */
 .hero {
-  background: url('../cover.png') center/cover, linear-gradient(135deg, rgba(46, 125, 50, 0.8), rgba(76, 175, 80, 0.8));
+  background-image: url('../ideciclo-navcover.png');
+  background-size: cover;
+  background-position: center;
+  height: 52vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: white;
-  padding: 4rem 0;
-  margin-bottom: 2rem;
+  margin-top: 0;
 }
 
 .hero-content {
@@ -82,13 +123,15 @@ body {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero p {
   font-size: 1.2rem;
-  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 /* Stats */
@@ -101,16 +144,22 @@ body {
 
 .stat-card {
   background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  border-radius: 40px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
 }
 
 .stat-number {
   font-size: 2rem;
   font-weight: 700;
-  color: #2E7D32;
+  color: var(--ideciclo-blue);
   display: block;
 }
 
@@ -122,9 +171,9 @@ body {
 /* Search Section */
 .search-section {
   background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  border-radius: 40px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
   margin-bottom: 1rem;
 }
 
@@ -136,9 +185,9 @@ body {
 /* Filters */
 .filters {
   background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  border-radius: 40px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
   margin-bottom: 2rem;
 }
 
@@ -176,7 +225,7 @@ body {
 
 .search-input:focus, .filter-select:focus {
   outline: none;
-  border-color: #2E7D32;
+  border-color: var(--ideciclo-teal);
 }
 
 .btn {
@@ -190,12 +239,16 @@ body {
 }
 
 .btn-primary {
-  background: #2E7D32;
+  background: var(--ideciclo-blue);
   color: white;
+  border-radius: 40px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
 }
 
 .btn-primary:hover {
-  background: #1B5E20;
+  transform: translateY(-1px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+  background: var(--ideciclo-teal);
 }
 
 /* Via Cards */
@@ -207,16 +260,16 @@ body {
 
 .via-card {
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 40px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .via-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
 }
 
 .via-header {
@@ -264,7 +317,7 @@ body {
 .info-value {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #2E7D32;
+  color: var(--ideciclo-blue);
 }
 
 .info-label {
@@ -295,6 +348,11 @@ body {
   color: #2563eb;
 }
 
+.typology-compartilhada {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
 /* Score Badge */
 .score-badge {
   display: inline-flex;
@@ -306,29 +364,52 @@ body {
   font-size: 0.9rem;
 }
 
-.score-excellent { background: #E8F5E8; color: #2E7D32; }
-.score-good { background: #F1F8E9; color: #689F38; }
-.score-regular { background: #FFF8E1; color: #F57C00; }
-.score-poor { background: #FFF3E0; color: #FF9800; }
-.score-inadequate { background: #FFEBEE; color: #F44336; }
+.score-excellent { background: #4CAF50; color: white; }
+.score-good { background: #8BC34A; color: white; }
+.score-regular { background: #FFC107; color: #333; }
+.score-poor { background: #FF9800; color: white; }
+.score-inadequate { background: #F44336; color: white; }
 
-/* Footer */
+/* Footer IDECICLO */
 .footer {
-  background: #333;
+  background: var(--ideciclo);
   color: white;
   padding: 3rem 0;
   margin-top: 3rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo img {
+  height: 48px;
+}
+
+.footer-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-info p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
 }
 
 .footer-section h3 {
-  color: #4CAF50;
+  color: var(--ideciclo-teal);
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -339,7 +420,7 @@ body {
 }
 
 .footer-section a {
-  color: #4CAF50;
+  color: var(--ideciclo-teal);
   text-decoration: none;
 }
 
@@ -416,8 +497,8 @@ body {
 .map-section {
   background: white;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 40px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
   margin: 2rem 0;
 }
 
@@ -444,9 +525,9 @@ body {
 .chart-container {
   background: white;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  border-radius: 40px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
 }
 
 .chart-container:hover {
@@ -502,5 +583,173 @@ body {
   
   .chart-container {
     padding: 1rem;
+  }
+}
+
+/* Componentes IDECICLO */
+
+/* Botões IDECICLO */
+.ideciclo-button {
+  background: var(--ideciclo-blue);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.ideciclo-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ideciclo-button.yellow {
+  background: var(--ideciclo-yellow);
+  color: var(--text-grey);
+}
+
+.ideciclo-button.red {
+  background: var(--ideciclo-red);
+}
+
+.ideciclo-button.teal {
+  background: var(--ideciclo-teal);
+}
+
+/* Cards de categoria com ícones */
+.categoria-card {
+  width: 234px;
+  min-height: 150px;
+  border-radius: 40px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+  margin-top: 80px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.categoria-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.categoria-card .icon {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 104px;
+  height: 108px;
+}
+
+.categoria-projeto {
+  background-color: var(--ideciclo-blue);
+  color: white;
+}
+
+.categoria-seguranca {
+  background-color: var(--ideciclo-yellow);
+  color: var(--text-grey);
+}
+
+.categoria-manutencao {
+  background-color: var(--ideciclo-pink);
+  color: var(--text-grey);
+}
+
+.categoria-urbanidade {
+  background-color: var(--ideciclo-green);
+  color: white;
+}
+
+/* Sistema de Badges/Scores IDECICLO */
+.score-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.score-excelente {
+  background: #4CAF50;
+  color: white;
+}
+
+.score-bom {
+  background: #8BC34A;
+  color: white;
+}
+
+.score-regular {
+  background: #FFC107;
+  color: #333;
+}
+
+.score-ruim {
+  background: #FF9800;
+  color: white;
+}
+
+.score-pessimo {
+  background: #F44336;
+  color: white;
+}
+
+/* Utilitários IDECICLO */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+.p-4 { padding: 1rem; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-4 { gap: 1rem; }
+.gap-8 { gap: 2rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+
+/* Responsividade IDECICLO */
+@media (max-width: 768px) {
+  .categoria-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 80px auto 0;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero {
+    height: 40vh;
+  }
+  
+  .header-content {
+    padding: 0 1rem;
+  }
+  
+  .nav ul {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .categoria-card {
+    width: 280px;
   }
 }

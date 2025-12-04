@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <title>IDECICLO - Auditoria Cicloviária</title>
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
         .dashboard-hero {
-            background: url('assets/cover.png') center/cover, linear-gradient(135deg, rgba(46, 125, 50, 0.8), rgba(76, 175, 80, 0.8));
-            color: white;
-            padding: 4rem 0;
+            background-image: url('assets/ideciclo-navcover.png');
+            background-size: cover;
+            background-position: center;
+            height: 52vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            color: white;
+            margin-top: 0;
         }
         
         .dashboard-hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: 700;
             margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .dashboard-hero p {
             font-size: 1.2rem;
-            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         .dashboard-stats {
@@ -36,20 +44,21 @@
         .dashboard-stat-card {
             background: white;
             padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 40px;
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
             text-align: center;
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
         }
         
         .dashboard-stat-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
         }
         
         .dashboard-stat-number {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #2E7D32;
+            color: var(--ideciclo-blue);
             display: block;
         }
         
@@ -154,13 +163,14 @@
         .info-card {
             background: white;
             padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            border-radius: 40px;
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
         }
         
         .info-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
         }
         
         .info-card.full-width {
@@ -168,9 +178,10 @@
         }
         
         .info-card h3 {
-            color: #2E7D32;
+            color: var(--ideciclo-teal);
             margin-bottom: 1.5rem;
             font-size: 1.3rem;
+            font-weight: 600;
         }
         
         table {
@@ -286,12 +297,13 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1><a href="index.html">IDECICLO</a></h1>
-                    <p>Camboriú e Balneário Camboriú</p>
+                    <a href="index.html">
+                        <img src="assets/ideciclo_logo.png" alt="IDECICLO" style="height: 64px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                    </a>
                 </div>
                 <nav class="nav">
                     <ul>
-                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="index.html" class="nav-link active">Início</a></li>
                         <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
                         <li><a href="comparacao.html" class="nav-link">Comparação</a></li>
                         <li><a href="ranking.html" class="nav-link">Ranking Nacional</a></li>
@@ -479,12 +491,12 @@
 
                 <!-- Botões de Exportação -->
                 <section class="info-card full-width" style="margin-top: 3rem;">
-                    <h3>📊 Exportar Relatórios</h3>
+                    <h3 style="color: var(--ideciclo-teal); margin-bottom: 1rem;">📊 Exportar Relatórios</h3>
                     <p>Gere relatórios completos dos dados apresentados nesta página:</p>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem;">
-                        <button class="btn btn-primary" onclick="exportMarkdown()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📄 Exportar .MD</button>
-                        <button class="btn btn-primary" onclick="exportJSON()" style="padding: 0.75rem 1.5rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📋 Exportar .JSON</button>
-                        <button class="btn btn-secondary" onclick="showCSVModal()" style="padding: 0.75rem 1.5rem; background: #666; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">📊 Exportar .CSV</button>
+                        <button onclick="exportMarkdown()" class="ideciclo-button">📄 Exportar .MD</button>
+                        <button onclick="exportJSON()" class="ideciclo-button teal">📋 Exportar .JSON</button>
+                        <button onclick="showCSVModal()" class="ideciclo-button yellow">📊 Exportar .CSV</button>
                     </div>
                 </section>
 
@@ -526,15 +538,15 @@
 
     <!-- Modal CSV -->
     <div id="csv-modal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
-        <div class="modal-content" style="background: white; margin: 15% auto; padding: 2rem; width: 80%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+        <div class="modal-content" style="background: white; margin: 15% auto; padding: 2rem; width: 80%; max-width: 500px; border-radius: 40px; box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);">
             <span class="close" onclick="closeCSVModal()" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
             <h2>📊 Exportar CSV</h2>
             <p>Escolha qual seção deseja exportar:</p>
             <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
-                <button class="btn btn-primary" onclick="exportCSV('geral')" style="padding: 0.75rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer;">📈 Dados Gerais</button>
-                <button class="btn btn-primary" onclick="exportCSV('balneario')" style="padding: 0.75rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer;">🏖️ Balneário Camboriú</button>
-                <button class="btn btn-primary" onclick="exportCSV('camboriu')" style="padding: 0.75rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer;">🏢 Camboriú</button>
-                <button class="btn btn-primary" onclick="exportCSV('cobertura')" style="padding: 0.75rem; background: #2E7D32; color: white; border: none; border-radius: 6px; cursor: pointer;">📋 Tabelas de Cobertura</button>
+                <button onclick="exportCSV('geral')" class="ideciclo-button" style="width: 100%;">📈 Dados Gerais</button>
+                <button onclick="exportCSV('balneario')" class="ideciclo-button teal" style="width: 100%;">🏖️ Balneário Camboriú</button>
+                <button onclick="exportCSV('camboriu')" class="ideciclo-button yellow" style="width: 100%;">🏢 Camboriú</button>
+                <button onclick="exportCSV('cobertura')" class="ideciclo-button red" style="width: 100%;">📋 Tabelas de Cobertura</button>
             </div>
         </div>
     </div>

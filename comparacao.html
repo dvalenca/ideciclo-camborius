@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Comparação entre estruturas cicloviárias - IDECICLO">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <title>Comparação de Estruturas - IDECICLO</title>
     
     <!-- Mapbox CSS -->
@@ -15,23 +15,7 @@
     <link rel="stylesheet" href="assets/css/print.css">
     
     <style>
-        .comparison-hero {
-            background: url('assets/cover.png') center/cover, linear-gradient(135deg, rgba(46, 125, 50, 0.8), rgba(76, 175, 80, 0.8));
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .comparison-hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .comparison-hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
+
         
         .comparison-container {
             display: grid;
@@ -41,11 +25,18 @@
         }
         
         .via-selector {
-            background: white;
+            background: linear-gradient(135deg, #ffffff, #fafbfc);
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 40px;
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
             margin-bottom: 2rem;
+            border: 1px solid rgba(109, 191, 172, 0.1);
+        }
+        
+        .via-selector h2 {
+            color: var(--ideciclo-teal);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
         }
         
         .selector-group {
@@ -62,7 +53,8 @@
         
         .selector-item label {
             font-weight: 600;
-            color: #333;
+            color: var(--ideciclo-blue);
+            margin-bottom: 0.5rem;
         }
         
         .selector-item select,
@@ -70,16 +62,18 @@
             width: 100%;
             padding: 0.75rem;
             border: 2px solid #E0E0E0;
-            border-radius: 6px;
+            border-radius: 20px;
             font-size: 1rem;
             background: white;
             box-sizing: border-box;
+            transition: all 0.3s ease;
         }
         
         .selector-item select:focus,
         #typology-select:focus {
             outline: none;
-            border-color: #2E7D32;
+            border-color: var(--ideciclo-teal);
+            box-shadow: 0px 2px 4px rgba(109, 191, 172, 0.2);
         }
         
         #typology-select {
@@ -88,13 +82,19 @@
         
         .via-card {
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 40px;
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
             overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .via-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
         }
         
         .via-header {
-            background: #2E7D32;
+            background: linear-gradient(135deg, var(--ideciclo-teal), var(--ideciclo-blue));
             color: white;
             padding: 1.5rem;
             text-align: center;
@@ -124,9 +124,15 @@
             align-items: center;
             padding: 0.75rem;
             margin-bottom: 0.5rem;
-            background: #f8f9fa;
-            border-radius: 6px;
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            border-radius: 15px;
             border-left: 4px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        
+        .score-item:hover {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            transform: translateX(2px);
         }
         
         .score-label {
@@ -142,10 +148,35 @@
         .empty-state {
             text-align: center;
             padding: 3rem;
-            color: #666;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border: 2px dashed #ddd;
+            color: var(--text-grey);
+            background: linear-gradient(135deg, #fafbfc, #f1f3f4);
+            border-radius: 40px;
+            border: 2px dashed rgba(109, 191, 172, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .empty-state::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(109, 191, 172, 0.05) 50%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .empty-state h3 {
+            color: var(--ideciclo-teal);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .empty-state p {
+            position: relative;
+            z-index: 1;
         }
         
         .empty-state h3 {
@@ -161,50 +192,66 @@
         .btn {
             padding: 0.75rem 1.5rem;
             border: none;
-            border-radius: 6px;
+            border-radius: 40px;
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
             margin: 0 0.5rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
         }
         
         .btn-primary {
-            background: #2E7D32;
+            background: var(--ideciclo-blue);
             color: white;
         }
         
         .btn-primary:hover {
-            background: #1B5E20;
+            background: var(--ideciclo-teal);
+            transform: translateY(-1px);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
         }
         
         .btn-secondary {
-            background: #455A64;
-            color: white;
+            background: var(--ideciclo-yellow);
+            color: var(--text-grey);
         }
         
         .btn-secondary:hover {
-            background: #37474F;
+            background: #f4d03f;
+            transform: translateY(-1px);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
         }
         
         .btn:disabled {
             background: #ccc;
             cursor: not-allowed;
+            transform: none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         }
         
         .typology-info {
-            background: #E8F5E8;
-            padding: 1rem;
-            border-radius: 6px;
+            background: linear-gradient(135deg, #e8f4f8, #f0f8ff);
+            padding: 1.5rem;
+            border-radius: 25px;
             margin-bottom: 2rem;
             text-align: center;
+            border: 2px solid var(--ideciclo-blue);
+            box-shadow: 0px 4px 8px rgba(90, 194, 225, 0.15);
         }
         
         .typology-info h4 {
             margin: 0 0 0.5rem 0;
-            color: #2E7D32;
+            color: var(--ideciclo-blue);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .typology-info p {
+            color: var(--ideciclo-teal);
+            font-weight: 500;
         }
         
         .typology-info p {
@@ -230,8 +277,9 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1><a href="index.html">IDECICLO</a></h1>
-                    <p>Camboriú e Balneário Camboriú</p>
+                    <a href="index.html">
+                        <img src="assets/ideciclo_logo.png" alt="IDECICLO" style="height: 64px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                    </a>
                 </div>
                 <nav class="nav">
                     <ul>
@@ -247,8 +295,8 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="comparison-hero">
-        <div class="container">
+    <section class="hero">
+        <div class="hero-content">
             <h1>Comparação de Estruturas Cicloviárias</h1>
             <p>Compare as notas de avaliação entre estruturas da mesma tipologia</p>
         </div>
@@ -512,7 +560,7 @@
                 
                 scoresHtml += `
                     <div class="score-section">
-                        <h4>🏆 ${scoreTree.average.label}</h4>
+                        <h4><img src="assets/icones/qualidade-do-projeto.svg" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 10px;"> ${scoreTree.average.label}</h4>
                         <div class="score-item" style="border-left-color: ${avgColor}">
                             <span class="score-label">${scoreTree.average.label}</span>
                             <span class="score-value" style="color: ${avgColor}">
@@ -529,7 +577,7 @@
                         const compColor = getScoreColor(compValue);
                         const compClassification = getScoreClassification(compValue);
                         
-                        const icon = comp.label.includes('1.') ? '🏗️' : comp.label.includes('2.') ? '🛡️' : '😴';
+                        const icon = comp.label.includes('1.') ? '<img src="assets/icones/qualidade-do-projeto.svg" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;">' : comp.label.includes('2.') ? '<img src="assets/icones/seguranca-viaria.svg" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;">' : '<img src="assets/icones/manutencao.svg" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;">';
                         
                         scoresHtml += `
                             <div class="score-item" style="border-left-color: ${compColor}">
@@ -702,9 +750,9 @@
                         const comp1 = rates1[comp.key];
                         const comp2 = rates2[comp.key];
                         
-                        const icon = comp.label.includes('1.') ? '🏗️' : comp.label.includes('2.') ? '🛡️' : '😴';
+                        const iconText = comp.label.includes('1.') ? '🏗️' : comp.label.includes('2.') ? '🛡️' : '😴';
                         
-                        content += `### ${icon} ${comp.label}\n\n`;
+                        content += `### ${iconText} ${comp.label}\n\n`;
                         content += `| Estrutura | Nota | Classificação |\n`;
                         content += `|-----------|------|---------------|\n`;
                         content += `| ${selectedVia1.structure_name} | ${comp1 !== null && comp1 !== undefined ? comp1.toFixed(1) : 'N/A'} | ${getScoreClassification(comp1)} |\n`;

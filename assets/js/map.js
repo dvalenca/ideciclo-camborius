@@ -174,7 +174,7 @@ class ViaMap {
       source: 'waypoints',
       paint: {
         'circle-radius': 6,
-        'circle-color': '#FF5722',
+        'circle-color': '#F5BDBF',
         'circle-stroke-color': '#fff',
         'circle-stroke-width': 2
       }
@@ -207,13 +207,13 @@ class ViaMap {
     });
   }
 
-  // Cores por tipologia
+  // Cores por tipologia IDECICLO
   getTypologyColor(typology) {
     const colors = {
-      'Ciclovia': '#dc2626', // vermelho
-      'Ciclofaixa': '#16a34a', // verde
-      'Calçada compartilhada': '#2563eb', // azul
-      'Ciclorrota': '#F57C00'
+      'Ciclovia': '#CE4831', // IDECICLO Red
+      'Ciclofaixa': '#EFC345', // IDECICLO Yellow
+      'Calçada compartilhada': '#5AC2E1', // IDECICLO Blue
+      'Ciclorrota': '#6DBFAC' // IDECICLO Teal
     };
     return colors[typology] || '#666';
   }

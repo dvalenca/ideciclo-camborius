@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDECICLO - Índice de Desenvolvimento Cicloviário</title>
+    <link rel="stylesheet" href="ideciclo-styles.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="ideciclo-navbar">
+        <div class="navbar-content">
+            <div class="navbar-logo">
+                <a href="/">
+                    <img src="images/ideciclo_logo.png" alt="IDECICLO">
+                </a>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="/" class="active">Início</a></li>
+                <li><a href="/avaliacao">Avaliação</a></li>
+                <li><a href="/ranking">Ranking</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>IDECICLO</h1>
+            <p>Índice de Desenvolvimento Cicloviário</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Cards de ação -->
+        <section class="flex justify-center gap-8 mt-4">
+            <a href="/manual.pdf" class="categoria-card categoria-seguranca">
+                <img src="icones/qualidade-do-projeto.svg" class="icon" alt="">
+                <h3>Manual do Ideciclo</h3>
+                <p>E confira como funciona</p>
+            </a>
+            
+            <a href="/formulario.pdf" class="categoria-card categoria-projeto">
+                <img src="icones/conflitos-ao-longo.svg" class="icon" alt="">
+                <h3>Formulário de avaliação</h3>
+                <p>Baixe aqui e avalie sua cidade</p>
+            </a>
+        </section>
+
+        <!-- Seção de exemplo com cards -->
+        <section class="mt-4">
+            <h2 class="text-center mb-4">Parâmetros de Avaliação</h2>
+            <div class="flex justify-center gap-4 flex-col md:flex-row">
+                <div class="ideciclo-card">
+                    <h3>Planejamento Cicloviário</h3>
+                    <p>Avaliação da integração da infraestrutura com o planejamento urbano.</p>
+                    <span class="score-badge score-bom">Bom</span>
+                </div>
+                
+                <div class="ideciclo-card">
+                    <h3>Segurança Viária</h3>
+                    <p>Análise dos elementos de proteção e segurança para ciclistas.</p>
+                    <span class="score-badge score-excelente">Excelente</span>
+                </div>
+                
+                <div class="ideciclo-card">
+                    <h3>Manutenção</h3>
+                    <p>Estado de conservação da infraestrutura cicloviária.</p>
+                    <span class="score-badge score-regular">Regular</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="ideciclo-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/ideciclo-logo.png" alt="IDECICLO">
+                    <div class="footer-info">
+                        <h3>IDECICLO</h3>
+                        <p>Índice de Desenvolvimento Cicloviário</p>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <h4>Desenvolvido por</h4>
+                    <p><strong>Ameciclo</strong></p>
+                    <p>Associação Metropolitana de Ciclistas do Recife</p>
+                    <p>contato@ameciclo.org</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

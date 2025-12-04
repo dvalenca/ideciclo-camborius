@@ -22,11 +22,12 @@ Acesse o site em: [URL será gerada após deploy na Vercel]
 ## 🛠️ Tecnologias
 
 - HTML5
-- CSS3
+- CSS3 com identidade visual IDECICLO
 - JavaScript (Vanilla)
 - Mapbox GL JS
 - Chart.js
 - jsPDF
+- Google Fonts (Open Sans + Lato)
 
 ## 🚀 Como executar localmente
 
@@ -51,14 +52,33 @@ Acesse `http://localhost:3000`
 ```
 ├── index.html              # Página principal
 ├── assets/
-│   ├── css/                # Estilos
+│   ├── css/                # Estilos com identidade IDECICLO
 │   ├── js/                 # Scripts
 │   ├── data/               # Dados JSON
-│   └── images/             # Imagens
+│   ├── images/             # Imagens das estruturas
+│   ├── icones/             # Ícones SVG dos parâmetros
+│   ├── ideciclo_logo.png   # Logo principal IDECICLO
+│   ├── ideciclo-logo.png   # Logo alternativo
+│   ├── ideciclo-navcover.png # Imagem hero
+│   └── favicon.ico         # Favicon IDECICLO
 ├── content/                # Conteúdo em Markdown
 ├── libs/                   # Bibliotecas externas
+├── temporary/              # Arquivos da nova identidade
+├── NEW_VISUAL_ID_GUIDELINE.md # Guia da identidade visual
 └── *.html                  # Outras páginas
 ```
+
+## 🎨 Identidade Visual
+
+O projeto agora utiliza a identidade visual oficial do IDECICLO com:
+
+- **Paleta de cores oficial**: Vermelho, Verde-azulado, Azul, Amarelo, Rosa e Verde
+- **Tipografia**: Open Sans (corpo) + Lato (títulos)
+- **Componentes**: Cards arredondados (40px), botões com sombras, badges de score
+- **Ícones**: 18 SVGs dos parâmetros de avaliação
+- **Logo**: Marca oficial IDECICLO
+
+Consulte o arquivo `NEW_VISUAL_ID_GUIDELINE.md` para detalhes completos.
 
 ## 📈 Deploy
 

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo - Componentes IDECICLO</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Header IDECICLO -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/ideciclo_logo.png" alt="IDECICLO">
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
+                        <li><a href="comparacao.html" class="nav-link">Comparação</a></li>
+                        <li><a href="ranking.html" class="nav-link">Ranking Nacional</a></li>
+                        <li><a href="metodologia.html" class="nav-link active">Metodologia</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Componentes IDECICLO</h1>
+                <p>Exemplos de uso da nova identidade visual</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            
+            <!-- Botões IDECICLO -->
+            <section class="info-card">
+                <h3>Botões IDECICLO</h3>
+                <div class="flex gap-4" style="flex-wrap: wrap;">
+                    <button class="ideciclo-button">Botão Azul</button>
+                    <button class="ideciclo-button yellow">Botão Amarelo</button>
+                    <button class="ideciclo-button red">Botão Vermelho</button>
+                    <button class="ideciclo-button teal">Botão Verde-Azulado</button>
+                </div>
+            </section>
+
+            <!-- Cards de Categoria -->
+            <section class="info-card">
+                <h3>Cards de Categoria com Ícones</h3>
+                <div class="flex justify-center gap-8" style="flex-wrap: wrap;">
+                    <a href="#" class="categoria-card categoria-projeto">
+                        <img src="assets/icones/qualidade-do-projeto.svg" class="icon" alt="">
+                        <h3>Qualidade do Projeto</h3>
+                        <p>Avaliação da qualidade</p>
+                    </a>
+                    
+                    <a href="#" class="categoria-card categoria-seguranca">
+                        <img src="assets/icones/seguranca-viaria.svg" class="icon" alt="">
+                        <h3>Segurança Viária</h3>
+                        <p>Análise de segurança</p>
+                    </a>
+                    
+                    <a href="#" class="categoria-card categoria-manutencao">
+                        <img src="assets/icones/manutencao.svg" class="icon" alt="">
+                        <h3>Manutenção</h3>
+                        <p>Estado de conservação</p>
+                    </a>
+                    
+                    <a href="#" class="categoria-card categoria-urbanidade">
+                        <img src="assets/icones/urbanidade.svg" class="icon" alt="">
+                        <h3>Urbanidade</h3>
+                        <p>Integração urbana</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Sistema de Badges -->
+            <section class="info-card">
+                <h3>Sistema de Badges/Scores</h3>
+                <div class="flex gap-4" style="flex-wrap: wrap; align-items: center;">
+                    <span class="score-badge score-excelente">Excelente</span>
+                    <span class="score-badge score-bom">Bom</span>
+                    <span class="score-badge score-regular">Regular</span>
+                    <span class="score-badge score-ruim">Ruim</span>
+                    <span class="score-badge score-pessimo">Péssimo</span>
+                </div>
+            </section>
+
+            <!-- Cards Padrão -->
+            <section class="info-card">
+                <h3>Cards com Nova Identidade</h3>
+                <div class="vias-grid">
+                    <div class="via-card">
+                        <div class="via-header">
+                            <h4 class="via-name">Exemplo de Via</h4>
+                            <p class="via-location">Balneário Camboriú</p>
+                        </div>
+                        <div class="via-body">
+                            <div class="via-info">
+                                <div class="info-item">
+                                    <span class="info-value">8.5</span>
+                                    <span class="info-label">IDECICLO</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-value">2.3km</span>
+                                    <span class="info-label">Extensão</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-value">15</span>
+                                    <span class="info-label">Pontos</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span class="typology-badge typology-ciclovia">Ciclovia</span>
+                                <span class="score-badge score-excelente">Excelente</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="via-card">
+                        <div class="via-header">
+                            <h4 class="via-name">Outra Via Exemplo</h4>
+                            <p class="via-location">Camboriú</p>
+                        </div>
+                        <div class="via-body">
+                            <div class="via-info">
+                                <div class="info-item">
+                                    <span class="info-value">6.2</span>
+                                    <span class="info-label">IDECICLO</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-value">1.8km</span>
+                                    <span class="info-label">Extensão</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-value">12</span>
+                                    <span class="info-label">Pontos</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span class="typology-badge typology-ciclofaixa">Ciclofaixa</span>
+                                <span class="score-badge score-regular">Regular</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Paleta de Cores -->
+            <section class="info-card">
+                <h3>Paleta de Cores IDECICLO</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div style="background: var(--ideciclo-red); color: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <strong>Vermelho IDECICLO</strong><br>
+                        #CE4831
+                    </div>
+                    <div style="background: var(--ideciclo-teal); color: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <strong>Verde-Azulado</strong><br>
+                        #6DBFAC
+                    </div>
+                    <div style="background: var(--ideciclo-blue); color: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <strong>Azul IDECICLO</strong><br>
+                        #5AC2E1
+                    </div>
+                    <div style="background: var(--ideciclo-yellow); color: var(--text-grey); padding: 1rem; border-radius: 8px; text-align: center;">
+                        <strong>Amarelo IDECICLO</strong><br>
+                        #EFC345
+                    </div>
+                    <div style="background: var(--ideciclo-pink); color: var(--text-grey); padding: 1rem; border-radius: 8px; text-align: center;">
+                        <strong>Rosa IDECICLO</strong><br>
+                        #F5BDBF
+                    </div>
+                    <div style="background: var(--ideciclo-green); color: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <strong>Verde IDECICLO</strong><br>
+                        #69BFAF
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer IDECICLO -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/ideciclo-logo.png" alt="IDECICLO">
+                    <div class="footer-info">
+                        <h3>IDECICLO</h3>
+                        <p>Índice de Desenvolvimento Cicloviário</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Desenvolvido por</h3>
+                    <p><strong>Ameciclo</strong></p>
+                    <p>Associação Metropolitana de Ciclistas do Recife</p>
+                    <p>contato@ameciclo.org</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

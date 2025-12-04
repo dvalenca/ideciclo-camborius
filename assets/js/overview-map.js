@@ -81,9 +81,9 @@ class OverviewMap {
       paint: {
         'line-color': [
           'case',
-          ['==', ['get', 'typology'], 'Ciclovia'], '#dc2626',
-          ['==', ['get', 'typology'], 'Ciclofaixa'], '#16a34a',
-          ['==', ['get', 'typology'], 'Calçada compartilhada'], '#2563eb',
+          ['==', ['get', 'typology'], 'Ciclovia'], '#CE4831',
+          ['==', ['get', 'typology'], 'Ciclofaixa'], '#EFC345',
+          ['==', ['get', 'typology'], 'Calçada compartilhada'], '#5AC2E1',
           '#666'
         ],
         'line-width': 3,
