@@ -1,0 +1,1643 @@
+{
+  "summary": {
+    "total_structures": 111,
+    "structures_with_width": 111,
+    "min_width": 75,
+    "max_width": 350,
+    "avg_width": "181.97",
+    "total_extension": 107369
+  },
+  "by_city": {
+    "Balneario Camboriu": {
+      "total_structures": 70,
+      "min_width": 85,
+      "max_width": 350,
+      "avg_width": "186.61",
+      "total_extension": 65885
+    },
+    "Camboriu": {
+      "total_structures": 41,
+      "min_width": 75,
+      "max_width": 299,
+      "avg_width": "174.05",
+      "total_extension": 41484
+    }
+  },
+  "by_type": {
+    "Ciclovia": {
+      "count": 27,
+      "min": 141,
+      "max": 300,
+      "avg": "218.33",
+      "total_extension": 26400
+    },
+    "Ciclofaixa": {
+      "count": 74,
+      "min": 75,
+      "max": 234,
+      "avg": "166.62",
+      "total_extension": 77734
+    },
+    "Compart.": {
+      "count": 10,
+      "min": 85,
+      "max": 350,
+      "avg": "197.40",
+      "total_extension": 3235
+    }
+  },
+  "width_distribution": {
+    "0-100cm": {
+      "count": 2,
+      "extension": 310,
+      "structures": [
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Jesuíno A. Pereira T1 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 75,
+          "length": 245
+        },
+        {
+          "name": "EDIT GPX - Compart. Pass. Pte. Rio Camboriú BR 101 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Compart.",
+          "width": 85,
+          "length": 65
+        }
+      ]
+    },
+    "100-150cm": {
+      "count": 21,
+      "extension": 26439,
+      "structures": [
+        {
+          "name": "EDIT GPX - Ciclofaixa Al. Cap. Ernesto Nunes e R. Osvaldo Minela - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 139,
+          "length": 1240
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Rodesindo Pavan T4 - Sul - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 145,
+          "length": 2490
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Santa Catarina T1 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 138,
+          "length": 1110
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Santo Amaro T1 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 135,
+          "length": 190
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Estr. Paulo J. Lorenzetti - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 120,
+          "length": 880
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Estr. dos Macacos - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 140,
+          "length": 6520
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Edgar Linhares T1 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 120,
+          "length": 305
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Emanuel R. Santos - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 146,
+          "length": 945
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Guamirim - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 130,
+          "length": 460
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Guaraparim - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 140,
+          "length": 9
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Imbuia - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 130,
+          "length": 490
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Just. Neves, Pedro Saut, Manoel Pereira - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 114,
+          "length": 1100
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Padre André Aneza - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 117,
+          "length": 545
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Paulo Dallago T1 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 135,
+          "length": 865
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Paulo Dallago T2 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 135,
+          "length": 4680
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Paulo Faquetti - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 112,
+          "length": 625
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. São Miguel - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 135,
+          "length": 710
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. Estado T1 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 141,
+          "length": 1100
+        },
+        {
+          "name": "EDIT GPX - Compart. Av. Marg. Oeste BR 101 T3 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Compart.",
+          "width": 115,
+          "length": 480
+        },
+        {
+          "name": "EDIT GPX - Compart. Pte. Rio Camboriú BR 101 T1 - Leste - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Compart.",
+          "width": 145,
+          "length": 1080
+        },
+        {
+          "name": "EDIT GPX - Compart. Pte. Rio Camboriú BR 101 T2 Oeste e Av. Marg. Oeste T2 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Compart.",
+          "width": 133,
+          "length": 615
+        }
+      ]
+    },
+    "150-200cm": {
+      "count": 58,
+      "extension": 56995,
+      "structures": [
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Brasil T1 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 161,
+          "length": 780
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Brasil T2 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 173,
+          "length": 1870
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. João Costa T3 e Estr. Rio - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 170,
+          "length": 3630
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. João da Costa T2 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 170,
+          "length": 1120
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Minas Gerais T3 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 160,
+          "length": 1020
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Normando Tedesco - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 184,
+          "length": 1890
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Rodesindo Pavan T1 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 170,
+          "length": 385
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Rodesindo Pavan T2 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 152,
+          "length": 8790
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Rodesindo Pavan T3 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 155,
+          "length": 250
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Rodesindo Pavan T4 - Norte - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 165,
+          "length": 2490
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Ruy Barbosa - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 180,
+          "length": 660
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Áustria - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 190,
+          "length": 305
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Estr. da Rainha - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 180,
+          "length": 840
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 1001 T2 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 175,
+          "length": 350
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 1901 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 190,
+          "length": 165
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 2000 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 160,
+          "length": 1210
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 2550 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 158,
+          "length": 1160
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 3000 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 181,
+          "length": 905
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 3208 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 171,
+          "length": 390
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 3700 T1 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 180,
+          "length": 330
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 3700 T2 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 152,
+          "length": 200
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 3780 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 153,
+          "length": 285
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 991 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 150,
+          "length": 65
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 995 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 174,
+          "length": 40
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Biguaçu - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 181,
+          "length": 1360
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Dom Afonso - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 180,
+          "length": 850
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Dom Daniel - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 175,
+          "length": 875
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Doralice L. B. e R. Alécio D. L. - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 184,
+          "length": 705
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Edgar Linhares T2 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 165,
+          "length": 600
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Indonésia - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 170,
+          "length": 150
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Itália - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 190,
+          "length": 465
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Jardim da Saudade - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 190,
+          "length": 975
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Jesuino A. Pereira T2 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 190,
+          "length": 370
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Joaquim Garcia - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 185,
+          "length": 510
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. José Fco Bernardes - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 165,
+          "length": 105
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. José Fco. Vitor - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 192,
+          "length": 270
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. José Honorato da Silva - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 199,
+          "length": 725
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Maria Mansoto - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 180,
+          "length": 455
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Marmeleiro - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 154,
+          "length": 1230
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Monte Acaraí - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 172,
+          "length": 980
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Monte Alto - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 160,
+          "length": 785
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Monte Bandeiras - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 185,
+          "length": 895
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Paulo Marciano Cunha - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 170,
+          "length": 565
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Porto Velho e R. Minas Gerais T1 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 163,
+          "length": 365
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Síria - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 170,
+          "length": 680
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Ver. Domingos Fonseca - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 173,
+          "length": 915
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. da Praia T1 e R. Napoleão Vieira - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 180,
+          "length": 295
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. da Praia T2 e R. Vergílio R. Pereira - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 173,
+          "length": 420
+        },
+        {
+          "name": "EDIT GPX - Ciclovia 3a. Av. - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 194,
+          "length": 1830
+        },
+        {
+          "name": "EDIT GPX - Ciclovia 5a. Av. - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 190,
+          "length": 2400
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 197,
+          "length": 1240
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. José Fco Bernardes - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclovia",
+          "width": 157,
+          "length": 1970
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. João Acácio Simas - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclovia",
+          "width": 168,
+          "length": 1450
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. Santa Catarina T2 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclovia",
+          "width": 195,
+          "length": 1410
+        },
+        {
+          "name": "EDIT GPX - Ciclovia R. 3100 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 180,
+          "length": 260
+        },
+        {
+          "name": "EDIT GPX - Ciclovia R. Angelina - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 197,
+          "length": 310
+        },
+        {
+          "name": "EDIT GPX - Ciclovia R. José Cesário Pereira - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 159,
+          "length": 1250
+        },
+        {
+          "name": "EDIT GPX - Compart. R. Cel. Benjamin Vieira T1 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Compart.",
+          "width": 196,
+          "length": 200
+        }
+      ]
+    },
+    "200-250cm": {
+      "count": 20,
+      "extension": 19865,
+      "structures": [
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Atlântica - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 223,
+          "length": 5890
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Carlos Drummond de Andrade - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 210,
+          "length": 60
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Martin Luther T2 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 234,
+          "length": 730
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa Av. Minas Gerais T2 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclofaixa",
+          "width": 204,
+          "length": 865
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. 1001 T1 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 200,
+          "length": 160
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Angelina - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 227,
+          "length": 385
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Dom Felipe - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 215,
+          "length": 740
+        },
+        {
+          "name": "EDIT GPX - Ciclofaixa R. Dom Henrique - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclofaixa",
+          "width": 211,
+          "length": 820
+        },
+        {
+          "name": "EDIT GPX - Ciclovia 4a. Av. - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 208,
+          "length": 2160
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. Estado T2 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 203,
+          "length": 2080
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. João da Costa T1 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclovia",
+          "width": 202,
+          "length": 190
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. Marg. Oeste BR 101 T1 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 244,
+          "length": 2190
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. Martin Luther T1 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 200,
+          "length": 760
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. Martin Luther T3 e R. África do Sul - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 200,
+          "length": 1040
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. Santo Amaro T2 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclovia",
+          "width": 235,
+          "length": 900
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Pref. Gilberto A. Meirinho - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 240,
+          "length": 135
+        },
+        {
+          "name": "EDIT GPX - Ciclovia R. 290 e R. 200 - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 205,
+          "length": 130
+        },
+        {
+          "name": "EDIT GPX - Ciclovia R. Cel. Benjamin Vieira T2 - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclovia",
+          "width": 200,
+          "length": 250
+        },
+        {
+          "name": "EDIT GPX - Compart. Pte. Altamiro D. Castilho T1 - Oeste - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Compart.",
+          "width": 200,
+          "length": 190
+        },
+        {
+          "name": "EDIT GPX - Compart. Pte. Altamiro D. Castilho T2 - Leste - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Compart.",
+          "width": 200,
+          "length": 190
+        }
+      ]
+    },
+    "250-300cm": {
+      "count": 7,
+      "extension": 3185,
+      "structures": [
+        {
+          "name": "EDIT GPX - Ciclovia Al. Belo Horizonte - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclovia",
+          "width": 272,
+          "length": 710
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Al. Delfim P. Peixoto Filho - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 250,
+          "length": 285
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. Brasilia - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclovia",
+          "width": 273,
+          "length": 600
+        },
+        {
+          "name": "EDIT GPX - Ciclovia Av. Buenos Aires - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclovia",
+          "width": 296,
+          "length": 250
+        },
+        {
+          "name": "EDIT GPX - Ciclovia R. Bogotá - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclovia",
+          "width": 299,
+          "length": 540
+        },
+        {
+          "name": "EDIT GPX - Ciclovia R. Roma - Cb.gpx",
+          "city": "Camboriu",
+          "type": "Ciclovia",
+          "width": 290,
+          "length": 700
+        },
+        {
+          "name": "EDIT GPX - Compart. Pass. Viaduto BR 101 - 1 (R. 3100) - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Compart.",
+          "width": 250,
+          "length": 100
+        }
+      ]
+    },
+    "300+cm": {
+      "count": 3,
+      "extension": 575,
+      "structures": [
+        {
+          "name": "EDIT GPX - Ciclovia Estr. da Rainha - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Ciclovia",
+          "width": 300,
+          "length": 260
+        },
+        {
+          "name": "EDIT GPX - Compart. Av. Flores T1 e R. Aqueduto - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Compart.",
+          "width": 350,
+          "length": 210
+        },
+        {
+          "name": "EDIT GPX - Compart. Pass. Viaduto BR 101 - 2 (R. 2500) - BC.gpx",
+          "city": "Balneario Camboriu",
+          "type": "Compart.",
+          "width": 300,
+          "length": 105
+        }
+      ]
+    }
+  },
+  "structures": [
+    {
+      "name": "EDIT GPX - Compart. Av. Flores T1 e R. Aqueduto - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Compart.",
+      "width": 350,
+      "length": 210
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Estr. da Rainha - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 300,
+      "length": 260
+    },
+    {
+      "name": "EDIT GPX - Compart. Pass. Viaduto BR 101 - 2 (R. 2500) - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Compart.",
+      "width": 300,
+      "length": 105
+    },
+    {
+      "name": "EDIT GPX - Ciclovia R. Bogotá - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclovia",
+      "width": 299,
+      "length": 540
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. Buenos Aires - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclovia",
+      "width": 296,
+      "length": 250
+    },
+    {
+      "name": "EDIT GPX - Ciclovia R. Roma - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclovia",
+      "width": 290,
+      "length": 700
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. Brasilia - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclovia",
+      "width": 273,
+      "length": 600
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Al. Belo Horizonte - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclovia",
+      "width": 272,
+      "length": 710
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Al. Delfim P. Peixoto Filho - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 250,
+      "length": 285
+    },
+    {
+      "name": "EDIT GPX - Compart. Pass. Viaduto BR 101 - 1 (R. 3100) - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Compart.",
+      "width": 250,
+      "length": 100
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. Marg. Oeste BR 101 T1 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 244,
+      "length": 2190
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Pref. Gilberto A. Meirinho - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 240,
+      "length": 135
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. Santo Amaro T2 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclovia",
+      "width": 235,
+      "length": 900
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Martin Luther T2 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 234,
+      "length": 730
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Angelina - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 227,
+      "length": 385
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Atlântica - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 223,
+      "length": 5890
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Dom Felipe - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 215,
+      "length": 740
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Dom Henrique - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 211,
+      "length": 820
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Carlos Drummond de Andrade - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 210,
+      "length": 60
+    },
+    {
+      "name": "EDIT GPX - Ciclovia 4a. Av. - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 208,
+      "length": 2160
+    },
+    {
+      "name": "EDIT GPX - Ciclovia R. 290 e R. 200 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 205,
+      "length": 130
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Minas Gerais T2 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 204,
+      "length": 865
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. Estado T2 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 203,
+      "length": 2080
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. João da Costa T1 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclovia",
+      "width": 202,
+      "length": 190
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 1001 T1 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 200,
+      "length": 160
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. Martin Luther T1 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 200,
+      "length": 760
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. Martin Luther T3 e R. África do Sul - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 200,
+      "length": 1040
+    },
+    {
+      "name": "EDIT GPX - Ciclovia R. Cel. Benjamin Vieira T2 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclovia",
+      "width": 200,
+      "length": 250
+    },
+    {
+      "name": "EDIT GPX - Compart. Pte. Altamiro D. Castilho T1 - Oeste - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Compart.",
+      "width": 200,
+      "length": 190
+    },
+    {
+      "name": "EDIT GPX - Compart. Pte. Altamiro D. Castilho T2 - Leste - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Compart.",
+      "width": 200,
+      "length": 190
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. José Honorato da Silva - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 199,
+      "length": 725
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. Flores T2 e Marg. Leste BR 101 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 197,
+      "length": 1240
+    },
+    {
+      "name": "EDIT GPX - Ciclovia R. Angelina - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 197,
+      "length": 310
+    },
+    {
+      "name": "EDIT GPX - Compart. R. Cel. Benjamin Vieira T1 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Compart.",
+      "width": 196,
+      "length": 200
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. Santa Catarina T2 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclovia",
+      "width": 195,
+      "length": 1410
+    },
+    {
+      "name": "EDIT GPX - Ciclovia 3a. Av. - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 194,
+      "length": 1830
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. José Fco. Vitor - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 192,
+      "length": 270
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Áustria - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 190,
+      "length": 305
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 1901 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 190,
+      "length": 165
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Itália - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 190,
+      "length": 465
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Jardim da Saudade - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 190,
+      "length": 975
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Jesuino A. Pereira T2 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 190,
+      "length": 370
+    },
+    {
+      "name": "EDIT GPX - Ciclovia 5a. Av. - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 190,
+      "length": 2400
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Joaquim Garcia - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 185,
+      "length": 510
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Monte Bandeiras - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 185,
+      "length": 895
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Normando Tedesco - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 184,
+      "length": 1890
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Doralice L. B. e R. Alécio D. L. - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 184,
+      "length": 705
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 3000 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 181,
+      "length": 905
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Biguaçu - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 181,
+      "length": 1360
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Ruy Barbosa - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 180,
+      "length": 660
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Estr. da Rainha - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 180,
+      "length": 840
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 3700 T1 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 180,
+      "length": 330
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Dom Afonso - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 180,
+      "length": 850
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Maria Mansoto - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 180,
+      "length": 455
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. da Praia T1 e R. Napoleão Vieira - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 180,
+      "length": 295
+    },
+    {
+      "name": "EDIT GPX - Ciclovia R. 3100 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 180,
+      "length": 260
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 1001 T2 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 175,
+      "length": 350
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Dom Daniel - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 175,
+      "length": 875
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 995 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 174,
+      "length": 40
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Brasil T2 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 173,
+      "length": 1870
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Ver. Domingos Fonseca - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 173,
+      "length": 915
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. da Praia T2 e R. Vergílio R. Pereira - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 173,
+      "length": 420
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Monte Acaraí - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 172,
+      "length": 980
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 3208 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 171,
+      "length": 390
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. João Costa T3 e Estr. Rio - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 170,
+      "length": 3630
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. João da Costa T2 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 170,
+      "length": 1120
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Rodesindo Pavan T1 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 170,
+      "length": 385
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Indonésia - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 170,
+      "length": 150
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Paulo Marciano Cunha - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 170,
+      "length": 565
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Síria - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 170,
+      "length": 680
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. João Acácio Simas - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclovia",
+      "width": 168,
+      "length": 1450
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Rodesindo Pavan T4 - Norte - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 165,
+      "length": 2490
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Edgar Linhares T2 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 165,
+      "length": 600
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. José Fco Bernardes - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 165,
+      "length": 105
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Porto Velho e R. Minas Gerais T1 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 163,
+      "length": 365
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Brasil T1 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 161,
+      "length": 780
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Minas Gerais T3 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 160,
+      "length": 1020
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 2000 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 160,
+      "length": 1210
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Monte Alto - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 160,
+      "length": 785
+    },
+    {
+      "name": "EDIT GPX - Ciclovia R. José Cesário Pereira - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 159,
+      "length": 1250
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 2550 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 158,
+      "length": 1160
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. José Fco Bernardes - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclovia",
+      "width": 157,
+      "length": 1970
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Rodesindo Pavan T3 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 155,
+      "length": 250
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Marmeleiro - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 154,
+      "length": 1230
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 3780 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 153,
+      "length": 285
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Rodesindo Pavan T2 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 152,
+      "length": 8790
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 3700 T2 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 152,
+      "length": 200
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. 991 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 150,
+      "length": 65
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Emanuel R. Santos - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 146,
+      "length": 945
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Rodesindo Pavan T4 - Sul - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 145,
+      "length": 2490
+    },
+    {
+      "name": "EDIT GPX - Compart. Pte. Rio Camboriú BR 101 T1 - Leste - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Compart.",
+      "width": 145,
+      "length": 1080
+    },
+    {
+      "name": "EDIT GPX - Ciclovia Av. Estado T1 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclovia",
+      "width": 141,
+      "length": 1100
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Estr. dos Macacos - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 140,
+      "length": 6520
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Guaraparim - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 140,
+      "length": 9
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Al. Cap. Ernesto Nunes e R. Osvaldo Minela - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 139,
+      "length": 1240
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Santa Catarina T1 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 138,
+      "length": 1110
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Av. Santo Amaro T1 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 135,
+      "length": 190
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Paulo Dallago T1 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 135,
+      "length": 865
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Paulo Dallago T2 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 135,
+      "length": 4680
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. São Miguel - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 135,
+      "length": 710
+    },
+    {
+      "name": "EDIT GPX - Compart. Pte. Rio Camboriú BR 101 T2 Oeste e Av. Marg. Oeste T2 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Compart.",
+      "width": 133,
+      "length": 615
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Guamirim - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 130,
+      "length": 460
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Imbuia - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 130,
+      "length": 490
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa Estr. Paulo J. Lorenzetti - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 120,
+      "length": 880
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Edgar Linhares T1 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Ciclofaixa",
+      "width": 120,
+      "length": 305
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Padre André Aneza - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 117,
+      "length": 545
+    },
+    {
+      "name": "EDIT GPX - Compart. Av. Marg. Oeste BR 101 T3 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Compart.",
+      "width": 115,
+      "length": 480
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Just. Neves, Pedro Saut, Manoel Pereira - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 114,
+      "length": 1100
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Paulo Faquetti - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 112,
+      "length": 625
+    },
+    {
+      "name": "EDIT GPX - Compart. Pass. Pte. Rio Camboriú BR 101 - BC.gpx",
+      "city": "Balneario Camboriu",
+      "type": "Compart.",
+      "width": 85,
+      "length": 65
+    },
+    {
+      "name": "EDIT GPX - Ciclofaixa R. Jesuíno A. Pereira T1 - Cb.gpx",
+      "city": "Camboriu",
+      "type": "Ciclofaixa",
+      "width": 75,
+      "length": 245
+    }
+  ]
+}

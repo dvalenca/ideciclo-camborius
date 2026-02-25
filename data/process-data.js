@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 
 // Carregar dados
 const ratedData = JSON.parse(fs.readFileSync('../assets/data/rated-data.json', 'utf8'));
-const balnearioGeoJSON = JSON.parse(fs.readFileSync('../../crosses/Balneario.geojson', 'utf8'));
-const camboriuGeoJSON = JSON.parse(fs.readFileSync('../../crosses/Camboriu.geojson', 'utf8'));
+const balnearioGeoJSON = JSON.parse(fs.readFileSync('../assets/data/Balneario.geojson', 'utf8'));
+const camboriuGeoJSON = JSON.parse(fs.readFileSync('../assets/data/Camboriu.geojson', 'utf8'));
 
 
 

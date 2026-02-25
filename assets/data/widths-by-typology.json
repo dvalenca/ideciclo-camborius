@@ -1,0 +1,50 @@
+[
+  {
+    "typology": "Calçada Compartilhada",
+    "direction": "Bidirecional",
+    "count": 9,
+    "totalLength": "3220.00",
+    "avgWidthByStructure": "210.33",
+    "avgWidthByKm": "170.68"
+  },
+  {
+    "typology": "Ciclofaixa",
+    "direction": "Bidirecional",
+    "count": 72,
+    "totalLength": "72729.00",
+    "avgWidthByStructure": "168.99",
+    "avgWidthByKm": "166.10"
+  },
+  {
+    "typology": "Ciclofaixa",
+    "direction": "Unidirecional no Fluxo",
+    "count": 2,
+    "totalLength": "4980.00",
+    "avgWidthByStructure": "155.00",
+    "avgWidthByKm": "155.00"
+  },
+  {
+    "typology": "Ciclovia",
+    "direction": "Bidirecional",
+    "count": 24,
+    "totalLength": "25710.00",
+    "avgWidthByStructure": "212.08",
+    "avgWidthByKm": "203.22"
+  },
+  {
+    "typology": "Ciclovia",
+    "direction": "Bidirecional, Bidirecional com Mão Inglesa",
+    "count": 2,
+    "totalLength": "380.00",
+    "avgWidthByStructure": "250.50",
+    "avgWidthByKm": "264.87"
+  },
+  {
+    "typology": "Não identificado",
+    "direction": "Bidirecional",
+    "count": 2,
+    "totalLength": "350.00",
+    "avgWidthByStructure": "119.00",
+    "avgWidthByKm": "140.37"
+  }
+]

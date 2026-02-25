@@ -1,6 +1,10 @@
 // Script para processar arquivos GPX e extrair waypoints com anotações
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Função para extrair waypoints de um arquivo GPX
 function extractWaypointsFromGPX(gpxContent, filename) {
@@ -90,8 +94,6 @@ function processAllGPXFiles() {
 }
 
 // Executar processamento
-if (require.main === module) {
-  processAllGPXFiles();
-}
+processAllGPXFiles();
 
-module.exports = { processAllGPXFiles, extractWaypointsFromGPX };
+export { processAllGPXFiles, extractWaypointsFromGPX };

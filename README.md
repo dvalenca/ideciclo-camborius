@@ -80,6 +80,39 @@ O projeto agora utiliza a identidade visual oficial do IDECICLO com:
 
 Consulte o arquivo `NEW_VISUAL_ID_GUIDELINE.md` para detalhes completos.
 
+## 📊 Estrutura de Dados
+
+O projeto utiliza diversos arquivos JSON gerados a partir do arquivo principal `rated-data.json`:
+
+### Arquivo Principal
+- **`assets/data/rated-data.json`** (1,5 MB): Base de dados com todas as avaliações (gerado externamente)
+
+### Arquivos Gerados
+- **`obstacles-by-city.json`**: Análise de obstáculos por cidade
+- **`widths-analysis.json`**: Análise completa de larguras
+- **`widths-by-typology.json`**: Larguras por tipologia e direção
+- **`ANALISE-PADROES-LARGURA.md`**: Comparação com padrões técnicos
+
+### Atualizar Dados
+
+Após receber um novo `rated-data.json`, execute:
+
+```bash
+./update-data.sh
+```
+
+Ou individualmente:
+
+```bash
+node compile-obstacles.js
+node compile-widths.js
+node compile-widths-by-typology.js
+node compile-width-standards.js
+cd data && node process-data.js && node process-gpx.js
+```
+
+Consulte `ESTRUTURA-DADOS.md` para documentação completa.
+
 ## 📈 Deploy
 
 Este projeto está configurado para deploy automático na Vercel. Qualquer push para a branch `main` irá disparar um novo deploy.
