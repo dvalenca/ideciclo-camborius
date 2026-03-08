@@ -6,7 +6,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "python3 -m http.server 3000",
-    "build": "echo 'Build completed - static site ready'",
+    "build": "node compile-obstacles.js && node compile-widths.js && node compile-widths-by-typology.js && node compile-width-standards.js && cd data && node process-data.js",
     "start": "python3 -m http.server 8080"
   },
   "keywords": [

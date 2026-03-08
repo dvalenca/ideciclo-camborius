@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Notas - IDECICLO</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .filters-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 40px;
+            margin-bottom: 2rem;
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+        }
+        .filter-group {
+            margin-bottom: 1.5rem;
+        }
+        .filter-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .filter-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+            font-size: 14px;
+            background: white;
+        }
+        .filters-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .results-table {
+            background: white;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        thead {
+            background: linear-gradient(135deg, #E63946 0%, #F77F00 100%);
+            color: white;
+        }
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+        }
+        th:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        tr:hover {
+            background: #f9f9f9;
+        }
+        .score-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+        .score-high { background: #06D6A0; color: white; }
+        .score-medium { background: #FFD166; color: #333; }
+        .score-low { background: #EF476F; color: white; }
+        .score-null { background: #ccc; color: #666; }
+        .params-list {
+            font-size: 13px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .param-item {
+            margin: 3px 0;
+            padding: 3px 8px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+        .sort-icon {
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        @media (max-width: 768px) {
+            .filters-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/ideciclo_logo.png" alt="IDECICLO" style="height: 64px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="estruturas.html" class="nav-link">Estruturas avaliadas</a></li>
+                        <li><a href="comparacao.html" class="nav-link">Comparação</a></li>
+                        <li><a href="ranking.html" class="nav-link">Ranking Nacional</a></li>
+                        <li><a href="metodologia.html" class="nav-link">Metodologia</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-small" style="background: linear-gradient(135deg, #E63946 0%, #F77F00 100%); padding: 4rem 0; text-align: center; color: white;">
+        <div class="container">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Análise Detalhada de Notas</h1>
+            <p style="font-size: 1.1rem;">Visualize as notas de cada estrutura por parâmetro de avaliação</p>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="container">
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label for="itemSelect">Selecione o Item de Avaliação:</label>
+                    <select id="itemSelect">
+                        <option value="">Carregando...</option>
+                    </select>
+                </div>
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="cityFilter">Cidade:</label>
+                        <select id="cityFilter">
+                            <option value="">Todas</option>
+                            <option value="Camboriú">Camboriú</option>
+                            <option value="Balneário Camboriú">Balneário Camboriú</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="typologyFilter">Tipologia:</label>
+                        <select id="typologyFilter">
+                            <option value="">Todas</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-table">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th data-sort="structure">Estrutura <span class="sort-icon">↕</span></th>
+                            <th data-sort="city">Cidade <span class="sort-icon">↕</span></th>
+                            <th data-sort="typology">Tipologia <span class="sort-icon">↕</span></th>
+                            <th data-sort="score">Nota <span class="sort-icon">↕</span></th>
+                            <th>Parâmetros do Formulário</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody">
+                        <tr><td colspan="5" class="no-results">Selecione um item de avaliação</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>O Ciclobservatório IFC</h3>
+                    <p>O Ciclobservatório IFC é um projeto institucional do Instituto Federal Catarinense, campus Camboriú, com o objetivo de promover o uso da bicicleta como meio de transporte sustentável através do ensino, pesquisa e extensão.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato com o Projeto</h3>
+                    <p>E-mail: <a href="mailto:ciclobservatorio.ifc@gmail.com">ciclobservatorio.ifc@gmail.com</a></p>
+                    <p>Instagram: <a href="https://instagram.com/ciclobservatorio.ifc" target="_blank">@ciclobservatorio.ifc</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Realização e Apoio</h3>
+                    <p><strong>Realização:</strong><br>Instituto Federal Catarinense</p>
+                    <p><strong>Apoio:</strong><br>Associação Metropolitana de Ciclistas do Recife</p>
+                    <div class="footer-logos">
+                        <a href="https://sites.google.com/view/ciclobservatorioifc/" target="_blank">
+                            <img src="assets/ifsc.png" alt="Instituto Federal Catarinense" class="footer-logo">
+                        </a>
+                        <a href="https://www.ameciclo.org/" target="_blank">
+                            <img src="assets/ameciclo.png" alt="Ameciclo" class="footer-logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/analise-notas.js"></script>
+</body>
+</html>

@@ -17,14 +17,14 @@
   },
   "by_typology": {
     "Ciclovia": 26,
-    "Ciclofaixa": 74,
+    "Ciclofaixa": 75,
     "Ciclorrota": 0,
-    "Calçada compartilhada": 9
+    "Calçada compartilhada": 10
   },
   "score_ranges": {
     "excellent": 0,
-    "good": 37,
-    "regular": 73,
+    "good": 45,
+    "regular": 65,
     "poor": 1,
     "inadequate": 0
   }
